@@ -1,12 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  // mode: 'jit',
+  darkMode: false,
+
   content: [
-    "./components/**/*.{js,vue,ts}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}",
+    // Content to be purged
+    './safelist.txt',
+    './components/**/*.vue',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './validators/*.{js,ts}',
+    './nuxt.config.{js,ts}',
   ],
+  
+  // safelist: [
+  //   './validators/*.js'
+  //   {pattern: '/pt-./'},
+  //   {pattern: '/pb-./'}
+  // ],
+
   theme: {
     fontSize: {
       xs:    ['var(--font-size-xs)', { lineHeight: '1' }],
@@ -78,5 +91,30 @@ module.exports = {
     //   'font-secondary': '',
     // },
   },
-  plugins: [],
+
+  variants: {
+    extend: {}
+  },
+
+  plugins: [
+    // Generate safelist of classnames not to be purged
+    // https://github.com/spatie/tailwind-safelist-generator
+    require('tailwind-safelist-generator')({
+      path: './safelist.txt',
+      patterns: [
+        'pt-{padding}',
+        'pb-{padding}',
+      ],
+    }),
+  ],
 }
+
+// export const getRGBColor = (hex, type) => {
+//   let color = hex.replace(/#/g, "")
+//   // rgb values
+//   var r = parseInt(color.substr(0, 2), 16)
+//   var g = parseInt(color.substr(2, 2), 16)
+//   var b = parseInt(color.substr(4, 2), 16)
+
+//   return `--color-${type}: ${r}, ${g}, ${b};`
+// }

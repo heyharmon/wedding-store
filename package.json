@@ -13,5 +13,8 @@
     "nuxt": "^3.3.3",
     "nuxt-headlessui": "^1.1.1",
     "nuxt-icon": "^0.3.3"
+  },
+  "dependencies": {
+    "tailwind-safelist-generator": "^1.0.0"
   }
 }
