@@ -16,7 +16,7 @@
             <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
               <div v-for="feature in features" :key="feature.name" class="relative pl-11">
                 <dt class="inline font-semibold text-gray-900">
-                  <Icon :name="feature.icon" class="absolute left-0 top-0 h-7 w-7 text-indigo-600" aria-hidden="true" />
+                  <Icon :name="feature.icon" class="absolute left-1 top-1 h-5 w-5 text-indigo-600" aria-hidden="true" />
                   {{ feature.name }}
                 </dt>
                 {{ ' ' }}
@@ -32,11 +32,21 @@
 </template>
 
 <script setup>
+const props = defineProps({
+  paddingTop: {
+    type: String,
+    default: 'lg',
+  },
+  paddingBottom: {
+    type: String,
+    default: 'lg',
+  },
+})
+
 const features = [
   {
     name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
     icon: 'heroicons:cloud-arrow-up',
   },
   {

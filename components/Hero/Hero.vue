@@ -12,23 +12,21 @@
       </div>
 
       <!-- Title -->
-      <h1 class="text-6xl font-bold tracking-tight text-gray-900 __sm:text-6xl">
+      <h1 class="text-5xl font-bold tracking-tight text-gray-900 __sm:text-6xl">
         Data to enrich your online business
       </h1>
 
       <!-- Subtitle -->
-      <p class="mt-6 text-lg leading-8 text-gray-600">
-        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+      <p class="mt-6 text-xl leading-10 text-gray-600">
+        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat fcommodo. Elit sunt amet fugiat.
       </p>
-      <!-- <p class="mt-4 text-xl text-white">
-        The new arrivals have, well, newly arrived. Check out the latest options from our summer small-batch release while they're still in stock.
-      </p> -->
 
       <!-- Button group -->
       <div class="mt-10 flex items-center justify-center gap-x-6">
-        <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-          Get started
-        </a>
+        <Button label="Hello World" icon="heroicons:cloud-arrow-up"/>
+        <!-- <VButton icon="heroicons:cloud-arrow-up"/> -->
+        <!-- <VButton icon="heroicons:cloud-arrow-up">Let's go?</VButton> -->
+
         <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
           Learn more 
           <span aria-hidden="true">→</span>
@@ -38,7 +36,8 @@
 </template>
 
 <script setup>
-import Block from '@/components/blocks/Block.vue'
+// import Block from '@/components/blocks/Block.vue'
+// import Button from '~/components/elements/Button/Button.vue.js'
 
 // const paddingVertical = ref('11')
 
