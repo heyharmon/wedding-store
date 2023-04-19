@@ -1,23 +1,11 @@
-/* @tailwind base; */
-/* @tailwind components; */
-/* @tailwind utilities; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Color themes
  * Resource: https://blog.logrocket.com/applying-dynamic-styles-tailwind-css/
  */
 :root {
-    --primary-50: 240 243 255;
-    --primary-100: 224 231 255;
-    --primary-200: 208 215 247;
-    --primary-300: 170 185 255;
-    --primary-400: 137 148 255;
-    --primary-500: 107 112 252;
-    --primary-600: 85 79 238;
-    --primary-700: 69 60 205;
-    --primary-800: 56 48 162;
-    --primary-900: 39 33 115;
-}
-[data-theme='base'] {
     --primary-50: 240 243 255;
     --primary-100: 224 231 255;
     --primary-200: 208 215 247;
@@ -66,7 +54,8 @@
     --primary-900: 89 0 40;
 }
 
-/* Fluid font size variables
+@base {
+    /* Fluid font size variables
  * Reference: https://play.tailwindcss.com/Gf8bSHpsyx
  * Resource: https://utopia.fyi/type/calculator
  */
@@ -123,15 +112,4 @@
     --spacing-80: clamp(16.89rem, 43.96vw + 5.9rem, 58.66rem);
     --spacing-96: clamp(19rem, 62.12vw + 3.47rem, 78.01rem);
 }
-
-/* .theme-1 {
-    
 }
-
-.theme-2 {
-
-}
-
-.theme-3 {
-
-} */

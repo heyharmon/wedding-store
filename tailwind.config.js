@@ -1,13 +1,5 @@
-// Add opacity variations of color
-// Alternative: https://tailwindcss.com/blog/tailwindcss-v3-1#easier-css-variable-color-configuration
-// function withOpacity(variableName) {
-//   return ({ opacityValue }) => {
-//     if (opacityValue !== undefined) {
-//       return `rgba(var(${variableName}), ${opacityValue})`
-//     }
-//     return `rgb(var(${variableName}))`
-//   }
-// }
+const themesPlugin = require('@/tailwind/themes-plugin.js') 
+
 
 module.exports = {
   // mode: 'jit',
@@ -28,52 +20,7 @@ module.exports = {
           800: 'rgb( var(--primary-800) / <alpha-value>)',
           900: 'rgb( var(--primary-900) / <alpha-value>)',
         }
-        
-        // primary: {
-        //   // Tailwind violet
-        //   DEFAULT: '#7c3aed',
-        //   50: '#f5f3ff',
-        //   100: '#ede9fe',
-        //   200: '#ddd6fe',
-        //   300: '#c4b5fd',
-        //   400: '#a78bfa',
-        //   500: '#8b5cf6',
-        //   600: '#7c3aed',
-        //   700: '#6d28d9',
-        //   800: '#5b21b6',
-        //   900: '#4c1d95',
-        //   950: '#2e1065',
-
-        //   // Tailwind teal
-        //   // DEFAULT: '#0d9488',
-        //   // 50: '#f0fdfa',
-        //   // 100: '#ccfbf1',
-        //   // 200: '#99f6e4',
-        //   // 300: '#5eead4',
-        //   // 400: '#2dd4bf',
-        //   // 500: '#14b8a6',
-        //   // 600: '#0d9488',
-        //   // 700: '#0f766e',
-        //   // 800: '#115e59',
-        //   // 900: '#134e4a',
-        //   // 950: '#042f2e',
-        // },
-        // gray: {
-        //   // Tailwind slate
-        //   DEFAULT: '#475569',
-        //   50:  '#f8fafc',
-        //   100: '#f1f5f9',
-        //   200: '#e2e8f0',
-        //   300: '#cbd5e1',
-        //   400: '#94a3b8',
-        //   500: '#64748b',
-        //   600: '#475569',
-        //   700: '#334155',
-        //   800: '#1e293b',
-        //   900: '#0f172a',
-        //   950: '#020617',
-        // }
-      },
+      }
     },
 
     fontSize: {
@@ -149,17 +96,6 @@ module.exports = {
       96:  'var(--spacing-96)',
     },
 
-    // colors: {
-    //   'color-white': '#ffffff',
-    //   'color-black': '#000000',
-    //   'color-primary': '#ff77e9',
-    //   'color-secondary': '#3ab7bf',
-    //   'color-accent-1': '#3f3cbb',
-    //   'color-accent-2': '#121063',
-    //   'color-accent-3': '#565584',
-    //   'color-accent-4': '#ecebff',
-    // },
-
     // fontFamily: {
     //   'font-primary': '',
     //   'font-secondary': '',
@@ -188,8 +124,12 @@ module.exports = {
   // ],
 
   plugins: [
+    // Our own themeing plugin
+    // require('@/tailwind/themes-plugin'),
+    themesPlugin,
+
     // Tailwind form styles
-    require("@tailwindcss/forms"),
+    require('@tailwindcss/forms'),
 
     // Generate safelist of classnames not to be purged
     // https://github.com/spatie/tailwind-safelist-generator
