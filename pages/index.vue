@@ -18,27 +18,31 @@ import { defineAsyncComponent } from 'vue';
 const page = {
   blocks: [
       {
-          "component": "NavNavbar",
-          "group": "Navigation",
-          "data": {},
+        id: 1,
+        name: 'NavNavbar',
+        group: 'Navigation',
+        data: {},
       },
       {
-          "component": "Hero",
-          "group": "Hero",
-          "data": {
-              "paddingTop": "6xl",
-              "paddingBottom": "6xl",
-          },
+        id: 2,
+        name: 'Hero',
+        group: 'Hero',
+        data: {
+            'paddingTop': '6xl',
+            'paddingBottom': '6xl',
+        },
       },
       {
-          "component": "Feature",
-          "group": "Feature",
-          "data": {},
+        id: 3,
+        name: 'Feature',
+        group: 'Feature',
+        data: {},
       },
       {
-          "component": "NavFooter",
-          "group": "Navigation",
-          "data": {},
+        id: 4,
+        name: 'NavFooter',
+        group: 'Navigation',
+        data: {},
       },
   ]
 }
@@ -46,11 +50,14 @@ const page = {
 let blocks = []
 
 blocks = page.blocks.map((block) => {
-  const {component, group, data} = block;
+  const {id, name, group, data} = block;
   
   return {
+    id: id,
+    name: name,
+    group: group,
     data: data,
-    component: defineAsyncComponent(() => import(`../components/${group}/${component}.vue`))
+    component: defineAsyncComponent(() => import(`../components/${group}/${name}.vue`))
   }
 })
 </script>
