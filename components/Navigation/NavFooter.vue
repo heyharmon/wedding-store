@@ -1,13 +1,13 @@
 <template>
-  <footer class="bg-gray-900" aria-labelledby="footer-heading">
+  <footer class="bg-primary-900" aria-labelledby="footer-heading">
     <h2 id="footer-heading" class="sr-only">Footer</h2>
     <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
         <div class="space-y-8">
-          <img class="h-7" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Company name" />
+          <img class="h-7" src="https://tailwindui.com/img/logos/mark.svg?color=white" alt="Company name" />
           <p class="text-sm leading-6 text-gray-300">Making the world a better place through constructing elegant hierarchies.</p>
           <div class="flex space-x-6">
-            <a v-for="item in navigation.social" :key="item.name" :href="item.href" class="text-gray-500 hover:text-gray-400">
+            <a v-for="item in navigation.social" :key="item.name" :href="item.href" class="text-gray-300 hover:text-gray-50">
               <span class="sr-only">{{ item.name }}</span>
               <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
             </a>
@@ -53,7 +53,7 @@
         </div>
       </div>
       <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-        <p class="text-xs leading-5 text-gray-400">&copy; 2020 Your Company, Inc. All rights reserved.</p>
+        <p class="text-xs leading-5 text-gray-300">&copy; 2020 Your Company, Inc. All rights reserved.</p>
       </div>
     </div>
   </footer>

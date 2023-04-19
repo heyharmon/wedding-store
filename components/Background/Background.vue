@@ -1,11 +1,11 @@
 <template>
   <!-- Background image-->
-  <div aria-hidden="true" class="absolute inset-0 overflow-hidden">
+  <!-- <div v-if="src" aria-hidden="true" class="absolute inset-0 overflow-hidden">
     <img :src="src" :alt="alt" class="h-full w-full object-cover object-center"/>
-  </div>
+  </div> -->
 
   <!-- Overlay -->
-  <div aria-hidden="true" class="absolute inset-0 bg-white opacity-70"/>
+  <div aria-hidden="true" class="absolute inset-0 bg-primary-50 opacity-70"/>
 
   <!-- Background via CSS only  -->
   <!-- <div aria-hidden="true" class="absolute inset-0 overflow-hidden bg-[url('@/assets/images/blurry-gradient-haikei.svg')] bg-cover bg-center opacity-30"></div> -->

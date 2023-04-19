@@ -6,7 +6,7 @@
         <dl class="col-span-2 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
           <div v-for="feature in features" :key="feature.name">
             <dt class="text-base font-semibold leading-7 text-gray-900">
-              <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+              <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-600">
                 <Icon :name="feature.icon" class="h-6 w-6 text-white" aria-hidden="true" />
               </div>
               {{ feature.name }}

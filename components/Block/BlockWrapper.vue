@@ -1,5 +1,5 @@
 <template>
-  <section class="relative bg-white">
+  <section class="relative bg-white" :data-theme="theme">
     <Background src="/images/blurry-gradient-haikei.svg"/>
 
     <div 
@@ -16,6 +16,9 @@
 import { PaddingTop, PaddingBottom } from '@/dictionaries/Padding.js'
 
 const props = defineProps({
+  theme: {
+    type: String
+  },
   paddingTop: {
     type: String,
     default: 'lg',

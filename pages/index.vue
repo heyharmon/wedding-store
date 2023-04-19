@@ -1,15 +1,10 @@
 <template>
-    <!-- <Hero padding-top="6xl" padding-bottom="6xl"/> -->
-    <!-- <Feature/> -->
-
-    <div>
-        <component 
-            v-for="(block, index) in blocks" 
-            :is="block.component"
-            v-bind="block.data"
-            :key="index"
-        />
-    </div>
+  <component 
+    v-for="(block, index) in blocks" 
+    :is="block.component"
+    v-bind="block.data"
+    :key="index"
+  />
 </template>
 
 <script setup>
@@ -18,28 +13,45 @@ import { defineAsyncComponent } from 'vue';
 const page = {
   blocks: [
       {
-        id: 1,
+        id: 'j4l2tnl',
         name: 'NavNavbar',
         group: 'Navigation',
         data: {},
       },
       {
-        id: 2,
+        id: 'slsn4l4',
         name: 'Hero',
         group: 'Hero',
         data: {
-            'paddingTop': '6xl',
-            'paddingBottom': '6xl',
+          'theme': 'candy',
+          'paddingTop': '5xl',
+          'paddingBottom': '5xl',
         },
       },
       {
-        id: 3,
+        id: 'akl24jl5l',
         name: 'Feature',
         group: 'Feature',
         data: {},
       },
       {
-        id: 4,
+        id: 'akjh245r',
+        name: 'FeatureOffsetTwoColGrid',
+        group: 'Feature',
+        data: {},
+      },
+      {
+        id: 'nmva3e4r',
+        name: 'HeroVertical',
+        group: 'Hero',
+        data: {
+          'theme': 'rainforest',
+          'paddingTop': '5xl',
+          'paddingBottom': 'none',
+        },
+      },
+      {
+        id: 'aklkh23l45',
         name: 'NavFooter',
         group: 'Navigation',
         data: {},

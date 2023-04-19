@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* @tailwind base; */
+/* @tailwind components; */
+/* @tailwind utilities; */
 
 /* Color themes
  * Resource: https://blog.logrocket.com/applying-dynamic-styles-tailwind-css/
@@ -54,12 +54,11 @@
     --primary-900: 89 0 40;
 }
 
-@base {
-    /* Fluid font size variables
+ /* Fluid font size variables
  * Reference: https://play.tailwindcss.com/Gf8bSHpsyx
  * Resource: https://utopia.fyi/type/calculator
  */
-:root {
+ :root {
     --font-size-xs:   clamp(0.90rem,  -0.25vw + 0.85rem, 0.57rem);
     --font-size-sm:   clamp(0.95rem,  -0.15vw + 0.92rem, 0.75rem);
     --font-size-base: clamp(1rem,     0vw     + 1rem,    1rem);
@@ -111,5 +110,4 @@
     --spacing-72: clamp(15.01rem, 30.62vw + 7.36rem, 44.1rem);
     --spacing-80: clamp(16.89rem, 43.96vw + 5.9rem, 58.66rem);
     --spacing-96: clamp(19rem, 62.12vw + 3.47rem, 78.01rem);
-}
 }
