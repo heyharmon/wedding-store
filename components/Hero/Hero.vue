@@ -1,5 +1,5 @@
 <template>
-  <Block :padding-top="paddingTop" :padding-bottom="paddingBottom">
+  <BlockWrapper :padding-top="paddingTop" :padding-bottom="paddingBottom">
     <!-- Pretitle -->
     <div class="mb-8 flex justify-center">
         <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
@@ -32,85 +32,18 @@
           <span aria-hidden="true">→</span>
         </a>
       </div>
-    </Block>
+    </BlockWrapper>
 </template>
 
 <script setup>
-// import Block from '@/components/blocks/Block.vue'
-// import Button from '~/components/elements/Button/Button.vue.js'
-
-// const paddingVertical = ref('11')
-
 const props = defineProps({
   paddingTop: {
     type: String,
     default: 'lg',
-    // validator: (value) => {
-    //   return Object.keys(PaddingTop).includes(value)
-    // }
   },
   paddingBottom: {
     type: String,
     default: 'lg',
-    // validator: (value) => {
-    //   return Object.keys(PaddingBottom).includes(value)
-    // }
   },
 })
-
-// const PaddingTop = {
-//     'sm': 'pt-10',
-//     'md': 'pt-20',
-//     'base': 'pt-32',
-//     'lg': 'pt-36',
-// }
-
-// const PaddingBottom = {
-//     'sm': 'pb-10',
-//     'md': 'pb-20',
-//     'base': 'pb-32',
-//     'lg': 'pb-36',
-// }
-
-// const paddingTop = computed(() => {
-//   return PaddingTop[props.padding_top]
-// })
-
-// const paddingBottom = computed(() => {
-//   return PaddingBottom[props.padding_bottom]
-// })
-
-// const classBinds = computed(() => {
-//   let classSet = ''
-
-//   classSet = appendToSet('pt-' + props.paddingTop, classSet)
-//   classSet = appendToSet('pb-' + props.paddingbottom, classSet)
-  
-//   return classSet
-// })
-
-// const classBinds = computed(() => {
-//   let classSet = ''
-
-//   classSet = appendToSet('pt-' + props.paddingTop, classSet)
-//   classSet = appendToSet('pb-' + props.paddingbottom, classSet)
-  
-//   return classSet
-// })
-
-// const appendToSet = (str, set) => {
-//   if (set.trim().length) {
-//     set += ` ${str}`;
-//   } else {
-//     set = `${str}`;
-//   }
-//   return set;
-// };
-
-// const classNames = computed(() => {
-//   return [
-//     'pt-' + props.paddingTop,
-//     'pb-' + props.paddingBottom
-//   ]
-// })
 </script>

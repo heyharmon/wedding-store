@@ -1,19 +1,9 @@
 <template>
   <section class="relative bg-white">
-    <!-- Background image w/ overlay-->
-    <!-- <div aria-hidden="true" class="absolute inset-0 overflow-hidden ">
-      <img src="https://tailwindui.com/img/ecommerce-images/home-page-01-hero-full-width.jpg" alt="" class="h-full w-full object-cover object-center" />
-    </div>
-    <div aria-hidden="true" class="absolute inset-0 bg-white opacity-90" /> -->
-
-    <!-- Background  -->
-    <div aria-hidden="true" class="absolute inset-0 overflow-hidden bg-[url('~/assets/images/blurry-gradient-haikei.svg')] bg-cover bg-center opacity-30"></div>
+    <Background src="/images/blurry-gradient-haikei.svg"/>
 
     <div 
-      :class="[
-        PaddingTop[paddingTop], 
-        PaddingBottom[paddingBottom]
-      ]"  
+      :class="[PaddingTop[paddingTop], PaddingBottom[paddingBottom]]"  
       class="relative flex flex-col mx-auto max-w-3xl items-center px-6 text-center"
     >
       <slot/>
