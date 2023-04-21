@@ -14,46 +14,45 @@ const page = {
   blocks: [
       {
         id: 'j4l2tnl',
-        name: 'NavNavbar',
         group: 'Navigation',
+        name: 'NavNavbar',
         data: {},
       },
       {
         id: 'slsn4l4',
-        name: 'Hero',
         group: 'Hero',
+        name: 'Hero',
         data: {
-          'theme': 'theme-2',
           'paddingTop': '5xl',
           'paddingBottom': '5xl',
         },
       },
       {
         id: 'akl24jl5l',
-        name: 'Feature',
         group: 'Feature',
+        name: 'Feature',
         data: {},
       },
       {
         id: 'akjh245r',
-        name: 'FeatureOffsetTwoColGrid',
         group: 'Feature',
+        name: 'FeatureOffsetTwoColGrid',
         data: {},
       },
-      {
-        id: 'nmva3e4r',
-        name: 'HeroVertical',
-        group: 'Hero',
-        data: {
-          'theme': 'theme-1',
-          'paddingTop': '5xl',
-          'paddingBottom': 'none',
-        },
-      },
+      // {
+      //   id: 'nmva3e4r',
+      //   group: 'Hero',
+      //   name: 'HeroVertical',
+      //   data: {
+      //     'theme': 'theme-2',
+      //     'paddingTop': '5xl',
+      //     'paddingBottom': 'none',
+      //   },
+      // },
       {
         id: 'aklkh23l45',
-        name: 'NavFooter',
         group: 'Navigation',
+        name: 'NavFooter',
         data: {},
       },
   ]

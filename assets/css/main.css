@@ -5,8 +5,7 @@
 /* Color theme overides
  * Resource: https://blog.logrocket.com/applying-dynamic-styles-tailwind-css/
  */
-:root,
-[data-theme='base'] {
+:root {
     --primary-50: 240 243 255;
     --primary-100: 224 231 255;
     --primary-200: 208 215 247;
@@ -18,7 +17,7 @@
     --primary-800: 56 48 162;
     --primary-900: 39 33 115;
 }
-[data-theme='theme-1'] {
+/* [data-theme='theme-1'] {
     --primary-50: 236 253 244;
     --primary-100: 201 242 222;
     --primary-200: 157 233 198;
@@ -41,6 +40,13 @@
     --primary-700: 161 0 75;
     --primary-800: 132 0 61;
     --primary-900: 89 0 40;
+} */
+
+/* Setup base element css variables */
+:root {
+    --button: var(--primary-500);
+    --button-hover: var(--primary-600);
+    --button-text: var(--white);
 }
 
  /* Fluid font size variables
