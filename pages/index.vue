@@ -23,7 +23,7 @@ const page = {
         name: 'Hero',
         group: 'Hero',
         data: {
-          'theme': 'candy',
+          'theme': 'theme-2',
           'paddingTop': '5xl',
           'paddingBottom': '5xl',
         },
@@ -45,7 +45,7 @@ const page = {
         name: 'HeroVertical',
         group: 'Hero',
         data: {
-          'theme': 'rainforest',
+          'theme': 'theme-1',
           'paddingTop': '5xl',
           'paddingBottom': 'none',
         },

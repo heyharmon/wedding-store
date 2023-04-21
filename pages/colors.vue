@@ -40,9 +40,9 @@
         </div>
 
         <div class="mt-8">
-            <h2 class="text-md font-semibold text-slate-900 mb-2">Rainforest</h2>
+            <h2 class="text-md font-semibold text-slate-900 mb-2">Theme 1</h2>
 
-            <div class="flex gap-4" data-theme="rainforest">
+            <div class="flex gap-4" data-theme="theme-1">
                 <div class="grid h-16 w-16 place-items-end bg-primary-50 rounded-md p-1 font-semibold leading-none text-primary-900">
                 50
                 </div>
@@ -77,9 +77,9 @@
         </div>
 
         <div class="mt-8">
-            <h2 class="text-md font-semibold text-slate-900 mb-2">Candy</h2>
+            <h2 class="text-md font-semibold text-slate-900 mb-2">Theme 2</h2>
 
-            <div class="flex gap-4" data-theme="candy">
+            <div class="flex gap-4" data-theme="theme-2">
                 <div class="grid h-16 w-16 place-items-end bg-primary-50 rounded-md p-1 font-semibold leading-none text-primary-900">
                 50
                 </div>

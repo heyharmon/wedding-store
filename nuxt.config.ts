@@ -8,6 +8,10 @@ export default defineNuxtConfig({
     'nuxt-icon',
   ],
 
+  devtools: {
+    enabled: false,
+  },
+
   headlessui: {
     // Change the default component prefix
     prefix: 'Headless'

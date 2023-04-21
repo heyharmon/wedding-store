@@ -14,7 +14,7 @@ function getRgbChannels(hex) {
 // Color themes
 // ------------------------------
 const themes = {
-  base: {
+  'base': {
     50: '#eef2ff',
     100: '#e0e7ff',
     200: '#d0d7f7',
@@ -26,7 +26,7 @@ const themes = {
     800: '#3830a2',
     900: '#272173',
   },
-  rainforest: {
+  'theme-1': {
     50: '#ecfdf4',
     100: '#c9f2de',
     200: '#9de9c6',
@@ -38,7 +38,7 @@ const themes = {
     800: '#005038',
     900: '#003422',
   },
-  candy: {
+  'theme-2': {
     50: '#fdf2f8',
     100: '#f7e2ee',
     200: '#f8cce5',
