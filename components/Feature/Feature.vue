@@ -1,5 +1,5 @@
 <template>
-  <section :data-theme="theme" :class="[PaddingTop[paddingTop], PaddingBottom[paddingBottom]]" class="overflow-hidden bg-white">
+  <section :data-theme="theme" :class="[PaddingTop[padding.top], PaddingBottom[padding.bottom]]" class="overflow-hidden bg-white">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
         <div class="lg:pr-8 lg:pt-4">
@@ -38,13 +38,15 @@ import { PaddingTop, PaddingBottom } from '@/dictionaries/Padding.js'
 const props = defineProps({
   theme: String,
   image: Object,
-  paddingTop: {
-    type: String,
-    default: '6xl',
-  },
-  paddingBottom: {
-    type: String,
-    default: '6xl',
+  padding: {
+    top: {
+      type: String,
+      default: '5xl'
+    },
+    bottom: {
+      type: String,
+      default: '5xl'
+    },
   },
 })
 

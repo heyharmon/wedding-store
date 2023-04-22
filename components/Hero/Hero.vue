@@ -1,9 +1,9 @@
 <template>
   <section :data-theme="theme" class="relative bg-white">
     <!-- Bg image -->
-    <Background overlay="overlay" :image="image"/>
+    <Background v-bind="background"/>
 
-    <div :class="[PaddingTop[paddingTop], PaddingBottom[paddingBottom]]" class="relative flex flex-col mx-auto max-w-3xl items-center px-6 text-center">
+    <div :class="[PaddingTop[padding.top], PaddingBottom[padding.bottom]]" class="relative flex flex-col mx-auto max-w-3xl items-center px-6 text-center">
       <!-- Pretitle -->
       <div class="mb-8 flex justify-center">
         <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
@@ -45,13 +45,10 @@ const props = defineProps({
   theme: String,
   overlay: Boolean,
   image: Object,
-  paddingTop: {
-    type: String,
-    default: '6xl',
-  },
-  paddingBottom: {
-    type: String,
-    default: '6xl',
+  background: Object,
+  padding: {
+    top: String,
+    bottom: String,
   },
 })
 </script>

@@ -1,44 +1,53 @@
 <template>
-  <BlockWrapper :theme="theme" :padding-top="paddingTop" :padding-bottom="paddingBottom">
-    <div class="mx-auto max-w-2xl text-center">
-      <!-- Title -->
-      <h1 class="text-5xl font-bold tracking-tight text-gray-900">
-        Data to enrich your online business
-      </h1>
+  <section :data-theme="theme" class="relative isolate bg-white">
+    <!-- Bg image -->
+    <Background v-bind="background"/>
+    
+    <div :class="[PaddingTop[padding.top], PaddingBottom[padding.bottom]]" class="relative">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <!-- Title -->
+          <h1 class="text-5xl font-bold tracking-tight text-gray-900">
+            Data to enrich your online business
+          </h1>
 
-      <!-- Subtitle -->
-      <p class="mt-6 text-xl leading-9 text-gray-600">
-        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat fcommodo. Elit sunt amet fugiat.
-      </p>
+          <!-- Subtitle -->
+          <p class="mt-6 text-xl leading-9 text-gray-600">
+            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat fcommodo. Elit sunt amet fugiat.
+          </p>
 
-      <!-- Button group -->
-      <div class="mt-10 flex items-center justify-center gap-x-6">
-        <Button label="Hello World" icon="heroicons:cloud-arrow-up"/>
+          <!-- Button group -->
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <Button label="Hello World" icon="heroicons:cloud-arrow-up"/>
 
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
-          Learn more 
-          <span aria-hidden="true">→</span>
-        </a>
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
+              Learn more 
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-16 flow-root sm:mt-24">
+          <div class="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
+            <Image v-bind="image" width="2432" height="1442" class="rounded-md shadow-2xl ring-1 ring-gray-900/10"/>
+          </div>
+        </div>
       </div>
     </div>
-    
-    <!-- Image -->
-    <img src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png" alt="App screenshot" width="2432" height="1442" class="mt-16 rounded-tl-md rounded-tr-md bg-white/5 shadow-2xl ring-1 ring-white/10 sm:mt-24" />
-  </BlockWrapper>
+  </section>
 </template>
 
 <script setup>
+import { PaddingTop, PaddingBottom } from '@/dictionaries/Padding.js'
+
 const props = defineProps({
-  theme: {
-    type: String,
-  },
-  paddingTop: {
-    type: String,
-    default: 'lg',
-  },
-  paddingBottom: {
-    type: String,
-    default: 'lg',
+  theme: String,
+  overlay: Boolean,
+  image: Object,
+  background: Object,
+  padding: {
+    top: String,
+    bottom: String,
   },
 })
 </script>
