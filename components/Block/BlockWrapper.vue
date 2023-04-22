@@ -1,6 +1,6 @@
 <template>
   <section class="relative bg-white" :data-theme="theme">
-    <Background src="/images/blurry-gradient-haikei.svg"/>
+    <!-- <Background src="/images/blurry-gradient-haikei.svg"/> -->
 
     <div 
       :class="[PaddingTop[paddingTop], PaddingBottom[paddingBottom]]"  

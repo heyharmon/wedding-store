@@ -61,7 +61,7 @@ const mobileMenuOpen = ref(false)
 const navigation = [
   { 
     name: 'Product',
-    href: '#',
+    href: '/homepage',
     children: [
       { name: 'Analytics', href: '#' },
       { name: 'Engagement', href: '#' },
@@ -73,7 +73,7 @@ const navigation = [
   },
   { 
     name: 'Features',
-    href: '#',
+    href: '/page-1',
   },
   { 
     name: 'Marketplace',

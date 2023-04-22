@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-hidden bg-white py-24 sm:py-32">
+  <section :data-theme="theme" :class="[PaddingTop[paddingTop], PaddingBottom[paddingBottom]]" class="overflow-hidden bg-white">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
         <div class="lg:pr-8 lg:pt-4">
@@ -25,21 +25,26 @@
             </dl>
           </div>
         </div>
-        <img src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png" alt="Product screenshot" class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0" width="2432" height="1442" />
+
+        <Image v-bind="image" class="w-[48rem] sm:w-[57rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"/>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
+import { PaddingTop, PaddingBottom } from '@/dictionaries/Padding.js'
+
 const props = defineProps({
+  theme: String,
+  image: Object,
   paddingTop: {
     type: String,
-    default: 'lg',
+    default: '6xl',
   },
   paddingBottom: {
     type: String,
-    default: 'lg',
+    default: '6xl',
   },
 })
 

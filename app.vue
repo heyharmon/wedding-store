@@ -82,7 +82,7 @@
 </template>
 
 <script setup>
-import { generatePalette } from '@/composables/useColors'
+import { generatePalette } from '@/utils/colors'
 
 const color1 = computed(() => generatePalette('#84cc16'))
 // const color2 = computed(() => generatePalette('#EBB02D'))

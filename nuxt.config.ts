@@ -4,8 +4,14 @@ export default defineNuxtConfig({
   
   modules: [
     '@nuxtjs/tailwindcss',
+    '@nuxt/image-edge',
     'nuxt-headlessui',
     'nuxt-icon',
+  ],
+
+  components: [
+    '~/components',
+    {path: '~/components/Base'},
   ],
 
   devtools: {
@@ -13,8 +19,7 @@ export default defineNuxtConfig({
   },
 
   headlessui: {
-    // Change the default component prefix
-    prefix: 'Headless'
+    prefix: 'Headless' // Change the default component prefix
   },
 
   css: [
