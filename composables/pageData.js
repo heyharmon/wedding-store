@@ -18,24 +18,21 @@ export default [
         name: 'Hero',
         data: {
           padding: {
-            top: '6xl',
-            bottom: '6xl',
+            paddingTop: '6xl',
+            paddingBottom: '6xl',
           },
           background: {
-            overlay: true,
-          }
+            image: {
+              src: 'https://tailwindui.com/img/beams-home@95.jpg'
+            },
+          },
         },
       },
       {
         id: 'akl24jl5l',
         group: 'Feature',
         name: 'Feature',
-        data: {
-          padding: {
-            top: '6xl',
-            bottom: '6xl',
-          },
-        },
+        data: {},
       },
       {
         id: 'aklkh23l45',
@@ -65,8 +62,8 @@ export default [
         name: 'Hero',
         data: {
           padding: {
-            top: '6xl',
-            bottom: '6xl',
+            paddingTop: '6xl',
+            paddingBottom: '6xl',
           },
           background: {
             overlay: true,
@@ -78,10 +75,6 @@ export default [
         group: 'Feature',
         name: 'Feature',
         data: {
-          padding: {
-            top: '6xl',
-            bottom: '6xl',
-          },
           image: {
             src: 'https://tailwindui.com/img/component-images/dark-project-app-screenshot.png',
             alt: 'The image alt',
@@ -92,12 +85,7 @@ export default [
         id: 'akjh245r',
         group: 'Feature',
         name: 'FeatureOffsetTwoColGrid',
-        data: {
-          padding: {
-            top: '6xl',
-            bottom: '6xl',
-          },
-        },
+        data: {},
       },
       {
         id: 'nmva3e4r',

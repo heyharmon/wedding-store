@@ -1,9 +1,9 @@
 <template>
-  <section :data-theme="theme" class="relative bg-white">
+  <BlockWrapper :data-theme="theme" v-bind="padding">
     <!-- Bg image -->
     <Background v-bind="background"/>
 
-    <div :class="[PaddingTop[padding.top], PaddingBottom[padding.bottom]]" class="relative flex flex-col mx-auto max-w-3xl items-center px-6 text-center">
+    <div class="relative flex flex-col mx-auto max-w-3xl items-center px-6 text-center">
       <!-- Pretitle -->
       <div class="mb-8 flex justify-center">
         <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
@@ -35,20 +35,15 @@
         </a>
       </div>
     </div>
-  </section>
+  </BlockWrapper>
 </template>
 
 <script setup>
-import { PaddingTop, PaddingBottom } from '@/dictionaries/Padding.js'
-
 const props = defineProps({
   theme: String,
   overlay: Boolean,
   image: Object,
   background: Object,
-  padding: {
-    top: String,
-    bottom: String,
-  },
+  padding: Object,
 })
 </script>

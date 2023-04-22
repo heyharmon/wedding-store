@@ -1,10 +1,9 @@
 <template>
-  <section :data-theme="theme" class="relative isolate bg-white">
+  <BlockWrapper :data-theme="theme" v-bind="padding" class="isolate">
     <!-- Bg image -->
     <Background v-bind="background"/>
     
-    <div :class="[PaddingTop[padding.top], PaddingBottom[padding.bottom]]" class="relative">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
           <!-- Title -->
           <h1 class="text-5xl font-bold tracking-tight text-gray-900">
@@ -33,21 +32,15 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+  </BlockWrapper>
 </template>
 
 <script setup>
-import { PaddingTop, PaddingBottom } from '@/dictionaries/Padding.js'
-
 const props = defineProps({
   theme: String,
   overlay: Boolean,
   image: Object,
   background: Object,
-  padding: {
-    top: String,
-    bottom: String,
-  },
+  padding: Object,
 })
 </script>

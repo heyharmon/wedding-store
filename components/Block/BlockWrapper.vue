@@ -1,37 +1,20 @@
 <template>
-  <section class="relative bg-white" :data-theme="theme">
-    <!-- <Background src="/images/blurry-gradient-haikei.svg"/> -->
-
-    <div 
-      :class="[PaddingTop[paddingTop], PaddingBottom[paddingBottom]]"  
-      class="relative flex flex-col mx-auto max-w-3xl items-center px-6 text-center"
-    >
-      <slot/>
-    </div>
+  <section :class="[PaddingTop[paddingTop], PaddingBottom[paddingBottom]]" class="relative bg-white">
+    <slot/>
   </section>
 </template>
 
 <script setup>
-//   import { computed } from 'vue'
 import { PaddingTop, PaddingBottom } from '@/dictionaries/Padding.js'
 
 const props = defineProps({
-  theme: {
-    type: String
-  },
   paddingTop: {
     type: String,
-    default: 'lg',
-    // validator: (value) => {
-    //   return Object.keys(PaddingTop).includes(value)
-    // }
+    default: '5xl',
   },
   paddingBottom: {
     type: String,
-    default: 'lg',
-    // validator: (value) => {
-    //   return Object.keys(PaddingBottom).includes(value)
-    // }
+    default: '5xl',
   },
 })
 
