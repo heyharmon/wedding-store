@@ -32,16 +32,52 @@
 
     <!-- For each theme, apply the primary, secondary and accent variables to utility variables
          such as text color, background color, button background color, etc. -->
-    <!-- <component is="style">
+    
+    <!-- Is this too much or do we just need enough to theme blocks including header and footer?
+         We should lean heavily on themes. Use these extra variables for specific design traits
+         such as corner roundness? -->
+    <component is="style">
       :root {
-        --text-heading-color:    var(--gray-500);
-        --text-body-color:       var(--gray-500);
-        --text-subtle-color:     var(--gray-500);
-        --button-bg-color:       var(--primary-500);
-        --button-bg-color-hover: var(--primary-600);
-        --button-text-color:     var(--white);
+        <!-- theme instead
+        --nav-links-color:                 var(--gray-900);
+        --nav-links-color-hover:           var(--gray-900);
+        --nav-bg-color:                    var(--primary-500); 
+        -->
+
+        --heading-h1-color:                var(--gray-900);
+        --heading-h2-color:                var(--gray-900);
+        --heading-h3-color:                var(--gray-900);
+        --heading-h4-color:                var(--gray-900);
+        --heading-h5-color:                var(--gray-900);
+        --heading-h6-color:                var(--gray-900);
+
+        --text-color:                      var(--gray-700);
+        --text-highlight-color:            var(--gray-700);
+        --text-subtle-color:               var(--gray-500);
+
+        --button-primary-bg-color:         var(--primary-500);
+        --button-primary-bg-color-hover:   var(--primary-600);
+        --button-primary-text-color:       var(--white);
+        --button-secondary-bg-color:       var(--primary-500);
+        --button-secondary-bg-color-hover: var(--primary-600);
+        --button-secondary-text-color:     var(--white);
+        --button-tertiary-bg-color:        var(--primary-500);
+        --button-tertiary-bg-color-hover:  var(--primary-600);
+        --button-tertiary-text-color:      var(--white);
+
+        --bg-color:                        var(--white);
+        --bg-overlay-color:                var(--white);
+
+        --card-bg-color:                   var(--white);
+        --card-bg-color-hover:             var(--gray-100);
+
+        <!-- theme instead
+        --footer-links-color:              var(--gray-900);
+        --footer-links-color-hover:        var(--gray-900);
+        --footer-bg-color:                 var(--primary-500);
+        -->
       }
-    </component> -->
+    </component>
   </div>
 </template>
 
