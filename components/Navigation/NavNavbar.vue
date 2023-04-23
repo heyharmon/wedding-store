@@ -1,18 +1,38 @@
 <template>
   <header class="bg-white">
     <!-- Desktop -->
-    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">Your Company</span>
           <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg" alt="" />
         </a>
       </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm font-semibold leading-6 text-gray-900">{{ item.name }}</a>
+      <div class="hidden lg:flex lg:gap-x-4">
+        <NuxtLink 
+          v-for="item in navigation" 
+          :key="item.name" 
+          :to="item.href" 
+          :class="{
+            'text-primary-500': item.href === $route.path,
+            'text-gray-900': item.href !== $route.path
+          }"
+          class="text-sm font-semibold leading-6 rounded-lg px-3 py-2 hover:bg-gray-50"
+        >
+          {{ item.name }}
+        </NuxtLink>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+        <NuxtLink 
+          to="#" 
+          :class="{
+            'text-primary-500': '#' === $route.path,
+            'text-gray-900': '#' !== $route.path
+          }"
+          class="text-sm font-semibold leading-6 rounded-lg px-3 py-2 hover:bg-gray-50"
+        >
+        Log in <span aria-hidden="true">&rarr;</span>
+        </NuxtLink>
       </div>
 
       <!-- Mobile menu trigger -->
@@ -42,7 +62,18 @@
           <div class="mt-6 flow-root">
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="space-y-2 py-6">
-                <a v-for="item in navigation" :key="item.name" :href="item.href" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ item.name }}</a>
+                <NuxtLink 
+                  v-for="item in navigation" 
+                  :key="item.name" 
+                  :to="item.href" 
+                  :class="{
+                    'text-primary-500': item.href === $route.path,
+                    'text-gray-900': item.href !== $route.path
+                  }"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50"
+                >
+                  {{ item.name }}
+                </NuxtLink>
               </div>
               <div class="py-6">
                 <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
@@ -77,7 +108,7 @@ const navigation = [
   },
   { 
     name: 'Marketplace',
-    href: '#',
+    href: 'https://google.com',
   },
   { 
     name: 'Company',
