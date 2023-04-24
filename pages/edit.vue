@@ -3,6 +3,12 @@
       v-for="(block, index) in blocks"
       :key="index"
       :active="block.id === activeBlockId"
+      :total="blocks.length"
+      :index="index"
+      :block="block"
+      @move="handleMove"
+      @delete="handleDelete"
+      @close="handleClose"
     >
         <component
           :is="block.component"
@@ -19,19 +25,31 @@ import BlockEditor from '@/components/Editor/BlockEditor.vue'
 let activeBlockId = ref('')
 
 function toggleActiveBlockId(id) {
-    this.activeBlockId = id;
+  activeBlockId.value = id;
+}
+
+function handleMove({index, block, direction} = {}) {
+  console.log('moving...')
+}
+
+function handleDelete(block) {
+  console.log('deleting...')
+}
+
+function handleClose() {
+  activeBlockId.value = ''
 }
 
 const page = {
   blocks: [
       {
-        id: 1,
+        id: 'aeg34w556t',
         name: 'NavNavbar',
         group: 'Navigation',
         data: {},
       },
       {
-        id: 2,
+        id: 'v40j3854thg',
         name: 'Hero',
         group: 'Hero',
         data: {
@@ -40,13 +58,13 @@ const page = {
         },
       },
       {
-        id: 3,
+        id: 'mip024wtf',
         name: 'Feature',
         group: 'Feature',
         data: {},
       },
       {
-        id: 4,
+        id: 'af24tq3g5v',
         name: 'NavFooter',
         group: 'Navigation',
         data: {},

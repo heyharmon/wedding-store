@@ -34,4 +34,10 @@ let blocks = computed(() => {
     }
   })
 })
+
+onMounted(() => {
+  useHead({
+    title: page.title
+  })
+})
 </script>
