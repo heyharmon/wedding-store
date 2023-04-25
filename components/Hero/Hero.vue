@@ -16,9 +16,18 @@
       </div>
 
       <!-- Title -->
-      <h1 class="text-5xl font-bold tracking-tight text-gray-900">
-        Data to enrich your online business
-      </h1>
+      <h1 class="text-5xl font-bold tracking-tight text-gray-900">{{ title }}</h1>
+
+      <!-- <InlineTextEditor id="034oj3h" @updated="" class="width-fit text-sm">
+        <h1 class="text-5xl font-bold tracking-tight text-gray-900">{{ title }}</h1>
+      </InlineTextEditor> -->
+
+      <!-- <h1 class="text-5xl font-bold tracking-tight text-gray-900">
+        <InlineTextEditor id="034oj3h" @updated="" class="width-fit text-sm">
+          {{ title }}
+        </InlineTextEditor>
+      </h1> -->
+      
 
       <!-- Subtitle -->
       <p class="mt-6 text-xl leading-9 text-gray-600">
@@ -40,6 +49,7 @@
 
 <script setup>
 const props = defineProps({
+  title: String,
   theme: String,
   overlay: Boolean,
   image: Object,

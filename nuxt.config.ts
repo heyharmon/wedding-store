@@ -12,6 +12,7 @@ export default defineNuxtConfig({
   components: [
     '~/components',
     {path: '~/components/Base'},
+    {path: '~/components/Editor'},
   ],
 
   devtools: {

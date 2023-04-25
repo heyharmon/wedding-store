@@ -17,6 +17,7 @@
     "nuxt-icon": "^0.3.3"
   },
   "dependencies": {
-    "hex-rgb": "^5.0.0"
+    "hex-rgb": "^5.0.0",
+    "lodash": "^4.17.21"
   }
 }

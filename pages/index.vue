@@ -7,8 +7,9 @@
       <Button to="/page-1">Page 1</Button>
     </div>
 
-    <VideoPlayer src="https://www.youtube.com/embed/MbZ7T71h76w"/>
+    <!-- <VideoPlayer src="https://www.youtube.com/embed/MbZ7T71h76w"/> -->
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+</script>
