@@ -17,6 +17,7 @@ export default [
         group: 'Hero',
         name: 'Hero',
         data: {
+          title: 'Hello world. Enrich your online business.',
           padding: {
             paddingTop: '6xl',
             paddingBottom: '6xl',
@@ -61,6 +62,7 @@ export default [
         group: 'Hero',
         name: 'Hero',
         data: {
+          title: 'Hello world. Enrich your online business.',
           padding: {
             paddingTop: '6xl',
             paddingBottom: '6xl',
@@ -93,6 +95,7 @@ export default [
         name: 'HeroVertical',
         data: {
           theme: 'theme-2',
+          title: 'Hello world. Enrich your online business.',
           padding: {
             top: '6xl',
             bottom: '6xl',

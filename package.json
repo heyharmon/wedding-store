@@ -17,7 +17,12 @@
     "nuxt-icon": "^0.3.3"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.4.9",
     "hex-rgb": "^5.0.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "pinia": "^2.0.35"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }

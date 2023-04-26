@@ -8,52 +8,41 @@
 </template>
 
 <script setup>
-import set from 'lodash/set';
-import get from 'lodash/get';
 import { defineAsyncComponent } from 'vue';
+// import { usePageStore } from '@/stores/pageStore'
 
 const route = useRoute()
+const store = usePageStore()
 
-const {data: page, pending, refresh} = await useAsyncData('page', () => $fetch('/api/page'))
+// const { data } = await useAsyncData('page', () => store.show(route.params.slug))
+await useAsyncData('page', () => store.show(route.params.slug))
+// const {data: page, pending, refresh} = await useAsyncData('page', () => $fetch(`/api/pages?slug=${route.params.slug}`))
 
-// const pages = usePages()
+let blocks = store.page.blocks.map((block) => {
+  const {name, group, data} = block;
+  
+  return {
+    name: name,
+    group: group,
+    data: data,
+    component: defineAsyncComponent(() => import(`../components/${group}/${name}.vue`))
+  }
+})
 
-// let page = computed(() => {
-//   let slug = route.params.slug ?? 'homepage'
-
-//   return pages.find((page) => {
-//     return page.slug === slug
+// let blocks = computed(() => {
+//   return store.page.blocks.map((block) => {
+//     const {name, group, data} = block;
+    
+//     return {
+//       name: name,
+//       group: group,
+//       data: data,
+//       component: defineAsyncComponent(() => import(`../components/${group}/${name}.vue`))
+//     }
 //   })
 // })
 
-let blocks = computed(() => {
-  return page.value.blocks.map((block) => {
-    const {name, group, data} = block;
-    
-    return {
-      name: name,
-      group: group,
-      data: data,
-      component: defineAsyncComponent(() => import(`../components/${group}/${name}.vue`))
-    }
-  })
-})
-
-// function getComponentProperty(component, path) {
-//   return get(component, path, "");
-// }
-
-// function setComponentProperty(componentId, path, value) {
-//   const componentIndex = page.components.findIndex(
-//     c => c.props.id === componentId
-//   );
-//   const fullPath = `components[${componentIndex}].props.${path}`;
-//   set(page, fullPath, value);
-//   saveToLocalStorage();
-//   return page;
-// }
-
 useHead({
-  title: page.value.title
+  title: store.page.title
 })
 </script>

@@ -3,10 +3,11 @@ export default defineNuxtConfig({
   // ssr: true, 
   
   modules: [
-    '@nuxtjs/tailwindcss',
-    '@nuxt/image-edge',
     'nuxt-headlessui',
     'nuxt-icon',
+    '@nuxtjs/tailwindcss',
+    '@nuxt/image-edge',
+    ['@pinia/nuxt', {autoImports: ['defineStore', 'acceptHMRUpdate']}]
   ],
 
   components: [
@@ -14,6 +15,10 @@ export default defineNuxtConfig({
     {path: '~/components/Base'},
     {path: '~/components/Editor'},
   ],
+
+  imports: {
+    dirs: ['stores'],
+  },
 
   devtools: {
     enabled: false,
