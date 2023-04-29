@@ -86,7 +86,7 @@ export default [
       {
         id: 'akjh245r',
         group: 'Feature',
-        name: 'FeatureOffsetTwoColGrid',
+        name: 'FeatureWithTwoColGrid',
         data: {},
       },
       {

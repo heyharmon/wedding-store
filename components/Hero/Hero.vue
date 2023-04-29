@@ -1,7 +1,7 @@
 <template>
   <BlockWrapper :data-theme="theme" v-bind="padding">
     <!-- Bg image -->
-    <Background v-bind="background"/>
+    <BaseBackground v-bind="background"/>
 
     <div class="relative flex flex-col mx-auto max-w-3xl items-center px-6 text-center">
       <!-- Pretitle -->
@@ -16,7 +16,8 @@
       </div>
 
       <!-- Title -->
-      <h1 class="text-5xl font-bold tracking-tight text-gray-900">{{ title }}</h1>
+      <!-- <h1 class="text-5xl font-bold tracking-tight text-gray-900">{{ title }}</h1> -->
+      <BaseHeading as="h1">{{ title }}</BaseHeading>
 
       <!-- <InlineTextEditor id="034oj3h" @updated="" class="width-fit text-sm">
         <h1 class="text-5xl font-bold tracking-tight text-gray-900">{{ title }}</h1>
@@ -27,16 +28,15 @@
           {{ title }}
         </InlineTextEditor>
       </h1> -->
-      
 
       <!-- Subtitle -->
       <p class="mt-6 text-xl leading-9 text-gray-600">
-        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat fcommodo. Elit sunt amet fugiat.
+        {{ subtitle }}
       </p>
 
       <!-- Button group -->
       <div class="mt-10 flex items-center justify-center gap-x-6">
-        <Button to="/homepage" rel="next" label="Homepage" icon="heroicons:cloud-arrow-up"/>
+        <BaseButton to="/homepage" rel="next" label="Homepage" icon="heroicons:cloud-arrow-up"/>
 
         <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
           Learn more 
@@ -50,10 +50,28 @@
 <script setup>
 const props = defineProps({
   title: String,
+  subtitle: String,
+  background: Object,
   theme: String,
   overlay: Boolean,
-  image: Object,
-  background: Object,
   padding: Object,
+  // title: {
+  //   type: String,
+  //   default: 'The title'
+  // },
+  // subtitle: {
+  //   type: String,
+  //   default: 'The subtitle'
+  // },
+  // background: {
+  //   type: Object,
+  //   default: () => ({
+  //     image: {},
+  //     overlay: {}
+  //   })
+  // },
+  // theme: String,
+  // overlay: Boolean,
+  // padding: Object,
 })
 </script>

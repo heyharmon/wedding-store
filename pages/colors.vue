@@ -1,6 +1,65 @@
 <template>
-    <section class="mx-auto max-w-7xl px-6 my-32">
-        <h1 class="text-lg font-semibold text-slate-900 mb-7">Color themes</h1>
+    <section class="mx-auto max-w-7xl px-6 mt-10 mb-20">
+        <p class="text-lg font-semibold text-slate-900 mb-7">Headings</p>
+
+        <div class="mt-8">
+            <div class="flex flex-col gap-6">
+                <BaseHeading as="h1">The heading size 1</BaseHeading>
+                <BaseHeading as="h2">The heading size 2</BaseHeading>
+                <BaseHeading as="h3">The heading size 3</BaseHeading>
+                <BaseHeading as="h4">The heading size 4</BaseHeading>
+                <BaseHeading as="h5">The heading size 5</BaseHeading>
+                <BaseHeading as="h6">The heading size 6</BaseHeading>
+            </div>
+        </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 my-10">
+        <p class="text-lg font-semibold text-slate-900 mb-7">Buttons</p>
+
+        <div class="mt-8">
+            <h2 class="text-md font-semibold text-slate-900 mb-2">Bold button</h2>
+
+            <div class="flex items-center gap-6">
+                <BaseButton to="#" label="Button text" variant="bold" size="lg"/>
+                <BaseButton to="#" label="Button text" variant="bold" size="base"/>
+                <BaseButton to="#" label="Button text" variant="bold" size="sm"/>
+            </div>
+        </div>
+
+        <div class="mt-8">
+            <h2 class="text-md font-semibold text-slate-900 mb-2">Light button</h2>
+
+            <div class="flex items-center gap-6">
+                <BaseButton to="#" label="Button text" variant="light" size="lg"/>
+                <BaseButton to="#" label="Button text" variant="light" size="base"/>
+                <BaseButton to="#" label="Button text" variant="light" size="sm"/>
+            </div>
+        </div>
+
+        <div class="mt-8">
+            <h2 class="text-md font-semibold text-slate-900 mb-2">Ghost button</h2>
+
+            <div class="flex items-center gap-6">
+                <BaseButton to="#" label="Button text" variant="ghost" size="lg"/>
+                <BaseButton to="#" label="Button text" variant="ghost" size="base"/>
+                <BaseButton to="#" label="Button text" variant="ghost" size="sm"/>
+            </div>
+        </div>
+
+        <div class="mt-8">
+            <h2 class="text-md font-semibold text-slate-900 mb-2">Text button</h2>
+
+            <div class="flex items-center gap-6">
+                <BaseButton to="#" label="Button text" variant="text" size="lg"/>
+                <BaseButton to="#" label="Button text" variant="text" size="base"/>
+                <BaseButton to="#" label="Button text" variant="text" size="sm"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="mx-auto max-w-7xl px-6 my-10">
+        <p class="text-lg font-semibold text-slate-900 mb-7">Color themes</p>
 
         <div class="mt-8">
             <h2 class="text-md font-semibold text-slate-900 mb-2">Base</h2>
@@ -112,5 +171,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 </template>

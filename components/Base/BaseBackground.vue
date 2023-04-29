@@ -2,7 +2,7 @@
   <div>
     <!-- Background image-->
     <div v-if="image" aria-hidden="true" class="absolute inset-0 overflow-hidden">
-      <Image v-bind="image" class="h-full w-full object-cover object-center"/>
+      <BaseImage v-bind="image" class="h-full w-full object-cover object-center"/>
     </div>
 
     <!-- Overlay -->

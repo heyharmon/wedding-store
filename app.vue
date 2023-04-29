@@ -4,29 +4,40 @@
     <NuxtPage/>
 
     <!-- Setup primary, secondary and accent color css variables -->
-    <component is="style">
+    <component :is="`style`">
       :root {
-        --primary-50:  {{ color1[50] }};
-        --primary-100: {{ color1[100] }};
-        --primary-200: {{ color1[200] }};
-        --primary-300: {{ color1[300] }};
-        --primary-400: {{ color1[400] }};
-        --primary-500: {{ color1[500] }};
-        --primary-600: {{ color1[600] }};
-        --primary-700: {{ color1[700] }};
-        --primary-800: {{ color1[800] }};
-        --primary-900: {{ color1[900] }};
+        --primary-50:  {{ primary[50] }};
+        --primary-100: {{ primary[100] }};
+        --primary-200: {{ primary[200] }};
+        --primary-300: {{ primary[300] }};
+        --primary-400: {{ primary[400] }};
+        --primary-500: {{ primary[500] }};
+        --primary-600: {{ primary[600] }};
+        --primary-700: {{ primary[700] }};
+        --primary-800: {{ primary[800] }};
+        --primary-900: {{ primary[900] }};
 
-        <!-- --secondary-50:  {{ color2[50] }};
-        --secondary-100: {{ color2[100] }};
-        --secondary-200: {{ color2[200] }};
-        --secondary-300: {{ color2[300] }};
-        --secondary-400: {{ color2[400] }};
-        --secondary-500: {{ color2[500] }};
-        --secondary-600: {{ color2[600] }};
-        --secondary-700: {{ color2[700] }};
-        --secondary-800: {{ color2[800] }};
-        --secondary-900: {{ color2[900] }}; -->
+        --secondary-50:  {{ secondary[50] }};
+        --secondary-100: {{ secondary[100] }};
+        --secondary-200: {{ secondary[200] }};
+        --secondary-300: {{ secondary[300] }};
+        --secondary-400: {{ secondary[400] }};
+        --secondary-500: {{ secondary[500] }};
+        --secondary-600: {{ secondary[600] }};
+        --secondary-700: {{ secondary[700] }};
+        --secondary-800: {{ secondary[800] }};
+        --secondary-900: {{ secondary[900] }};
+
+        --accent-50:  {{ accent[50] }};
+        --accent-100: {{ accent[100] }};
+        --accent-200: {{ accent[200] }};
+        --accent-300: {{ accent[300] }};
+        --accent-400: {{ accent[400] }};
+        --accent-500: {{ accent[500] }};
+        --accent-600: {{ accent[600] }};
+        --accent-700: {{ accent[700] }};
+        --accent-800: {{ accent[800] }};
+        --accent-900: {{ accent[900] }};
       }
     </component>
 
@@ -36,7 +47,7 @@
     <!-- Is this too much or do we just need enough to theme blocks including header and footer?
          We should lean heavily on themes. Use these extra variables for specific design traits
          such as corner roundness? -->
-    <component is="style">
+    <component :is="`style`">
       :root {
         <!-- theme instead
         --nav-links-color:                 var(--gray-900);
@@ -84,7 +95,7 @@
 <script setup>
 import { generatePalette } from '@/utils/colors'
 
-const color1 = computed(() => generatePalette('#84cc16'))
-// const color2 = computed(() => generatePalette('#EBB02D'))
-// const color3 = computed(() => generatePalette('#EA5455'))
+const primary = computed(() => generatePalette('#4f46e5'))
+const secondary = computed(() => generatePalette('#84cc16'))
+const accent = computed(() => generatePalette('#ebb02d'))
 </script>

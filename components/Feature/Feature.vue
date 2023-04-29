@@ -26,7 +26,7 @@
           </div>
         </div>
 
-        <Image v-bind="image" class="w-[48rem] sm:w-[57rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"/>
+        <BaseImage v-bind="image" class="w-[48rem] sm:w-[57rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"/>
       </div>
     </div>
   </BlockWrapper>
