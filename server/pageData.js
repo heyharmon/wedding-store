@@ -63,6 +63,7 @@ export default [
         name: 'Hero',
         data: {
           title: 'Hello world. Enrich your online business.',
+          subtitle: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat fcommodo. Elit sunt amet fugiat.',
           padding: {
             paddingTop: '6xl',
             paddingBottom: '6xl',
@@ -96,6 +97,7 @@ export default [
         data: {
           theme: 'theme-2',
           title: 'Hello world. Enrich your online business.',
+          subtitle: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat fcommodo. Elit sunt amet fugiat.',
           padding: {
             top: '6xl',
             bottom: '6xl',

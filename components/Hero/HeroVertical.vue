@@ -1,28 +1,14 @@
 <template>
   <BlockWrapper :data-theme="theme" v-bind="padding" class="isolate">
-    <!-- Bg image -->
     <BaseBackground v-bind="background"/>
     
     <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
-          <!-- Title -->
-          <h1 class="text-5xl font-bold tracking-tight text-gray-900">
-            Data to enrich your online business
-          </h1>
-
-          <!-- Subtitle -->
-          <p class="mt-6 text-xl leading-9 text-gray-600">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat fcommodo. Elit sunt amet fugiat.
-          </p>
-
-          <!-- Button group -->
+          <BaseHeading as="h1">{{ title }}</BaseHeading>
+          <BaseText size="xl" class="mt-6 leading-9 text-gray-600">{{ subtitle }}</BaseText>
           <div class="mt-10 flex items-center justify-center gap-x-6">
-            <BaseButton label="Hello World" icon="heroicons:cloud-arrow-up"/>
-
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
-              Learn more 
-              <span aria-hidden="true">→</span>
-            </a>
+            <BaseButton to="/homepage" label="Homepage"/>
+            <BaseButton variant="text" to="/page-1" label="Learn more" icon="heroicons:arrow-right"/>
           </div>
         </div>
 
@@ -37,10 +23,12 @@
 
 <script setup>
 const props = defineProps({
-  theme: String,
-  overlay: Boolean,
+  title: String,
+  subtitle: String,
   image: Object,
   background: Object,
+  theme: String,
+  overlay: Boolean,
   padding: Object,
 })
 </script>

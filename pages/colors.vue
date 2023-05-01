@@ -58,6 +58,122 @@
         </div>
     </section>
 
+    <section class="mx-auto max-w-7xl px-6 my-10">
+        <p class="text-lg font-semibold text-slate-900 mb-7">Colors</p>
+
+        <div class="mt-8">
+            <h2 class="text-md font-semibold text-slate-900 mb-2">Primary</h2>
+            
+            <div class="flex gap-4" data-theme="base">   
+                <div class="grid h-16 w-16 place-items-end bg-primary-50 rounded-md p-1 font-semibold leading-none text-primary-900">
+                50
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-primary-100 rounded-md p-1 font-semibold leading-none text-primary-900">
+                100
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-primary-200 rounded-md p-1 font-semibold leading-none text-primary-900">
+                200
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-primary-300 rounded-md p-1 font-semibold leading-none text-primary-900">
+                300
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-primary-400 rounded-md p-1 font-semibold leading-none text-primary-900">
+                400
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-primary-500 rounded-md p-1 font-semibold leading-none text-primary-50">
+                500
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-primary-600 rounded-md p-1 font-semibold leading-none text-primary-50">
+                600
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-primary-700 rounded-md p-1 font-semibold leading-none text-primary-50">
+                700
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-primary-800 rounded-md p-1 font-semibold leading-none text-primary-50">
+                800
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-primary-900 rounded-md p-1 font-semibold leading-none text-primary-50">
+                900
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8">
+            <h2 class="text-md font-semibold text-slate-900 mb-2">Secondary</h2>
+
+            <div class="flex gap-4" data-theme="theme-1">
+                <div class="grid h-16 w-16 place-items-end bg-secondary-50 rounded-md p-1 font-semibold leading-none text-primary-900">
+                50
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-secondary-100 rounded-md p-1 font-semibold leading-none text-primary-900">
+                100
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-secondary-200 rounded-md p-1 font-semibold leading-none text-primary-900">
+                200
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-secondary-300 rounded-md p-1 font-semibold leading-none text-primary-900">
+                300
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-secondary-400 rounded-md p-1 font-semibold leading-none text-primary-900">
+                400
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-secondary-500 rounded-md p-1 font-semibold leading-none text-primary-50">
+                500
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-secondary-600 rounded-md p-1 font-semibold leading-none text-primary-50">
+                600
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-secondary-700 rounded-md p-1 font-semibold leading-none text-primary-50">
+                700
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-secondary-800 rounded-md p-1 font-semibold leading-none text-primary-50">
+                800
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-secondary-900 rounded-md p-1 font-semibold leading-none text-primary-50">
+                900
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8">
+            <h2 class="text-md font-semibold text-slate-900 mb-2">Theme 2</h2>
+
+            <div class="flex gap-4" data-theme="theme-2">
+                <div class="grid h-16 w-16 place-items-end bg-accent-50 rounded-md p-1 font-semibold leading-none text-primary-900">
+                50
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-accent-100 rounded-md p-1 font-semibold leading-none text-primary-900">
+                100
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-accent-200 rounded-md p-1 font-semibold leading-none text-primary-900">
+                200
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-accent-300 rounded-md p-1 font-semibold leading-none text-primary-900">
+                300
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-accent-400 rounded-md p-1 font-semibold leading-none text-primary-900">
+                400
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-accent-500 rounded-md p-1 font-semibold leading-none text-primary-50">
+                500
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-accent-600 rounded-md p-1 font-semibold leading-none text-primary-50">
+                600
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-accent-700 rounded-md p-1 font-semibold leading-none text-primary-50">
+                700
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-accent-800 rounded-md p-1 font-semibold leading-none text-primary-50">
+                800
+                </div>
+                <div class="grid h-16 w-16 place-items-end bg-accent-900 rounded-md p-1 font-semibold leading-none text-primary-50">
+                900
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THEMES -->
     <!-- <section class="mx-auto max-w-7xl px-6 my-10">
         <p class="text-lg font-semibold text-slate-900 mb-7">Color themes</p>
 

@@ -19,9 +19,10 @@ await useAsyncData('page', () => store.show(route.params.slug))
 // const {data: page, pending, refresh} = await useAsyncData('page', () => $fetch(`/api/pages?slug=${route.params.slug}`))
 
 let blocks = store.page.blocks.map((block) => {
-  const {name, group, data} = block;
+  const {id, name, group, data} = block;
   
   return {
+    id: id,
     name: name,
     group: group,
     data: data,

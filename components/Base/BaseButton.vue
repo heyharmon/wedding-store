@@ -8,8 +8,8 @@
       ${sizeClasses[size]}
     `"
   >
-    <Icon v-if="icon" :name="icon" class="order-first h-5 w-5" aria-hidden="true" />
     <slot>{{ label || '' }}</slot>
+    <Icon v-if="icon" :name="icon" class="order-first h-5 w-5 ml-2" aria-hidden="true" />
   </NuxtLink>
 </template>
   

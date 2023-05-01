@@ -16,7 +16,6 @@
       </div>
 
       <!-- Title -->
-      <!-- <h1 class="text-5xl font-bold tracking-tight text-gray-900">{{ title }}</h1> -->
       <BaseHeading as="h1">{{ title }}</BaseHeading>
 
       <!-- <InlineTextEditor id="034oj3h" @updated="" class="width-fit text-sm">
@@ -30,18 +29,12 @@
       </h1> -->
 
       <!-- Subtitle -->
-      <p class="mt-6 text-xl leading-9 text-gray-600">
-        {{ subtitle }}
-      </p>
+      <BaseText size="xl" class="mt-6 leading-9 text-gray-600">{{ subtitle }}</BaseText>
 
       <!-- Button group -->
       <div class="mt-10 flex items-center justify-center gap-x-6">
-        <BaseButton to="/homepage" rel="next" label="Homepage" icon="heroicons:cloud-arrow-up"/>
-
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
-          Learn more 
-          <span aria-hidden="true">→</span>
-        </a>
+        <BaseButton to="/homepage" label="Homepage"/>
+        <BaseButton variant="text" to="/page-1" label="Learn more" icon="heroicons:arrow-right"/>
       </div>
     </div>
   </BlockWrapper>
