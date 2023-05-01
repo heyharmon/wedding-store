@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div class="absolute inset-0 z-10 bg-white">
+    <div class="absolute inset-0 pt-[50px] z-10 bg-white">
       <slot />
     </div>
   </div>

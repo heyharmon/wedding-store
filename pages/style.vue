@@ -25,19 +25,13 @@
         <div class="relative min-h-screen px-5 pt-3 pb-16">
           <div>Header</div>
 
-          <BlockEditor
-            v-for="(block, index) in store.page.blocks"
-            :key="index"
-            :active="block.id === activeBlockId"
-            :total="store.page.blocks.length"
-            :index="index"
-            :block="block"
-            @close="closeBlockEditor"
-            @delete="deleteBlock"
-            @move="moveBlock"
-          >
-            <Block v-bind="block" @click="toggleActiveBlockId(block.id)"/>
-          </BlockEditor>
+          <PreviewBrowser>
+            <Block 
+              v-for="(block, index) in store.page.blocks" 
+              :key="index" 
+              v-bind="block" 
+            />
+          </PreviewBrowser>
         </div>
       </section>
     </div>
@@ -47,23 +41,5 @@
 <script setup>
 const store = usePageStore()
 
-let activeBlockId = ref('')
-
 await useAsyncData('page', () => store.show('page-1'))
-
-function toggleActiveBlockId(id) {
-  activeBlockId.value = id;
-}
-
-function closeBlockEditor() {
-  activeBlockId.value = ''
-}
-
-function deleteBlock(block) {
-  console.log('deleting...')
-}
-
-function moveBlock({index, block, direction} = {}) {
-  console.log('moving...')
-}
 </script>

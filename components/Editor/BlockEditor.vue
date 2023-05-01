@@ -4,9 +4,9 @@
     <div v-if="active" class="z-10 h-full w-full absolute border-4 border-indigo-500">
 
       <!-- Controls -->
-      <div class="flex justify-between w-full mt-3">
+      <div class="flex justify-between w-full p-3">
         <div>
-          <button class="text-xs font-semibold inline-block py-2 px-3 ml-2 uppercase rounded text-indigo-600 bg-indigo-200 focus:bg-indigo-600 focus:text-white">
+          <button class="text-xs font-semibold inline-block py-2 px-3 uppercase rounded text-indigo-600 bg-indigo-200 focus:bg-indigo-600 focus:text-white">
             <Icon name="heroicons:swatch" class="h-5 w-5" aria-hidden="true" />
           </button>
         </div>
@@ -37,7 +37,7 @@
           
           <button
             @click="emitClose()"
-            class="text-xs font-semibold inline-block py-2 px-3 mr-2 ml-12 uppercase rounded text-gray-600 bg-gray-200 focus:bg-gray-600 focus:text-white"
+            class="text-xs font-semibold inline-block py-2 px-3 ml-12 uppercase rounded text-gray-600 bg-gray-200 focus:bg-gray-600 focus:text-white"
           >
             <Icon name="heroicons:x-mark" class="h-5 w-5" aria-hidden="true" />
           </button>

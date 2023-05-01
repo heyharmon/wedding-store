@@ -3,16 +3,17 @@ export default defineNuxtConfig({
   // ssr: true, 
   
   modules: [
-    'nuxt-headlessui',
     'nuxt-icon',
-    '@nuxtjs/tailwindcss',
+    'nuxt-headlessui',
     '@nuxt/image-edge',
+    '@nuxtjs/tailwindcss',
     ['@pinia/nuxt', {autoImports: ['defineStore', 'acceptHMRUpdate']}]
   ],
 
   components: [
     '~/components',
     {path: '~/components/Base'},
+    {path: '~/components/Block'},
     {path: '~/components/Editor'},
   ],
 
