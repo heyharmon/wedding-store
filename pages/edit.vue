@@ -1,14 +1,22 @@
 <template>
-  <NuxtLayout name="three-column" class="bg-slate-50">
+  <NuxtLayout name="three-column">
     <template #top>
-      <div class="flex items-center gap-x-4 h-14 border-b bg-white px-8">
-        <div class="flex flex-1 items-center gap-x-6">
-          <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
+      <div class="flex items-center gap-x-4 h-14 px-4 border-b bg-white">
+        <div class="flex flex-1 items-center gap-x-3">
+          <!-- Back -->
+          <button type="button" class="inline-flex items-center rounded-md bg-slate-100 p-[6px] text-slate-900 hover:bg-slate-200 active:translate-y-px">
+            <Icon name="heroicons:arrow-left" class="h-5 w-5 text-slate-700" aria-hidden="true" />
+          </button>
+
+          <!-- Settings -->
+          <button type="button" class="inline-flex items-center rounded-md bg-slate-100 p-[6px] text-slate-900 hover:bg-slate-200 active:translate-y-px">
+            <Icon name="heroicons:cog-6-tooth-solid" class="h-5 w-5 text-slate-700" aria-hidden="true" />
+          </button>
         </div>
 
         <nav class="flex items-center gap-x-4">
           <!-- Page title -->
-          <div class="text-gray-600 font-semibold text-[15px]">Homepage</div>
+          <div class="font-semibold text-[15px]">Page 1</div>
 
           <!-- Badge -->
           <span class="inline-flex items-center gap-x-1 rounded-md bg-indigo-100 text-indigo-700 text-[13px] px-[6px] py-[2px]">
@@ -21,29 +29,27 @@
           <!-- Profile dropdown -->
           <Menu as="div" class="relative">
             <MenuButton class="-m-1.5 flex items-center p-1.5">
-              <img class="h-8 w-8 rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
+              <img class="h-8 w-8 rounded-full bg-slate-50" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
             </MenuButton>
             <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
-              <MenuItems class="absolute right-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none">
+              <MenuItems class="absolute right-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-slate-900/5 focus:outline-none">
                 <MenuItem v-for="item in userNavigation" :key="item.name" v-slot="{ active }">
-                  <a :href="item.href" :class="[active ? 'bg-gray-50' : '', 'block px-3 py-1 text-sm leading-6 text-gray-900']">{{ item.name }}</a>
+                  <a :href="item.href" :class="[active ? 'bg-slate-50' : '', 'block px-3 py-1 text-sm leading-6 text-slate-900']">{{ item.name }}</a>
                 </MenuItem>
               </MenuItems>
             </transition>
           </Menu>
 
-          <!-- Settings -->
-          <button type="button" class="inline-flex items-center rounded-md bg-white p-[6px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-            <Icon name="heroicons:cog-6-tooth-solid" class="h-5 w-5 text-gray-400" aria-hidden="true" />
-          </button>
+          <!-- Separator -->
+          <div class="hidden lg:block lg:h-6 lg:w-px lg:bg-slate-900/10" aria-hidden="true" />
 
           <!-- Preview -->
-          <button type="button" class="inline-flex items-center rounded-md bg-white p-[6px] text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-            <Icon name="heroicons:eye-solid" class="h-5 w-5 text-gray-400" aria-hidden="true" />
+          <button type="button" class="inline-flex items-center rounded-md bg-slate-100 p-[6px] text-slate-900 hover:bg-slate-200 active:translate-y-px">
+            <Icon name="heroicons:eye-solid" class="h-5 w-5 text-slate-700" aria-hidden="true" />
           </button>
 
           <!-- Publish -->
-          <button type="button" class="inline-flex items-center rounded-md bg-indigo-600 py-[6px] px-[12px] text-[13px] text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+          <button type="button" class="inline-flex items-center rounded-md bg-indigo-500 py-[6px] px-[12px] text-[13px] text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 active:translate-y-px">
             Publish
           </button>
         </div>
@@ -51,8 +57,43 @@
     </template>
 
     <template #left>
-      <div class="border-b border-light-91 px-3 pb-2">
-        <a class="mx-1 mb-4 block h-5 w-5 rounded p-1 text-wedges-gray-400 hover:bg-light-91" href="https://app.lemonsqueezy.com/dashboard">
+      <div class="p-5 border-b hover:bg-slate-50">
+        <FormKit type="text" label="Pretitle"/>
+      </div>
+
+      <div class="p-5 border-b hover:bg-slate-50">
+        <FormKit type="text" label="Title"/>
+      </div>
+
+      <div class="p-5 border-b hover:bg-slate-50">
+        <FormKit type="text" label="Subtitle"/>
+      </div>
+        
+      <div class="p-5 border-b hover:bg-slate-50">
+        <span class="block text-xs font-medium leading-6 text-slate-900 mb-1">Buttons</span>
+
+        <div class="rounded-md border border-slate-300 bg-white p-3 sm:flex sm:items-start sm:justify-between">
+          <div class="sm:flex sm:items-center">
+            <div class="h-7 w-7 flex items-center justify-center rounded-md bg-indigo-500">
+              <Icon name="heroicons:link-solid" class="h-4 w-4 text-white" aria-hidden="true" />
+            </div>
+            
+            <div class="mt-3 sm:ml-3 sm:mt-0">
+              <div class="text-xs font-medium text-slate-900">Homepage</div>
+              <div class="mt-1 text-xs text-slate-500">/homepage</div>
+            </div>
+          </div>
+
+          <div class="mt-4 sm:ml-6 sm:mt-0 sm:flex-shrink-0">
+            <button type="button" class="inline-flex items-center rounded-md bg-slate-100 p-[6px] text-slate-900 hover:bg-slate-200 active:translate-y-px">
+              <Icon name="heroicons:trash" class="h-5 w-5 text-slate-700" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="border-b border-light-91 px-3 pb-2">
+        <a class="mx-1 mb-4 block h-5 w-5 rounded p-1 text-wedges-slate-400 hover:bg-light-91" href="https://app.lemonsqueezy.com/dashboard">
           <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 fill-transparent stroke-current"><path d="M4.75 11.98h14.5M11.25 18.25 4.75 12l6.5-6.25" stroke="#25252D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
         </a>
         
@@ -62,12 +103,12 @@
           </div>
           <p class="form-input-desc m-0 px-2 pb-1"> Display your store or hide it and redirect to your website instead.</p>
         </div>
-      </div>
+      </div> -->
     </template>
 
     <template #middle>
-      <div class="px-4 sm:px-6 lg:px-8">
-        <div class="overflow-hidden rounded-lg bg-white shadow-lg border">
+      <!-- <div class="px-4 pt-4"> -->
+        <!-- <div class="overflow-hidden rounded-lg bg-white shadow-lg border"> -->
           <BlockEditor
             v-for="(block, index) in store.page.blocks"
             :key="index"
@@ -81,8 +122,8 @@
           >
             <Block v-bind="block" @click="toggleActiveBlockId(block.id)"/>
           </BlockEditor>
-        </div>
-      </div>
+        <!-- </div> -->
+      <!-- </div> -->
     </template>
 
     <template #right>

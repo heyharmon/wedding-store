@@ -4,8 +4,8 @@
       <slot name="top" />
     </header>
 
-    <div class="flex-1 flex flex-row overflow-y-hidden no-scrollbar pt-3">
-      <nav class="w-[18rem] overflow-y-auto">
+    <div class="flex-1 flex flex-row overflow-y-hidden no-scrollbar">
+      <nav class="w-[24rem] overflow-y-auto border-r">
         <slot name="left" />
       </nav>
 
@@ -13,9 +13,9 @@
         <slot name="middle" />
       </main>
 
-      <aside class="w-[8rem] overflow-y-auto no-scrollbar">
+      <!-- <aside class="w-[8rem] overflow-y-auto no-scrollbar">
         <slot name="right" />
-      </aside>
+      </aside> -->
     </div>
   </div>
 </template>

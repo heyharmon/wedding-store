@@ -1,14 +1,8 @@
+const formKitTailwind = require('@formkit/themes/tailwindcss');
 // const themes = require('./tailwind/themes-plugin.js') 
 // const forms = require('@tailwindcss/forms')
 
 module.exports = {
-  content: [ // Content to be purged
-    './components/**/*.vue',
-    './pages/*.vue',
-    './dictionaries/*.{js,ts}',
-    './nuxt.config.{js,ts}',
-  ],
-
   theme: {
     extend: {
       colors: {
@@ -108,6 +102,14 @@ module.exports = {
     },
   },
   
+  content: [ // Content to be purged
+    './components/**/*.vue',
+    './pages/*.vue',
+    './dictionaries/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+    './formkit.config.js',
+  ],
+
   plugins: [
     // Our own themeing plugin
     // https://www.protailwind.com/workshops/multi-theme-strategy
@@ -116,5 +118,9 @@ module.exports = {
     // Tailwind form styles
     // https://github.com/tailwindlabs/tailwindcss-forms
     require('@tailwindcss/forms'),
+
+    // FormKit Tailwind theme
+    // https://formkit.com/guides/create-a-tailwind-theme
+    formKitTailwind
   ],
 }

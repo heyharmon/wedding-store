@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     'nuxt-headlessui',
     '@nuxt/image-edge',
     '@nuxtjs/tailwindcss',
+    '@formkit/nuxt',
     ['@pinia/nuxt', {autoImports: ['defineStore', 'acceptHMRUpdate']}]
   ],
 
