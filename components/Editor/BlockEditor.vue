@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <!-- Outline -->
-    <div v-if="active" class="z-10 h-full w-full absolute border-4 border-indigo-500">
+    <div v-if="active" class="z-10 h-full w-full absolute rounded-xl border-2 border-indigo-500">
 
       <!-- Controls -->
       <div class="flex justify-between w-full p-3">

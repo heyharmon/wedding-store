@@ -7,10 +7,10 @@ const config = {
         legend: 'block mb-1 font-bold',
         label() {
           if (type === 'text') {
-            return 'block text-xs font-medium leading-6 text-slate-900';
+            return 'block text-xs leading-6 text-slate-900';
           }
           if (type === 'radio') {
-            return 'text-xs font-medium leading-6 text-slate-900 mt-0.5';
+            return 'text-xs leading-6 text-slate-900 mt-0.5';
           }
         },
         options() {
