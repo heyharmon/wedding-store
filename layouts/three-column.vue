@@ -4,12 +4,12 @@
       <slot name="top" />
     </header>
 
-    <div class="flex-1 flex flex-row overflow-y-hidden no-scrollbar">
-      <nav class="w-[24rem] overflow-y-auto">
+    <div class="flex-1 flex flex-row overflow-y-hidden no-scrollbar mb-4">
+      <nav class="w-[22rem] overflow-y-auto rounded-lg border bg-white no-scrollbar ml-4">
         <slot name="left" />
       </nav>
 
-      <main class="flex-1 overflow-y-auto rounded-lg border drop-shadow-lg no-scrollbar mx-4">
+      <main class="flex-1 overflow-y-auto rounded-lg border drop-shadow no-scrollbar mx-4">
         <slot name="middle" />
       </main>
 
