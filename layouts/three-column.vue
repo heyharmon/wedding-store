@@ -5,11 +5,11 @@
     </header>
 
     <div class="flex-1 flex flex-row overflow-y-hidden no-scrollbar">
-      <nav class="w-[24rem] overflow-y-auto ml-3">
+      <nav class="w-[24rem] overflow-y-auto">
         <slot name="left" />
       </nav>
 
-      <main class="flex-1 overflow-y-auto rounded-xl border drop-shadow-lg no-scrollbar mx-3">
+      <main class="flex-1 overflow-y-auto rounded-lg border drop-shadow-lg no-scrollbar mx-4">
         <slot name="middle" />
       </main>
 

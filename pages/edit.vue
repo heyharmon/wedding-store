@@ -16,7 +16,7 @@
 
         <nav class="flex items-center gap-x-4">
           <!-- Page title -->
-          <div class="font-semibold text-[15px]">Page 1</div>
+          <div class="text-[15px]">Page 1</div>
 
           <!-- Badge -->
           <span class="inline-flex items-center gap-x-1 rounded-md bg-indigo-100 text-indigo-700 text-[13px] px-[6px] py-[2px]">
@@ -57,102 +57,94 @@
     </template>
 
     <template #left>
-      <div class="p-3 mb-2 rounded-md bg-slate-50">
-        <FormKit type="text" label="Pretitle"/>
-      </div>
+      <div class="pl-4">
+        <div class="p-3 mb-2 rounded-lg bg-slate-50">
+          <FormKit type="text" label="Pretitle"/>
+        </div>
 
-      <div class="p-3 mb-2 rounded-md bg-slate-50">
-        <FormKit type="text" label="Title"/>
-      </div>
+        <div class="p-3 mb-2 rounded-lg bg-slate-50">
+          <FormKit type="text" label="Title"/>
+        </div>
 
-      <div class="p-3 mb-2 rounded-md bg-slate-50">
-        <FormKit type="text" label="Subtitle"/>
-      </div>
-        
-      <div class="p-3 mb-2 rounded-md bg-slate-50">
-        <span class="block text-xs leading-6 text-slate-900 mb-1">Buttons</span>
+        <div class="p-3 mb-2 rounded-lg bg-slate-50">
+          <FormKit type="text" label="Subtitle"/>
+        </div>
+          
+        <div class="p-3 mb-2 rounded-lg bg-slate-50">
+          <span class="block text-xs leading-6 text-slate-900 mb-1">Buttons</span>
 
-        <div class="rounded-md border border-slate-300 bg-white ">
-          <!-- Button 1 -->
-          <div class="p-3 border-b last:border-b-0 sm:flex sm:items-start sm:justify-between">
-            <div class="sm:flex sm:items-center">
-              <!-- <div class="h-7 w-7 mr-2 flex items-center justify-center rounded-md bg-indigo-500">
-                <Icon name="heroicons:link-solid" class="h-4 w-4 text-white" aria-hidden="true" />
-              </div> -->
-              <div class="h-8 w-7 mr-3 flex items-center justify-center">
-                <Icon name="heroicons:bars-3" class="h-5 w-5 text-slate-400" aria-hidden="true" />
+          <div class="">
+            <!-- Button 1 -->
+            <div class="sm:flex sm:items-start sm:justify-between rounded-lg border border-slate-300 bg-white hover:bg-slate-100 cursor-pointer p-3 first:mb-2">
+              <div class="sm:flex sm:items-center">
+                <div class="h-8 w-7 mr-3 flex items-center justify-center cursor-move">
+                  <Icon name="heroicons:bars-3" class="h-5 w-5 text-slate-400" aria-hidden="true" />
+                </div>
+                
+                <div>
+                  <div class="text-xs text-slate-900">Homepage</div>
+                  <div class="mt-1 text-xs text-slate-400">/homepage</div>
+                </div>
               </div>
-              
-              <div>
-                <div class="text-xs text-slate-900">Homepage</div>
-                <div class="mt-1 text-xs text-slate-400">/homepage</div>
-              </div>
-            </div>
 
-            <div class="mt-4 sm:ml-6 sm:mt-0 sm:flex-shrink-0">
-              <button type="button" class="inline-flex items-center rounded-md border p-[6px] hover:bg-slate-100 active:translate-y-px">
-                <Icon name="heroicons:trash" class="h-5 w-5 text-slate-400" aria-hidden="true" />
-              </button>
-            </div>
-          </div>
-
-          <!-- Button 2 -->
-          <div class="p-3 border-b last:border-b-0 sm:flex sm:items-start sm:justify-between">
-            <div class="sm:flex sm:items-center">
-              <!-- <div class="h-7 w-7 mr-2 flex items-center justify-center rounded-md bg-indigo-500">
-                <Icon name="heroicons:link-solid" class="h-4 w-4 text-white" aria-hidden="true" />
-              </div> -->
-              <div class="h-8 w-7 mr-3 flex items-center justify-center">
-                <Icon name="heroicons:bars-3" class="h-5 w-5 text-slate-400" aria-hidden="true" />
-              </div>
-              
-              <div>
-                <div class="text-xs text-slate-900">Homepage</div>
-                <div class="mt-1 text-xs text-slate-400">/homepage</div>
+              <div class="mt-4 sm:ml-6 sm:mt-0 sm:flex-shrink-0">
+                <button type="button" class="inline-flex items-center rounded-md border p-[6px] hover:bg-slate-100 active:translate-y-px">
+                  <Icon name="heroicons:trash" class="h-5 w-5 text-slate-400" aria-hidden="true" />
+                </button>
               </div>
             </div>
 
-            <div class="mt-4 sm:ml-6 sm:mt-0 sm:flex-shrink-0">
-              <button type="button" class="inline-flex items-center rounded-md border p-[6px] hover:bg-slate-100 active:translate-y-px">
-                <Icon name="heroicons:trash" class="h-5 w-5 text-slate-400" aria-hidden="true" />
-              </button>
+            <!-- Button 2 -->
+            <div class="sm:flex sm:items-start sm:justify-between rounded-lg border border-slate-300 bg-white hover:bg-slate-100 cursor-pointer p-3 first:mb-2">
+              <div class="sm:flex sm:items-center">
+                <div class="h-8 w-7 mr-3 flex items-center justify-center cursor-move">
+                  <Icon name="heroicons:bars-3" class="h-5 w-5 text-slate-400" aria-hidden="true" />
+                </div>
+                
+                <div>
+                  <div class="text-xs text-slate-900">Homepage</div>
+                  <div class="mt-1 text-xs text-slate-400">/homepage</div>
+                </div>
+              </div>
+
+              <div class="mt-4 sm:ml-6 sm:mt-0 sm:flex-shrink-0">
+                <button type="button" class="inline-flex items-center rounded-md border p-[6px] hover:bg-slate-100 active:translate-y-px">
+                  <Icon name="heroicons:trash" class="h-5 w-5 text-slate-400" aria-hidden="true" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- <div class="border-b border-light-91 px-3 pb-2">
-        <a class="mx-1 mb-4 block h-5 w-5 rounded p-1 text-wedges-slate-400 hover:bg-light-91" href="https://app.lemonsqueezy.com/dashboard">
-          <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 fill-transparent stroke-current"><path d="M4.75 11.98h14.5M11.25 18.25 4.75 12l6.5-6.25" stroke="#25252D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-        </a>
-        
-        <div class="rounded hover:bg-light-91">
-          <div class="flex items-center px-2 py-1">
-            <label class="form-label mb-0 flex-grow">Enable your store</label>
+        <!-- <div class="border-b border-light-91 px-3 pb-2">
+          <a class="mx-1 mb-4 block h-5 w-5 rounded p-1 text-wedges-slate-400 hover:bg-light-91" href="https://app.lemonsqueezy.com/dashboard">
+            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 fill-transparent stroke-current"><path d="M4.75 11.98h14.5M11.25 18.25 4.75 12l6.5-6.25" stroke="#25252D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </a>
+          
+          <div class="rounded hover:bg-light-91">
+            <div class="flex items-center px-2 py-1">
+              <label class="form-label mb-0 flex-grow">Enable your store</label>
+            </div>
+            <p class="form-input-desc m-0 px-2 pb-1"> Display your store or hide it and redirect to your website instead.</p>
           </div>
-          <p class="form-input-desc m-0 px-2 pb-1"> Display your store or hide it and redirect to your website instead.</p>
-        </div>
-      </div> -->
+        </div> -->
+      </div>
     </template>
 
     <template #middle>
-      <!-- <div class="px-4 pt-4"> -->
-        <!-- <div class="relative min-h-screen overflow-y-auto no-scrollbar rounded-xl border drop-shadow-lg"> -->
-          <BlockEditor
-            v-for="(block, index) in store.page.blocks"
-            :key="index"
-            :active="block.id === activeBlockId"
-            :total="store.page.blocks.length"
-            :index="index"
-            :block="block"
-            @close="closeBlockEditor"
-            @delete="deleteBlock"
-            @move="moveBlock"
-          >
-            <Block v-bind="block" @click="toggleActiveBlockId(block.id)"/>
-          </BlockEditor>
-        <!-- </div> -->
-      <!-- </div> -->
+      <BlockEditor
+        v-for="(block, index) in store.page.blocks"
+        :key="index"
+        :active="block.id === activeBlockId"
+        :total="store.page.blocks.length"
+        :index="index"
+        :block="block"
+        @close="closeBlockEditor"
+        @delete="deleteBlock"
+        @move="moveBlock"
+      >
+        <Block v-bind="block" @click="toggleActiveBlockId(block.id)"/>
+      </BlockEditor>
     </template>
 
     <template #right>
