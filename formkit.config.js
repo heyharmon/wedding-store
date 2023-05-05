@@ -7,7 +7,7 @@ const config = {
         legend: 'block mb-1 font-bold',
         label() {
           if (type === 'text') {
-            return 'block text-xs leading-6 text-slate-900';
+            return 'block text-xs leading-6 font-medium text-slate-900';
           }
           if (type === 'radio') {
             return 'text-xs leading-6 text-slate-900 mt-0.5';
@@ -20,7 +20,9 @@ const config = {
         },
         input() {
           if (type === 'text') {
-            return 'block w-full rounded-md border-0 py-2 mt-1 text-slate-900 ring-1 ring-inset ring-slate-300 bg-slate-50 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-xs';
+            // return 'block w-full rounded-md border-0 py-2 mt-1 text-slate-900 ring-1 ring-inset ring-slate-300 bg-slate-50 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-xs';
+            return 'block w-full rounded-md border-0 py-2 mt-1.5 text-slate-900 ring-1 ring-inset ring-slate-300 bg-slate-100 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-xs';
+            // return 'block w-full rounded-md border-0 py-2 mt-1 text-slate-900 bg-slate-100 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-xs';
           }
           if (type === 'radio') {
             return 'mr-2';
