@@ -5,15 +5,13 @@
 
     <div class="relative flex flex-col mx-auto max-w-3xl items-center px-6 text-center">
       <!-- Pretitle -->
-      <div class="mb-8 flex justify-center">
+      <BaseHeading v-if="pretitle" as="h2" size="base" class="pb-2">{{ pretitle }}</BaseHeading>
+
+      <!-- <div v-if="pretitle" class="mb-8 flex justify-center">
         <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-          Announcing our next round of funding. 
-          <a href="#" class="font-semibold text-primary-600"><span class="absolute inset-0" aria-hidden="true" />
-            Read more 
-            <span aria-hidden="true">&rarr;</span>
-          </a>
+          {{ pretitle }}
         </div>
-      </div>
+      </div> -->
 
       <!-- Title -->
       <BaseHeading as="h1">{{ title }}</BaseHeading>
@@ -29,7 +27,7 @@
       </h1> -->
 
       <!-- Subtitle -->
-      <BaseText size="xl" class="mt-6 leading-9 text-gray-600">{{ subtitle }}</BaseText>
+      <BaseText v-if="subtitle" size="xl" class="mt-6 leading-9 text-gray-600">{{ subtitle }}</BaseText>
 
       <!-- Button group -->
       <div class="mt-10 flex items-center justify-center gap-x-6">
@@ -42,6 +40,7 @@
 
 <script setup>
 const props = defineProps({
+  pretitle: String,
   title: String,
   subtitle: String,
   background: Object,

@@ -17,7 +17,9 @@ export default [
         group: 'Hero',
         name: 'Hero',
         data: {
-          title: 'Hello world. Enrich your online business.',
+          pretitle: 'This is the pretitle',
+          title: 'Hello world.',
+          subtitle: 'The subtitle is here. Lorem ipsum dolar sit amit.',
           padding: {
             paddingTop: '6xl',
             paddingBottom: '6xl',
