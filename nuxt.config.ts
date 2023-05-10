@@ -8,15 +8,18 @@ export default defineNuxtConfig({
     '@nuxt/image-edge',
     '@nuxtjs/tailwindcss',
     '@formkit/nuxt',
-    ['@pinia/nuxt', {autoImports: ['defineStore', 'acceptHMRUpdate']}]
+    ['@pinia/nuxt', {
+      autoImports: ['defineStore', 'acceptHMRUpdate']
+    }],
   ],
 
   components: [
-    '~/components',
-    {path: '~/components/Admin'},
+    {path: '~/admin/builder/components'},
+    {path: '~/admin/dashboard/components'},
+    {path: '~/admin/designer/components'},
     {path: '~/components/Base'},
     {path: '~/components/Block'},
-    {path: '~/components/Editor'},
+    '~/components',
   ],
 
   imports: {

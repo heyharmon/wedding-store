@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout name="three-column">
-    <template #top>
+    <template v-slot:top>
       <div class="flex items-center gap-x-4 h-14 px-4">
         <div class="flex flex-1 items-center gap-x-3">
           <!-- Back -->
@@ -56,7 +56,7 @@
       </div>
     </template>
 
-    <template #left>
+    <template v-slot:left>
       <div v-if="store.activeBlock">
         <!-- Panel top -->
         <div class="flex items-center justify-between border-b px-4 py-3">
@@ -211,7 +211,7 @@
       </div>
     </template>
 
-    <template #middle>
+    <template v-slot:middle>
       <BlockEditor
         v-for="(block, index) in store.page.blocks"
         :key="index"
@@ -227,7 +227,7 @@
       </BlockEditor>
     </template>
 
-    <template #right>
+    <template v-slot:right>
       <div>Right...</div>
     </template>
   </NuxtLayout>
@@ -235,7 +235,6 @@
 
 <script setup>
 import { Switch, SwitchGroup, SwitchLabel } from '@headlessui/vue'
-
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 
 const overlayEnabled = ref(false)

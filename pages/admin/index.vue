@@ -1,11 +1,11 @@
 <template>
   <NuxtLayout name="two-column">
     <template #left>
-      <AdminNavigation/>
+      <DashboardSidebar/>
     </template>
 
     <template #top>
-      <AdminTopBar/>
+      <DashboardTopBar/>
     </template>
 
     <template #right>
@@ -15,6 +15,3 @@
     </template>
   </NuxtLayout>
 </template>
-
-<script setup>
-</script>

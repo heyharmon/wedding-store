@@ -8,14 +8,18 @@
         <li>
           <ul role="list" class="-mx-2 space-y-1">
             <li v-for="item in navigation" :key="item.name">
-              <a :href="item.href" :class="[item.current ? 'bg-gray-50 text-indigo-600' : 'text-gray-700 hover:text-indigo-600 hover:bg-gray-50', 'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
+              <!-- <a :href="item.href" :class="[item.current ? 'bg-gray-50 text-indigo-600' : 'text-gray-700 hover:text-indigo-600 hover:bg-gray-50', 'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
                 <Icon :name="item.icon" :class="[item.current ? 'text-indigo-600' : 'text-gray-400 group-hover:text-indigo-600', 'h-6 w-6 shrink-0']" aria-hidden="true" />
                 {{ item.name }}
-              </a>
+              </a> -->
+              <NuxtLink :to="item.href" :class="[item.current ? 'bg-gray-50 text-indigo-600' : 'text-gray-700 hover:text-indigo-600 hover:bg-gray-50', 'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
+                <Icon :name="item.icon" :class="[item.current ? 'text-indigo-600' : 'text-gray-400 group-hover:text-indigo-600', 'h-6 w-6 shrink-0']" aria-hidden="true" />
+                {{ item.name }}
+              </NuxtLink>
             </li>
           </ul>
         </li>
-        <li>
+        <!-- <li>
           <div class="text-xs font-semibold leading-6 text-gray-400">Your teams</div>
           <ul role="list" class="-mx-2 mt-2 space-y-1">
             <li v-for="team in teams" :key="team.name">
@@ -25,7 +29,7 @@
               </a>
             </li>
           </ul>
-        </li>
+        </li> -->
         <li class="mt-auto">
           <a href="#" class="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600">
             <Icon name="heroicons:cog-6-tooth" class="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600" aria-hidden="true" />
@@ -39,12 +43,15 @@
 
 <script setup>
 const navigation = [
-  { name: 'Dashboard', href: '#', icon: 'heroicons:home', current: true },
-  { name: 'Team', href: '#', icon: 'heroicons:users', current: false },
-  { name: 'Projects', href: '#', icon: 'heroicons:folder', current: false },
-  { name: 'Calendar', href: '#', icon: 'heroicons:calendar', current: false },
-  { name: 'Documents', href: '#', icon: 'heroicons:document-duplicate', current: false },
-  { name: 'Reports', href: '#', icon: 'heroicons:chart-pie', current: false },
+  { name: 'Dashboard', href: '/admin', icon: 'heroicons:home', current: true },
+  // { name: 'View Site', href: '/', icon: 'heroicons:window', current: true },
+  // { name: 'Explore', href: '/admin/explore', icon: 'heroicons:swatch', current: false },
+
+  { name: 'Pages', href: '/admin/builder', icon: 'heroicons:pencil-square', current: false },
+  { name: 'Designer', href: '/admin/designer', icon: 'heroicons:swatch', current: false },
+  // { name: 'Calendar', href: '#', icon: 'heroicons:calendar', current: false },
+  // { name: 'Documents', href: '#', icon: 'heroicons:document-duplicate', current: false },
+  // { name: 'Reports', href: '#', icon: 'heroicons:chart-pie', current: false },
 ]
 
 const teams = [
