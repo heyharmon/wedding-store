@@ -70,13 +70,13 @@
         <div class="border-b px-4 py-6">
           <div class="flex flex-col gap-y-5">
             <!-- Pretitle -->
-            <FormKit v-model="store.activeBlock.data.pretitle" type="text" label="Pretitle"/>
+            <FormKit v-model="store.activeBlock.data.pretitle.content" type="text" label="Pretitle"/>
 
             <!-- Title -->
-            <FormKit v-model="store.activeBlock.data.title" type="text" label="Title"/>
+            <FormKit v-model="store.activeBlock.data.title.content" type="text" label="Title"/>
 
             <!-- Subtitle -->
-            <FormKit v-model="store.activeBlock.data.subtitle" type="text" label="Subtitle"/>
+            <FormKit v-model="store.activeBlock.data.subtitle.content" type="text" label="Subtitle"/>
           </div>
         </div>
         

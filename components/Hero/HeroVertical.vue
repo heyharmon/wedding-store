@@ -1,5 +1,5 @@
 <template>
-  <BlockWrapper :data-theme="theme" v-bind="padding" class="isolate">
+  <BaseSection :data-theme="theme" v-bind="padding" class="isolate">
     <BaseBackground v-bind="background"/>
     
     <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
@@ -18,7 +18,7 @@
           </div>
         </div>
       </div>
-  </BlockWrapper>
+  </BaseSection>
 </template>
 
 <script setup>

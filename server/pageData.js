@@ -17,17 +17,29 @@ export default [
         group: 'Hero',
         name: 'Hero',
         data: {
-          pretitle: 'This is the pretitle',
-          title: 'Hello world.',
-          subtitle: 'The subtitle is here. Lorem ipsum dolar sit amit.',
-          padding: {
-            paddingTop: '6xl',
-            paddingBottom: '6xl',
+          pretitle: {
+            as: 'span',
+            content: 'This is the pretitle',
+            size: 'base',
+          },
+          title: {
+            as: 'h1',
+            content: 'Hello world.',
+            size: '5xl',
+          },
+          subtitle: {
+            as: 'p',
+            content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
+            size: 'xl',
           },
           background: {
             image: {
               src: 'https://tailwindui.com/img/beams-home@95.jpg'
             },
+          },
+          padding: {
+            paddingTop: '6xl',
+            paddingBottom: '6xl',
           },
         },
       },
@@ -64,8 +76,21 @@ export default [
         group: 'Hero',
         name: 'Hero',
         data: {
-          title: 'Hello world. Enrich your online business.',
-          subtitle: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat fcommodo. Elit sunt amet fugiat.',
+          pretitle: {
+            as: 'span',
+            content: 'This is the pretitle',
+            size: 'base',
+          },
+          title: {
+            as: 'h1',
+            content: 'Hello world.',
+            size: '5xl',
+          },
+          subtitle: {
+            as: 'p',
+            content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
+            size: 'xl',
+          },
           padding: {
             paddingTop: '6xl',
             paddingBottom: '6xl',

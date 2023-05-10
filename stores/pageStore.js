@@ -3,7 +3,7 @@ import pages from '~/server/pageData'
 export const usePageStore = defineStore('page', {
   state: () => ({
     page: {},
-    activeBlockId: ''
+    activeBlockId: null
   }),
   
   actions: {
@@ -26,7 +26,7 @@ export const usePageStore = defineStore('page', {
   },
   getters: {
     activeBlock: (state) => {
-      // if (!state.activeBlockId) return
+      if (!state.activeBlockId) return
 
       return state.page.blocks.find(
         block => block.id === state.activeBlockId
