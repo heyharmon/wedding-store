@@ -72,43 +72,38 @@
             <!-- Pretitle -->
             <div>
               <!-- <label class="text-xs leading-6 font-medium text-slate-900 mb-1.5">Pretitle</label> -->
-              <AppInput v-model="store.activeBlock.data.pretitle.content" label="Pretitle" type="text"/>
+              <TextField v-model="store.activeBlock.data.pretitle.content" label="Pretitle" type="text"/>
             </div>
 
             <!-- Title -->
             <div>
               <!-- <label class="text-xs leading-6 font-medium text-slate-900 mb-1.5">Title</label> -->
-              <AppInput v-model="store.activeBlock.data.title.content" label="Title" type="text"/>
+              <TextField v-model="store.activeBlock.data.title.content" label="Title" type="text"/>
             </div>
 
             <!-- Title size -->
             <div>
-                <!-- <label for="title-size" class="text-xs leading-6 font-medium text-slate-900 mb-1.5">Title size</label>
-                <input id="title-size" type="range" min="0" max="5" value="2.5" step="0.5" class="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer"> -->
-
-                <label for="title-size" class="block text-sm font-medium leading-6 text-gray-900">Title size</label>
-                <select v-model="store.activeBlock.data.title.size" id="title-size" name="title-size" class="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                  <option value="xl">Tiny</option>
-                  <option value="3xl">Smaller</option>
-                  <option value="4xl">Small</option>
-                  <option value="5xl">Default</option>
-                  <option value="6xl">Large</option>
-                  <option value="7xl">Larger</option>
-                  <option value="8xl">Huge</option>
-                </select>
-              </div>
+              <SelectField v-model="store.activeBlock.data.title.size" label="Title size" :options="[
+                {value: 'xl', label: 'Tiny'},
+                {value: '3xl', label: 'Smaller'},
+                {value: '4xl', label: 'Small'},
+                {value: '5xl', label: 'Default'},
+                {value: '6xl', label: 'Large'},
+                {value: '7xl', label: 'Larger'},
+                {value: '8xl', label: 'Huge'},
+              ]"/>
+            </div>
 
             <!-- Subtitle -->
             <div>
-              <p class="text-xs leading-6 font-medium text-slate-900 mb-1.5">Subtitle</p>
-              <AppInput v-model="store.activeBlock.data.subtitle.content" type="text"/>
+              <TextField v-model="store.activeBlock.data.subtitle.content" label="Subtitle" type="text"/>
             </div>
 
             <!-- Buttons -->
             <div>
               <p class="text-xs leading-6 font-medium text-slate-900 mb-1.5">Buttons</p>
 
-              <div class="overflow-hidden rounded-md border bg-white _flex _flex-col _gap-y-2.5">
+              <div class="overflow-hidden rounded-md border bg-white">
                 <!-- Button 1 -->
                 <div class="group sm:flex sm:items-start sm:justify-between border-b last:border-0 cursor-pointer hover:bg-slate-50 transition-color duration-200 ease-in-out px-2 py-3">
                   <div class="sm:flex sm:items-center">
