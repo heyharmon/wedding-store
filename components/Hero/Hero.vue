@@ -25,10 +25,14 @@
 
       <!-- Button group -->
       <!-- TODO: Create a <ButtonRepeater/> component that accepts an array of button objects and min, max props -->
-      <div class="mt-10 flex items-center justify-center gap-x-6">
+      <!-- <div class="mt-10 flex items-center justify-center gap-x-6">
         <BaseButton to="/homepage" label="Homepage"/>
         <BaseButton variant="text" to="/page-1" label="Learn more" icon="heroicons:arrow-right"/>
-      </div>
+      </div> -->
+      
+      <BaseButtonGroup class="mt-10">
+        <BaseButton v-for="button in buttons" v-bind="button"/>
+      </BaseButtonGroup>
     </div>
   </BaseSection>
 </template>
@@ -38,6 +42,7 @@ const props = defineProps({
   pretitle: Object,
   title: Object,
   subtitle: Object,
+  buttons: Array,
   background: Object,
   theme: String,
   overlay: Boolean,

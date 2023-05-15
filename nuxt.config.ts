@@ -14,6 +14,7 @@ export default defineNuxtConfig({
   ],
 
   components: [
+    {path: '~/app/components'},
     {path: '~/admin/builder/components'},
     {path: '~/admin/dashboard/components'},
     {path: '~/admin/designer/components'},

@@ -87,7 +87,9 @@
     --font-size-4xl:  clamp(1.8rem,   2.48vw  + 1.18rem, 4.16rem);
     --font-size-5xl:  clamp(2.03rem,  3.69vw  + 1.1rem,  5.53rem);
     --font-size-6xl:  clamp(2.28rem,  5.35vw  + 0.94rem, 7.36rem);
-    --font-size-7xl:  clamp(2.57rem,  7.61vw  + 0.66rem, 9.79rem);
+    --font-size-7xl:  clamp(2.57rem,  7.00vw  + 0.66rem, 9.20rem);
+    --font-size-8xl:  clamp(2.80rem,  9.70vw  + 0.66rem, 10.40rem);
+    --font-size-9xl:  clamp(3.00rem,  11.40vw + 0.66rem, 11.60rem);
 }
 
 /* Fluid spacing variables

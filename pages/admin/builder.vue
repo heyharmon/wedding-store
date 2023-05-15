@@ -16,7 +16,7 @@
 
         <nav class="flex items-center gap-x-4">
           <!-- Page title -->
-          <div class="text-[15px]">Page 1</div>
+          <div class="text-[15px]">Homepage</div>
 
           <!-- Badge -->
           <span class="inline-flex items-center gap-x-1 rounded-md bg-indigo-100 text-indigo-700 text-[13px] px-[6px] py-[2px]">
@@ -31,7 +31,7 @@
             <MenuButton class="-m-1.5 flex items-center p-1.5">
               <img class="h-8 w-8 rounded-full bg-slate-50" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
             </MenuButton>
-            <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
+            <transition enter-active-class="transition ease-out duration-200" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
               <MenuItems class="absolute right-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-slate-900/5 focus:outline-none">
                 <MenuItem v-for="item in userNavigation" :key="item.name" v-slot="{ active }">
                   <a :href="item.href" :class="[active ? 'bg-slate-50' : '', 'block px-3 py-1 text-sm leading-6 text-slate-900']">{{ item.name }}</a>
@@ -70,58 +70,84 @@
         <div class="border-b px-4 py-6">
           <div class="flex flex-col gap-y-5">
             <!-- Pretitle -->
-            <FormKit v-model="store.activeBlock.data.pretitle.content" type="text" label="Pretitle"/>
-
-            <!-- Title -->
-            <FormKit v-model="store.activeBlock.data.title.content" type="text" label="Title"/>
-
-            <!-- Subtitle -->
-            <FormKit v-model="store.activeBlock.data.subtitle.content" type="text" label="Subtitle"/>
-          </div>
-        </div>
-        
-        <!-- Buttons -->
-        <div class="border-b px-4 py-6">
-          <span class="block text-xs leading-6 font-medium text-slate-900 mb-1.5">Buttons</span>
-
-          <div class="flex flex-col gap-y-2.5">
-            <!-- Button 1 -->
-            <div class="group sm:flex sm:items-start sm:justify-between rounded-md border border-slate-300 bg-white hover:bg-slate-50 cursor-pointer px-2 py-3">
-              <div class="sm:flex sm:items-center">
-                <div class="h-8 w-6 mr-2 flex items-center justify-center cursor-move">
-                  <Icon name="heroicons:bars-3" class="h-5 w-5 text-slate-400" aria-hidden="true" />
-                </div>
-                
-                <div class="truncate">
-                  <div class="text-xs text-slate-900">Homepage</div>
-                  <div class="mt-1 text-xs text-slate-400">/homepage</div>
-                </div>
-              </div>
-
-              <div class="mt-4 sm:ml-6 sm:mt-0 sm:flex-shrink-0">
-                <button type="button" class="invisible group-hover:visible inline-flex items-center rounded-md border border-slate-300 p-[6px] bg-white hover:bg-slate-100 active:translate-y-px">
-                  <Icon name="heroicons:trash" class="h-5 w-5 text-slate-400" aria-hidden="true" />
-                </button>
-              </div>
+            <div>
+              <!-- <label class="text-xs leading-6 font-medium text-slate-900 mb-1.5">Pretitle</label> -->
+              <AppInput v-model="store.activeBlock.data.pretitle.content" label="Pretitle" type="text"/>
             </div>
 
-            <!-- Button 2 -->
-            <div class="group sm:flex sm:items-start sm:justify-between rounded-md border border-slate-300 bg-white hover:bg-slate-50 cursor-pointer px-2 py-3">
-              <div class="sm:flex sm:items-center">
-                <div class="h-8 w-6 mr-2 flex items-center justify-center cursor-move">
-                  <Icon name="heroicons:bars-3" class="h-5 w-5 text-slate-400" aria-hidden="true" />
-                </div>
-                
-                <div class="truncate">
-                  <div class="text-xs text-slate-900">Learn more</div>
-                  <div class="mt-1 text-xs text-slate-400">/learn-more</div>
-                </div>
+            <!-- Title -->
+            <div>
+              <!-- <label class="text-xs leading-6 font-medium text-slate-900 mb-1.5">Title</label> -->
+              <AppInput v-model="store.activeBlock.data.title.content" label="Title" type="text"/>
+            </div>
+
+            <!-- Title size -->
+            <div>
+                <!-- <label for="title-size" class="text-xs leading-6 font-medium text-slate-900 mb-1.5">Title size</label>
+                <input id="title-size" type="range" min="0" max="5" value="2.5" step="0.5" class="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer"> -->
+
+                <label for="title-size" class="block text-sm font-medium leading-6 text-gray-900">Title size</label>
+                <select v-model="store.activeBlock.data.title.size" id="title-size" name="title-size" class="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                  <option value="xl">Tiny</option>
+                  <option value="3xl">Smaller</option>
+                  <option value="4xl">Small</option>
+                  <option value="5xl">Default</option>
+                  <option value="6xl">Large</option>
+                  <option value="7xl">Larger</option>
+                  <option value="8xl">Huge</option>
+                </select>
               </div>
 
-              <div class="mt-4 sm:ml-6 sm:mt-0 sm:flex-shrink-0">
-                <button type="button" class="invisible group-hover:visible inline-flex items-center rounded-md border border-slate-300 p-[6px] bg-white hover:bg-slate-100 active:translate-y-px">
-                  <Icon name="heroicons:trash" class="h-5 w-5 text-slate-400" aria-hidden="true" />
-                </button>
+            <!-- Subtitle -->
+            <div>
+              <p class="text-xs leading-6 font-medium text-slate-900 mb-1.5">Subtitle</p>
+              <AppInput v-model="store.activeBlock.data.subtitle.content" type="text"/>
+            </div>
+
+            <!-- Buttons -->
+            <div>
+              <p class="text-xs leading-6 font-medium text-slate-900 mb-1.5">Buttons</p>
+
+              <div class="overflow-hidden rounded-md border bg-white _flex _flex-col _gap-y-2.5">
+                <!-- Button 1 -->
+                <div class="group sm:flex sm:items-start sm:justify-between border-b last:border-0 cursor-pointer hover:bg-slate-50 transition-color duration-200 ease-in-out px-2 py-3">
+                  <div class="sm:flex sm:items-center">
+                    <div class="h-8 w-6 mr-2 flex items-center justify-center cursor-move">
+                      <Icon name="heroicons:bars-3" class="h-5 w-5 text-slate-400" aria-hidden="true" />
+                    </div>
+                    
+                    <div class="truncate">
+                      <div class="text-xs text-slate-900">Homepage</div>
+                      <div class="mt-1 text-xs text-slate-400">/homepage</div>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 sm:ml-6 sm:mt-0 sm:flex-shrink-0">
+                    <button type="button" class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 inline-flex items-center rounded-md border border-slate-300 p-[6px] bg-white hover:bg-slate-100 active:translate-y-px">
+                      <Icon name="heroicons:trash" class="h-5 w-5 text-slate-400" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Button 2 -->
+                <div class="group sm:flex sm:items-start sm:justify-between border-b last:border-0 cursor-pointer hover:bg-slate-50 transition-opacity duration-200 ease-in-out px-2 py-3">
+                  <div class="sm:flex sm:items-center">
+                    <div class="h-8 w-6 mr-2 flex items-center justify-center cursor-move">
+                      <Icon name="heroicons:bars-3" class="h-5 w-5 text-slate-400" aria-hidden="true" />
+                    </div>
+                    
+                    <div class="truncate">
+                      <div class="text-xs text-slate-900">Learn more</div>
+                      <div class="mt-1 text-xs text-slate-400">/learn-more</div>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 sm:ml-6 sm:mt-0 sm:flex-shrink-0">
+                    <button type="button" class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 inline-flex items-center rounded-md border border-slate-300 p-[6px] bg-white hover:bg-slate-100 active:translate-y-px">
+                      <Icon name="heroicons:trash" class="h-5 w-5 text-slate-400" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -129,19 +155,19 @@
 
         <!-- Background -->
         <div class="border-b px-4 py-6">
-          <span class="block text-xs leading-6 font-medium text-slate-900 mb-1.5">Background</span>
+          <p class="text-xs leading-6 font-medium text-slate-900 mb-1.5">Background</p>
 
           <!-- Image -->
-          <div class="group flex rounded-md shadow-sm cursor-pointer">
-            <div class="flex w-16 h-16 flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-white bg-slate-300"></div>
+          <div class="group flex rounded-md shadow-sm cursor-pointer border bg-white transition-colors duration-200 ease-in-out hover:bg-slate-50">
+            <div class="flex w-16 h-16 flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-white bg-slate-100"></div>
 
-            <div class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-slate-300 bg-white">
+            <div class="flex flex-1 items-center justify-between truncate">
               <div class="flex-1 truncate px-4 py-2 text-xs">
                 <div class="text-slate-900">Image title</div>
                 <div class="text-slate-400 mt-1">png</div>
               </div>
 
-              <div class="invisible group-hover:visible flex-shrink-0 pr-2">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out flex-shrink-0 pr-2">
                 <button type="button" class="inline-flex items-center rounded-md border border-slate-300 p-[6px] bg-white hover:bg-slate-100 active:translate-y-px">
                   <Icon name="heroicons:trash" class="h-5 w-5 text-slate-400" aria-hidden="true" />
                 </button>
@@ -150,35 +176,52 @@
           </div>
 
           <!-- Overlay -->
-          <div class="last:border-t">
+          <div class="group mt-2">
             <SwitchGroup as="div" class="flex items-center cursor-pointer">
               <SwitchLabel as="span" class="flex-1 text-xs font-medium text-slate-900 py-4">
                 Overlay
               </SwitchLabel>
 
-              <Switch v-model="overlayEnabled" :class="[overlayEnabled ? 'bg-indigo-600' : 'bg-slate-200', 'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2']">
-                <span aria-hidden="true" :class="[overlayEnabled ? 'translate-x-5' : 'translate-x-0', 'pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out']" />
+              <Switch 
+                v-model="store.activeBlock.data.background.overlay" 
+                :class="[store.activeBlock.data.background.overlay ? 'bg-indigo-600' : 'bg-slate-200']"
+                class="group-hover:bg-indigo-400 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+              >
+                <span 
+                  aria-hidden="true" 
+                  :class="[store.activeBlock.data.background.overlay ? 'translate-x-5' : 'translate-x-0']" 
+                  class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+                />
               </Switch>
             </SwitchGroup>
           </div>
 
-          <div class="last:border-t">
+          <!-- Gradient -->
+          <!-- <div class="last:border-t">
             <SwitchGroup as="div" class="flex items-center cursor-pointer">
               <SwitchLabel as="span" class="flex-1 text-xs font-medium text-slate-900 py-4">
                 Gradient
               </SwitchLabel>
 
-              <Switch v-model="gradientEnabled" :class="[gradientEnabled ? 'bg-indigo-600' : 'bg-slate-200', 'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2']">
-                <span aria-hidden="true" :class="[gradientEnabled ? 'translate-x-5' : 'translate-x-0', 'pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out']" />
+              <Switch 
+                v-model="gradientEnabled" 
+                :class="[gradientEnabled ? 'bg-indigo-600' : 'bg-slate-200']"
+                class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+              >
+                <span 
+                  aria-hidden="true" 
+                  :class="[gradientEnabled ? 'translate-x-5' : 'translate-x-0']" 
+                  class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+                />
               </Switch>
             </SwitchGroup>
-          </div>
+          </div> -->
 
           <!-- <Menu as="div" class="relative">
             <MenuButton class="flex items-center">
               <div class="h-8 w-8 rounded-full bg-white"></div>
             </MenuButton>
-            <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
+            <transition enter-active-class="transition ease-out duration-200" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
               <MenuItems class="absolute left-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-slate-900/5 focus:outline-none">
                 <MenuItem v-for="item in userNavigation" :key="item.name" v-slot="{ active }">
                   <a :href="item.href" :class="[active ? 'bg-slate-50' : '', 'block px-3 py-1 text-sm leading-6 text-slate-900']">{{ item.name }}</a>
@@ -212,19 +255,19 @@
     </template>
 
     <template v-slot:middle>
-      <BlockEditor
+      <BlockWrapper
         v-for="(block, index) in store.page.blocks"
         :key="index"
         :active="block.id === store.activeBlockId"
         :total="store.page.blocks.length"
         :index="index"
         :block="block"
-        @close="closeBlockEditor"
+        @close="closeBlockWrapper"
         @delete="deleteBlock"
         @move="moveBlock"
       >
         <Block v-bind="block" @click="toggleActiveBlockId(block.id)"/>
-      </BlockEditor>
+      </BlockWrapper>
     </template>
 
     <template v-slot:right>
@@ -236,9 +279,6 @@
 <script setup>
 import { Switch, SwitchGroup, SwitchLabel } from '@headlessui/vue'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-
-const overlayEnabled = ref(false)
-const gradientEnabled = ref(false)
 
 const userNavigation = [
   { name: 'Your profile', href: '#' },
@@ -253,7 +293,7 @@ function toggleActiveBlockId(id) {
   store.activeBlockId = id
 }
 
-function closeBlockEditor() {
+function closeBlockWrapper() {
   store.activeBlockId = ''
 }
 

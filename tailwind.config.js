@@ -59,8 +59,8 @@ module.exports = {
       '5xl': ['var(--font-size-5xl)',  { lineHeight: '1' }],
       '6xl': ['var(--font-size-6xl)',  { lineHeight: '1' }],
       '7xl': ['var(--font-size-7xl)',  { lineHeight: '1' }],
-      '8xl': ['6rem',                  { lineHeight: '1' }],
-      '9xl': ['8rem',                  { lineHeight: '1' }],
+      '8xl': ['var(--font-size-8xl)',  { lineHeight: '1' }],
+      '9xl': ['var(--font-size-9xl)',  { lineHeight: '1' }],
     },
 
     padding: {
@@ -103,6 +103,7 @@ module.exports = {
   },
   
   content: [ // Content to be purged
+    './app/components/*.vue',
     './admin/**/components/*.vue',
     './components/**/*.vue',
     './pages/*.vue',

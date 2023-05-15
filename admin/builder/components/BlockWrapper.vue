@@ -19,7 +19,7 @@
               class="relative text-xs font-semibold inline-block py-2 px-3 border-r rounded-l-md text-slate-900 bg-white hover:bg-slate-50 active:translate-y-px"
             >
               <Icon name="heroicons:arrow-up" class="h-5 w-5" aria-hidden="true" />
-              {{ index }}
+              <!-- {{ index }} -->
             </button>
 
             <button
@@ -28,7 +28,7 @@
               class="relative text-xs font-semibold inline-block py-2 px-3 rounded-r-md text-slate-900 bg-white hover:bg-slate-50 active:translate-y-px disabled:opacity-25 disabled:pointer-events-none"
             >
               <Icon name="heroicons:arrow-down" class="h-5 w-5" aria-hidden="true" />
-              {{ index }}
+              <!-- {{ index }} -->
             </button>
           </span>
 

@@ -32,10 +32,22 @@ export default [
             content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
             size: 'xl',
           },
+          buttons: [
+            {
+              label: 'Call to action',
+              to: '/homepage',
+            },
+            {
+              label: 'Learn more',
+              to: '/page-1',
+              variant: 'text',
+            }
+          ],
           background: {
             image: {
               src: 'https://tailwindui.com/img/beams-home@95.jpg'
             },
+            overlay: true,
           },
           padding: {
             paddingTop: '6xl',
