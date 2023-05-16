@@ -105,6 +105,7 @@ module.exports = {
   content: [ // Content to be purged
     './app/components/*.vue',
     './admin/**/components/*.vue',
+    './admin/**/components/**/*.vue',
     './components/**/*.vue',
     './pages/*.vue',
     './dictionaries/*.{js,ts}',

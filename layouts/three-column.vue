@@ -9,8 +9,9 @@
         <slot name="left" />
       </nav>
 
-      <main class="flex-1 overflow-y-auto rounded-lg border drop-shadow bg-white no-scrollbar mx-4">
+      <main class="relative flex-1 overflow-y-auto rounded-lg border drop-shadow bg-white no-scrollbar mx-4">
         <slot name="middle" />
+        <div id="headlessui-portal-root"></div>
       </main>
 
       <!-- <aside class="w-[8rem] overflow-y-auto no-scrollbar">

@@ -1,6 +1,6 @@
 <template>
     <section class="mx-auto max-w-7xl px-6 mt-10 mb-20">
-        <p class="text-lg font-semibold text-slate-900 mb-7">Headings</p>
+        <p class="text-lg font-semibold text-gray-900 mb-7">Headings</p>
 
         <div class="mt-8">
             <div class="flex flex-col gap-6">
@@ -15,10 +15,10 @@
     </section>
 
     <section class="mx-auto max-w-7xl px-6 my-10">
-        <p class="text-lg font-semibold text-slate-900 mb-7">Buttons</p>
+        <p class="text-lg font-semibold text-gray-900 mb-7">Buttons</p>
 
         <div class="mt-8">
-            <h2 class="text-md font-semibold text-slate-900 mb-2">Bold button</h2>
+            <h2 class="text-md font-semibold text-gray-900 mb-2">Bold button</h2>
 
             <div class="flex items-center gap-6">
                 <BaseButton to="#" label="Button text" variant="bold" size="lg"/>
@@ -28,7 +28,7 @@
         </div>
 
         <div class="mt-8">
-            <h2 class="text-md font-semibold text-slate-900 mb-2">Light button</h2>
+            <h2 class="text-md font-semibold text-gray-900 mb-2">Light button</h2>
 
             <div class="flex items-center gap-6">
                 <BaseButton to="#" label="Button text" variant="light" size="lg"/>
@@ -38,7 +38,7 @@
         </div>
 
         <div class="mt-8">
-            <h2 class="text-md font-semibold text-slate-900 mb-2">Ghost button</h2>
+            <h2 class="text-md font-semibold text-gray-900 mb-2">Ghost button</h2>
 
             <div class="flex items-center gap-6">
                 <BaseButton to="#" label="Button text" variant="ghost" size="lg"/>
@@ -48,7 +48,7 @@
         </div>
 
         <div class="mt-8">
-            <h2 class="text-md font-semibold text-slate-900 mb-2">Text button</h2>
+            <h2 class="text-md font-semibold text-gray-900 mb-2">Text button</h2>
 
             <div class="flex items-center gap-6">
                 <BaseButton to="#" label="Button text" variant="text" size="lg"/>
@@ -59,10 +59,10 @@
     </section>
 
     <section class="mx-auto max-w-7xl px-6 my-10">
-        <p class="text-lg font-semibold text-slate-900 mb-7">Colors</p>
+        <p class="text-lg font-semibold text-gray-900 mb-7">Colors</p>
 
         <div class="mt-8">
-            <h2 class="text-md font-semibold text-slate-900 mb-2">Primary</h2>
+            <h2 class="text-md font-semibold text-gray-900 mb-2">Primary</h2>
             
             <div class="flex gap-4" data-theme="base">   
                 <div class="grid h-16 w-16 place-items-end bg-primary-50 rounded-md p-1 font-semibold leading-none text-primary-900">
@@ -99,7 +99,7 @@
         </div>
 
         <div class="mt-8">
-            <h2 class="text-md font-semibold text-slate-900 mb-2">Secondary</h2>
+            <h2 class="text-md font-semibold text-gray-900 mb-2">Secondary</h2>
 
             <div class="flex gap-4" data-theme="theme-1">
                 <div class="grid h-16 w-16 place-items-end bg-secondary-50 rounded-md p-1 font-semibold leading-none text-primary-900">
@@ -136,7 +136,7 @@
         </div>
 
         <div class="mt-8">
-            <h2 class="text-md font-semibold text-slate-900 mb-2">Theme 2</h2>
+            <h2 class="text-md font-semibold text-gray-900 mb-2">Theme 2</h2>
 
             <div class="flex gap-4" data-theme="theme-2">
                 <div class="grid h-16 w-16 place-items-end bg-accent-50 rounded-md p-1 font-semibold leading-none text-primary-900">
@@ -175,10 +175,10 @@
 
     <!-- THEMES -->
     <!-- <section class="mx-auto max-w-7xl px-6 my-10">
-        <p class="text-lg font-semibold text-slate-900 mb-7">Color themes</p>
+        <p class="text-lg font-semibold text-gray-900 mb-7">Color themes</p>
 
         <div class="mt-8">
-            <h2 class="text-md font-semibold text-slate-900 mb-2">Base</h2>
+            <h2 class="text-md font-semibold text-gray-900 mb-2">Base</h2>
             
             <div class="flex gap-4" data-theme="base">   
                 <div class="grid h-16 w-16 place-items-end bg-primary-50 rounded-md p-1 font-semibold leading-none text-primary-900">
@@ -215,7 +215,7 @@
         </div>
 
         <div class="mt-8">
-            <h2 class="text-md font-semibold text-slate-900 mb-2">Theme 1</h2>
+            <h2 class="text-md font-semibold text-gray-900 mb-2">Theme 1</h2>
 
             <div class="flex gap-4" data-theme="theme-1">
                 <div class="grid h-16 w-16 place-items-end bg-primary-50 rounded-md p-1 font-semibold leading-none text-primary-900">
@@ -252,7 +252,7 @@
         </div>
 
         <div class="mt-8">
-            <h2 class="text-md font-semibold text-slate-900 mb-2">Theme 2</h2>
+            <h2 class="text-md font-semibold text-gray-900 mb-2">Theme 2</h2>
 
             <div class="flex gap-4" data-theme="theme-2">
                 <div class="grid h-16 w-16 place-items-end bg-primary-50 rounded-md p-1 font-semibold leading-none text-primary-900">
