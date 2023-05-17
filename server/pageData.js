@@ -45,7 +45,12 @@ export default [
           ],
           background: {
             image: {
-              src: 'https://tailwindui.com/img/beams-home@95.jpg'
+              name: 'The image title',
+              src: 'https://tailwindui.com/img/beams-home@95.jpg',
+              extension: 'png',
+              alt: 'The image alt',
+              description: 'The image description',
+              caption: 'The image caption',
             },
             overlay: true,
           },
@@ -118,8 +123,12 @@ export default [
         name: 'Feature',
         data: {
           image: {
+            name: 'The image title',
             src: 'https://tailwindui.com/img/component-images/dark-project-app-screenshot.png',
+            extension: 'png',
             alt: 'The image alt',
+            description: 'The image description',
+            caption: 'The image caption',
           }
         },
       },
@@ -142,11 +151,21 @@ export default [
             bottom: '6xl',
           },
           image: {
-            src: 'https://tailwindui.com/img/component-images/project-app-screenshot.png'
+            name: 'The image title',
+            src: 'https://tailwindui.com/img/component-images/project-app-screenshot.png',
+            extension: 'png',
+            alt: 'The image alt',
+            description: 'The image description',
+            caption: 'The image caption',
           },
           background: {
             image: {
-              src: 'https://tailwindui.com/img/beams-home@95.jpg'
+              name: 'The image title',
+              src: 'https://tailwindui.com/img/beams-home@95.jpg',
+              extension: 'png',
+              alt: 'The image alt',
+              description: 'The image description',
+              caption: 'The image caption',
             },
           },
         },

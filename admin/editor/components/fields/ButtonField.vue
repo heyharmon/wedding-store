@@ -1,5 +1,5 @@
 <template>
-  <div class="group sm:flex sm:items-start sm:justify-between border-b last:border-0 cursor-pointer hover:bg-gray-50 transition-color duration-200 ease-in-out px-2 py-3">
+  <div class="group sm:flex sm:items-start sm:justify-between border-b border-gray-300 last:border-0 cursor-pointer hover:bg-indigo-50 transition-color duration-200 ease-in-out px-2 py-3">
     <div class="sm:flex sm:items-center">
       <div class="h-8 w-6 mr-2 flex items-center justify-center cursor-move">
         <Icon name="heroicons:bars-3" class="h-5 w-5 text-gray-400" aria-hidden="true" />

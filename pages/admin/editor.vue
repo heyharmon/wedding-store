@@ -66,75 +66,32 @@
           </button>
         </div>
 
-        <!-- Content group -->
-        <div class="border-b px-4 py-6">
-          <div class="flex flex-col gap-y-5">
-            <!-- Pretitle -->
-            <AppInput v-model="store.activeBlock.data.pretitle.content" label="Pretitle" type="text"/>
+        <!-- Content fields -->
+        <div class="flex flex-col gap-y-5 px-4 py-6">
+          <!-- Pretitle -->
+          <FormInput v-model="store.activeBlock.data.pretitle.content" label="Pretitle" type="text"/>
 
-            <!-- Title -->
-            <AppInput v-model="store.activeBlock.data.title.content" label="Title" type="text"/>
+          <!-- Title -->
+          <FormInput v-model="store.activeBlock.data.title.content" label="Title" type="text"/>
 
-            <!-- Title size -->
-            <AppSelectButtons v-model="store.activeBlock.data.title.size" label="Title size" :options="[
-                {value: '4xl', label: 'Small'},
-                {value: '5xl', label: 'Default'},
-                {value: '6xl', label: 'Large'},
-                {value: '7xl', label: 'Huge'},
-              ]"/>
+          <!-- Title size -->
+          <FormSelectButtons v-model="store.activeBlock.data.title.size" label="Title size" :options="[
+              {value: '4xl', label: 'Small'},
+              {value: '5xl', label: 'Default'},
+              {value: '6xl', label: 'Large'},
+              {value: '7xl', label: 'Huge'},
+            ]"/>
 
-            <!-- Subtitle -->
-            <AppInput v-model="store.activeBlock.data.subtitle.content" label="Subtitle" type="text"/>
+          <!-- Subtitle -->
+          <FormInput v-model="store.activeBlock.data.subtitle.content" label="Subtitle" type="text"/>
 
-            <!-- Buttons -->
-            <ButtonFieldsWrapper label="Buttons">
-              <ButtonField v-for="button in store.activeBlock.data.buttons" v-bind="button"/>
-            </ButtonFieldsWrapper>
-          </div>
-        </div>
+          <!-- Buttons -->
+          <ButtonsGroup label="Buttons">
+            <ButtonField v-for="button in store.activeBlock.data.buttons" v-bind="button"/>
+          </ButtonsGroup>
 
-        <!-- Background -->
-        <div class="border-b px-4 py-6">
-          <p class="text-xs leading-6 font-medium text-gray-900 mb-1.5">Background</p>
-
-          <!-- Image -->
-          <div class="group flex rounded-md shadow-sm cursor-pointer border bg-white transition-colors duration-200 ease-in-out hover:bg-gray-50">
-            <div class="flex w-16 h-16 flex-shrink-0 items-center justify-center rounded-l-md text-sm font-medium text-white bg-gray-100"></div>
-
-            <div class="flex flex-1 items-center justify-between truncate">
-              <div class="flex-1 truncate px-4 py-2 text-xs">
-                <div class="text-gray-900">Image title</div>
-                <div class="text-gray-400 mt-1">png</div>
-              </div>
-
-              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out flex-shrink-0 pr-2">
-                <button type="button" class="inline-flex items-center rounded-md border border-gray-300 p-[6px] bg-white hover:bg-gray-100 active:translate-y-px">
-                  <Icon name="heroicons:trash" class="h-5 w-5 text-gray-400" aria-hidden="true" />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Overlay -->
-          <div class="group mt-2">
-            <SwitchGroup as="div" class="flex items-center cursor-pointer">
-              <SwitchLabel as="span" class="flex-1 text-xs font-medium text-gray-900 py-4">
-                Overlay
-              </SwitchLabel>
-
-              <Switch 
-                v-model="store.activeBlock.data.background.overlay" 
-                :class="[store.activeBlock.data.background.overlay ? 'bg-indigo-600' : 'bg-gray-200']"
-                class="group-hover:bg-indigo-400 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
-              >
-                <span 
-                  aria-hidden="true" 
-                  :class="[store.activeBlock.data.background.overlay ? 'translate-x-5' : 'translate-x-0']" 
-                  class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
-                />
-              </Switch>
-            </SwitchGroup>
-          </div>
+          <!-- Background -->
+          <BackgroundField v-bind="store.activeBlock.data.background"/>
 
           <!-- Gradient -->
           <!-- <div class="last:border-t">
@@ -169,7 +126,7 @@
               </MenuItems>
             </transition>
           </Menu> -->
-          
+
           <!-- Background color -->
           <!-- <FormKit
             type="select"
@@ -189,7 +146,6 @@
               </div>
             </template>
           </FormKit> -->
-
         </div>
       </div>
     </template>
