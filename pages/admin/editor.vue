@@ -69,29 +69,46 @@
         <!-- Content fields -->
         <div class="flex flex-col gap-y-5 px-4 py-6">
           <!-- Pretitle -->
-          <FormInput v-model="store.activeBlock.data.pretitle.content" label="Pretitle" type="text"/>
+          <FormInput label="Pretitle" v-model="store.activeBlock.data.pretitle.content"/>
 
           <!-- Title -->
-          <FormInput v-model="store.activeBlock.data.title.content" label="Title" type="text"/>
+          <FormInput label="Title" v-model="store.activeBlock.data.title.content"/>
 
           <!-- Title size -->
-          <FormSelectButtons v-model="store.activeBlock.data.title.size" label="Title size" :options="[
-              {value: '4xl', label: 'Small'},
-              {value: '5xl', label: 'Default'},
-              {value: '6xl', label: 'Large'},
-              {value: '7xl', label: 'Huge'},
-            ]"/>
+          <FormSelectButtons label="Title size" v-model="store.activeBlock.data.title.size" :options="[
+            {value: '4xl', label: 'Small'},
+            {value: '5xl', label: 'Default'},
+            {value: '6xl', label: 'Large'},
+            {value: '7xl', label: 'Huge'},
+          ]"/>
 
           <!-- Subtitle -->
-          <FormInput v-model="store.activeBlock.data.subtitle.content" label="Subtitle" type="text"/>
+          <FormInput label="Subtitle" v-model="store.activeBlock.data.subtitle.content"/>
 
           <!-- Buttons -->
           <ButtonsGroup label="Buttons">
             <ButtonField v-for="button in store.activeBlock.data.buttons" v-bind="button"/>
           </ButtonsGroup>
 
-          <!-- Background -->
-          <BackgroundField v-bind="store.activeBlock.data.background"/>
+          <!-- Background image -->
+          <!-- <BackgroundField v-bind="store.activeBlock.data.background"/> -->
+          <ImageField label="Background image" v-bind="store.activeBlock.data.background.image"/>
+          
+          <!-- Background overlay -->
+          <FormSwitch label="Overlay" v-model="store.activeBlock.data.background.overlay"/>
+
+          <!-- Padding -->
+          <FormSelectButtons 
+            label="Title size" 
+            v-model="topAndBottomPadding" 
+            :options="[
+              {value: 'md', label: 'Tiny'},
+              {value: 'xl', label: 'Smaller'},
+              {value: '3xl', label: 'Small'},
+              {value: '5xl', label: 'Default'},
+              {value: '7xl', label: 'Large'},
+            ]"
+          />
 
           <!-- Gradient -->
           <!-- <div class="last:border-t">
@@ -173,7 +190,6 @@
 </template>
 
 <script setup>
-import { Switch, SwitchGroup, SwitchLabel } from '@headlessui/vue'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 
 const userNavigation = [
@@ -184,6 +200,16 @@ const userNavigation = [
 const store = usePageStore()
 
 await useAsyncData('page', () => store.show('homepage'))
+
+let topAndBottomPadding = computed({
+  get() {
+    return store.activeBlock.data.padding.paddingTop;
+  },
+  set(value) {
+    store.activeBlock.data.padding.paddingTop = value
+    store.activeBlock.data.padding.paddingBottom = value
+  }
+})
 
 function toggleActiveBlockId(id) {
   store.activeBlockId = id
