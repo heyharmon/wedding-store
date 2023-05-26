@@ -7,7 +7,7 @@
         :key="option.value"
         @click="updateValue(option.value)"
         :class="modelValue === option.value ? 'ring-indigo-500 ring-2 ring-inset bg-indigo-50 z-10' : ''"
-        class="relative inline-flex items-center px-3 py-2 text-sm text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-indigo-50 first:rounded-l-md last:rounded-r-md [&:not(:first-child)]:-ml-px"
+        class="relative inline-flex items-center px-3 py-2 text-sm text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 first:rounded-l-md last:rounded-r-md [&:not(:first-child)]:-ml-px"
         type="button"
       >
       {{ option.label }}

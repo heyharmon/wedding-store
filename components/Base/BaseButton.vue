@@ -25,11 +25,11 @@ const props = defineProps({
     // onClick: {
     //   type: Function,
     // },
-    to: {
+    label: {
         type: String,
         default: ''
     },
-    label: {
+    to: {
         type: String,
         default: ''
     },

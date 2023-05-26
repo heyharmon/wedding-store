@@ -1,12 +1,12 @@
 <template>
-  <NuxtImg :src="src" :alt="alt" :format="format" :width="width" :height="height"/>
+  <!-- <NuxtImg :src="'https://d25r5txdw1c9o7.cloudfront.net/fit-in/' + width + 'x' + height + '/' + path" :alt="alt" :format="format" :width="width" :height="height"/> -->
+  <NuxtImg :src="'https://d25r5txdw1c9o7.cloudfront.net/fit-in/' + path" :alt="alt" :format="format" :width="width" :height="height"/>
 </template>
-  
+  350x350
 <script setup>
 const props = defineProps({
-    src: {
+    path: {
         type: String,
-        default: 'https://dummyimage.com/1200x800/f0f4f8/111827'
     },
     alt: {
         type: String,

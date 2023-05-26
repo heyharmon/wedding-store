@@ -1,8 +1,8 @@
 <template>
   <div>
     <!-- Background image-->
-    <div v-if="image" aria-hidden="true" class="absolute inset-0 overflow-hidden">
-      <BaseImage v-bind="image" class="h-full w-full object-cover object-center"/>
+    <div v-if="file" aria-hidden="true" class="absolute inset-0 overflow-hidden">
+      <BaseImage v-bind="file" class="h-full w-full object-cover object-center"/>
     </div>
 
     <!-- Overlay -->
@@ -14,7 +14,7 @@
 
 <script setup>
 const props = defineProps({
-  image: Object,
+  file: Object,
   overlay: {
     type: Boolean,
     default: false

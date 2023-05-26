@@ -69,13 +69,13 @@
         <!-- Content fields -->
         <div class="flex flex-col gap-y-5 px-4 py-6">
           <!-- Pretitle -->
-          <FormInput label="Pretitle" v-model="store.activeBlock.data.pretitle.content"/>
+          <AppInput label="Pretitle" v-model="store.activeBlock.data.pretitle.content"/>
 
           <!-- Title -->
-          <FormInput label="Title" v-model="store.activeBlock.data.title.content"/>
+          <AppInput label="Title" v-model="store.activeBlock.data.title.content"/>
 
           <!-- Title size -->
-          <FormSelectButtons label="Title size" v-model="store.activeBlock.data.title.size" :options="[
+          <AppSelectButtons label="Title size" v-model="store.activeBlock.data.title.size" :options="[
             {value: '4xl', label: 'Small'},
             {value: '5xl', label: 'Default'},
             {value: '6xl', label: 'Large'},
@@ -83,86 +83,43 @@
           ]"/>
 
           <!-- Subtitle -->
-          <FormInput label="Subtitle" v-model="store.activeBlock.data.subtitle.content"/>
+          <AppInput label="Subtitle" v-model="store.activeBlock.data.subtitle.content"/>
 
           <!-- Buttons -->
           <ButtonsGroup label="Buttons">
-            <ButtonField v-for="button in store.activeBlock.data.buttons" v-bind="button"/>
+            <ButtonField 
+              v-for="(button, index) in store.activeBlock.data.buttons" 
+              v-model="store.activeBlock.data.buttons[index]"
+            />
           </ButtonsGroup>
 
           <!-- Background image -->
-          <!-- <BackgroundField v-bind="store.activeBlock.data.background"/> -->
-          <ImageField label="Background image" v-bind="store.activeBlock.data.background.image"/>
+          <FileField 
+            label="Background image" 
+            v-bind="store.activeBlock.data.background.file" 
+            @click="
+              store.filesModal.open = true,
+              store.filesModal.targetBlockProp = 'background'
+            "
+          />
           
           <!-- Background overlay -->
-          <FormSwitch label="Overlay" v-model="store.activeBlock.data.background.overlay"/>
+          <AppSwitch 
+            label="Overlay" 
+            v-model="store.activeBlock.data.background.overlay"
+          />
 
           <!-- Padding -->
-          <FormSelectButtons 
-            label="Title size" 
+          <AppSelectButtons 
+            label="Padding" 
             v-model="topAndBottomPadding" 
             :options="[
-              {value: 'md', label: 'Tiny'},
               {value: 'xl', label: 'Smaller'},
               {value: '3xl', label: 'Small'},
               {value: '5xl', label: 'Default'},
               {value: '7xl', label: 'Large'},
             ]"
           />
-
-          <!-- Gradient -->
-          <!-- <div class="last:border-t">
-            <SwitchGroup as="div" class="flex items-center cursor-pointer">
-              <SwitchLabel as="span" class="flex-1 text-xs font-medium text-gray-900 py-4">
-                Gradient
-              </SwitchLabel>
-
-              <Switch 
-                v-model="gradientEnabled" 
-                :class="[gradientEnabled ? 'bg-indigo-600' : 'bg-gray-200']"
-                class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
-              >
-                <span 
-                  aria-hidden="true" 
-                  :class="[gradientEnabled ? 'translate-x-5' : 'translate-x-0']" 
-                  class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
-                />
-              </Switch>
-            </SwitchGroup>
-          </div> -->
-
-          <!-- <Menu as="div" class="relative">
-            <MenuButton class="flex items-center">
-              <div class="h-8 w-8 rounded-full bg-white"></div>
-            </MenuButton>
-            <transition enter-active-class="transition ease-out duration-200" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
-              <MenuItems class="absolute left-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none">
-                <MenuItem v-for="item in userNavigation" :key="item.name" v-slot="{ active }">
-                  <a :href="item.href" :class="[active ? 'bg-gray-50' : '', 'block px-3 py-1 text-sm leading-6 text-gray-900']">{{ item.name }}</a>
-                </MenuItem>
-              </MenuItems>
-            </transition>
-          </Menu> -->
-
-          <!-- Background color -->
-          <!-- <FormKit
-            type="select"
-            label="Background color"
-            :options="[
-              {label: 'Primary', value: '#fff'},
-              {label: 'Secondary', value: '#fff'},
-              {label: 'Accent', value: '#fff'},
-            ]"
-          >
-            <template #option="{ option }">
-              <div class="formkit-option">
-                <div class="h-8 w-8 rounded-full" :style="`background-color: ${option.value};`"></div>
-                <span>
-                  {{ option.label }}
-                </span>
-              </div>
-            </template>
-          </FormKit> -->
         </div>
       </div>
     </template>
@@ -187,6 +144,9 @@
       <div>Right...</div>
     </template>
   </NuxtLayout>
+
+  <FilesModal v-if="store.filesModal.open" @close="store.filesModal.open = false" title="Files" size="full"/>
+  <!-- <ButtonModal v-if="store.buttonModal.open" @close="store.buttonModal.open = false"/> -->
 </template>
 
 <script setup>
@@ -197,7 +157,7 @@ const userNavigation = [
   { name: 'Sign out', href: '#' },
 ]
 
-const store = usePageStore()
+const store = useEditorStore()
 
 await useAsyncData('page', () => store.show('homepage'))
 

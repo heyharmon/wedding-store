@@ -1,9 +1,8 @@
-import pages from '~/server/pageData'
+import pages from '~/server/pages'
 
 export const usePageStore = defineStore('page', {
   state: () => ({
     page: {},
-    activeBlockId: null
   }),
   
   actions: {
@@ -24,15 +23,7 @@ export const usePageStore = defineStore('page', {
       //   })
     }
   },
-  getters: {
-    activeBlock: (state) => {
-      if (!state.activeBlockId) return
-
-      return state.page.blocks.find(
-        block => block.id === state.activeBlockId
-      )
-    }
-  },
+  getters: {},
 })
 
 // export const usePageStore = defineStore('page', () => {d

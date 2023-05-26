@@ -1,4 +1,4 @@
-import pages from '~/server/pageData'
+import pages from '~/server/pages'
 
 export const usePageStore = defineStore('page', {
   state: () => ({

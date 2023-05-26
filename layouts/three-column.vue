@@ -5,7 +5,7 @@
     </header>
 
     <div class="flex-1 flex flex-row overflow-y-hidden no-scrollbar mb-4">
-      <nav class="w-[22rem] overflow-y-auto rounded-lg border drop-shadow bg-white no-scrollbar ml-4">
+      <nav class="w-[25rem] overflow-y-auto rounded-lg border drop-shadow bg-white no-scrollbar ml-4">
         <slot name="left" />
       </nav>
 

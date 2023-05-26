@@ -1,4 +1,4 @@
-import pages from '~/server/pageData'
+import pages from '~/server/pages'
 
 export default defineEventHandler(async (event) => {
   const query = getQuery(event)

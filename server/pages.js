@@ -44,10 +44,12 @@ export default [
             }
           ],
           background: {
-            image: {
-              name: 'The image title',
-              src: 'https://tailwindui.com/img/beams-home@95.jpg',
-              extension: 'png',
+            file: {
+              id: 25,
+              extension: 'image',
+              name: 'alesia-kazantceva-XLm6-fPwK5Q-unsplash.jpg',
+              path: 'files/ce7d5fb2cb97435410902044d96855c5.jpg',
+              size: '1.51 MB',
               alt: 'The image alt',
               description: 'The image description',
               caption: 'The image caption',
