@@ -7,8 +7,8 @@
       </div>
 
       <div class="truncate">
-        <div class="text-xs text-gray-900">{{ modelValue.label }}</div>
-        <div class="mt-1.5 text-xs text-gray-400">{{ modelValue.to }}</div>
+        <div class="text-xs text-gray-900">{{ button.label }}</div>
+        <div class="mt-1.5 text-xs text-gray-400">{{ button.to }}</div>
       </div>
     </div>
 
@@ -21,28 +21,27 @@
     <!-- Button editor modal -->
     <AppModal v-if="open" @close="open = false" title="Button" size="sm">
       <div class="flex flex-col gap-y-5 p-8">
-        <AppInput label="Label" v-model="modelValue.label"/>
-        <AppInput label="To" v-model="modelValue.to"/>
+        <AppInput label="Label" v-model="store.activeBlock.data[path][index].label"/>
+        <AppInput label="To" v-model="store.activeBlock.data[path][index].to"/>
       </div>
     </AppModal>
   </div>
 </template>
 
 <script setup>
-import pullAt from "lodash/pullAt";
+const open = ref(false)
+const store = useEditorStore()
 
 const props = defineProps({
-  modelValue: Object,
+  button: Object,
+  path: String,
   index: Number,
 })
 
-const store = useEditorStore()
-const open = ref(false)
-
 function destroy() {
-  pullAt(
-    store.activeBlock.data.buttons,
-    [props.index]
-  )
+  forget({
+    array: store.activeBlock.data[props.path],
+    index: [props.index]
+  })
 }
 </script>

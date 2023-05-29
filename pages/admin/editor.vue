@@ -86,13 +86,7 @@
           <AppInput label="Subtitle" v-model="store.activeBlock.data.subtitle.content"/>
 
           <!-- Buttons -->
-          <ButtonFieldRepeater label="Buttons">
-            <ButtonField 
-              v-for="(button, index) in store.activeBlock.data.buttons"
-              v-model="store.activeBlock.data.buttons[index]"
-              :index="index"
-            />
-          </ButtonFieldRepeater>
+          <ButtonFieldRepeater label="Buttons" path="buttons"/>
 
           <!-- Background image -->
           <FileField 

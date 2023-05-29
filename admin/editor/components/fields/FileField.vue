@@ -36,16 +36,15 @@
         store.filesModal.targetProp = path
       "
       type="button" 
-      class="mt-2 relative block w-full rounded-lg text-gray-400 border-2 border-dashed border-gray-300 p-6 hover:bg-gray-50 focus:border-solid focus:border-indigo-500"
+      class="mt-2 relative block w-full rounded-lg text-gray-400 border-2 border-dashed border-gray-300 p-4 hover:bg-gray-50 focus:border-solid focus:border-indigo-500"
     >
-      <Icon name="heroicons:photo" class="mx-auto h-8 w-8" />
-      <span class="mt-1 block text-sm">Add file</span>
+      <Icon name="heroicons:photo" class="mx-auto h-6 w-6" />
+      <span class="mt-1 block text-xs">Add file</span>
     </button>
   </div>
 </template>
 
 <script setup>
-import set from "lodash/set";
 const store = useEditorStore()
 
 const props = defineProps({
@@ -55,10 +54,10 @@ const props = defineProps({
 })
 
 function destroy() {
-  set(
-    store.activeBlock.data,
-    props.path,
-    null
-  )
+  setValue({
+    object: store.activeBlock.data,
+    path: props.path,
+    value: null
+  })
 }
 </script>
