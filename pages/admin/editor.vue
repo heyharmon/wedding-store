@@ -102,15 +102,9 @@
           />
 
           <!-- Padding -->
-          <AppSelectButtons 
+          <PaddingField 
             label="Padding" 
-            v-model="topAndBottomPadding" 
-            :options="[
-              {value: 'xl', label: 'Smaller'},
-              {value: '3xl', label: 'Small'},
-              {value: '5xl', label: 'Default'},
-              {value: '7xl', label: 'Large'},
-            ]"
+            path="padding"
           />
         </div>
       </div>
@@ -151,16 +145,6 @@ const userNavigation = [
 const store = useEditorStore()
 
 await useAsyncData('page', () => store.show('homepage'))
-
-let topAndBottomPadding = computed({
-  get() {
-    return store.activeBlock.data.padding.paddingTop;
-  },
-  set(value) {
-    store.activeBlock.data.padding.paddingTop = value
-    store.activeBlock.data.padding.paddingBottom = value
-  }
-})
 
 function toggleActiveBlockId(id) {
   store.activeBlockId = id

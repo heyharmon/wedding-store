@@ -29,14 +29,14 @@
 </template>
 
 <script setup>
-const open = ref(false)
-const store = useEditorStore()
-
 const props = defineProps({
   button: Object,
   path: String,
   index: Number,
 })
+
+const open = ref(false)
+const store = useEditorStore()
 
 function destroy() {
   forget({

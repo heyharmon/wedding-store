@@ -45,13 +45,13 @@
 </template>
 
 <script setup>
-const store = useEditorStore()
-
 const props = defineProps({
   modelValue: Object,
   label: String,
   path: String,
 })
+
+const store = useEditorStore()
 
 function destroy() {
   setValue({
