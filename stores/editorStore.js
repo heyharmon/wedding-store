@@ -11,7 +11,7 @@ export const useEditorStore = defineStore('editor', {
     filesModal: {
       open: false,
       selectMultiple: false,
-      targetBlockProp: ''
+      targetProp: ''
     },
   }),
   
@@ -32,9 +32,26 @@ export const useEditorStore = defineStore('editor', {
     },
 
     setBlockProp(prop, data) {
-      console.log(this.activeBlock.data[prop])
       this.activeBlock.data[prop] = data
-    }
+    },
+
+    deleteBlockProp(prop) {
+      delete this.activeBlock.data[prop]
+    },
+
+    // getComponentProperty(component, path) {
+    //   return get(component, path, "");
+    // },
+    
+    // setComponentProperty(componentId, path, value) {
+    //   const componentIndex = store.page.components.findIndex(
+    //     c => c.id === componentId
+    //   );
+    //   const fullPath = `components[${componentIndex}].props.${path}`;
+    //   set(page, fullPath, value);
+    //   saveToLocalStorage();
+    //   return page;
+    // },
   },
 })
 

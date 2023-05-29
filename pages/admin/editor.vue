@@ -86,21 +86,19 @@
           <AppInput label="Subtitle" v-model="store.activeBlock.data.subtitle.content"/>
 
           <!-- Buttons -->
-          <ButtonsGroup label="Buttons">
+          <ButtonFieldGroup label="Buttons">
             <ButtonField 
-              v-for="(button, index) in store.activeBlock.data.buttons" 
+              v-for="(button, index) in store.activeBlock.data.buttons"
               v-model="store.activeBlock.data.buttons[index]"
+              :index="index"
             />
-          </ButtonsGroup>
+          </ButtonFieldGroup>
 
           <!-- Background image -->
           <FileField 
-            label="Background image" 
-            v-bind="store.activeBlock.data.background.file" 
-            @click="
-              store.filesModal.open = true,
-              store.filesModal.targetBlockProp = 'background'
-            "
+            label="Background image"
+            path="background.file"
+            v-model="store.activeBlock.data.background.file" 
           />
           
           <!-- Background overlay -->
@@ -146,7 +144,6 @@
   </NuxtLayout>
 
   <FilesModal v-if="store.filesModal.open" @close="store.filesModal.open = false" title="Files" size="full"/>
-  <!-- <ButtonModal v-if="store.buttonModal.open" @close="store.buttonModal.open = false"/> -->
 </template>
 
 <script setup>
