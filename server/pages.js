@@ -20,7 +20,7 @@ export default [
           pretitle: {
             as: 'span',
             content: 'This is the pretitle',
-            size: 'base',
+            // size: 'base',
           },
           title: {
             as: 'h1',

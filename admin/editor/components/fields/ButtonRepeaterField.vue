@@ -11,6 +11,7 @@
       />
     </div>
 
+    <!-- Empty state -->
     <div v-else class="mt-2">
       <button 
         @click="addNewButton()"

@@ -1,3 +1,5 @@
+import get from "lodash/get";
+import set from "lodash/set";
 import pages from '~/server/pages'
 
 export const useEditorStore = defineStore('editor', {
@@ -22,36 +24,14 @@ export const useEditorStore = defineStore('editor', {
       return state.page.blocks.find(
         block => block.id === state.activeBlockId
       )
-    }
+    },
   },
   
   actions: {
     async show(slug) {
       const page = pages.find((page) => page.slug === slug);
       this.page = page
-    },
-
-    setBlockProp(prop, data) {
-      this.activeBlock.data[prop] = data
-    },
-
-    deleteBlockProp(prop) {
-      delete this.activeBlock.data[prop]
-    },
-
-    // getComponentProperty(component, path) {
-    //   return get(component, path, "");
-    // },
-    
-    // setComponentProperty(componentId, path, value) {
-    //   const componentIndex = store.page.components.findIndex(
-    //     c => c.id === componentId
-    //   );
-    //   const fullPath = `components[${componentIndex}].props.${path}`;
-    //   set(page, fullPath, value);
-    //   saveToLocalStorage();
-    //   return page;
-    // },
+    }
   },
 })
 

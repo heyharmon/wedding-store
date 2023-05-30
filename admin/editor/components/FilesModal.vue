@@ -48,7 +48,6 @@
 </template>
 
 <script setup>
-import set from "lodash/set";
 const emit = defineEmits(['close'])
 const editorStore = useEditorStore()
 const fileStore = useFileStore()
@@ -58,11 +57,11 @@ await useAsyncData('files', () => fileStore.index())
 let currentTab = ref('files')
 
 function selectFile(file) {
-  set(
-    editorStore.activeBlock.data,
-    editorStore.filesModal.targetProp,
-    file
-  )
+  setValue({
+    object: editorStore.activeBlock.data,
+    path: editorStore.filesModal.targetProp,
+    value: file
+  })
 
   editorStore.filesModal.open = false
 }

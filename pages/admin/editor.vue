@@ -69,13 +69,13 @@
         <!-- Content fields -->
         <div class="flex flex-col gap-y-5 px-4 py-6">
           <!-- Pretitle -->
-          <AppInput label="Pretitle" v-model="store.activeBlock.data.pretitle.content"/>
+          <TextField label="Pretitle" path="pretitle.content" />
 
           <!-- Title -->
-          <AppInput label="Title" v-model="store.activeBlock.data.title.content"/>
+          <TextField label="Title" path="title.content" />
 
           <!-- Title size -->
-          <AppSelectButtons label="Title size" v-model="store.activeBlock.data.title.size" :options="[
+          <SelectButtonsField label="Title size" path="title.size" :options="[
             {value: '4xl', label: 'Small'},
             {value: '5xl', label: 'Default'},
             {value: '6xl', label: 'Large'},
@@ -83,17 +83,13 @@
           ]"/>
 
           <!-- Subtitle -->
-          <AppInput label="Subtitle" v-model="store.activeBlock.data.subtitle.content"/>
+          <TextField label="Subtitle" path="subtitle.content" />
 
           <!-- Buttons -->
-          <ButtonFieldRepeater label="Buttons" path="buttons"/>
+          <ButtonRepeaterField label="Buttons" path="buttons"/>
 
           <!-- Background image -->
-          <FileField 
-            label="Background image"
-            path="background.file"
-            v-model="store.activeBlock.data.background.file" 
-          />
+          <FileField label="Background image" path="background.file" />
           
           <!-- Background overlay -->
           <AppSwitch 
@@ -102,10 +98,7 @@
           />
 
           <!-- Padding -->
-          <PaddingField 
-            label="Padding" 
-            path="padding"
-          />
+          <PaddingField label="Padding" path="padding"/>
         </div>
       </div>
     </template>
