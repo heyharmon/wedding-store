@@ -10,26 +10,10 @@
       <!-- Title -->
       <BaseHeading v-bind="title"/>
 
-      <!-- <InlineTextEditor id="034oj3h" @updated="" class="width-fit text-sm">
-        <h1 class="text-5xl font-bold tracking-tight text-gray-900">{{ title }}</h1>
-      </InlineTextEditor> -->
-
-      <!-- <h1 class="text-5xl font-bold tracking-tight text-gray-900">
-        <InlineTextEditor id="034oj3h" @updated="" class="width-fit text-sm">
-          {{ title }}
-        </InlineTextEditor>
-      </h1> -->
-
       <!-- Subtitle -->
       <BaseText v-if="subtitle" v-bind="subtitle" class="mt-6 leading-9 text-gray-600"/>
 
-      <!-- Button group -->
-      <!-- TODO: Create a <ButtonRepeater/> component that accepts an array of button objects and min, max props -->
-      <!-- <div class="mt-10 flex items-center justify-center gap-x-6">
-        <BaseButton to="/homepage" label="Homepage"/>
-        <BaseButton variant="text" to="/page-1" label="Learn more" icon="heroicons:arrow-right"/>
-      </div> -->
-      
+      <!-- Buttons -->
       <BaseButtonGroup class="mt-10">
         <BaseButton v-for="button in buttons" v-bind="button"/>
       </BaseButtonGroup>

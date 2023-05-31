@@ -1,5 +1,3 @@
-import get from "lodash/get";
-import set from "lodash/set";
 import pages from '~/server/pages'
 
 export const useEditorStore = defineStore('editor', {

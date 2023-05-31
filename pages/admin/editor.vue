@@ -104,7 +104,7 @@
     </template>
 
     <template v-slot:middle>
-      <BlockWrapper
+      <!-- <BlockWrapper
         v-for="(block, index) in store.page.blocks"
         :key="index"
         :active="block.id === store.activeBlockId"
@@ -114,9 +114,9 @@
         @close="closeBlockWrapper"
         @delete="deleteBlock"
         @move="moveBlock"
-      >
-        <Block v-bind="block" @click="toggleActiveBlockId(block.id)"/>
-      </BlockWrapper>
+      > -->
+        <Block v-for="(block, index) in store.page.blocks" v-bind="block" @click="toggleActiveBlockId(block.id)"/>
+      <!-- </BlockWrapper> -->
     </template>
 
     <template v-slot:right>
