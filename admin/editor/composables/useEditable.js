@@ -18,7 +18,7 @@ export default function useComposableFunction() {
   function onClick(event) {
     isEditing.value = true
     setTimeout(() => {
-        (editableElement.value).focus()
+      (editableElement.value).focus()
     }, 10)
     // inputText.value = props.modelValue || ""
   }

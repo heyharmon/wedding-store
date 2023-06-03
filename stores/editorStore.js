@@ -4,7 +4,7 @@ export const useEditorStore = defineStore('editor', {
   state: () => ({
     page: {},
     // activeBlockId: null,
-    activeBlockId: 'slsn4l4',
+    activeBlockId: '34lkj4',
     buttonModal: {
       open: false,
     },

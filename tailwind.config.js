@@ -102,10 +102,11 @@ module.exports = {
     },
   },
   
-  content: [ // Content to be purged
+  content: [ // Content to be scanned
     './app/components/*.vue',
     './admin/**/components/*.vue',
     './admin/**/components/**/*.vue',
+    './admin/**/composables/*.js',
     './components/**/*.vue',
     './pages/*.vue',
     './dictionaries/*.{js,ts}',

@@ -13,18 +13,19 @@ export default [
         data: {},
       },
       {
-        id: 'slsn4l4',
+        id: '34lkj4',
         group: 'Hero',
         name: 'Hero',
         data: {
+          theme: null,
           pretitle: {
-            as: 'span',
+            as: 'p',
             content: 'This is the pretitle',
-            // size: 'base',
+            size: 'base',
           },
           title: {
             as: 'h1',
-            content: 'Hello world.',
+            content: 'The hero',
             size: '5xl',
           },
           subtitle: {
@@ -43,6 +44,20 @@ export default [
               variant: 'text',
             }
           ],
+          image: {
+            file: {
+              id: 25,
+              extension: 'image',
+              name: 'alesia-kazantceva-XLm6-fPwK5Q-unsplash.jpg',
+              path: 'files/ce7d5fb2cb97435410902044d96855c5.jpg',
+              size: '1.51 MB',
+              alt: 'The image alt',
+              description: 'The image description',
+              caption: 'The image caption',
+            },
+            width: null,
+            height: null,
+          },
           background: {
             file: {
               id: 25,
@@ -60,6 +75,55 @@ export default [
             paddingTop: '6xl',
             paddingBottom: '6xl',
           },
+          invert: false,
+        },
+      },
+      {
+        id: 'kj2h345',
+        group: 'Hero',
+        name: 'Hero',
+        data: {
+          theme: null,
+          pretitle: {
+            as: 'p',
+            content: 'This is the pretitle',
+            size: 'base',
+          },
+          title: {
+            as: 'h1',
+            content: 'The hero',
+            size: '5xl',
+          },
+          subtitle: {
+            as: 'p',
+            content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
+            size: 'xl',
+          },
+          buttons: [
+            {
+              label: 'Call to action',
+              to: '/homepage',
+            },
+            {
+              label: 'Learn more',
+              to: '/page-1',
+              variant: 'text',
+            }
+          ],
+          image: {
+            file: null,
+            width: null,
+            height: null,
+          },
+          background: {
+            file: null,
+            overlay: false,
+          },
+          padding: {
+            paddingTop: '6xl',
+            paddingBottom: '6xl',
+          },
+          orientation: null,
         },
       },
       {
@@ -91,7 +155,7 @@ export default [
         data: {},
       },
       {
-        id: 'slsn4l4',
+        id: 'slsna4l4',
         group: 'Hero',
         name: 'Hero',
         data: {

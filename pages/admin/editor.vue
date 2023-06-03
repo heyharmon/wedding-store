@@ -60,45 +60,19 @@
       <div v-if="store.activeBlock">
         <!-- Panel top -->
         <div class="flex items-center justify-between border-b px-4 py-3">
-          <p class="font-medium">Panel title</p>
+          <p class="font-medium">{{ fields.title }}</p>
           <button type="button" class="inline-flex items-center rounded-md border border-gray-300 p-[6px] hover:bg-gray-100 active:translate-y-px">
             <Icon name="heroicons:x-mark" class="h-5 w-5 text-gray-400" aria-hidden="true" />
           </button>
         </div>
 
-        <!-- Content fields -->
-        <div class="flex flex-col gap-y-5 px-4 py-6">
-          <!-- Pretitle -->
-          <TextField label="Pretitle" path="pretitle.content" />
-
-          <!-- Title -->
-          <TextField label="Title" path="title.content" />
-
-          <!-- Title size -->
-          <SelectButtonsField label="Title size" path="title.size" :options="[
-            {value: '4xl', label: 'Small'},
-            {value: '5xl', label: 'Default'},
-            {value: '6xl', label: 'Large'},
-            {value: '7xl', label: 'Huge'},
-          ]"/>
-
-          <!-- Subtitle -->
-          <TextField label="Subtitle" path="subtitle.content" />
-
-          <!-- Buttons -->
-          <ButtonRepeaterField label="Buttons" path="buttons"/>
-
-          <!-- Background image -->
-          <FileField label="Background image" path="background.file" />
-          
-          <!-- Background overlay -->
-          <AppSwitch 
-            label="Overlay" 
-            v-model="store.activeBlock.data.background.overlay"
+        <!-- Fields -->
+        <div class="flex flex-col gap-y-5 px-4 py-6">          
+          <Field 
+            v-for="(field, index) in fields.content"
+            :key="index"
+            v-bind="field"
           />
-
-          <!-- Padding -->
-          <PaddingField label="Padding" path="padding"/>
         </div>
       </div>
     </template>
@@ -123,14 +97,18 @@
 </template>
 
 <script setup>
+// import fields from '@/components/Hero/fields'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 
 const store = useEditorStore()
 
-const userNavigation = [
-  { name: 'Your profile', href: '#' },
-  { name: 'Sign out', href: '#' },
-]
+const { fields } = await import('@/components/Hero/fields/index.js');
+
+// let fields = computed(() => {
+//   const fields = import('@/components/Hero/fields/index.js');
+
+//   return fields
+// })
 
 await useAsyncData('page', () => store.show('homepage'))
 </script>

@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     {path: '~/app/components'},
     {path: '~/admin/components'},
     {path: '~/admin/editor/components'},
-    {path: '~/admin/editor/components/fields'},
+    {path: '~/admin/editor/components/Fields'},
     {path: '~/admin/dashboard/components'},
     {path: '~/admin/designer/components'},
     {path: '~/components/Base'},
@@ -28,6 +28,7 @@ export default defineNuxtConfig({
   imports: {
     dirs: [
       'app/composables',
+      'admin/editor/composables',
       'stores',
     ],
   },

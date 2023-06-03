@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div v-if="file || overlay">
     <!-- Background image-->
     <div v-if="file" aria-hidden="true" class="absolute inset-0 overflow-hidden">
-      <BaseImage v-bind="file" class="h-full w-full object-cover object-center"/>
+      <BaseImage :file="file" class="h-full w-full object-cover object-center"/>
     </div>
 
     <!-- Overlay -->

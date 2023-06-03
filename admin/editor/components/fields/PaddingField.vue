@@ -13,7 +13,7 @@
 <script setup>
 const props = defineProps({
   label: String,
-  path: String
+  path: String,
 })
 
 const store = useEditorStore()
