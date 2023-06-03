@@ -57,23 +57,21 @@
     </template>
 
     <template v-slot:left>
-      <div v-if="store.activeBlock">
-        <!-- Panel top -->
-        <div class="flex items-center justify-between border-b px-4 py-3">
-          <p class="font-medium">{{ fields.title }}</p>
-          <button type="button" class="inline-flex items-center rounded-md border border-gray-300 p-[6px] hover:bg-gray-100 active:translate-y-px">
-            <Icon name="heroicons:x-mark" class="h-5 w-5 text-gray-400" aria-hidden="true" />
-          </button>
-        </div>
+      <!-- Panel top -->
+      <div class="flex items-center justify-between border-b px-4 py-3">
+        <p class="font-medium">{{ fields.title }}</p>
+        <button type="button" class="inline-flex items-center rounded-md border border-gray-300 p-[6px] hover:bg-gray-100 active:translate-y-px">
+          <Icon name="heroicons:x-mark" class="h-5 w-5 text-gray-400" aria-hidden="true" />
+        </button>
+      </div>
 
-        <!-- Fields -->
-        <div class="flex flex-col gap-y-5 px-4 py-6">          
-          <Field 
-            v-for="(field, index) in fields.content"
-            :key="index"
-            v-bind="field"
-          />
-        </div>
+      <!-- Fields -->
+      <div class="flex flex-col gap-y-5 px-4 py-6">          
+        <AbstractField 
+          v-for="(field, index) in fields.content"
+          :key="index"
+          v-bind="field"
+        />
       </div>
     </template>
 
@@ -84,7 +82,7 @@
         :index="index"
         :block="block"
       >
-        <Block v-bind="block"/>
+        <AbstractBlock v-bind="block"/>
       </BlockWrapper>
     </template>
 

@@ -6,40 +6,40 @@ const fields = {
       label: 'Pretitle',
       path: 'pretitle.content',
       name: 'TextField',
-      options: [],
+      // options: [],
     },
     {
       label: 'Title',
       path: 'title.content',
       name: 'TextField',
-      options: [],
+      // options: [],
     },
     {
       label: 'Subtitle',
       path: 'subtitle.content',
       name: 'TextField',
-      options: [],
+      // options: [],
     },
     {
       label: 'Buttons',
       path: 'buttons',
       name: 'ButtonRepeaterField',
-      options: [],
+      // options: [],
     },
     {
       label: 'Image',
       path: 'image.file',
       name: 'FileField',
-      options: [],
+      // options: [],
     },
     {
       label: 'Background image',
       path: 'background.file',
       name: 'FileField',
-      options: [],
+      // options: [],
     },
   ],
-  style: [
+  styles: [
     {
       label: 'Title size',
       path: 'title.size',

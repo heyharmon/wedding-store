@@ -51,7 +51,7 @@
           </div> -->
           
           <DesignerPreview>
-            <Block 
+            <AbstractBlock 
               v-for="(block, index) in store.page.blocks" 
               :key="index" 
               v-bind="block" 

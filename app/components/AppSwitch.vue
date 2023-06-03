@@ -31,9 +31,6 @@ const props = defineProps({
   label: {
     type: String
   },
-  hint: {
-    type: String
-  },
   disabled: {
     type: Boolean,
     default: false
