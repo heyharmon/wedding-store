@@ -14,17 +14,6 @@ const fields = {
       // options: [],
     },
     {
-      label: 'Title size',
-      path: 'title.size',
-      name: 'SelectButtonsField',
-      options: [
-        { value: '4xl', label: 'Small' },
-        { value: '5xl', label: 'Default' },
-        { value: '6xl', label: 'Large' },
-        { value: '7xl', label: 'Huge' },
-      ]
-    },
-    {
       label: 'Subtitle',
       path: 'subtitle.content',
       name: 'TextField',
@@ -49,19 +38,30 @@ const fields = {
       name: 'FileField',
       // options: [],
     },
-    {
-      label: 'Background overlay',
-      path: 'background.overlay',
-      // type: 'Boolean',
-      name: 'SwitchField',
-    }
   ],
   style: [
+    {
+      label: 'Title size',
+      path: 'title.size',
+      name: 'SelectButtonsField',
+      options: [
+        { value: '4xl', label: 'Small' },
+        { value: '5xl', label: 'Default' },
+        { value: '6xl', label: 'Large' },
+        { value: '7xl', label: 'Huge' },
+      ]
+    },
     {
       label: 'Padding',
       path: 'padding',
       name: 'PaddingField',
       // options: [],
+    },
+    {
+      label: 'Background overlay',
+      path: 'background.overlay',
+      // type: 'Boolean',
+      name: 'SwitchField',
     },
     {
       label: 'Invert layout',
