@@ -9,8 +9,20 @@
           </button>
 
           <!-- Settings -->
-          <button type="button" class="inline-flex items-center rounded-md bg-gray-100 p-[6px] text-gray-900 hover:bg-gray-200 active:translate-y-px">
+          <!-- <button type="button" class="inline-flex items-center rounded-md bg-gray-100 p-[6px] text-gray-900 hover:bg-gray-200 active:translate-y-px">
             <Icon name="heroicons:cog-6-tooth-solid" class="h-5 w-5 text-gray-700" aria-hidden="true" />
+          </button> -->
+
+          <!-- Blocks -->
+          <button @click="store.showDefault()" :class="store.show.blocksPanel ? 'bg-indigo-100' : ''" class="inline-flex items-center py-[6px] px-[12px] text-[14px] text-indigo-600 rounded-md hover:bg-indigo-100 active:translate-y-px">
+            <Icon name="heroicons:squares-plus-solid" class="h-5 w-5 mr-1.5" aria-hidden="true" />
+            Blocks
+          </button>
+
+          <!-- Design -->
+          <button @click="store.showDesignPanel()" :class="store.show.designPanel ? 'bg-indigo-100' : ''" class="inline-flex items-center py-[6px] px-[12px] text-[14px] text-indigo-600 rounded-md hover:bg-indigo-100 active:translate-y-px">
+            <Icon name="heroicons:swatch-solid" class="h-5 w-5 mr-1.5" aria-hidden="true" />
+            Design
           </button>
         </div>
 
@@ -43,13 +55,18 @@
           <!-- Separator -->
           <div class="hidden lg:block lg:h-6 lg:w-px lg:bg-gray-900/10" aria-hidden="true" />
 
+          <!-- Settings -->
+          <button type="button" class="inline-flex items-center rounded-md bg-gray-100 p-[6px] text-gray-900 hover:bg-gray-200 active:translate-y-px">
+            <Icon name="heroicons:cog-6-tooth-solid" class="h-5 w-5 text-gray-700" aria-hidden="true" />
+          </button>
+
           <!-- Preview -->
           <button type="button" class="inline-flex items-center rounded-md bg-gray-100 p-[6px] text-gray-900 hover:bg-gray-200 active:translate-y-px">
             <Icon name="heroicons:eye-solid" class="h-5 w-5 text-gray-700" aria-hidden="true" />
           </button>
 
           <!-- Publish -->
-          <button type="button" class="inline-flex items-center rounded-md bg-indigo-500 py-[6px] px-[12px] text-[13px] text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 active:translate-y-px">
+          <button type="button" class="inline-flex items-center rounded-md bg-indigo-500 py-[5px] px-[12px] text-[14px] text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 active:translate-y-px">
             Publish
           </button>
         </div>
@@ -61,7 +78,7 @@
         <!-- Panel top -->
         <div class="flex items-center justify-between border-b px-4 py-3">
           <p class="font-medium">{{ fields.title }}</p>
-          <button type="button" class="inline-flex items-center rounded-md border border-gray-300 p-[6px] hover:bg-gray-100 active:translate-y-px">
+          <button @click="store.showDefault()" type="button" class="inline-flex items-center rounded-md border border-gray-300 p-[6px] hover:bg-gray-100 active:translate-y-px">
             <Icon name="heroicons:x-mark" class="h-5 w-5 text-gray-400" aria-hidden="true" />
           </button>
         </div>
@@ -72,10 +89,10 @@
           <div class="border-b border-gray-200">
             <nav class="-mb-px flex">
               <button 
-                v-for="tab in ['content', 'style']" :key="tab" 
+                v-for="tab in ['content', 'style']" :key="tab"
                 @click="activeEditorTab = tab"
                 :class="tab === activeEditorTab ? 'border-indigo-500 text-indigo-600' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'" 
-                class="w-1/2 border-b-2 py-4 px-1 capitalize text-center text-sm font-medium"
+                class="w-1/2 border-b-2 py-4 px-1 capitalize text-center text-xs font-medium"
               >
                 {{ tab }}
               </button>
@@ -103,6 +120,11 @@
     </template>
 
     <template v-slot:middle>
+      <!-- Panel top -->
+      <!-- <div class="sticky z-20 top-0 flex items-center justify-between border-b px-4 py-3 bg-white">
+        <p class="font-medium">Yolo</p>
+      </div> -->
+
       <BlockWrapper
         v-for="(block, index) in store.page.blocks"
         :key="index"
@@ -125,9 +147,8 @@
 // import fields from '@/components/Hero/fields'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 
-const activeEditorTab = ref('content')
 const store = useEditorStore()
-
+const activeEditorTab = ref('content')
 const { fields } = await import('@/components/Hero/fields/index.js');
 
 // let fields = computed(() => {
@@ -136,5 +157,5 @@ const { fields } = await import('@/components/Hero/fields/index.js');
 //   return fields
 // })
 
-await useAsyncData('page', () => store.show('homepage'))
+await useAsyncData('page', () => store.showPage('homepage'))
 </script>

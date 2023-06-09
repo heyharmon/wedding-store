@@ -66,5 +66,5 @@
 <script setup>
 const store = usePageStore()
 
-await useAsyncData('page', () => store.show('page-1'))
+await useAsyncData('page', () => store.showPage('page-1'))
 </script>

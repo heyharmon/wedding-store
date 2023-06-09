@@ -1,5 +1,5 @@
 <template>
-  <div class="relative" @click="showBlockWrapper()">
+  <div class="relative" @click="store.showEditorPanel(block.id)">
     <!-- Outline -->
     <div v-if="block.id === store.activeBlockId" class="z-10 h-full w-full absolute rounded-xl border-2 border-indigo-500 pointer-events-none">
 
@@ -35,7 +35,7 @@
             <Icon name="heroicons:swatch" class="h-5 w-5" aria-hidden="true" />
           </button>
           
-          <button @click.stop="closeBlockWrapper()" class="pointer-events-auto text-xs font-semibold inline-block py-2 px-3 rounded-md text-gray-900 bg-white shadow hover:bg-gray-50 active:translate-y-px ml-4">
+          <button @click.stop="store.showDefault()" class="pointer-events-auto text-xs font-semibold inline-block py-2 px-3 rounded-md text-gray-900 bg-white shadow hover:bg-gray-50 active:translate-y-px ml-4">
             <Icon name="heroicons:x-mark" class="h-5 w-5" aria-hidden="true" />
           </button>
         </div>
@@ -52,16 +52,6 @@ const props = defineProps({
 })
 
 const store = useEditorStore()
-
-function showBlockWrapper() {
-  console.log('showing...')
-  store.activeBlockId = props.block.id
-}
-
-function closeBlockWrapper() {
-  console.log('closing...')
-  store.activeBlockId = null
-}
 
 function deleteBlock() {
   console.log('deleting...')

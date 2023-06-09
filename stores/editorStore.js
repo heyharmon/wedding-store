@@ -5,6 +5,12 @@ export const useEditorStore = defineStore('editor', {
     page: {},
     // activeBlockId: null,
     activeBlockId: '34lkj4',
+    show: {
+      blocksPanel: true,
+      designPanel: false,
+      editorPanel: false,
+      thumbnailsPanel: true,
+    },
     buttonModal: {
       open: false,
     },
@@ -26,10 +32,43 @@ export const useEditorStore = defineStore('editor', {
   },
   
   actions: {
-    async show(slug) {
+    async showPage(slug) {
       const page = pages.find((page) => page.slug === slug);
       this.page = page
-    }
+    },
+
+    showDefault() {
+      this.activeBlockId = null
+
+      this.show = {
+        blocksPanel: true,
+        designPanel: false,
+        editorPanel: false,
+        thumbnailsPanel: true,
+      }
+    },
+
+    showEditorPanel(blockId) {
+      this.activeBlockId = blockId
+      
+      this.show = {
+        blocksPanel: false,
+        designPanel: false,
+        editorPanel: true,
+        thumbnailsPanel: false,
+      }
+    },
+
+    showDesignPanel() {
+      this.activeBlockId = null
+      
+      this.show = {
+        blocksPanel: false,
+        designPanel: true,
+        editorPanel: false,
+        thumbnailsPanel: false,
+      }
+    },
   },
 })
 

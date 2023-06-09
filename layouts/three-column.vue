@@ -14,9 +14,9 @@
         <div id="headlessui-portal-root"></div>
       </main>
 
-      <!-- <aside class="w-[8rem] overflow-y-auto no-scrollbar">
+      <aside class="w-[10rem] overflow-y-auto no-scrollbar">
         <slot name="right" />
-      </aside> -->
+      </aside>
     </div>
   </div>
 </template>
