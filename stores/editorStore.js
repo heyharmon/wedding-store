@@ -3,8 +3,8 @@ import pages from '~/server/pages'
 export const useEditorStore = defineStore('editor', {
   state: () => ({
     page: {},
-    // activeBlockId: null,
-    activeBlockId: '34lkj4',
+    activeBlockId: null,
+    // activeBlockId: '34lkj4',
     show: {
       blocksPanel: true,
       designPanel: false,

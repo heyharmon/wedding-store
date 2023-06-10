@@ -13,6 +13,54 @@ export default [
         data: {},
       },
       {
+        id: 'kj2h345',
+        group: 'Hero',
+        name: 'Hero',
+        data: {
+          theme: null,
+          pretitle: {
+            as: 'p',
+            content: 'This is the pretitle',
+            size: 'base',
+          },
+          title: {
+            as: 'h1',
+            content: 'The hero',
+            size: '5xl',
+          },
+          subtitle: {
+            as: 'p',
+            content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
+            size: 'xl',
+          },
+          buttons: [
+            {
+              label: 'Call to action',
+              to: '/homepage',
+            },
+            {
+              label: 'Learn more',
+              to: '/page-1',
+              variant: 'text',
+            }
+          ],
+          image: {
+            file: null,
+            width: null,
+            height: null,
+          },
+          background: {
+            file: null,
+            overlay: false,
+          },
+          padding: {
+            paddingTop: '6xl',
+            paddingBottom: '6xl',
+          },
+          orientation: null,
+        },
+      },
+      {
         id: '34lkj4',
         group: 'Hero',
         name: 'Hero',
@@ -76,54 +124,6 @@ export default [
             paddingBottom: '6xl',
           },
           invert: false,
-        },
-      },
-      {
-        id: 'kj2h345',
-        group: 'Hero',
-        name: 'Hero',
-        data: {
-          theme: null,
-          pretitle: {
-            as: 'p',
-            content: 'This is the pretitle',
-            size: 'base',
-          },
-          title: {
-            as: 'h1',
-            content: 'The hero',
-            size: '5xl',
-          },
-          subtitle: {
-            as: 'p',
-            content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
-            size: 'xl',
-          },
-          buttons: [
-            {
-              label: 'Call to action',
-              to: '/homepage',
-            },
-            {
-              label: 'Learn more',
-              to: '/page-1',
-              variant: 'text',
-            }
-          ],
-          image: {
-            file: null,
-            width: null,
-            height: null,
-          },
-          background: {
-            file: null,
-            overlay: false,
-          },
-          padding: {
-            paddingTop: '6xl',
-            paddingBottom: '6xl',
-          },
-          orientation: null,
         },
       },
       {

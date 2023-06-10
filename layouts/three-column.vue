@@ -11,7 +11,7 @@
 
       <main class="relative flex-1 overflow-y-auto rounded-lg border drop-shadow bg-white no-scrollbar mx-4">
         <slot name="middle" />
-        <div id="headlessui-portal-root"></div>
+        <div id="headlessui-portal-root"></div> <!-- Modals are portalled here -->
       </main>
 
       <aside class="w-[10rem] overflow-y-auto no-scrollbar">

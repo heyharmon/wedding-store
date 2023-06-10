@@ -1,7 +1,7 @@
 <template>
   <div class="relative" @click="store.showEditorPanel(block.id)">
     <!-- Outline -->
-    <div v-if="block.id === store.activeBlockId" class="z-10 h-full w-full absolute rounded-xl border-2 border-indigo-500 pointer-events-none">
+    <div v-if="block.id === store.activeBlockId" class="z-10 h-full w-full absolute rounded-lg border-2 border-indigo-500 pointer-events-none">
 
       <!-- Controls -->
       <div class="flex justify-between w-full p-3">
