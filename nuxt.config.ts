@@ -27,8 +27,10 @@ export default defineNuxtConfig({
 
   imports: {
     dirs: [
+      'admin/**/composables',
+      'admin/**/store',
+      'app/**/store',
       'app/composables',
-      'admin/editor/composables',
       'stores',
     ],
   },

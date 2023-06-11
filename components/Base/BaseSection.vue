@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import { PaddingTop, PaddingBottom } from '@/dictionaries/Padding.js'
+import { PaddingTop, PaddingBottom } from '@/admin/editor/dictionaries/Padding.js'
 
 const props = defineProps({
   paddingTop: {

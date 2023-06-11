@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import { InvertStyles } from '@/dictionaries/InvertStyles.js'
+import { InvertStyles } from '@/admin/editor/dictionaries/InvertStyles.js'
 
 const props = defineProps({
   theme: String,
