@@ -104,11 +104,11 @@ module.exports = {
   
   content: [ // Content to be scanned
     './app/components/*.vue',
-    './admin/**/components/*.vue',
-    './admin/**/components/**/*.vue',
-    './admin/**/dictionaries/*.js',
-    './admin/**/composables/*.js',
-    './admin/**/layouts/*.vue',
+    './cms/**/components/*.vue',
+    './cms/**/components/**/*.vue',
+    './cms/**/dictionaries/*.js',
+    './cms/**/composables/*.js',
+    './cms/**/layouts/*.vue',
     './components/**/*.vue',
     './pages/*.vue',
     './nuxt.config.{js,ts}',
