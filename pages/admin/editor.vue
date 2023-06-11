@@ -74,49 +74,8 @@
     </template>
 
     <template v-slot:left>
-      <div v-if="store.activeBlockId">
-        <!-- Panel top -->
-        <div class="flex items-center justify-between border-b px-4 py-3">
-          <p class="font-medium">{{ fields.title }}</p>
-          <button @click="store.showDefault()" type="button" class="inline-flex items-center rounded-md border border-gray-300 p-[6px] hover:bg-gray-100 active:translate-y-px">
-            <Icon name="heroicons:x-mark" class="h-5 w-5 text-gray-400" aria-hidden="true" />
-          </button>
-        </div>
-
-        <!-- Fields -->
-        <div v-if="fields">
-          <!-- Tabs -->
-          <div class="border-b border-gray-200">
-            <nav class="-mb-px flex">
-              <button 
-                v-for="tab in ['content', 'style']" :key="tab"
-                @click="activeEditorTab = tab"
-                :class="tab === activeEditorTab ? 'border-indigo-500 text-indigo-600' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'" 
-                class="w-1/2 border-b-2 py-4 px-1 capitalize text-center text-xs font-medium"
-              >
-                {{ tab }}
-              </button>
-            </nav>
-          </div>
-
-          <!-- Fields -->
-          <div class="flex flex-col gap-y-5 px-4 py-6">
-            <Field 
-              v-if="activeEditorTab === 'content'"
-              v-for="(field, index) in fields.content"
-              :key="index"
-              v-bind="field"
-            />
-
-            <Field 
-              v-if="activeEditorTab === 'style'"
-              v-for="(field, index) in fields.style"
-              :key="index"
-              v-bind="field"
-            />
-          </div>
-        </div>
-      </div>
+      <BlocksPanel v-if="store.show.blocksPanel"/>
+      <FieldsPanel v-if="store.activeBlockId"/>
     </template>
 
     <template v-slot:middle>
@@ -125,28 +84,13 @@
         <p class="font-medium">Yolo</p>
       </div> -->
 
-      <BlockWrapper
-        v-for="(block, index) in store.page.blocks"
-        :key="index"
-        :index="index"
-        :block="block"
-      >
+      <BlockWrapper v-for="(block, index) in store.page.blocks" :key="index" :index="index" :block="block">
         <Block v-bind="block"/>
       </BlockWrapper>
     </template>
 
     <template v-slot:right>
-      <ul role="list" class="grid gap-y-2.5 mr-4">
-        <li v-for="(block, index) in store.page.blocks" :key="index" @click="store.showEditorPanel(block.id)" :class="store.activeBlockId == block.id ? 'border-2 border-indigo-500' : ''" class="relative cursor-pointer overflow-hidden rounded-md border">
-          <p class="block truncate text-xs text-gray-900 p-2">{{ block.name }}</p>
-          <!-- <div class="group aspect-h-7 aspect-w-10 block w-full max-h-44 bg-gray-100">
-            <img :src="'https://placehold.co/350x200'" :alt="`${block.name} thumbnail`" class="pointer-events-none shrink-0 min-w-full min-h-full group-hover:opacity-75" />
-            <button type="button" class="absolute inset-0 focus:outline-none">
-              <span class="sr-only">Yolo</span>
-            </button>
-          </div> -->
-        </li>
-      </ul>
+      <ThumbnailsPanel/>
     </template>
   </NuxtLayout>
 
@@ -158,8 +102,7 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 
 const store = useEditorStore()
-const activeEditorTab = ref('content')
-const { fields } = await import('@/components/Hero/fields/index.js');
+
 
 // let fields = computed(() => {
 //   const fields = import('@/components/Hero/fields/index.js');
