@@ -1,5 +1,5 @@
 <template>
-  <NuxtLayout name="three-column">
+  <EditorLayout>
     <template v-slot:top>
       <div class="flex items-center gap-x-4 h-14 px-4">
         <div class="flex flex-1 items-center gap-x-3">
@@ -92,7 +92,7 @@
     <template v-slot:right>
       <ThumbnailsPanel/>
     </template>
-  </NuxtLayout>
+  </EditorLayout>
 
   <FilesModal v-if="store.filesModal.open" @close="store.filesModal.open = false" title="Files" size="full"/>
 </template>

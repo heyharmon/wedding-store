@@ -1,4 +1,4 @@
-const formKitTailwind = require('@formkit/themes/tailwindcss');
+// const formKitTailwind = require('@formkit/themes/tailwindcss');
 // const themes = require('./tailwind/themes-plugin.js') 
 // const forms = require('@tailwindcss/forms')
 
@@ -107,6 +107,7 @@ module.exports = {
     './admin/**/components/*.vue',
     './admin/**/components/**/*.vue',
     './admin/**/composables/*.js',
+    './admin/**/layouts/*.vue',
     './components/**/*.vue',
     './pages/*.vue',
     './dictionaries/*.{js,ts}',
@@ -125,6 +126,6 @@ module.exports = {
 
     // FormKit Tailwind theme
     // https://formkit.com/guides/create-a-tailwind-theme
-    formKitTailwind
+    // formKitTailwind
   ],
 }
