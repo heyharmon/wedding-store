@@ -1,4 +1,3 @@
-// const formKitTailwind = require('@formkit/themes/tailwindcss');
 // const themes = require('./tailwind/themes-plugin.js') 
 // const forms = require('@tailwindcss/forms')
 
@@ -103,7 +102,7 @@ module.exports = {
   },
   
   content: [ // Content to be scanned
-    './app/components/*.vue',
+    './base/components/*.vue',
     './cms/**/components/*.vue',
     './cms/**/components/**/*.vue',
     './cms/**/dictionaries/*.js',
@@ -112,7 +111,6 @@ module.exports = {
     './components/**/*.vue',
     './pages/*.vue',
     './nuxt.config.{js,ts}',
-    './formkit.config.js',
   ],
 
   plugins: [
@@ -123,9 +121,5 @@ module.exports = {
     // Tailwind form styles
     // https://github.com/tailwindlabs/tailwindcss-forms
     require('@tailwindcss/forms'),
-
-    // FormKit Tailwind theme
-    // https://formkit.com/guides/create-a-tailwind-theme
-    // formKitTailwind
   ],
 }

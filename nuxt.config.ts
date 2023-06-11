@@ -7,14 +7,13 @@ export default defineNuxtConfig({
     'nuxt-headlessui',
     '@nuxt/image-edge',
     '@nuxtjs/tailwindcss',
-    '@formkit/nuxt',
     ['@pinia/nuxt', {
       autoImports: ['defineStore', 'acceptHMRUpdate']
     }],
   ],
 
   components: [
-    {path: '~/app/components'},
+    {path: '~/base/components'},
     {path: '~/cms/editor/components'},
     {path: '~/cms/editor/components/Fields'},
     {path: '~/cms/editor/layouts'},
@@ -27,10 +26,10 @@ export default defineNuxtConfig({
 
   imports: {
     dirs: [
+      'base/**/store',
+      'base/composables',
       'cms/**/composables',
       'cms/**/store',
-      'app/**/store',
-      'app/composables',
       'stores',
     ],
   },
