@@ -98,7 +98,8 @@
 </template>
 
 <script setup>
-// import fields from '@/components/Hero/fields'
+import BlockWrapper from '@/nuxt-cms/editor/components/BlockWrapper.vue'
+import Block from '@/nuxt-website/components/Block/Block.vue'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 
 const store = useEditorStore()

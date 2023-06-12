@@ -33,6 +33,9 @@
 </template>
 
 <script setup>
+import BaseSection from '~/nuxt-website/components/Base/BaseSection.vue'
+import BaseImage from '~/nuxt-website/components/Base/BaseImage.vue'
+
 const props = defineProps({
   theme: String,
   image: Object,

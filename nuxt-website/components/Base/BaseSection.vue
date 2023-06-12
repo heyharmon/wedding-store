@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import { PaddingTop, PaddingBottom } from '@/cms/editor/dictionaries/Padding.js'
+import { PaddingTop, PaddingBottom } from '@/nuxt-website/dictionaries/Padding.js'
 
 const props = defineProps({
   paddingTop: {

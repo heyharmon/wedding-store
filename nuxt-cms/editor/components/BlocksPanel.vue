@@ -13,7 +13,7 @@
     </nav>
 
     <!-- Right -->
-    <div class="absolute left-[12.5rem] top-0 z-10 h-full w-[22rem] overflow-y-auto rounded-tr-lg rounded-br-lg border bg-white no-scrollbar p-4">
+    <!-- <div class="absolute left-[12.5rem] top-0 z-10 h-full w-[22rem] overflow-y-auto rounded-tr-lg rounded-br-lg border bg-white no-scrollbar p-4">
       <ul role="list" class="grid gap-y-4">
         <li v-for="(block, index) in store.blocks" :key="index" class="relative cursor-pointer overflow-hidden rounded-md border bg-white">
           <p class="block truncate text-xs text-gray-900 p-2">{{ block.name }}</p>
@@ -24,7 +24,7 @@
           </div>
         </li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </template>
 

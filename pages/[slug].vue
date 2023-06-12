@@ -1,15 +1,18 @@
 <template>
-  <component 
+  <!-- <component 
     v-for="(block, index) in blocks" 
     :is="block.component"
     v-bind="block.data"
     :key="index"
-  />
+  /> -->
+
+  <Block v-for="(block, index) in store.page.blocks" :key="index" v-bind="block"/>
 </template>
 
 <script setup>
-import { defineAsyncComponent } from 'vue';
-// import { usePageStore } from '@/stores/pageStore'
+// import { defineAsyncComponent } from 'vue';
+import Block from '@/nuxt-website/components/Block/Block.vue'
+// import { usePageStore } from '@/nuxt-website/stores/pageStore.js'
 
 const route = useRoute()
 const store = usePageStore()
@@ -21,13 +24,13 @@ await useAsyncData('page', () => store.showPage(route.params.slug))
 let blocks = store.page.blocks.map((block) => {
   const {id, name, group, data} = block;
   
-  return {
-    id: id,
-    name: name,
-    group: group,
-    data: data,
-    component: defineAsyncComponent(() => import(`../components/${group}/${name}.vue`))
-  }
+  // return {
+  //   id: id,
+  //   name: name,
+  //   group: group,
+  //   data: data,
+  //   component: defineAsyncComponent(() => import(`@/nuxt-website/components/${group}/${name}.vue`))
+  // }
 })
 
 // let blocks = computed(() => {

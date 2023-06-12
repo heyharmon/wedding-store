@@ -130,7 +130,22 @@ export default [
         id: 'akl24jl5l',
         group: 'Feature',
         name: 'Feature',
-        data: {},
+        data: {
+          image: {
+            file: {
+              id: 25,
+              extension: 'image',
+              name: 'alesia-kazantceva-XLm6-fPwK5Q-unsplash.jpg',
+              path: 'files/ce7d5fb2cb97435410902044d96855c5.jpg',
+              size: '1.51 MB',
+              alt: 'The image alt',
+              description: 'The image description',
+              caption: 'The image caption',
+            },
+            width: null,
+            height: null,
+          },
+        },
       },
       {
         id: 'aklkh23l45',
@@ -203,38 +218,6 @@ export default [
         group: 'Feature',
         name: 'FeatureWithTwoColGrid',
         data: {},
-      },
-      {
-        id: 'nmva3e4r',
-        group: 'Hero',
-        name: 'HeroVertical',
-        data: {
-          theme: 'theme-2',
-          title: 'Hello world. Enrich your online business.',
-          subtitle: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat fcommodo. Elit sunt amet fugiat.',
-          padding: {
-            top: '6xl',
-            bottom: '6xl',
-          },
-          image: {
-            name: 'The image title',
-            src: 'https://tailwindui.com/img/component-images/project-app-screenshot.png',
-            extension: 'png',
-            alt: 'The image alt',
-            description: 'The image description',
-            caption: 'The image caption',
-          },
-          background: {
-            image: {
-              name: 'The image title',
-              src: 'https://tailwindui.com/img/beams-home@95.jpg',
-              extension: 'png',
-              alt: 'The image alt',
-              description: 'The image description',
-              caption: 'The image caption',
-            },
-          },
-        },
       },
       {
         id: 'aklkh23l45',

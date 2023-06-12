@@ -18,7 +18,15 @@
 </template>
 
 <script setup>
-import { InvertStyles } from '@/cms/editor/dictionaries/InvertStyles.js'
+import BaseSection from '~/nuxt-website/components/Base/BaseSection.vue'
+import BaseBackground from '~/nuxt-website/components/Base/BaseBackground.vue'
+import BaseText from '~/nuxt-website/components/Base/BaseText.vue'
+import BaseHeading from '~/nuxt-website/components/Base/BaseHeading.vue'
+import BaseButtonGroup from '~/nuxt-website/components/Base/BaseButtonGroup.vue'
+import BaseButton from '~/nuxt-website/components/Base/BaseButton.vue'
+import BaseImage from '~/nuxt-website/components/Base/BaseImage.vue'
+
+import { InvertStyles } from '~/nuxt-website/dictionaries/InvertStyles.js'
 
 const props = defineProps({
   theme: String,

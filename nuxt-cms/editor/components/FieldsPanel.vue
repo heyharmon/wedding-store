@@ -47,5 +47,5 @@
 <script setup>
 const store = useEditorStore()
 const activeTab = ref('content')
-const { fields } = await import('@/components/Hero/fields/index.js');
+const { fields } = await import('~/nuxt-website/components/Hero/fields/index.js');
 </script>

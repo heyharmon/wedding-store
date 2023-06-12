@@ -13,6 +13,8 @@
 </template>
 
 <script setup>
+import BaseImage from '~/nuxt-website/components/Base/BaseImage.vue'
+
 const props = defineProps({
   file: Object,
   overlay: {

@@ -13,24 +13,24 @@ export default defineNuxtConfig({
   ],
 
   components: [
-    {path: '~/base/components'},
-    {path: '~/cms/editor/components'},
-    {path: '~/cms/editor/components/Fields'},
-    {path: '~/cms/editor/layouts'},
-    {path: '~/cms/dashboard/components'},
-    {path: '~/cms/designer/components'},
-    {path: '~/components/Base'},
-    {path: '~/components/Block'},
+    '~/nuxt-cms/editor/components',
+    '~/nuxt-cms/editor/components/Fields',
+    '~/nuxt-cms/editor/layouts',
+    '~/nuxt-cms/dashboard/components',
+    '~/nuxt-cms/designer/components',
+    '~/nuxt-website/components/Base',
     '~/components',
+    '~/components/base',
   ],
 
   imports: {
     dirs: [
-      'base/**/store',
-      'base/composables',
-      'cms/**/composables',
-      'cms/**/store',
-      'stores',
+      'composables',
+      'store',
+      'nuxt-cms/**/composables',
+      'nuxt-cms/**/store',
+      'nuxt-website/**/composables',
+      'nuxt-website/**/store',
     ],
   },
 
