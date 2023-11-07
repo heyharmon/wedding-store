@@ -7,10 +7,12 @@ export const usePageStore = defineStore('page', {
   
   actions: {
     async showPage(slug) {
-      const page = pages.find((page) => page.slug === slug);
-      this.page = page
+
+      this.page = {}
+      this.page = await pages.find((page) => page.slug === slug)
     },
   },
+
   getters: {},
 })
 

@@ -4,7 +4,9 @@
 
 <script setup>
 const props = defineProps({
-  file: Object,
+  file: {
+    type: Object,
+  },
   width: {
     type: String,
     default: '',

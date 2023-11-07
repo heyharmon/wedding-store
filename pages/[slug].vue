@@ -21,8 +21,8 @@ const store = usePageStore()
 await useAsyncData('page', () => store.showPage(route.params.slug))
 // const {data: page, pending, refresh} = await useAsyncData('page', () => $fetch(`/api/pages?slug=${route.params.slug}`))
 
-let blocks = store.page.blocks.map((block) => {
-  const {id, name, group, data} = block;
+// let blocks = store.page.blocks.map((block) => {
+  // const {id, name, group, data} = block;
   
   // return {
   //   id: id,
@@ -31,7 +31,7 @@ let blocks = store.page.blocks.map((block) => {
   //   data: data,
   //   component: defineAsyncComponent(() => import(`@/nuxt-website/components/${group}/${name}.vue`))
   // }
-})
+// })
 
 // let blocks = computed(() => {
 //   return store.page.blocks.map((block) => {
@@ -46,7 +46,7 @@ let blocks = store.page.blocks.map((block) => {
 //   })
 // })
 
-useHead({
-  title: store.page.title
-})
+// useHead({
+//   title: store.page.title
+// })
 </script>

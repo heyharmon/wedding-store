@@ -16,7 +16,9 @@
 import BaseImage from '~/nuxt-website/components/Base/BaseImage.vue'
 
 const props = defineProps({
-  file: Object,
+  file: {
+    type: Object,
+  },
   overlay: {
     type: Boolean,
     default: false

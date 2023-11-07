@@ -213,18 +213,18 @@ export default [
           }
         },
       },
-      {
-        id: 'akjh245r',
-        group: 'Feature',
-        name: 'FeatureWithTwoColGrid',
-        data: {},
-      },
-      {
-        id: 'aklkh23l45',
-        group: 'Navigation',
-        name: 'NavFooter',
-        data: {},
-      },
+      // {
+      //   id: 'akjh245r',
+      //   group: 'Feature',
+      //   name: 'FeatureWithTwoColGrid',
+      //   data: {},
+      // },
+      // {
+      //   id: 'aklkh23l45',
+      //   group: 'Navigation',
+      //   name: 'NavFooter',
+      //   data: {},
+      // },
     ]
   }
 ]

@@ -49,12 +49,6 @@
          such as corner roundness? -->
     <component :is="`style`">
       :root {
-        <!-- theme instead
-        --nav-links-color:                 var(--gray-900);
-        --nav-links-color-hover:           var(--gray-900);
-        --nav-bg-color:                    var(--primary-500); 
-        -->
-
         --heading-h1-color:                var(--gray-900);
         --heading-h2-color:                var(--gray-900);
         --heading-h3-color:                var(--gray-900);
@@ -81,12 +75,6 @@
 
         --card-bg-color:                   var(--white);
         --card-bg-color-hover:             var(--gray-100);
-
-        <!-- theme instead
-        --footer-links-color:              var(--gray-900);
-        --footer-links-color-hover:        var(--gray-900);
-        --footer-bg-color:                 var(--primary-500);
-        -->
       }
     </component>
   </div>
