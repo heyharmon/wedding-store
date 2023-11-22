@@ -7,21 +7,22 @@ export default defineNuxtConfig({
     'nuxt-headlessui',
     '@nuxt/image-edge',
     '@nuxtjs/tailwindcss',
-    // '@vueuse/nuxt',
+    '@vueuse/nuxt',
     ['@pinia/nuxt', {
       autoImports: ['defineStore', 'acceptHMRUpdate']
     }],
   ],
 
   components: [
+    '~/cms/components',
     '~/cms/editor/components',
     '~/cms/editor/components/Fields',
     '~/cms/editor/layouts',
     '~/cms/dashboard/components',
     '~/cms/designer/components',
     '~/client/components/Base',
-    '~/components',
-    '~/components/base',
+    // '~/components',
+    // '~/components/base',
   ],
 
   imports: {
