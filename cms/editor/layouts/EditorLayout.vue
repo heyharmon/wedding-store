@@ -15,9 +15,9 @@
         <div id="headlessui-portal-root"></div> <!-- Modals are portalled here -->
       </main>
 
-      <aside class="w-[10rem] overflow-y-auto no-scrollbar">
+      <!-- <aside class="w-[10rem] overflow-y-auto no-scrollbar">
         <slot name="right" />
-      </aside>
+      </aside> -->
     </div>
   </div>
 </template>

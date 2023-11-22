@@ -106,9 +106,9 @@
       </BlockWrapper>
     </template>
 
-    <template v-slot:right>
+    <!-- <template v-slot:right>
       <ThumbnailsPanel/>
-    </template>
+    </template> -->
   </EditorLayout>
 
   <FilesModal v-if="store.filesModal.open" @close="store.filesModal.open = false" title="Files" size="full"/>
