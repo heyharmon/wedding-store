@@ -3,13 +3,16 @@ import pages from '~/server/pages'
 export const usePageStore = defineStore('page', {
   state: () => ({
     page: {},
+    blocks: {},
   }),
   
   actions: {
     async showPage(slug) {
 
-      this.page = {}
-      this.page = await pages.find((page) => page.slug === slug)
+      // this.page = {}
+      const page = await pages.find((page) => page.slug === slug)
+      this.blocks = page.blocks
+
     },
   },
 

@@ -3,19 +3,19 @@
     <!-- Desktop -->
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
+        <NuxtLink to="/homepage" class="-m-1.5 p-1.5">
           <span class="sr-only">Your Company</span>
           <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg" alt="" />
-        </a>
+        </NuxtLink>
       </div>
       <div class="hidden lg:flex lg:gap-x-4">
         <NuxtLink 
           v-for="item in navigation" 
           :key="item.name" 
-          :to="item.href" 
+          :to="item.to" 
           :class="{
-            'text-primary-500': item.href === $route.path,
-            'text-gray-900': item.href !== $route.path
+            'text-primary-500': item.to === $route.path,
+            'text-gray-900': item.to !== $route.path
           }"
           class="text-sm font-semibold leading-6 rounded-lg px-3 py-2 hover:bg-gray-50"
         >
@@ -65,10 +65,10 @@
                 <NuxtLink 
                   v-for="item in navigation" 
                   :key="item.name" 
-                  :to="item.href" 
+                  :to="item.to" 
                   :class="{
-                    'text-primary-500': item.href === $route.path,
-                    'text-gray-900': item.href !== $route.path
+                    'text-primary-500': item.to === $route.path,
+                    'text-gray-900': item.to !== $route.path
                   }"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50"
                 >
@@ -91,28 +91,28 @@ const mobileMenuOpen = ref(false)
 
 const navigation = [
   { 
-    name: 'Product',
-    href: '/homepage',
+    name: 'Homepage',
+    to: 'homepage',
     children: [
-      { name: 'Analytics', href: '#' },
-      { name: 'Engagement', href: '#' },
-      { name: 'Security', href: '#' },
-      { name: 'Integrations', href: '#' },
-      { name: 'Automations', href: '#' },
-      { name: 'Reports', href: '#' },
+      { name: 'Analytics', to: '#' },
+      { name: 'Engagement', to: '#' },
+      { name: 'Security', to: '#' },
+      { name: 'Integrations', to: '#' },
+      { name: 'Automations', to: '#' },
+      { name: 'Reports', to: '#' },
     ]
   },
   { 
     name: 'Features',
-    href: '/page-1',
+    to: 'features',
   },
   { 
     name: 'Marketplace',
-    href: 'https://google.com',
+    to: 'https://google.com',
   },
   { 
     name: 'Company',
-    href: '#',
+    to: '#',
   },
 ]
 </script>

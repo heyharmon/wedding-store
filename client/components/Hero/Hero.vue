@@ -18,15 +18,15 @@
 </template>
 
 <script setup>
-import BaseSection from '~/nuxt-website/components/Base/BaseSection.vue'
-import BaseBackground from '~/nuxt-website/components/Base/BaseBackground.vue'
-import BaseText from '~/nuxt-website/components/Base/BaseText.vue'
-import BaseHeading from '~/nuxt-website/components/Base/BaseHeading.vue'
-import BaseButtonGroup from '~/nuxt-website/components/Base/BaseButtonGroup.vue'
-import BaseButton from '~/nuxt-website/components/Base/BaseButton.vue'
-import BaseImage from '~/nuxt-website/components/Base/BaseImage.vue'
+import BaseSection from '~/client/components/Base/BaseSection.vue'
+import BaseBackground from '~/client/components/Base/BaseBackground.vue'
+import BaseText from '~/client/components/Base/BaseText.vue'
+import BaseHeading from '~/client/components/Base/BaseHeading.vue'
+import BaseButtonGroup from '~/client/components/Base/BaseButtonGroup.vue'
+import BaseButton from '~/client/components/Base/BaseButton.vue'
+import BaseImage from '~/client/components/Base/BaseImage.vue'
 
-import { InvertStyles } from '~/nuxt-website/dictionaries/InvertStyles.js'
+import { InvertStyles } from '~/client/dictionaries/InvertStyles.js'
 
 const props = defineProps({
   theme: String,
@@ -42,4 +42,19 @@ const props = defineProps({
     default: false,
   },
 })
+
+// const props = defineProps({
+//   theme: String,
+//   pretitle: Object,
+//   title: Object,
+//   subtitle: Object,
+//   buttons: Array,
+//   image: Object,
+//   background: Object,
+//   padding: Object,
+//   invert: {
+//     type: Boolean,
+//     default: false,
+//   },
+// })
 </script>

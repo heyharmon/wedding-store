@@ -35,6 +35,11 @@
             <svg class="h-1.5 w-1.5 fill-indigo-500" viewBox="0 0 6 6" aria-hidden="true"><circle cx="3" cy="3" r="3" /></svg>
             Draft
           </span>
+
+          <!-- Undo/redo -->
+          <button type="button" class="inline-flex items-center rounded-md bg-gray-100 p-[6px] text-gray-900 hover:bg-gray-200 active:translate-y-px">
+            <Icon name="heroicons:cog-6-tooth-solid" class="h-5 w-5 text-gray-700" aria-hidden="true" />
+          </button>
         </nav>
 
         <div class="flex flex-1 items-center justify-end gap-x-3">
@@ -84,7 +89,7 @@
         <p class="font-medium">Yolo</p>
       </div> -->
 
-      <BlockWrapper v-for="(block, index) in store.page.blocks" :key="index" :index="index" :block="block">
+      <BlockWrapper v-for="(block, index) in blocks" :key="index" :index="index" :block="block">
         <Block v-bind="block"/>
       </BlockWrapper>
     </template>
@@ -98,12 +103,18 @@
 </template>
 
 <script setup>
-import BlockWrapper from '@/nuxt-cms/editor/components/BlockWrapper.vue'
-import Block from '@/nuxt-website/components/Block/Block.vue'
+import { storeToRefs } from 'pinia'
+// import { useRefHistory } from 'vueuse'
+import BlockWrapper from '@/cms/editor/components/BlockWrapper.vue'
+import Block from '@/client/components/Block/Block.vue'
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 
 const store = useEditorStore()
+const { blocks } = storeToRefs(store)
 
+// const { history, undo, redo } = useRefHistory(blocks, {
+//   capacity: 10, // limit history records
+// });
 
 // let fields = computed(() => {
 //   const fields = import('@/components/Hero/fields/index.js');

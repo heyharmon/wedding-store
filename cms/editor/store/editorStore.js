@@ -3,6 +3,7 @@ import pages from '~/server/pages'
 export const useEditorStore = defineStore('editor', {
   state: () => ({
     page: {},
+    blocks: [],
     activeBlockId: null,
     // activeBlockId: '34lkj4',
     show: {
@@ -25,7 +26,7 @@ export const useEditorStore = defineStore('editor', {
     activeBlock: (state) => {
       if (!state.activeBlockId) return
 
-      return state.page.blocks.find(
+      return state.blocks.find(
         block => block.id === state.activeBlockId
       )
     },
@@ -33,8 +34,9 @@ export const useEditorStore = defineStore('editor', {
   
   actions: {
     async showPage(slug) {
-      const page = pages.find((page) => page.slug === slug);
+      const page = await pages.find((page) => page.slug === slug)
       this.page = page
+      this.blocks = page.blocks
     },
 
     showDefault() {

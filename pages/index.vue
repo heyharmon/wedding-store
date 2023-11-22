@@ -1,3 +1,7 @@
+<!-- <template>
+  <NuxtPage />
+</template> -->
+
 <template>
   <section>
     <h1 class="text-xl">Homepage</h1>
@@ -6,10 +10,7 @@
       <BaseButton to="/homepage">Homepage</BaseButton>
       <BaseButton to="/page-1">Page 1</BaseButton>
     </div>
-
-    <!-- <VideoPlayer src="https://www.youtube.com/embed/MbZ7T71h76w"/> -->
   </section>
 </template>
 
-<script setup>
-</script>
+<script setup></script>

@@ -13,6 +13,6 @@ const props = defineProps({
 })
 
 let component = computed(() => {
-  return defineAsyncComponent(() => import(`~/nuxt-website/components/${props.group}/${props.name}.vue`))
+  return defineAsyncComponent(() => import(`~/client/components/${props.group}/${props.name}.vue`))
 })
 </script>

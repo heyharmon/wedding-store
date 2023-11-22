@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import BaseImage from '~/nuxt-website/components/Base/BaseImage.vue'
+import BaseImage from '~/client/components/Base/BaseImage.vue'
 
 const props = defineProps({
   file: {

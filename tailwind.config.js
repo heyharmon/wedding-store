@@ -102,12 +102,12 @@ module.exports = {
   },
   
   content: [ // Content to be scanned
-    './nuxt-website/dictionaries/*.js',
-    './nuxt-website/components/**/*.vue',
-    './nuxt-cms/**/components/*.vue',
-    './nuxt-cms/**/components/**/*.vue',
-    './nuxt-cms/**/composables/*.js',
-    './nuxt-cms/**/layouts/*.vue',
+    './client/dictionaries/*.js',
+    './client/components/**/*.vue',
+    './cms/**/components/*.vue',
+    './cms/**/components/**/*.vue',
+    './cms/**/composables/*.js',
+    './cms/**/layouts/*.vue',
     './components/**/*.vue',
     './pages/*.vue',
     './nuxt.config.{js,ts}',

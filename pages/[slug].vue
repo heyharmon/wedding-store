@@ -6,13 +6,14 @@
     :key="index"
   /> -->
 
-  <Block v-for="(block, index) in store.page.blocks" :key="index" v-bind="block"/>
+  <!-- <Block v-for="(block, index) in store.page.blocks" :key="index" v-bind="block"/> -->
+  <Block v-if="store.blocks" v-for="block in store.blocks" :key="block.id" v-bind="block"/>
 </template>
 
 <script setup>
 // import { defineAsyncComponent } from 'vue';
-import Block from '@/nuxt-website/components/Block/Block.vue'
-// import { usePageStore } from '@/nuxt-website/stores/pageStore.js'
+import Block from '@/client/components/Block/Block.vue'
+// import { usePageStore } from '@/client/stores/pageStore.js'
 
 const route = useRoute()
 const store = usePageStore()
@@ -29,7 +30,7 @@ await useAsyncData('page', () => store.showPage(route.params.slug))
   //   name: name,
   //   group: group,
   //   data: data,
-  //   component: defineAsyncComponent(() => import(`@/nuxt-website/components/${group}/${name}.vue`))
+  //   component: defineAsyncComponent(() => import(`@/client/components/${group}/${name}.vue`))
   // }
 // })
 

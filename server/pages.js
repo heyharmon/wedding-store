@@ -18,6 +18,8 @@ export default [
         name: 'Hero',
         data: {
           theme: null,
+          
+          // Content
           pretitle: {
             as: 'p',
             content: 'This is the pretitle',
@@ -49,6 +51,9 @@ export default [
             width: null,
             height: null,
           },
+          invert: false,
+
+          // Section
           background: {
             file: null,
             overlay: false,
@@ -57,7 +62,7 @@ export default [
             paddingTop: '6xl',
             paddingBottom: '6xl',
           },
-          orientation: null,
+          // orientation: null,
         },
       },
       {
@@ -148,7 +153,7 @@ export default [
         },
       },
       {
-        id: 'aklkh23l45',
+        id: 'aklkh23las',
         group: 'Navigation',
         name: 'NavFooter',
         data: {},
@@ -161,7 +166,7 @@ export default [
   //////////////////////////////////
   {
     title: 'Example page one',
-    slug: 'page-1',
+    slug: 'features',
     blocks: [
       {
         id: 'j4l2tnl',
