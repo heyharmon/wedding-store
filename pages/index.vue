@@ -4,12 +4,14 @@
 
 <template>
   <section>
-    <h1 class="text-xl">Homepage</h1>
+    <BaseHeading>Hello world</BaseHeading>
 
-    <div class="flex">
+    <BaseText>Hello this is the base text</BaseText>
+
+    <BaseButtonGroup>
       <BaseButton to="/homepage">Homepage</BaseButton>
       <BaseButton to="/page-1">Page 1</BaseButton>
-    </div>
+    </BaseButtonGroup>
   </section>
 </template>
 

@@ -26,7 +26,6 @@ import BaseImage from '~/client/components/Base/BaseImage.vue'
 import { InvertStyles } from '~/client/dictionaries/InvertStyles.js'
 
 const props = defineProps({
-  
   pretitle: Object,
   title: Object,
   subtitle: Object,
