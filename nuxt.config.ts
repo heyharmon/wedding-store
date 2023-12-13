@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     ['@pinia/nuxt', {
       autoImports: ['defineStore', 'acceptHMRUpdate']
     }],
+    "@nuxt/image"
   ],
 
   components: [
