@@ -1,7 +1,5 @@
 <template>
-  <BaseSection :data-theme="theme" v-bind="padding">
-    <BaseBackground v-bind="background"/>
-    
+  <BaseSection v-bind="section">
     <div class="flex flex-col gap-16 sm:gap-24 relative mx-auto max-w-7xl px-6 lg:px-8">
         <div :class="`${InvertStyles[invert]}`" class="mx-auto max-w-3xl text-center">
           <BaseText v-if="pretitle" v-bind="pretitle" class="text-primary-600 font-semibold mb-3" />
@@ -19,7 +17,6 @@
 
 <script setup>
 import BaseSection from '~/client/components/Base/BaseSection.vue'
-import BaseBackground from '~/client/components/Base/BaseBackground.vue'
 import BaseText from '~/client/components/Base/BaseText.vue'
 import BaseHeading from '~/client/components/Base/BaseHeading.vue'
 import BaseButtonGroup from '~/client/components/Base/BaseButtonGroup.vue'
@@ -29,14 +26,15 @@ import BaseImage from '~/client/components/Base/BaseImage.vue'
 import { InvertStyles } from '~/client/dictionaries/InvertStyles.js'
 
 const props = defineProps({
-  theme: String,
+  
   pretitle: Object,
   title: Object,
   subtitle: Object,
   buttons: Array,
   image: Object,
-  background: Object,
-  padding: Object,
+  
+  section: Object,
+
   invert: {
     type: Boolean,
     default: false,
