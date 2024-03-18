@@ -5,7 +5,6 @@ export const useEditorStore = defineStore('editor', {
     page: {},
     blocks: [],
     activeBlockId: null,
-    // activeBlockId: '34lkj4',
     show: {
       blocksPanel: true,
       designPanel: false,

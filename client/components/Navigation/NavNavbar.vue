@@ -92,7 +92,7 @@ const mobileMenuOpen = ref(false)
 const navigation = [
   { 
     name: 'Homepage',
-    to: 'homepage',
+    to: '/homepage',
     children: [
       { name: 'Analytics', to: '#' },
       { name: 'Engagement', to: '#' },
@@ -104,7 +104,7 @@ const navigation = [
   },
   { 
     name: 'Features',
-    to: 'features',
+    to: '/features',
   },
   { 
     name: 'Marketplace',
@@ -112,7 +112,7 @@ const navigation = [
   },
   { 
     name: 'Company',
-    to: '#',
+    to: '/about',
   },
 ]
 </script>
