@@ -55,3 +55,4 @@ const props = defineProps({
 //   },
 // })
 </script>
+~/modules/client/dictionaries/InvertStyles.js
