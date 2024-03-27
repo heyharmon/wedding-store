@@ -1,11 +1,8 @@
 <template>
   <section 
     :data-theme="theme" 
-    :class="`
-      ${PaddingTop[paddingTop]} 
-      ${PaddingBottom[paddingBottom]}
-    `"
-    class="relative bg-white"
+    :class="`${PaddingTop[padding.top]} ${PaddingBottom[padding.bottom]}`"
+    class="relative isolate overflow-hidden bg-white"
   >
     <BaseBackground v-bind="background"/>
     <slot/>
@@ -13,21 +10,20 @@
 </template>
 
 <script setup>
-import { PaddingTop, PaddingBottom } from '@/client/dictionaries/Padding.js'
+import { PaddingTop, PaddingBottom } from '@/modules/client/dictionaries/Padding.js'
 
 const props = defineProps({
-  theme: String,
-  // padding: Object,
+  theme: {
+    type: String,
+    default: null,
+  },
+  padding: {
+    type: Object,
+    default: () => ({
+      top: '6xl',
+      bottom: '6xl',
+    }),
+  },
   background: Object,
-
-  paddingTop: {
-    type: String,
-    default: '5xl',
-  },
-  paddingBottom: {
-    type: String,
-    default: '5xl',
-  },
 })
 </script>
-  ~/modules/client/dictionaries/Padding.js

@@ -1,5 +1,6 @@
 <template>
   <component
+    v-if="content"
     :is="as"
     :class="`
       ${baseClasses} 
@@ -14,15 +15,14 @@
 const props = defineProps({
   as: {
     type: String,
-    default: 'h2' // h1, h2, h3, h4, h5, h6
+    default: 'h2' // h1, h2, h3, h4, h5, h6, p, span
   },
   content: {
       type: String,
       default: null
   },
   size: {
-    type: String,
-    default: '' // xs, sm, base, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl, 8xl, 9xl
+    type: String, // xs, sm, base, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl, 8xl, 9xl
   },
 })
 
@@ -50,7 +50,7 @@ const sizeClasses = {
 
 const textSizeByTag = {
   'h1': 'text-5xl',
-  'h2': 'text-3xl',
+  'h2': 'text-4xl',
   'h3': 'text-2xl',
   'h4': 'text-xl',
   'h5': 'text-lg',

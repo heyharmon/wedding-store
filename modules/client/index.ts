@@ -36,8 +36,8 @@ export default defineNuxtModule({
 
       pages.push({
         name: 'pages',
-        path: '/hello',
-        file: resolve(__dirname, './pages/page.vue'),
+        path: '/:path*',
+        file: resolve(__dirname, './pages/[path].vue'),
       })
     })
   },

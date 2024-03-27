@@ -3,9 +3,9 @@
     :to="to"
     @click="$emit('click')"
     :class="`
-      ${baseClasses} 
-      ${variantClasses[variant]} 
+      ${baseClasses}
       ${sizeClasses[size]}
+      ${variantClasses[variant]} 
     `"
   >
     <slot>{{ label || '' }}</slot>
@@ -64,7 +64,7 @@ const variantClasses = {
   bold: 'text-white bg-primary-600 hover:bg-primary-700 shadow-sm',
   light: 'text-primary-600 bg-primary-100 hover:bg-primary-200 shadow-sm',
   ghost: 'text-primary-600 bg-transparent ring-2 ring-inset ring-primary-600 hover:bg-primary-100',
-  text: 'text-primary-600 bg-transparent px-0',
+  text: 'text-primary-600 bg-transparent pl-0 pr-0 pt-0 pb-0',
 }
 
 const sizeClasses = {
