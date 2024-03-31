@@ -15,25 +15,25 @@ export default defineNuxtConfig({
   ],
 
   components: [
-    '~/cms/components',
-    '~/cms/editor/components',
-    '~/cms/editor/components/Fields',
-    '~/cms/editor/layouts',
-    '~/cms/dashboard/components',
-    '~/cms/designer/components',
-    '~/client/components/Base',
+    '~/modules/client/*',
+    // '~/cms/components',
+    // '~/cms/editor/components',
+    // '~/cms/editor/components/Fields',
+    // '~/cms/dashboard/components',
+    // '~/cms/designer/components',
+    // '~/modules/client/components/Base',
     // '~/components',
     // '~/components/base',
   ],
 
   imports: {
     dirs: [
-      'composables',
-      'store',
-      'cms/**/composables',
-      'cms/**/store',
-      'client/**/composables',
-      'client/**/store',
+      // 'composables',
+      // 'store',
+      // 'cms/**/composables',
+      // 'cms/**/store',
+      // 'client/**/composables',
+      // 'client/**/store',
     ],
   },
 
@@ -45,8 +45,13 @@ export default defineNuxtConfig({
     prefix: 'Headless' // Change the default component prefix
   },
 
+  // image: {
+  //   dir: 'public/images'
+  // },
+
   css: [
-    '@/assets/css/main.css'
+    '@/modules/admin/styles/admin.css',
+    '@/modules/client/styles/client.css'
   ],
   
   // build: {

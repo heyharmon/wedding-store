@@ -1,18 +1,17 @@
-<!-- <template>
-  <NuxtPage />
-</template> -->
-
 <template>
-  <section>
-    <BaseHeading>Hello world</BaseHeading>
-
-    <BaseText>Hello this is the base text</BaseText>
+    <!-- <NuxtPage /> -->
+    <base-heading>Homepage</base-heading>
 
     <BaseButtonGroup>
-      <BaseButton to="/homepage">Homepage</BaseButton>
-      <BaseButton to="/page-1">Page 1</BaseButton>
+        <BaseButton to="/">Homepage</BaseButton>
+        <BaseButton to="/about">About</BaseButton>
+        <BaseButton to="/about/contact">Contact</BaseButton>
     </BaseButtonGroup>
-  </section>
 </template>
 
-<script setup></script>
+<script setup>
+const route = useRoute()
+const store = usePageStore()
+import { usePageStore } from '@/modules/client/store/pageStore.js'
+await useAsyncData('page', () => store.showPage(route.fullPath))
+</script>
