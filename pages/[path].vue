@@ -21,11 +21,14 @@
 
 <script setup>
 // import { defineAsyncComponent } from 'vue';
-import Block from '@/modules/client/components/Block/Block.vue'
-import { usePageStore } from '@/modules/client/store/pageStore.js'
+import Block from '@/components/Block/Block.vue'
+import { usePageStore } from '@/store/pageStore.js'
 
 const route = useRoute()
 const store = usePageStore()
+
+console.log('path', route.path)
+console.log('fullPath', route.fullPath)
 
 // let path = computed(() => {
 //   return "/" + route.params.path.join("/");
@@ -67,4 +70,4 @@ const { data: page, pending: pagePending, error: pageError } = await useAsyncDat
 // useHead({
 //   title: store.page.title
 // })
-</script>
+</script>~/store/pageStore.js

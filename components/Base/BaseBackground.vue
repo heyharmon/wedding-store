@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import BaseImage from '~/modules/client/components/Base/BaseImage.vue'
+// import BaseImage from '~/modules/client/components/Base/BaseImage.vue'
 
 const props = defineProps({
   file: Object,

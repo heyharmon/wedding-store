@@ -10,8 +10,13 @@
 </template>
 
 <script setup>
+import { usePageStore } from '@/store/pageStore.js'
+
 const route = useRoute()
 const store = usePageStore()
-import { usePageStore } from '@/modules/client/store/pageStore.js'
+
+console.log('path', route.path)
+console.log('fullPath', route.fullPath)
+
 await useAsyncData('page', () => store.showPage(route.fullPath))
-</script>
+</script>~/store/pageStore.js

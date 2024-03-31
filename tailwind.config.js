@@ -104,7 +104,7 @@ module.exports = {
   content: [ // Content to be scanned
     // '@/modules/client/components/**/*.vue',
     // '@/modules/client/dictionaries/*.js',
-    // './client/dictionaries/*.js',
+    // '@/dictionaries/*.js',
     // './client/components/**/*.vue',
     // './cms/**/components/*.vue',
     // './cms/**/components/**/*.vue',

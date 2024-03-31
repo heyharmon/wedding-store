@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-import { PaddingTop, PaddingBottom } from '@/modules/client/dictionaries/Padding.js'
+import { PaddingTop, PaddingBottom } from '@/dictionaries/Padding.js'
 
 const props = defineProps({
   theme: {

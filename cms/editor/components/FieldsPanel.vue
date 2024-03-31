@@ -49,4 +49,4 @@ const store = useEditorStore()
 const activeTab = ref('content')
 // const { fields } = await import(`~/modules/client/components/Hero/fields/index.js`)
 import { fields } from '~/modules/client/components/Hero/fields/index.js'
-</script>
+</script>~/components/Hero/fields/index.js
