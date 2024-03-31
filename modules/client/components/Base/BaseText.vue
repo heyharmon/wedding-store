@@ -15,7 +15,7 @@
 const props = defineProps({
   as: {
     type: String,
-    default: 'p' // p, span
+    default: 'p' // p, span, blockquote
   },
   content: {
       type: String,
@@ -27,7 +27,7 @@ const props = defineProps({
     },
 })
 
-const baseClasses = ``
+const baseClasses = `leading-normal`
 
 const sizeClasses = {
 	'xs': 'text-xs',

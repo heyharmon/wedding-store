@@ -355,7 +355,23 @@ export default [
         name: 'FeatureRepeater',
         data: {
           section: null,
-          repeaterContent: [
+          content: {
+            pretitle: {
+              content: 'This is the pretitle',
+              size: 'base',
+            },
+            title: {
+              as: 'h2',
+              content: 'Stay on top of customer support',
+            },
+            body: {
+              size: 'lg',
+              content: 'Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.',
+            },
+            buttons: [],
+            image: null,
+          },
+          features: [
             {
               title: {
                 as: 'p',
@@ -427,7 +443,157 @@ export default [
             },
           ]
         }
-      }
+      },
+      {
+        id: 'ghj24d4re',
+        group: 'Testimonial',
+        name: 'Testimonial',
+        data: {
+          section: {
+            theme: null,
+            padding: {
+              top: '6xl',
+              bottom: '6xl',
+            },
+            background: {
+              overlay: true
+            }
+          },
+          testimonial: {
+            quote: {
+              content: '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
+            },
+            author: {
+              content: 'Judith Black',
+            },
+            extra: {
+              content: 'CEO of Workcation',
+            },
+            image: {
+              file: {
+                name: 'The image title',
+                src: 'https://placehold.co/100x100',
+                alt: 'The image alt',
+                description: 'The image description',
+                caption: 'The image caption',
+              }
+            },
+          }
+        }
+      },
+      {
+        id: 'akl24je22',
+        group: 'Card',
+        name: 'CardRepeater',
+        data: {
+          section: null,
+          content: {
+            pretitle: {
+              content: 'This is the pretitle',
+              size: 'base',
+            },
+            title: {
+              as: 'h2',
+              content: 'From the blog',
+            },
+            body: {
+              size: 'lg',
+              content: 'Learn how to grow your business with our expert advice.',
+            },
+            buttons: [],
+            image: null,
+          },
+          cards: [
+            {
+              content: {
+                pretitle: {
+                  content: 'This is the pretitle',
+                  size: 'base',
+                },
+                title: {
+                  as: 'p',
+                  content: 'Boost your conversion rate',
+                  size: 'base'
+                },
+                body: {
+                  as: 'p',
+                  content: 'Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.',
+                },
+                buttons: [
+                  { label: 'Learn more', to: '/' },
+                ],
+                image: {
+                  file: {
+                    name: 'The image title',
+                    src: 'https://placehold.co/400x300',
+                    alt: 'The image alt',
+                    description: 'The image description',
+                    caption: 'The image caption',
+                  }
+                }
+              }
+            },
+            {
+              content: {
+                pretitle: {
+                  content: 'This is the pretitle',
+                  size: 'base',
+                },
+                title: {
+                  as: 'p',
+                  content: 'How to use search engines',
+                  size: 'base'
+                },
+                body: {
+                  as: 'p',
+                  content: 'Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.',
+                },
+                buttons: [
+                  { label: 'Learn more', to: '/' },
+                ],
+                image: {
+                  file: {
+                    name: 'The image title',
+                    src: 'https://placehold.co/400x300',
+                    alt: 'The image alt',
+                    description: 'The image description',
+                    caption: 'The image caption',
+                  }
+                }
+              }
+            },
+            {
+              content: {
+                pretitle: {
+                  content: 'This is the pretitle',
+                  size: 'base',
+                },
+                title: {
+                  as: 'p',
+                  content: 'Improve your customer experience',
+                  size: 'base'
+                },
+                body: {
+                  as: 'p',
+                  content: 'Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.',
+                },
+                buttons: [
+                  { label: 'Learn more', to: '/' },
+                ],
+                image: {
+                  file: {
+                    name: 'The image title',
+                    src: 'https://placehold.co/400x300',
+                    alt: 'The image alt',
+                    description: 'The image description',
+                    caption: 'The image caption',
+                  }
+                }
+              }
+            },
+          ]
+        }
+      },
     ]
   }
 ]
