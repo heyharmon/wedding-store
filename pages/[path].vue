@@ -27,15 +27,8 @@ import { usePageStore } from '@/store/pageStore.js'
 const route = useRoute()
 const store = usePageStore()
 
-console.log('path', route.path)
-console.log('fullPath', route.fullPath)
-
-// let path = computed(() => {
-//   return "/" + route.params.path.join("/");
-// })
-
 const { data: page, pending: pagePending, error: pageError } = await useAsyncData('page', () =>
-    store.showPage(route.fullPath)
+    store.showPage(route.path)
 );
 
 // const { data } = await useAsyncData('page', () => store.showPage(route.fullPath))

@@ -3,7 +3,7 @@
   <NuxtImg v-if="src" :src="src" :alt="alt" :format="extension" :width="width" :height="height"/>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   name: {
     type: String,

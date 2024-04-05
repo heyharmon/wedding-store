@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   ],
 
   components: [
-    '~/modules/admin/*',
+    // '~/modules/admin/components/*',
     // '~/cms/components',
     // '~/cms/editor/components',
     // '~/cms/editor/components/Fields',

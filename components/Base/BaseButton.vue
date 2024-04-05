@@ -13,7 +13,7 @@
   </NuxtLink>
 </template>
   
-<script setup>
+<script setup lang="ts">
 // Button as event button
 // <Button @click="onClickButton">Button</Button>
 

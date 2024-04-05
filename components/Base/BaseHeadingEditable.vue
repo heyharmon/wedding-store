@@ -18,7 +18,7 @@
   </component>
 </template>
   
-<script setup>
+<script setup lang="ts">
 const { isEditing, editableElement, editableClasses, onClick, onInput, onBlur, onPaste, onKeypress } = useEditable()
 
 const props = defineProps({

@@ -18,13 +18,13 @@
   </BaseSection>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   section: Object,
   content: {
     type: Object,
     default: () => ({
-      pretitle: Object,
+      pretitle: Object, 
       title: Object,
       body: Object,
       buttons: Array,

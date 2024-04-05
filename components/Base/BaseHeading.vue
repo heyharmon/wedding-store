@@ -11,7 +11,7 @@
   </component>
 </template>
   
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   as: {
     type: String,

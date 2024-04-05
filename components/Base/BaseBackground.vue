@@ -10,15 +10,15 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 // import BaseImage from '~/modules/client/components/Base/BaseImage.vue'
 
 const props = defineProps({
-  file: Object,
   overlay: {
     type: Boolean,
     default: false,
-  }
+  },
+  file: Object,
 })
 </script>
   

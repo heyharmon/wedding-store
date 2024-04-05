@@ -9,7 +9,7 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { PaddingTop, PaddingBottom } from '@/dictionaries/Padding.js'
 
 const props = defineProps({

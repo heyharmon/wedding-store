@@ -37,7 +37,7 @@
   </BaseSection>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   section: Object,
   content: {

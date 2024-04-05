@@ -7,12 +7,6 @@ export default [
     path: '/',
     blocks: [
       {
-        id: 'j4l2tasdf',
-        group: 'Navigation',
-        name: 'NavNavbar',
-        data: {},
-      },
-      {
         id: 'slsna4asdf',
         group: 'Hero',
         name: 'Hero',
@@ -43,12 +37,6 @@ export default [
           }
         },
       },
-      {
-        id: 'aklkh23las',
-        group: 'Navigation',
-        name: 'NavFooter',
-        data: {},
-      },
     ]
   },
 
@@ -59,12 +47,6 @@ export default [
     title: 'About',
     path: '/about',
     blocks: [
-      {
-        id: 'j4l2tnl',
-        group: 'Navigation',
-        name: 'NavNavbar',
-        data: {},
-      },
       {
         id: 'slsna4l4',
         group: 'Hero',
@@ -96,12 +78,6 @@ export default [
           }
         },
       },
-      {
-        id: 'aklkh23las',
-        group: 'Navigation',
-        name: 'NavFooter',
-        data: {},
-      },
     ]
   },
 
@@ -112,12 +88,6 @@ export default [
     title: 'Contact',
     path: '/about/contact',
     blocks: [
-      {
-        id: 'j4l2tnl',
-        group: 'Navigation',
-        name: 'NavNavbar',
-        data: {},
-      },
       {
         id: 'slsna4l4',
         group: 'Hero',
@@ -250,7 +220,7 @@ export default [
         }
       },
       {
-        id: 'akl24je22',
+        id: 'akl24je292',
         group: 'Feature',
         name: 'FeatureRepeater',
         data: {
@@ -493,12 +463,6 @@ export default [
             },
           ]
         }
-      },
-      {
-        id: 'aklkh23las',
-        group: 'Navigation',
-        name: 'NavFooter',
-        data: {},
       },
     ]
   }

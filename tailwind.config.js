@@ -101,17 +101,13 @@ module.exports = {
     },
   },
   
-  content: [ // Content to be scanned
-    // '@/modules/client/components/**/*.vue',
-    // '@/modules/client/dictionaries/*.js',
-    // '@/dictionaries/*.js',
-    // './client/components/**/*.vue',
-    // './cms/**/components/*.vue',
-    // './cms/**/components/**/*.vue',
-    // './cms/**/composables/*.js',
-    // './components/**/*.vue',
-    // './pages/*.vue',
-    // './nuxt.config.{js,ts}',
+  content: [
+    // "./components/**/*.{js,vue,ts}",
+    // "./layouts/**/*.vue",
+    // "./pages/**/*.vue",
+    // "./plugins/**/*.{js,ts}",
+    // "./nuxt.config.{js,ts}",
+    // "./app.vue",
   ],
 
   plugins: [
