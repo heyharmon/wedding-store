@@ -6,24 +6,24 @@ export default [
     data: {
       theme: null,
       pretitle: {
-        as: 'p',
+        tag: 'p',
         content: 'This is the pretitle',
         size: 'base',
       },
       title: {
-        as: 'h1',
+        tag: 'h1',
         content: 'The hero',
         size: '5xl',
       },
       subtitle: {
-        as: 'p',
+        tag: 'p',
         content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
         size: 'xl',
       },
       buttons: [
         {
           label: 'Call to action',
-          to: '/',
+          destination: '/',
         },
       ],
       image: {
@@ -49,24 +49,24 @@ export default [
     data: {
       theme: null,
       pretitle: {
-        as: 'p',
+        tag: 'p',
         content: 'This is the pretitle',
         size: 'base',
       },
       title: {
-        as: 'h1',
+        tag: 'h1',
         content: 'The hero',
         size: '5xl',
       },
       subtitle: {
-        as: 'p',
+        tag: 'p',
         content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
         size: 'xl',
       },
       buttons: [
         {
           label: 'Call to action',
-          to: '/',
+          destination: '/',
         },
       ],
       image: {

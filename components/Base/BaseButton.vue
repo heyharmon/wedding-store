@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    :to="to"
+    :to="destination"
     @click="$emit('click')"
     :class="`
       ${baseClasses}
@@ -29,7 +29,7 @@ const props = defineProps({
         type: String,
         default: ''
     },
-    to: {
+    destination: {
         type: String,
         default: ''
     },

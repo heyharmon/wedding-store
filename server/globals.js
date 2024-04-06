@@ -17,16 +17,16 @@ export default {
             }
           },
           menu: [
-            { label: 'Services', to: '/services', children: [
-              { label: 'Service 1', to: '/services/service-1' },
-              { label: 'Service 2', to: '/services/service-2' },
+            { label: 'Services', destination: '/services', children: [
+              { label: 'Service 1', destination: '/services/service-1' },
+              { label: 'Service 2', destination: '/services/service-2' },
             ]},
-            { label: 'Care plan', to: '/care-plan' },
-            { label: 'About', to: '/about' },
-            { label: 'Contact', to: '/contact' },
+            { label: 'Care plan', destination: '/care-plan' },
+            { label: 'About', destination: '/about' },
+            { label: 'Contact', destination: '/contact' },
           ],
           secondaryMenu: [
-            { label: 'Request appointment', to: '/request-appointment' },
+            { label: 'Request appointment', destination: '/request-appointment' },
           ]
         }
       },
@@ -42,9 +42,9 @@ export default {
           section: null,
           logo: {},
           menu: [
-            { label: 'Item 1', to: '/item-1' },
-            { label: 'Item 2', to: '/item-2' },
-            { label: 'Item 3', to: '/item-3' },
+            { label: 'Item 1', destination: '/item-1' },
+            { label: 'Item 2', destination: '/item-2' },
+            { label: 'Item 3', destination: '/item-3' },
           ],
           secondaryMenu: []
         }

@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="as"
+    :is="tag"
     :class="`
       ${baseClasses} 
       ${computedSize}
@@ -18,11 +18,11 @@
   </component>
 </template>
   
-<script setup lang="ts">
+<script setup>
 const { isEditing, editableElement, editableClasses, onClick, onInput, onBlur, onPaste, onKeypress } = useEditable()
 
 const props = defineProps({
-  as: {
+  tag: {
     type: String,
     default: 'h2' // h1, h2, h3, h4, h5, h6
   },

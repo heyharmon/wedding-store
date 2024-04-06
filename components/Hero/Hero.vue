@@ -8,9 +8,10 @@
         <BaseText v-bind="content.pretitle" class="text-primary-600 font-semibold mb-3" />
         <BaseHeading v-bind="content.title" class="mb-6"/>
         <BaseText v-bind="content.body" class="leading-9 text-gray-600"/>
-        <BaseButtonGroup class="mt-10">
+        <BaseButtonGroup v-bind="content.buttons" class="mt-10"/>
+        <!-- <BaseButtonGroup class="mt-10">
           <BaseButton v-for="button in content.buttons" v-bind="button"/>
-        </BaseButtonGroup>
+        </BaseButtonGroup> -->
       </div>
 
       <BaseImage v-bind="content.image" class="flow-root mx-auto rounded-md shadow-2xl"/>

@@ -21,16 +21,17 @@ export default [
           },
           content: {
             pretitle: {
+              tag: 'p',
               content: 'This is the pretitle',
               size: 'base',
             },
             title: {
-              as: 'h1',
+              tag: 'h1',
               content: 'Home',
               size: '5xl',
             },
             body: {
-              as: 'p',
+              tag: 'p',
               content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
               size: 'xl',
             },
@@ -62,16 +63,17 @@ export default [
           },
           content: {
             pretitle: {
+              tag: 'p',
               content: 'This is the pretitle',
               size: 'base',
             },
             title: {
-              as: 'h1',
+              tag: 'h1',
               content: 'About',
               size: '5xl',
             },
             body: {
-              as: 'p',
+              tag: 'p',
               content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
               size: 'xl',
             },
@@ -103,16 +105,17 @@ export default [
           },
           content: {
             pretitle: {
+              tag: 'p',
               content: 'This is the pretitle',
               size: 'base',
             },
             title: {
-              as: 'h1',
+              tag: 'h1',
               content: 'Contact',
               size: '5xl',
             },
             body: {
-              as: 'p',
+              tag: 'p',
               content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
               size: 'xl',
             },
@@ -143,11 +146,12 @@ export default [
           },
           content: {
             pretitle: {
+              tag: 'p',
               content: 'This is the pretitle',
               size: 'base',
             },
             title: {
-              as: 'h2',
+              tag: 'h2',
               content: 'The about feature',
             },
             body: {
@@ -157,11 +161,11 @@ export default [
             buttons: [
               {
                 label: 'Call to action',
-                to: '/homepage',
+                destination: '/homepage',
               },
               {
                 label: 'Learn more',
-                to: '/page-1',
+                destination: '/page-1',
                 variant: 'ghost',
               }
             ],
@@ -195,15 +199,16 @@ export default [
           },
           content: {
             pretitle: {
+              tag: 'p',
               content: 'This is the pretitle',
               size: 'base',
             },
             title: {
-              as: 'h2',
+              tag: 'h2',
               content: 'Boost your productivity. Start using our app today.',
             },
             body: {
-              as: 'p',
+              tag: 'p',
               content: 'Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.',
             },
             buttons: [],
@@ -227,11 +232,12 @@ export default [
           section: null,
           content: {
             pretitle: {
+              tag: 'p',
               content: 'This is the pretitle',
               size: 'base',
             },
             title: {
-              as: 'h2',
+              tag: 'h2',
               content: 'Stay on top of customer support',
             },
             body: {
@@ -244,16 +250,16 @@ export default [
           features: [
             {
               title: {
-                as: 'p',
+                tag: 'p',
                 content: 'Unlimited inboxes',
                 size: 'base'
               },
               body: {
-                as: 'p',
+                tag: 'p',
                 content: 'Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.',
               },
               buttons: [
-                { label: 'Learn more', to: '/' },
+                { label: 'Learn more', destination: '/' },
               ],
               image: {
                 file: {
@@ -267,16 +273,16 @@ export default [
             },
             {
               title: {
-                as: 'p',
+                tag: 'p',
                 content: 'Manage team members',
                 size: 'base'
               },
               body: {
-                as: 'p',
+                tag: 'p',
                 content: 'Vero eum voluptatem aliquid nostrum voluptatem. Vitae esse natus. Earum nihil deserunt eos quasi cupiditate. A inventore et molestiae natus.',
               },
               buttons: [
-                { label: 'Learn more', to: '/' },
+                { label: 'Learn more', destination: '/' },
               ],
               image: {
                 file: {
@@ -290,16 +296,16 @@ export default [
             },
             {
               title: {
-                as: 'p',
+                tag: 'p',
                 content: 'Spam report',
                 size: 'base'
               },
               body: {
-                as: 'p',
+                tag: 'p',
                 content: 'Et quod quaerat dolorem quaerat architecto aliquam accusantium. Ex adipisci et doloremque autem quia quam. Quis eos molestiae at iure impedit.',
               },
               buttons: [
-                { label: 'Learn more', to: '/' },
+                { label: 'Learn more', destination: '/' },
               ],
               image: {
                 file: {
@@ -359,11 +365,12 @@ export default [
           section: null,
           content: {
             pretitle: {
+              tag: 'p',
               content: 'This is the pretitle',
               size: 'base',
             },
             title: {
-              as: 'h2',
+              tag: 'h2',
               content: 'From the blog',
             },
             body: {
@@ -377,20 +384,21 @@ export default [
             {
               content: {
                 pretitle: {
+                  tag: 'p',
                   content: 'This is the pretitle',
                   size: 'base',
                 },
                 title: {
-                  as: 'p',
+                  tag: 'p',
                   content: 'Boost your conversion rate',
                   size: 'base'
                 },
                 body: {
-                  as: 'p',
+                  tag: 'p',
                   content: 'Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.',
                 },
                 buttons: [
-                  { label: 'Learn more', to: '/' },
+                  { label: 'Learn more', destination: '/' },
                 ],
                 image: {
                   file: {
@@ -406,20 +414,21 @@ export default [
             {
               content: {
                 pretitle: {
+                  tag: 'p',
                   content: 'This is the pretitle',
                   size: 'base',
                 },
                 title: {
-                  as: 'p',
+                  tag: 'p',
                   content: 'How to use search engines',
                   size: 'base'
                 },
                 body: {
-                  as: 'p',
+                  tag: 'p',
                   content: 'Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.',
                 },
                 buttons: [
-                  { label: 'Learn more', to: '/' },
+                  { label: 'Learn more', destination: '/' },
                 ],
                 image: {
                   file: {
@@ -435,20 +444,21 @@ export default [
             {
               content: {
                 pretitle: {
+                  tag: 'p',
                   content: 'This is the pretitle',
                   size: 'base',
                 },
                 title: {
-                  as: 'p',
+                  tag: 'p',
                   content: 'Improve your customer experience',
                   size: 'base'
                 },
                 body: {
-                  as: 'p',
+                  tag: 'p',
                   content: 'Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.',
                 },
                 buttons: [
-                  { label: 'Learn more', to: '/' },
+                  { label: 'Learn more', destination: '/' },
                 ],
                 image: {
                   file: {

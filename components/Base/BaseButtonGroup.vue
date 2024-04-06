@@ -1,5 +1,13 @@
 <template>
   <div class="flex items-center gap-x-4">
-    <slot/>
+    <BaseButton v-for="button in buttons" v-bind="button"/>
   </div>
 </template>
+
+<script setup lang="ts">
+const props = defineProps({
+    buttons: {
+        type: Array,
+    }
+})
+</script>
