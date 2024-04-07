@@ -1,5 +1,5 @@
 <template>
-  <BaseSection v-bind="section" class="overflow-hidden">
+  <BlockSection v-bind="section" class="overflow-hidden">
     <!-- Block wrapper -->
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
@@ -14,26 +14,28 @@
           </BaseButtonGroup>
         </div>
         <div class="relative mt-16 h-80 lg:mt-8">
-          <BaseImage v-bind="content.image.file" class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"/>
+          <!-- <BaseImage v-bind="content.image.file" class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"/> -->
+          <BaseImage v-if="content.image" v-bind="content.image" class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"/>
         </div>
       </div>
 
     </div>
-  </BaseSection>
+  </BlockSection>
 </template>
 
 <script setup lang="ts">
 const props = defineProps({
   section: Object,
-  content: {
-    type: Object,
-    default: () => ({
-      pretitle: Object,
-      title: Object,
-      body: Object,
-      buttons: Array,
-      image: Object,
-    }),
-  },
+  content: Object,
+  // content: {
+  //   type: Object,
+  //   default: () => ({
+  //     pretitle: Object,
+  //     title: Object,
+  //     body: Object,
+  //     buttons: Array,
+  //     image: Object,
+  //   }),
+  // },
 })
 </script>

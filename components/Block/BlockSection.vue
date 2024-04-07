@@ -4,7 +4,7 @@
     :class="`${PaddingTop[padding.top]} ${PaddingBottom[padding.bottom]}`"
     class="relative isolate overflow-hidden bg-white"
   >
-    <BaseBackground v-bind="background"/>
+    <BlockBackground v-bind="background"/>
     <slot/>
   </section>
 </template>

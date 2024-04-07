@@ -17,23 +17,32 @@ export default [
               top: '6xl',
               bottom: '6xl',
             },
-            background: {}
+            background: {
+              file: null,
+              overlay: false
+            }
           },
           content: {
             pretitle: {
-              tag: 'p',
+              element: 'p',
               content: 'This is the pretitle',
               size: 'base',
             },
             title: {
-              tag: 'h1',
+              element: 'h1',
               content: 'Home',
               size: '5xl',
             },
             body: {
-              tag: 'p',
+              element: 'p',
               content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
               size: 'xl',
+            },
+            image: {
+              file: null,
+              overlay: false,
+              width: null,
+              height: null,
             },
           }
         },
@@ -59,23 +68,32 @@ export default [
               top: '6xl',
               bottom: '6xl',
             },
-            background: {}
+            background: {
+              file: null,
+              overlay: false
+            }
           },
           content: {
             pretitle: {
-              tag: 'p',
+              element: 'p',
               content: 'This is the pretitle',
               size: 'base',
             },
             title: {
-              tag: 'h1',
+              element: 'h1',
               content: 'About',
               size: '5xl',
             },
             body: {
-              tag: 'p',
+              element: 'p',
               content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
               size: 'xl',
+            },
+            image: {
+              file: null,
+              overlay: false,
+              width: null,
+              height: null,
             },
           }
         },
@@ -101,23 +119,32 @@ export default [
               top: '6xl',
               bottom: '6xl',
             },
-            background: {}
+            background: {
+              file: null,
+              overlay: false
+            }
           },
           content: {
             pretitle: {
-              tag: 'p',
+              element: 'p',
               content: 'This is the pretitle',
               size: 'base',
             },
             title: {
-              tag: 'h1',
+              element: 'h1',
               content: 'Contact',
               size: '5xl',
             },
             body: {
-              tag: 'p',
+              element: 'p',
               content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
               size: 'xl',
+            },
+            image: {
+              file: null,
+              overlay: false,
+              width: null,
+              height: null,
             },
           }
         },
@@ -146,12 +173,12 @@ export default [
           },
           content: {
             pretitle: {
-              tag: 'p',
+              element: 'p',
               content: 'This is the pretitle',
               size: 'base',
             },
             title: {
-              tag: 'h2',
+              element: 'h2',
               content: 'The about feature',
             },
             body: {
@@ -176,7 +203,10 @@ export default [
                 alt: 'The image alt',
                 description: 'The image description',
                 caption: 'The image caption',
-              }
+              },
+              overlay: false,
+              width: null,
+              height: null,
             },
           }
         }
@@ -199,16 +229,16 @@ export default [
           },
           content: {
             pretitle: {
-              tag: 'p',
+              element: 'p',
               content: 'This is the pretitle',
               size: 'base',
             },
             title: {
-              tag: 'h2',
+              element: 'h2',
               content: 'Boost your productivity. Start using our app today.',
             },
             body: {
-              tag: 'p',
+              element: 'p',
               content: 'Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.',
             },
             buttons: [],
@@ -219,7 +249,10 @@ export default [
                 alt: 'The image alt',
                 description: 'The image description',
                 caption: 'The image caption',
-              }
+              },
+              overlay: false,
+              width: null,
+              height: null,
             },
           }
         }
@@ -232,12 +265,12 @@ export default [
           section: null,
           content: {
             pretitle: {
-              tag: 'p',
+              element: 'p',
               content: 'This is the pretitle',
               size: 'base',
             },
             title: {
-              tag: 'h2',
+              element: 'h2',
               content: 'Stay on top of customer support',
             },
             body: {
@@ -245,17 +278,22 @@ export default [
               content: 'Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.',
             },
             buttons: [],
-            image: null,
+            image: {
+              file: null,
+              overlay: false,
+              width: null,
+              height: null,
+            },
           },
           features: [
             {
               title: {
-                tag: 'p',
+                element: 'p',
                 content: 'Unlimited inboxes',
                 size: 'base'
               },
               body: {
-                tag: 'p',
+                element: 'p',
                 content: 'Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.',
               },
               buttons: [
@@ -263,22 +301,26 @@ export default [
               ],
               image: {
                 file: {
+                  id: 1,
                   name: 'The image title',
                   src: '/images/icon-camera.svg',
                   alt: 'The image alt',
                   description: 'The image description',
                   caption: 'The image caption',
-                }
+                },
+                overlay: false,
+                width: null,
+                height: null,
               }
             },
             {
               title: {
-                tag: 'p',
+                element: 'p',
                 content: 'Manage team members',
                 size: 'base'
               },
               body: {
-                tag: 'p',
+                element: 'p',
                 content: 'Vero eum voluptatem aliquid nostrum voluptatem. Vitae esse natus. Earum nihil deserunt eos quasi cupiditate. A inventore et molestiae natus.',
               },
               buttons: [
@@ -286,22 +328,26 @@ export default [
               ],
               image: {
                 file: {
+                  id: 1,
                   name: 'The image title',
                   src: '/images/icon-heart.svg',
                   alt: 'The image alt',
                   description: 'The image description',
                   caption: 'The image caption',
-                }
+                },
+                overlay: false,
+                width: null,
+                height: null,
               }
             },
             {
               title: {
-                tag: 'p',
+                element: 'p',
                 content: 'Spam report',
                 size: 'base'
               },
               body: {
-                tag: 'p',
+                element: 'p',
                 content: 'Et quod quaerat dolorem quaerat architecto aliquam accusantium. Ex adipisci et doloremque autem quia quam. Quis eos molestiae at iure impedit.',
               },
               buttons: [
@@ -309,12 +355,16 @@ export default [
               ],
               image: {
                 file: {
+                  id: 1,
                   name: 'The image title',
                   src: '/images/icon-map.svg',
                   alt: 'The image alt',
                   description: 'The image description',
                   caption: 'The image caption',
-                }
+                },
+                overlay: false,
+                width: null,
+                height: null,
               }
             },
           ]
@@ -332,6 +382,7 @@ export default [
               bottom: '6xl',
             },
             background: {
+              file: null,
               overlay: true
             }
           },
@@ -347,12 +398,16 @@ export default [
             },
             image: {
               file: {
+                id: 1,
                 name: 'The image title',
                 src: 'https://placehold.co/100x100',
                 alt: 'The image alt',
                 description: 'The image description',
                 caption: 'The image caption',
-              }
+              },
+              overlay: false,
+              width: null,
+              height: null,
             },
           }
         }
@@ -365,12 +420,12 @@ export default [
           section: null,
           content: {
             pretitle: {
-              tag: 'p',
+              element: 'p',
               content: 'This is the pretitle',
               size: 'base',
             },
             title: {
-              tag: 'h2',
+              element: 'h2',
               content: 'From the blog',
             },
             body: {
@@ -378,23 +433,28 @@ export default [
               content: 'Learn how to grow your business with our expert advice.',
             },
             buttons: [],
-            image: null,
+            image: {
+              file: null,
+              overlay: false,
+              width: null,
+              height: null,
+            },
           },
           cards: [
             {
               content: {
                 pretitle: {
-                  tag: 'p',
+                  element: 'p',
                   content: 'This is the pretitle',
                   size: 'base',
                 },
                 title: {
-                  tag: 'p',
+                  element: 'p',
                   content: 'Boost your conversion rate',
                   size: 'base'
                 },
                 body: {
-                  tag: 'p',
+                  element: 'p',
                   content: 'Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.',
                 },
                 buttons: [
@@ -402,29 +462,33 @@ export default [
                 ],
                 image: {
                   file: {
+                    id: 1,
                     name: 'The image title',
                     src: 'https://placehold.co/400x300',
                     alt: 'The image alt',
                     description: 'The image description',
                     caption: 'The image caption',
-                  }
+                  },
+                  overlay: false,
+                  width: null,
+                  height: null,
                 }
               }
             },
             {
               content: {
                 pretitle: {
-                  tag: 'p',
+                  element: 'p',
                   content: 'This is the pretitle',
                   size: 'base',
                 },
                 title: {
-                  tag: 'p',
+                  element: 'p',
                   content: 'How to use search engines',
                   size: 'base'
                 },
                 body: {
-                  tag: 'p',
+                  element: 'p',
                   content: 'Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.',
                 },
                 buttons: [
@@ -432,29 +496,33 @@ export default [
                 ],
                 image: {
                   file: {
+                    id: 1,
                     name: 'The image title',
                     src: 'https://placehold.co/400x300',
                     alt: 'The image alt',
                     description: 'The image description',
                     caption: 'The image caption',
-                  }
+                  },
+                  overlay: false,
+                  width: null,
+                  height: null,
                 }
               }
             },
             {
               content: {
                 pretitle: {
-                  tag: 'p',
+                  element: 'p',
                   content: 'This is the pretitle',
                   size: 'base',
                 },
                 title: {
-                  tag: 'p',
+                  element: 'p',
                   content: 'Improve your customer experience',
                   size: 'base'
                 },
                 body: {
-                  tag: 'p',
+                  element: 'p',
                   content: 'Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.',
                 },
                 buttons: [
@@ -462,12 +530,16 @@ export default [
                 ],
                 image: {
                   file: {
+                    id: 1,
                     name: 'The image title',
                     src: 'https://placehold.co/400x300',
                     alt: 'The image alt',
                     description: 'The image description',
                     caption: 'The image caption',
-                  }
+                  },
+                  overlay: false,
+                  width: null,
+                  height: null,
                 }
               }
             },

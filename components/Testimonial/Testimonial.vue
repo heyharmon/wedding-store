@@ -1,5 +1,5 @@
 <template>
-  <BaseSection v-bind="section" class="overflow-hidden">
+  <BlockSection v-bind="section" class="overflow-hidden">
     <!-- Block wrapper -->
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
@@ -25,7 +25,7 @@
         <figure class="mt-10">
           <BaseText v-bind="testimonial.quote" as="blockquote" size="2xl" class="text-center font-semibold" />
           <figcaption class="mt-10">
-            <BaseImage v-bind="testimonial.image.file" class="mx-auto h-10 w-10 rounded-full"/>
+            <BaseImage v-bind="testimonial.image" class="mx-auto h-10 w-10 rounded-full"/>
             <div class="mt-4 flex items-center justify-center space-x-3 text-base">
               <BaseText v-bind="testimonial.author" class="font-semibold text-gray-900"/>
               <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
@@ -38,7 +38,7 @@
       </div>
 
     </div>
-  </BaseSection>
+  </BlockSection>
 </template>
 
 <script setup lang="ts">

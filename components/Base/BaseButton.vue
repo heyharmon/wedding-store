@@ -21,32 +21,6 @@
 // <Button to="/en/blog" rel="next">Link</Button>
 // <Button to="https://google.com" rel="external" target="_blank">External link</Button>
 
-const props = defineProps({
-    // onClick: {
-    //   type: Function,
-    // },
-    label: {
-        type: String,
-        default: ''
-    },
-    destination: {
-        type: String,
-        default: ''
-    },
-    variant: {
-      type: String,
-      default: 'bold' // bold, light, text
-    },
-    size: {
-      type: String,
-      default: 'base' // sm, base, lg
-    },
-    icon: {
-        type: String,
-        default: ''
-    },
-})
-
 const baseClasses = `
   font-semibold 
   rounded-md

@@ -1,7 +1,7 @@
 <template>
   <component
     v-if="content"
-    :is="tag"
+    :is="element"
     :class="`
       ${baseClasses} 
       ${computedSize}
@@ -13,7 +13,7 @@
   
 <script setup>
 const props = defineProps({
-  tag: {
+  element: {
     type: String,
     default: 'h2' // h1, h2, h3, h4, h5, h6, p, span
   },
@@ -59,6 +59,6 @@ const textSizeByTag = {
 
 const computedSize = computed(() => {
   if (props.size) return sizeClasses[props.size]
-  return textSizeByTag[props.as]
+  return textSizeByTag[props.element]
 })
 </script>

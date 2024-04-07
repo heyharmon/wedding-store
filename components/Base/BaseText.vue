@@ -1,7 +1,7 @@
 <template>
   <component
     v-if="content"
-    :is="tag"
+    :is="element"
     :class="`
       ${baseClasses} 
       ${sizeClasses[size]}
@@ -13,7 +13,7 @@
   
 <script setup>
 const props = defineProps({
-  tag: {
+  element: {
     type: String,
     default: 'p' // p, span, blockquote
   },

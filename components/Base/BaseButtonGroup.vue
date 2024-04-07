@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center gap-x-4">
+  <div v-if="buttons" class="flex items-center gap-x-4">
     <BaseButton v-for="button in buttons" v-bind="button"/>
   </div>
 </template>

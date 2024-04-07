@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="tag"
+    :is="element"
     :class="`
       ${baseClasses} 
       ${computedSize}
@@ -22,7 +22,7 @@
 const { isEditing, editableElement, editableClasses, onClick, onInput, onBlur, onPaste, onKeypress } = useEditable()
 
 const props = defineProps({
-  tag: {
+  element: {
     type: String,
     default: 'h2' // h1, h2, h3, h4, h5, h6
   },
@@ -69,6 +69,6 @@ const sizeByTagClasses = {
 
 const computedSize = computed(() => {
   if (props.size) return sizeClasses[props.size]
-  return sizeByTagClasses[props.as]
+  return sizeByTagClasses[props.element]
 })
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <BaseSection v-bind="section" class="overflow-hidden">
+  <BlockSection v-bind="section" class="overflow-hidden">
     <!-- Block wrapper -->
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
@@ -19,7 +19,7 @@
           <div v-for="content in features" class="flex flex-col">
             <dt class="text-base font-semibold leading-7 text-gray-900">
               <div class="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                <BaseImage v-bind="content.image.file" class="h-6 w-6 fill-white"/>
+                <BaseImage v-bind="content.image" class="h-6 w-6 fill-white"/>
               </div>
               <BaseHeading v-bind="content.title"/>
             </dt>
@@ -34,22 +34,13 @@
       </div>
 
     </div>
-  </BaseSection>
+  </BlockSection>
 </template>
 
 <script setup lang="ts">
 const props = defineProps({
   section: Object,
-  content: {
-    type: Object,
-    default: () => ({
-      pretitle: Object,
-      title: Object,
-      body: Object,
-      buttons: Array,
-      image: Object,
-    }),
-  },
+  content: Object,
   features: Array,
 })
 </script>
