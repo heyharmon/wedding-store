@@ -1,5 +1,5 @@
 <template>
-  <BlockSection v-bind="section" class="overflow-hidden">
+  <BaseSection v-bind="section" class="overflow-hidden">
     <!-- Block wrapper -->
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
@@ -12,7 +12,7 @@
         <BaseImage v-if="content.image" v-bind="content.image" class="mx-auto w-full rounded-md shadow-2xl"/>
       </div>
     </div>
-  </BlockSection>
+  </BaseSection>
 </template>
 
 <script setup lang="ts">

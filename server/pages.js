@@ -121,7 +121,7 @@ export default [
             },
             background: {
               file: null,
-              overlay: false
+              overlay: true
             }
           },
           content: {
@@ -174,7 +174,7 @@ export default [
                 description: 'The image description',
                 caption: 'The image caption',
               },
-              overlay: true
+              overlay: false
             }
           },
           content: {

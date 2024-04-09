@@ -21,7 +21,7 @@
 
 <script setup>
 // import { defineAsyncComponent } from 'vue';
-import Block from '@/components/Block/Block.vue'
+import Block from '@/components/Block.vue'
 import { usePageStore } from '@/store/pageStore.js'
 
 const route = useRoute()
