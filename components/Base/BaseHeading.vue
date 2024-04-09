@@ -29,6 +29,7 @@ const props = defineProps({
 const baseClasses = `
   text-gray-900
   font-bold
+  text-balance
   tracking-tight
 `
 

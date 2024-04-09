@@ -141,7 +141,13 @@ export default [
               size: 'xl',
             },
             image: {
-              file: null,
+              file: {
+                name: 'The image title',
+                src: 'https://placehold.co/1280x720/white/grey',
+                alt: 'The image alt',
+                description: 'The image description',
+                caption: 'The image caption',
+              },
               overlay: false,
               width: null,
               height: null,

@@ -27,7 +27,7 @@ const props = defineProps({
     },
 })
 
-const baseClasses = `leading-normal`
+const baseClasses = `text-balance leading-normal`
 
 const sizeClasses = {
 	'xs': 'text-xs',

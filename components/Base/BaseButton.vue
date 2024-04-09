@@ -9,7 +9,7 @@
     `"
   >
     <slot>{{ label || '' }}</slot>
-    <Icon v-if="icon" :name="icon" class="order-first h-5 w-5 ml-2" aria-hidden="true" />
+    <!-- <Icon v-if="icon" :name="icon" class="order-first h-5 w-5 ml-2" aria-hidden="true" /> -->
   </NuxtLink>
 </template>
   
@@ -20,6 +20,23 @@
 // Button as nuxt-link or anchor
 // <Button to="/en/blog" rel="next">Link</Button>
 // <Button to="https://google.com" rel="external" target="_blank">External link</Button>
+
+const props = defineProps({
+    label: String,
+    destination: String,
+    variant: {
+        type: String,
+        default: 'bold' // bold, light, ghost, text
+    },
+    size: {
+        type: String,
+        default: 'base' // sm, base, lg
+    },
+    icon: {
+        type: String,
+        default: ''
+    },
+})
 
 const baseClasses = `
   font-semibold 

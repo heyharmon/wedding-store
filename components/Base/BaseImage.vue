@@ -7,29 +7,7 @@
 <script setup lang="ts">
 const props = defineProps({
   file: Object,
-  // name: {
-  //   type: String,
-  //   default: '',
-  // },
-  // src: {
-  //   type: String,
-  //   default: '',
-  // },
-  // alt: {
-  //   type: String,
-  //   default: '',
-  // },
-  // extension: {
-  //   type: String,
-  //   default: '',
-  // },
-  // width: {
-  //   type: String,
-  //   default: '',
-  // },
-  // height: {
-  //   type: String,
-  //   default: '',
-  // },
+  width: String,
+  height: String,
 })
 </script>
