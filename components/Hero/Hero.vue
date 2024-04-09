@@ -8,17 +8,18 @@
         <BaseContent v-bind="content" />
       </div>
 
-      <div class="mt-16 flow-root sm:mt-24">
-        <BaseImage v-if="content.image" v-bind="content.image" class="mx-auto w-full rounded-md shadow-2xl"/>
+      <div v-if="images" class="mt-16 flow-root sm:mt-24">
+        <BaseImage v-bind="images[0]" class="mx-auto w-full rounded-md shadow-2xl"/>
       </div>
     </div>
   </BaseSection>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const props = defineProps({
   section: Object,
   content: Object,
+  images: Array,
   // content: {
   //   type: Object,
   //   default: () => ({

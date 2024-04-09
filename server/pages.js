@@ -140,7 +140,9 @@ export default [
               content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
               size: 'xl',
             },
-            image: {
+          },
+          images: [
+            {
               file: {
                 name: 'The image title',
                 src: 'https://placehold.co/1280x720/white/grey',
@@ -151,8 +153,8 @@ export default [
               overlay: false,
               width: null,
               height: null,
-            },
-          }
+            }
+          ]
         },
       },
       {
@@ -202,7 +204,9 @@ export default [
                 variant: 'ghost',
               }
             ],
-            image: {
+          },
+          images: [
+            {
               file: {
                 name: 'The image title',
                 src: 'https://placehold.co/600x400/white/grey',
@@ -213,8 +217,8 @@ export default [
               overlay: false,
               width: null,
               height: null,
-            },
-          }
+            }
+          ]
         }
       },
       {
@@ -248,7 +252,9 @@ export default [
               content: 'Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.',
             },
             buttons: [],
-            image: {
+          },
+          images: [
+            {
               file: {
                 name: 'The image title',
                 src: 'https://placehold.co/600x400',
@@ -259,8 +265,8 @@ export default [
               overlay: false,
               width: null,
               height: null,
-            },
-          }
+            }
+          ]
         }
       },
       {
