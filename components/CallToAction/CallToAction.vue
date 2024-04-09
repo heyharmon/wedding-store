@@ -13,9 +13,9 @@
             <BaseButton v-for="button in content.buttons" v-bind="button"/>
           </BaseButtonGroup>
         </div>
-        <div v-if="images" class="relative mt-16 h-80 lg:mt-8">
+        <div v-if="content.images" class="relative mt-16 h-80 lg:mt-8">
           <!-- <BaseImage v-bind="content.image.file" class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"/> -->
-          <BaseImage v-bind="images[0]" class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"/>
+          <BaseImage v-bind="content.images[0]" class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"/>
         </div>
       </div>
 
@@ -23,11 +23,11 @@
   </BaseSection>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const props = defineProps({
   section: Object,
   content: Object,
-  images: Array,
+  
   // content: {
   //   type: Object,
   //   default: () => ({

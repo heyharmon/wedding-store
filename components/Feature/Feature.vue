@@ -18,18 +18,17 @@
           </div>
         </div>
         <!-- <BaseImage v-if="content.image.file" v-bind="content.image.file" class="w-[48rem] sm:w-[57rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"/> -->
-        <BaseImage v-if="images" v-bind="images[0]" class="w-[48rem] sm:w-[57rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"/>
+        <BaseImage v-if="content.images" v-bind="content.images[0]" class="w-[48rem] sm:w-[57rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"/>
       </div>
 
     </div>
   </BaseSection>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const props = defineProps({
   section: Object,
   content: Object,
-  images: Array,
   // content: {
   //   type: Object,
   //   default: () => ({

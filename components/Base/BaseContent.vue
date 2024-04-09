@@ -9,17 +9,10 @@
 
 <script setup lang="ts">
 const props = defineProps({
-    pretitle: {
-        type: Object,
-    },
-    title: {
-        type: Object,
-    },
-    body: {
-        type: Object,
-    },
-    buttons: {
-        type: Array,
-    },
+    pretitle: Object,
+    title: Object,
+    body: Object,
+    buttons: Array,
+    images: Array,
 })
 </script>

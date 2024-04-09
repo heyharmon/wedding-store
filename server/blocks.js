@@ -1,94 +1,115 @@
 export default [
   {
-    id: '3293nfkaq346tg',
+    id: 'slsnaasdf',
     group: 'Hero',
     name: 'Hero',
     data: {
-      theme: null,
-      pretitle: {
-        tag: 'p',
-        content: 'This is the pretitle',
-        size: 'base',
-      },
-      title: {
-        tag: 'h1',
-        content: 'The hero',
-        size: '5xl',
-      },
-      subtitle: {
-        tag: 'p',
-        content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
-        size: 'xl',
-      },
-      buttons: [
-        {
-          label: 'Call to action',
-          destination: '/',
+      section: {
+        theme: null,
+        padding: {
+          top: '6xl',
+          bottom: '6xl',
         },
-      ],
-      image: {
-        file: null,
-        width: null,
-        height: null,
+        background: {
+          file: null,
+          overlay: true
+        }
       },
-      background: {
-        file: null,
-        overlay: false,
+      content: {
+        pretitle: {
+          element: 'p',
+          content: 'This is the pretitle',
+          size: 'base',
+        },
+        title: {
+          element: 'h1',
+          content: 'Contact',
+          size: '5xl',
+        },
+        body: {
+          element: 'p',
+          content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
+          size: 'xl',
+        },
+        images: [
+          {
+            file: {
+              name: 'The image title',
+              src: 'https://placehold.co/1280x720/white/grey',
+              alt: 'The image alt',
+              description: 'The image description',
+              caption: 'The image caption',
+            },
+            overlay: false,
+            width: null,
+            height: null,
+          }
+        ]
       },
-      padding: {
-        paddingTop: '6xl',
-        paddingBottom: '6xl',
-      },
-      orientation: null,
     },
   },
   {
-    id: '3293nfkaq346tg',
-    group: 'Hero',
-    name: 'Hero',
-    data: {
-      theme: null,
-      pretitle: {
-        tag: 'p',
-        content: 'This is the pretitle',
-        size: 'base',
-      },
-      title: {
-        tag: 'h1',
-        content: 'The hero',
-        size: '5xl',
-      },
-      subtitle: {
-        tag: 'p',
-        content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
-        size: 'xl',
-      },
-      buttons: [
-        {
-          label: 'Call to action',
-          destination: '/',
-        },
-      ],
-      image: {
-        file: null,
-        width: null,
-        height: null,
-      },
-      background: {
-        file: null,
-        overlay: true,
-      },
-      padding: {
-        paddingTop: '6xl',
-        paddingBottom: '6xl',
-      },
-      orientation: null,
-    },
-  },
-  {
-    id: 'akl24jl5l',
+    id: 'akl24jadsf',
     group: 'Feature',
     name: 'Feature',
-    data: {},
+    data: {
+      section: {
+        theme: null,
+        padding: {
+          top: '6xl',
+          bottom: '6xl',
+        },
+        background: {
+          file: {
+            name: 'The image title',
+            src: '/images/gradient-purple-pink.jpg',
+            alt: 'The image alt',
+            description: 'The image description',
+            caption: 'The image caption',
+          },
+          overlay: false
+        }
+      },
+      content: {
+        pretitle: {
+          element: 'p',
+          content: 'This is the pretitle',
+          size: 'base',
+        },
+        title: {
+          element: 'h2',
+          content: 'The about feature',
+        },
+        body: {
+          content: 'The body content is here. Lorem ipsum dolar sit amit.',
+          size: 'xl',
+        },
+        buttons: [
+          {
+            label: 'Call to action',
+            destination: '/homepage',
+          },
+          {
+            label: 'Learn more',
+            destination: '/page-1',
+            variant: 'ghost',
+          }
+        ],
+        images: [
+          {
+            file: {
+              name: 'The image title',
+              src: 'https://placehold.co/600x400/white/grey',
+              alt: 'The image alt',
+              description: 'The image description',
+              caption: 'The image caption',
+            },
+            overlay: false,
+            width: null,
+            height: null,
+          }
+        ]
+      },
+    }
   },
 ]
