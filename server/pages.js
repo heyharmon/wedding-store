@@ -11,7 +11,7 @@ export default [
         group: 'Hero',
         name: 'Hero',
         data: {
-          section: {
+          wrapper: {
             theme: null,
             padding: {
               top: '6xl',
@@ -62,7 +62,7 @@ export default [
         group: 'Hero',
         name: 'Hero',
         data: {
-          section: {
+          wrapper: {
             theme: null,
             padding: {
               top: '6xl',
@@ -113,7 +113,7 @@ export default [
         group: 'Hero',
         name: 'Hero',
         data: {
-          section: {
+          wrapper: {
             theme: null,
             padding: {
               top: '6xl',
@@ -161,7 +161,7 @@ export default [
         group: 'CallToAction',
         name: 'CallToAction',
         data: {
-          section: {
+          wrapper: {
             theme: null,
             padding: {
               top: '6xl',
@@ -180,7 +180,7 @@ export default [
               overlay: true
             }
           },
-          wrapper: {
+          container: {
             background: {
               image: {
                 file: {
@@ -231,7 +231,7 @@ export default [
         group: 'Feature',
         name: 'Feature',
         data: {
-          section: {
+          wrapper: {
             theme: null,
             padding: {
               top: '6xl',
@@ -296,7 +296,7 @@ export default [
         group: 'Feature',
         name: 'FeatureRepeater',
         data: {
-          section: null,
+          wrapper: null,
           content: {
             pretitle: {
               element: 'p',
@@ -409,7 +409,7 @@ export default [
         group: 'Testimonial',
         name: 'Testimonial',
         data: {
-          section: {
+          wrapper: {
             theme: null,
             padding: {
               top: '6xl',
@@ -451,7 +451,7 @@ export default [
         group: 'Card',
         name: 'CardRepeater',
         data: {
-          section: null,
+          wrapper: null,
           content: {
             pretitle: {
               element: 'p',

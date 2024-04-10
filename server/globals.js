@@ -6,7 +6,7 @@ export default {
         group: 'Navbar',
         name: 'Navbar',
         data: {
-          section: null,
+          wrapper: null,
           logo: {
             file: {
               name: 'The image title',
@@ -39,7 +39,7 @@ export default {
         group: 'Footer',
         name: 'Footer',
         data: {
-          section: null,
+          wrapper: null,
           logo: {},
           menu: [
             { label: 'Item 1', destination: '/item-1' },

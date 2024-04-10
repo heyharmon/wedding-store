@@ -1,9 +1,9 @@
 <template>
-    <BaseSection v-bind="section" class="overflow-hidden">
-      <!-- Block wrapper -->
+    <BaseWrapper v-bind="wrapper" class="overflow-hidden">
+      <!-- Wrapper -->
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
   
-        <!-- Content -->
+        <!-- Container -->
         <div class="mx-auto max-w-2xl lg:mx-0">
           <BaseText v-bind="content.pretitle" class="text-primary-600 font-semibold mb-4" />
           <BaseHeading v-bind="content.title" class="mb-6"/>
@@ -33,12 +33,12 @@
         </div>
   
       </div>
-    </BaseSection>
+    </BaseWrapper>
   </template>
   
   <script setup lang="ts">
   const props = defineProps({
-    section: Object,
+    wrapper: Object,
     content: Object,
     cards: Array,
   })
