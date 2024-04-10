@@ -1,44 +1,35 @@
 <template>
   <component
-    :is="as"
+    v-if="content"
+    :is="element"
     :class="`
       ${baseClasses} 
       ${computedSize}
-      ${editableClasses}
     `"
-    :contenteditable="isEditing"
-    @click="onClick"
-    @input="onInput"
-    @blur="onBlur"
-    @paste="onPaste"
-    @keypress="onKeypress"
-    ref="editableElement"
   >
     <slot>{{ content || '' }}</slot>
   </component>
 </template>
   
 <script setup>
-const { isEditing, editableElement, editableClasses, onClick, onInput, onBlur, onPaste, onKeypress } = useEditable()
-
 const props = defineProps({
-  as: {
+  element: {
     type: String,
-    default: 'h2' // h1, h2, h3, h4, h5, h6
+    default: 'h2' // h1, h2, h3, h4, h5, h6, p, span
   },
   content: {
       type: String,
       default: null
   },
   size: {
-    type: String,
-    default: '' // xs, sm, base, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl, 8xl, 9xl
-  }
+    type: String, // xs, sm, base, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl, 8xl, 9xl
+  },
 })
 
 const baseClasses = `
   text-gray-900
   font-bold
+  text-balance
   tracking-tight
 `
 
@@ -58,9 +49,9 @@ const sizeClasses = {
   '9xl': 'text-9xl',
 }
 
-const sizeByTagClasses = {
+const textSizeByTag = {
   'h1': 'text-5xl',
-  'h2': 'text-3xl',
+  'h2': 'text-4xl',
   'h3': 'text-2xl',
   'h4': 'text-xl',
   'h5': 'text-lg',
@@ -69,6 +60,6 @@ const sizeByTagClasses = {
 
 const computedSize = computed(() => {
   if (props.size) return sizeClasses[props.size]
-  return sizeByTagClasses[props.as]
+  return textSizeByTag[props.element]
 })
 </script>

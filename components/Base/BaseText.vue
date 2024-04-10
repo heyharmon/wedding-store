@@ -1,7 +1,7 @@
 <template>
   <component
     v-if="content"
-    :is="as"
+    :is="element"
     :class="`
       ${baseClasses} 
       ${sizeClasses[size]}
@@ -13,7 +13,7 @@
   
 <script setup>
 const props = defineProps({
-  as: {
+  element: {
     type: String,
     default: 'p' // p, span, blockquote
   },
@@ -27,7 +27,7 @@ const props = defineProps({
     },
 })
 
-const baseClasses = `leading-normal`
+const baseClasses = `text-balance leading-normal`
 
 const sizeClasses = {
 	'xs': 'text-xs',

@@ -76,7 +76,7 @@
 <script setup>
 import { storeToRefs } from 'pinia'
 import BlockWrapper from '@/cms/editor/components/BlockWrapper.vue'
-import Block from '@/client/components/Block/Block.vue'
+import Block from '@/client/components/Block.vue'
 
 const store = useEditorStore()
 const { blocks } = storeToRefs(store)

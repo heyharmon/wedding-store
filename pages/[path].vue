@@ -21,18 +21,14 @@
 
 <script setup>
 // import { defineAsyncComponent } from 'vue';
-import Block from '@/modules/client/components/Block/Block.vue'
-import { usePageStore } from '@/modules/client/store/pageStore.js'
+import Block from '@/components/Block.vue'
+import { usePageStore } from '@/store/pageStore.js'
 
 const route = useRoute()
 const store = usePageStore()
 
-// let path = computed(() => {
-//   return "/" + route.params.path.join("/");
-// })
-
 const { data: page, pending: pagePending, error: pageError } = await useAsyncData('page', () =>
-    store.showPage(route.fullPath)
+    store.showPage(route.path)
 );
 
 // const { data } = await useAsyncData('page', () => store.showPage(route.fullPath))
@@ -67,4 +63,4 @@ const { data: page, pending: pagePending, error: pageError } = await useAsyncDat
 // useHead({
 //   title: store.page.title
 // })
-</script>
+</script>~/store/pageStore.js

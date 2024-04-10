@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    :to="to"
+    :to="destination"
     @click="$emit('click')"
     :class="`
       ${baseClasses}
@@ -9,11 +9,11 @@
     `"
   >
     <slot>{{ label || '' }}</slot>
-    <Icon v-if="icon" :name="icon" class="order-first h-5 w-5 ml-2" aria-hidden="true" />
+    <!-- <Icon v-if="icon" :name="icon" class="order-first h-5 w-5 ml-2" aria-hidden="true" /> -->
   </NuxtLink>
 </template>
   
-<script setup>
+<script setup lang="ts">
 // Button as event button
 // <Button @click="onClickButton">Button</Button>
 
@@ -22,24 +22,15 @@
 // <Button to="https://google.com" rel="external" target="_blank">External link</Button>
 
 const props = defineProps({
-    // onClick: {
-    //   type: Function,
-    // },
-    label: {
-        type: String,
-        default: ''
-    },
-    to: {
-        type: String,
-        default: ''
-    },
+    label: String,
+    destination: String,
     variant: {
-      type: String,
-      default: 'bold' // bold, light, text
+        type: String,
+        default: 'bold' // bold, light, ghost, text
     },
     size: {
-      type: String,
-      default: 'base' // sm, base, lg
+        type: String,
+        default: 'base' // sm, base, lg
     },
     icon: {
         type: String,

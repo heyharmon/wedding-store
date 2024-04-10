@@ -1,7 +1,9 @@
 <template>
   <div>
     <NuxtLoadingIndicator/>
+    <Navbar/>
     <NuxtPage/>
+    <Footer/>
 
     <!-- Setup primary, secondary and accent color css variables -->
     <component :is="`style`">

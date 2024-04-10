@@ -1,7 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  devtools: { enabled: false },
+
   // ssr: true, 
-  
+  hooks: {
+    'pages:extend': (pages) => {
+      pages.push({
+        name: 'pages',
+        path: '/:path*',
+        file: '@/pages/[path].vue',
+      })
+    },
+  },
+
   modules: [
     'nuxt-icon',
     'nuxt-headlessui',
@@ -15,14 +26,15 @@ export default defineNuxtConfig({
   ],
 
   components: [
-    '~/modules/client/*',
+    // '~/modules/admin/components/*',
     // '~/cms/components',
     // '~/cms/editor/components',
     // '~/cms/editor/components/Fields',
     // '~/cms/dashboard/components',
     // '~/cms/designer/components',
     // '~/modules/client/components/Base',
-    // '~/components',
+    '~/components',
+    '~/dictionaries',
     // '~/components/base',
   ],
 
@@ -37,10 +49,6 @@ export default defineNuxtConfig({
     ],
   },
 
-  devtools: {
-    enabled: false,
-  },
-
   headlessui: {
     prefix: 'Headless' // Change the default component prefix
   },
@@ -50,8 +58,8 @@ export default defineNuxtConfig({
   // },
 
   css: [
+    '@/styles/client.css',
     '@/modules/admin/styles/admin.css',
-    '@/modules/client/styles/client.css'
   ],
   
   // build: {
