@@ -1,26 +1,10 @@
 <template>
-  <!-- <component 
-    v-for="(block, index) in blocks" 
-    :is="block.component"
-    v-bind="block.data"
-    :key="index"
-  /> -->
-
-  <!-- <Block v-for="(block, index) in store.page.blocks" :key="index" v-bind="block"/> -->
-  <Block v-if="page" v-for="block in page.blocks" :key="block.id" v-bind="block"/>
-  
-  <!-- <pre v-if="page">Blocks: {{ page.blocks }}</pre> -->
-  <!-- <pre>Page: {{ page }}</pre> -->
-
-  <!-- <BaseButtonGroup>
-      <BaseButton to="/">Homepage</BaseButton>
-      <BaseButton to="/about">About</BaseButton>
-      <BaseButton to="/about/contact">Contact</BaseButton>
-  </BaseButtonGroup> -->
+  <div>
+    <Block v-if="page" v-for="block in page.blocks" :key="block.id" v-bind="block"/>
+  </div>
 </template>
 
 <script setup>
-// import { defineAsyncComponent } from 'vue';
 import Block from '@/components/Block.vue'
 import { usePageStore } from '@/store/pageStore.js'
 
@@ -63,4 +47,4 @@ const { data: page, pending: pagePending, error: pageError } = await useAsyncDat
 // useHead({
 //   title: store.page.title
 // })
-</script>~/store/pageStore.js
+</script>
