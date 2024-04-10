@@ -3,110 +3,8 @@ export default [
   // Homepage
   //////////////////////////////////
   {
-    title: 'Home',
+    title: 'Homepage',
     path: '/',
-    blocks: [
-      {
-        id: 'slsna4asdf',
-        group: 'Hero',
-        name: 'Hero',
-        data: {
-          wrapper: {
-            theme: null,
-            padding: {
-              top: '6xl',
-              bottom: '6xl',
-            },
-            background: {
-              image: null,
-              overlay: false
-            }
-          },
-          content: {
-            pretitle: {
-              element: 'p',
-              content: 'This is the pretitle',
-              size: 'base',
-            },
-            title: {
-              element: 'h1',
-              content: 'Home',
-              size: '5xl',
-            },
-            body: {
-              element: 'p',
-              content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
-              size: 'lg',
-            },
-            image: {
-              file: null,
-              overlay: false,
-              width: null,
-              height: null,
-            },
-          }
-        },
-      },
-    ]
-  },
-
-  //////////////////////////////////
-  // About
-  //////////////////////////////////
-  {
-    title: 'About',
-    path: '/about',
-    blocks: [
-      {
-        id: 'slsna4l4',
-        group: 'Hero',
-        name: 'Hero',
-        data: {
-          wrapper: {
-            theme: null,
-            padding: {
-              top: '6xl',
-              bottom: '6xl',
-            },
-            background: {
-              image: null,
-              overlay: false
-            }
-          },
-          content: {
-            pretitle: {
-              element: 'p',
-              content: 'This is the pretitle',
-              size: 'base',
-            },
-            title: {
-              element: 'h1',
-              content: 'About',
-              size: '5xl',
-            },
-            body: {
-              element: 'p',
-              content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
-              size: 'lg',
-            },
-            image: {
-              file: null,
-              overlay: false,
-              width: null,
-              height: null,
-            },
-          }
-        },
-      },
-    ]
-  },
-
-   //////////////////////////////////
-  // About / Contact
-  //////////////////////////////////
-  {
-    title: 'Contact',
-    path: '/about/contact',
     blocks: [
       {
         id: 'slsna4l4',
@@ -132,7 +30,7 @@ export default [
             },
             title: {
               element: 'h1',
-              content: 'Contact',
+              content: 'Hello world',
               size: '5xl',
             },
             body: {
@@ -155,76 +53,6 @@ export default [
             ]
           },
         },
-      },
-      {
-        id: 'akl24je43',
-        group: 'CallToAction',
-        name: 'CallToAction',
-        data: {
-          wrapper: {
-            theme: null,
-            padding: {
-              top: '6xl',
-              bottom: '6xl',
-            },
-            background: {
-              image: {
-                file: {
-                  name: 'The image title',
-                  src: '/images/gradient-purple-pink.jpg',
-                  alt: 'The image alt',
-                  description: 'The image description',
-                  caption: 'The image caption',
-                }
-              },
-              overlay: true
-            }
-          },
-          container: {
-            background: {
-              image: {
-                file: {
-                  name: 'The image title',
-                  src: '/images/gradient-purple-pink.jpg',
-                  alt: 'The image alt',
-                  description: 'The image description',
-                  caption: 'The image caption',
-                }
-              },
-              overlay: true
-            }
-          },
-          content: {
-            pretitle: {
-              element: 'p',
-              content: 'This is the pretitle',
-              size: 'base',
-            },
-            title: {
-              element: 'h2',
-              content: 'Boost your productivity. Start using our app today.',
-            },
-            body: {
-              element: 'p',
-              content: 'Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.',
-              size: 'lg',
-            },
-            buttons: [],
-            images: [
-              {
-                file: {
-                  name: 'The image title',
-                  src: 'https://placehold.co/600x400/white/grey',
-                  alt: 'The image alt',
-                  description: 'The image description',
-                  caption: 'The image caption',
-                },
-                width: null,
-                height: null,
-              }
-            ]
-          },
-        }
       },
       {
         id: 'akl24jl5l',
@@ -292,6 +120,74 @@ export default [
         }
       },
       {
+        id: 'akl24je43',
+        group: 'Feature',
+        name: 'FeatureBoxed',
+        data: {
+          wrapper: {
+            theme: null,
+            padding: {
+              top: '6xl',
+              bottom: '6xl',
+            },
+            background: {
+              image: {
+                file: {
+                  name: 'The image title',
+                  src: '/images/gradient-purple-pink.jpg',
+                  alt: 'The image alt',
+                  description: 'The image description',
+                  caption: 'The image caption',
+                }
+              },
+              overlay: true
+            }
+          },
+          content: {
+            pretitle: {
+              element: 'p',
+              content: 'This is the pretitle',
+              size: 'base',
+            },
+            title: {
+              element: 'h2',
+              content: 'Boost your productivity. Start using our app today.',
+            },
+            body: {
+              element: 'p',
+              content: 'Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.',
+              size: 'lg',
+            },
+            buttons: [],
+            images: [
+              {
+                file: {
+                  name: 'The image title',
+                  src: 'https://placehold.co/600x400/white/grey',
+                  alt: 'The image alt',
+                  description: 'The image description',
+                  caption: 'The image caption',
+                },
+                width: null,
+                height: null,
+              }
+            ],
+            background: {
+              image: {
+                file: {
+                  name: 'The image title',
+                  src: '/images/gradient-purple-pink.jpg',
+                  alt: 'The image alt',
+                  description: 'The image description',
+                  caption: 'The image caption',
+                }
+              },
+              overlay: true
+            }
+          },
+        }
+      },
+      {
         id: 'akl24je292',
         group: 'Feature',
         name: 'FeatureRepeater',
@@ -319,7 +215,7 @@ export default [
               height: null,
             },
           },
-          features: [
+          collection: [
             {
               title: {
                 element: 'p',
@@ -474,7 +370,7 @@ export default [
               height: null,
             },
           },
-          cards: [
+          collection: [
             {
               content: {
                 pretitle: {
