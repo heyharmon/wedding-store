@@ -40,7 +40,6 @@ export default [
               description: 'The image description',
               caption: 'The image caption',
             },
-            overlay: false,
             width: null,
             height: null,
           }
@@ -104,7 +103,6 @@ export default [
               description: 'The image description',
               caption: 'The image caption',
             },
-            overlay: false,
             width: null,
             height: null,
           }
