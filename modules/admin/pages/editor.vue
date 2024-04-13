@@ -9,13 +9,13 @@
           </button>
 
           <!-- Blocks -->
-          <button @click="store.showDefault()" :class="store.show.blocksPanel ? 'bg-indigo-100' : ''" class="inline-flex items-center py-[6px] px-[12px] text-[14px] text-indigo-600 rounded-md hover:bg-indigo-100 active:translate-y-px">
+          <button @click="editorStore.showDefault()" :class="editorStore.show.blocksPanel ? 'bg-indigo-100' : ''" class="inline-flex items-center py-[6px] px-[12px] text-[14px] text-indigo-600 rounded-md hover:bg-indigo-100 active:translate-y-px">
             <Icon name="heroicons:squares-plus-solid" class="h-5 w-5 mr-1.5" aria-hidden="true" />
             Blocks
           </button>
 
           <!-- Design -->
-          <button @click="store.showDesignPanel()" :class="store.show.designPanel ? 'bg-indigo-100' : ''" class="inline-flex items-center py-[6px] px-[12px] text-[14px] text-indigo-600 rounded-md hover:bg-indigo-100 active:translate-y-px">
+          <button @click="editorStore.showDesignPanel()" :class="editorStore.show.designPanel ? 'bg-indigo-100' : ''" class="inline-flex items-center py-[6px] px-[12px] text-[14px] text-indigo-600 rounded-md hover:bg-indigo-100 active:translate-y-px">
             <Icon name="heroicons:swatch-solid" class="h-5 w-5 mr-1.5" aria-hidden="true" />
             Design
           </button>
@@ -55,14 +55,17 @@
     </template>
 
     <template v-slot:left>
-      <BlocksPanel v-if="store.show.blocksPanel"/>
-      <FieldsPanel v-if="store.activeBlockId"/>
+      <BlocksPanel v-if="editorStore.show.blocksPanel"/>
+      <FieldsPanel v-if="editorStore.activeBlockId"/>
+      <!-- <pre>{{ editorStore.activeBlock }}</pre> -->
     </template>
 
     <template v-slot:middle>
-      <BlockWrapper v-for="(block, index) in blocks" :key="index" :index="index" :block="block">
+      <BlockWrapper v-for="(block, index) in editorStore.blocks" :key="index" :index="index" :block="block">
         <Block v-bind="block"/>
       </BlockWrapper>
+      
+      <!-- <Block v-if="page" v-for="block in page.blocks" :key="block.id" v-bind="block"/> -->
     </template>
 
     <template v-slot:right>
@@ -70,16 +73,32 @@
     </template>
   </EditorLayout>
 
-  <FilesModal v-if="store.filesModal.open" @close="store.filesModal.open = false" title="Files" size="full"/>
+  <FilesModal v-if="editorStore.filesModal.open" @close="editorStore.filesModal.open = false" title="Files" size="full"/>
 </template>
 
 <script setup>
-import { storeToRefs } from 'pinia'
-import BlockWrapper from '@/cms/editor/components/BlockWrapper.vue'
-import Block from '@/client/components/Block.vue'
+// import { usePageStore } from '@/store/pageStore.js'
+import { useEditorStore } from '../store/editorStore'
+import EditorLayout from '../layouts/EditorLayout.vue'
+import Block from '@/components/blocks/Block.vue'
+import BlockWrapper from '../components/BlockWrapper.vue'
+import FieldsPanel from '../components/FieldsPanel.vue'
+import BlocksPanel from '../components/BlocksPanel.vue'
+import FilesModal from '../components/FilesModal.vue'
+import ThumbnailsPanel from '../components/ThumbnailsPanel.vue'
+// import { storeToRefs } from 'pinia'
+// import BlockWrapper from '@/cms/editor/components/BlockWrapper.vue'
+// import Block from '@/client/components/Block.vue'
 
-const store = useEditorStore()
-const { blocks } = storeToRefs(store)
+definePageMeta({
+  layout: 'admin'
+})
 
-await useAsyncData('page', () => store.showPage('homepage'))
+
+const editorStore = useEditorStore()
+// const pageStore = usePageStore()
+
+const { data: page, pending: pagePending, error: pageError } = await useAsyncData('page', () =>
+  editorStore.showPage('/')
+);
 </script>

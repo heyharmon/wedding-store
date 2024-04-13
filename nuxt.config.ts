@@ -26,14 +26,16 @@ export default defineNuxtConfig({
   ],
 
   components: [
-    // '~/modules/admin/components/*',
+    '~/modules/admin/components',
+    '~/modules/admin/layouts',
+    '~/modules/admin/pages',
     // '~/cms/components',
     // '~/cms/editor/components',
     // '~/cms/editor/components/Fields',
     // '~/cms/dashboard/components',
     // '~/cms/designer/components',
     // '~/modules/client/components/Base',
-    '~/components',
+    '~/components/blocks',
     '~/dictionaries',
     // '~/components/base',
   ],

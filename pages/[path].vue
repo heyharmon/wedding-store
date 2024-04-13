@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import Block from '@/components/Block.vue'
+import Block from '@/components/blocks/Block.vue'
 import { usePageStore } from '@/store/pageStore.js'
 
 const route = useRoute()

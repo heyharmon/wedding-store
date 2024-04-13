@@ -14,15 +14,24 @@ export default [
           wrapper: {
             theme: null,
             padding: {
-              top: '6xl',
-              bottom: '6xl',
+              top: '7xl',
+              bottom: '7xl',
             },
             background: {
-              image: null,
+              image: {
+                file: {
+                  name: 'The image title',
+                  src: '/images/woman-and-dog.jpg',
+                  alt: 'The image alt',
+                  description: 'The image description',
+                  caption: 'The image caption',
+                },
+              },
               overlay: true
             }
           },
           content: {
+            justify: 'left',
             pretitle: {
               element: 'p',
               content: 'This is the pretitle',
@@ -38,19 +47,31 @@ export default [
               content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
               size: 'xl',
             },
-            images: [
+            buttons: [
               {
-                file: {
-                  name: 'The image title',
-                  src: 'https://placehold.co/1280x720/white/grey',
-                  alt: 'The image alt',
-                  description: 'The image description',
-                  caption: 'The image caption',
-                },
-                width: null,
-                height: null,
-              }
-            ]
+                label: 'Bold',
+                destination: '/',
+                variant: 'bold',
+              },
+              {
+                label: 'Ghost',
+                destination: '/',
+                variant: 'ghost',
+              },
+            ],
+            // images: [
+            //   {
+            //     file: {
+            //       name: 'The image title',
+            //       src: 'https://placehold.co/1280x720/white/grey',
+            //       alt: 'The image alt',
+            //       description: 'The image description',
+            //       caption: 'The image caption',
+            //     },
+            //     width: null,
+            //     height: null,
+            //   }
+            // ]
           },
         },
       },
@@ -75,7 +96,72 @@ export default [
                   caption: 'The image caption',
                 },
               },
-              overlay: true
+              overlay: false
+            }
+          },
+          content: {
+            pretitle: {
+              element: 'p',
+              content: 'This is the pretitle',
+              size: 'base',
+            },
+            title: {
+              element: 'h2',
+              content: 'The about feature',
+            },
+            body: {
+              content: 'The body content is here. Lorem ipsum dolar sit amit.',
+              size: 'lg',
+            },
+            buttons: [
+              {
+                label: 'Call to action',
+                destination: '/homepage',
+              },
+              {
+                label: 'Learn more',
+                destination: '/page-1',
+                variant: 'ghost',
+              }
+            ],
+            images: [
+              {
+                file: {
+                  name: 'The image title',
+                  src: 'https://placehold.co/600x400/white/grey',
+                  alt: 'The image alt',
+                  description: 'The image description',
+                  caption: 'The image caption',
+                },
+                width: null,
+                height: null,
+              }
+            ]
+          },
+        }
+      },
+      {
+        id: 'akl24jl5l',
+        group: 'Feature',
+        name: 'FeatureBig',
+        data: {
+          wrapper: {
+            theme: null,
+            padding: {
+              top: '6xl',
+              bottom: '6xl',
+            },
+            background: {
+              image: {
+                file: {
+                  name: 'The image title',
+                  src: '/images/gradient-purple-pink.jpg',
+                  alt: 'The image alt',
+                  description: 'The image description',
+                  caption: 'The image caption',
+                },
+              },
+              overlay: false
             }
           },
           content: {
@@ -131,19 +217,12 @@ export default [
               bottom: '6xl',
             },
             background: {
-              image: {
-                file: {
-                  name: 'The image title',
-                  src: '/images/gradient-purple-pink.jpg',
-                  alt: 'The image alt',
-                  description: 'The image description',
-                  caption: 'The image caption',
-                }
-              },
-              overlay: true
+              image: null,
+              overlay: false
             }
           },
           content: {
+            justify: 'center',
             pretitle: {
               element: 'p',
               content: 'This is the pretitle',
@@ -151,7 +230,7 @@ export default [
             },
             title: {
               element: 'h2',
-              content: 'Boost your productivity. Start using our app today.',
+              content: 'Boost your productivity.',
             },
             body: {
               element: 'p',

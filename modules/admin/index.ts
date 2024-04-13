@@ -28,11 +28,12 @@ export default defineNuxtModule({
         file: resolve(__dirname, './pages/dashboard.vue'),
       })
 
-      // pages.push({
-      //   name: 'editor',
-      //   path: 'admin/editor/:path*',
-      //   file: resolve(__dirname, './pages/editor/[path].vue'),
-      // })
+      pages.push({
+        name: 'editor',
+        // path: 'admin/editor/:path*',
+        path: '/admin/editor',
+        file: resolve(__dirname, './pages/editor.vue'),
+      })
 
       // pages.push({
       //   name: 'pages',
