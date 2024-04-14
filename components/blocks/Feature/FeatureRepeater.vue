@@ -1,18 +1,12 @@
 <template>
   <BaseWrapper v-bind="wrapper">
     <!-- Wrapper -->
-    <div class="px-8">
+    <div class="mx-auto max-w-7xl px-8">
 
       <!-- Container -->
-      <div class="mx-auto max-w-2xl lg:mx-0">
-
+      <div class="max-w-2xl">
         <!-- Content -->
-        <BaseText v-bind="content.pretitle" class="text-primary-600 font-semibold mb-4" />
-        <BaseHeading v-bind="content.title" class="mb-6"/>
-        <BaseText v-bind="content.body" class="leading-9 text-gray-600 mb-10"/>
-        <BaseButtonGroup>
-          <BaseButton v-for="button in content.buttons" v-bind="button"/>
-        </BaseButtonGroup>
+        <BaseContent v-bind="content"/>
       </div>
       
       <!-- Features -->

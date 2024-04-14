@@ -7,7 +7,7 @@
       ${computedSize}
     `"
   >
-    <slot>{{ content || '' }}</slot>
+    {{ content || '' }}
   </component>
 </template>
   

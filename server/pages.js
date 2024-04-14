@@ -271,7 +271,11 @@ export default [
         group: 'Feature',
         name: 'FeatureRepeater',
         data: {
-          wrapper: null,
+          wrapper: {
+            background: {
+              overlay: true
+            }
+          },
           content: {
             pretitle: {
               element: 'p',
@@ -377,48 +381,6 @@ export default [
               }
             },
           ]
-        }
-      },
-      {
-        id: 'ghj24d4re',
-        group: 'Testimonial',
-        name: 'Testimonial',
-        data: {
-          wrapper: {
-            theme: null,
-            padding: {
-              top: '6xl',
-              bottom: '6xl',
-            },
-            background: {
-              image: null,
-              overlay: true
-            }
-          },
-          testimonial: {
-            quote: {
-              content: '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
-            },
-            author: {
-              content: 'Judith Black',
-            },
-            extra: {
-              content: 'CEO of Workcation',
-            },
-            image: {
-              file: {
-                id: 1,
-                name: 'The image title',
-                src: 'https://placehold.co/100x100',
-                alt: 'The image alt',
-                description: 'The image description',
-                caption: 'The image caption',
-              },
-              overlay: false,
-              width: null,
-              height: null,
-            },
-          }
         }
       },
       {
@@ -553,6 +515,48 @@ export default [
               }
             },
           ]
+        }
+      },
+      {
+        id: 'ghj24d4re',
+        group: 'Testimonial',
+        name: 'Testimonial',
+        data: {
+          wrapper: {
+            theme: null,
+            padding: {
+              top: '6xl',
+              bottom: '6xl',
+            },
+            background: {
+              image: null,
+              overlay: true
+            }
+          },
+          testimonial: {
+            quote: {
+              content: '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”',
+            },
+            author: {
+              content: 'Judith Black',
+            },
+            extra: {
+              content: 'CEO of Workcation',
+            },
+            image: {
+              file: {
+                id: 1,
+                name: 'The image title',
+                src: 'https://placehold.co/100x100',
+                alt: 'The image alt',
+                description: 'The image description',
+                caption: 'The image caption',
+              },
+              overlay: false,
+              width: null,
+              height: null,
+            },
+          }
         }
       },
     ]
