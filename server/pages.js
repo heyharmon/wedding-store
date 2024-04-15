@@ -48,30 +48,30 @@ export default [
               size: 'xl',
             },
             buttons: [
-              {
-                label: 'Bold',
-                destination: '/',
-                variant: 'bold',
-              },
-              {
-                label: 'Ghost',
-                destination: '/',
-                variant: 'ghost',
-              },
+              // {
+              //   label: 'Bold',
+              //   destination: '/',
+              //   variant: 'bold',
+              // },
+              // {
+              //   label: 'Ghost',
+              //   destination: '/',
+              //   variant: 'ghost',
+              // },
             ],
-            // images: [
-            //   {
-            //     file: {
-            //       name: 'The image title',
-            //       src: 'https://placehold.co/1280x720/white/grey',
-            //       alt: 'The image alt',
-            //       description: 'The image description',
-            //       caption: 'The image caption',
-            //     },
-            //     width: null,
-            //     height: null,
-            //   }
-            // ]
+            images: [
+              {
+                file: {
+                  name: 'The image title',
+                  src: 'https://placehold.co/1280x720/white/grey',
+                  alt: 'The image alt',
+                  description: 'The image description',
+                  caption: 'The image caption',
+                },
+                width: null,
+                height: null,
+              }
+            ]
           },
         },
       },
@@ -222,7 +222,7 @@ export default [
             }
           },
           content: {
-            justify: 'center',
+            justify: 'left',
             pretitle: {
               element: 'p',
               content: 'This is the pretitle',

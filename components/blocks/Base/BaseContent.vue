@@ -7,12 +7,12 @@
             <BaseText v-bind="pretitle" class="text-primary-600 font-semibold mb-3" />
             <BaseHeading v-bind="title" />
             <BaseText v-bind="body" class="mt-4 text-gray-600"/>
-            <BaseButtonGroup v-if="buttons.length" :buttons="buttons" class="mt-8"/>
+            <BaseButtonRepeater v-if="buttons.length" :buttons="buttons" class="mt-8"/>
         </div>
     </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const props = defineProps({
     justify: {
         type: String,

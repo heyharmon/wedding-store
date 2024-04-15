@@ -10,29 +10,33 @@ const fields = {
       label: 'Pretitle',
       path: 'content.pretitle.content',
       name: 'TextField',
-      // options: [],
+    },
+    {
+      label: 'Title',
+      path: 'content.title.content',
+      name: 'TextField',
+    },
+    {
+      label: 'Body',
+      path: 'content.body.content',
+      name: 'TextField',
+    },
+    {
+      label: 'Buttons',
+      path: 'content.buttons',
+      name: 'ButtonRepeaterField',
+    },
+    {
+      label: 'Image',
+      path: 'content.images',
+      name: 'ImageRepeaterField',
+      options: {
+        limit: 1
+      },
     },
     // {
-    //   label: 'Title',
-    //   path: 'content.title.content',
-    //   name: 'TextField',
-    //   // options: [],
-    // },
-    // {
-    //   label: 'Body',
-    //   path: 'content.body.content',
-    //   name: 'TextField',
-    //   // options: [],
-    // },
-    // {
-    //   label: 'Buttons',
-    //   path: 'content.buttons',
-    //   name: 'ButtonRepeaterField',
-    //   // options: [],
-    // },
-    // {
     //   label: 'Image',
-    //   path: 'image.file',
+    //   path: 'content.images[0].file',
     //   name: 'FileField',
     //   // options: [],
     // },

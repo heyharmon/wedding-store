@@ -21,9 +21,7 @@
             </dt>
             <dd class="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-600">
               <BaseText v-bind="feature.body" class="flex-auto mb-6"/>
-              <BaseButtonGroup>
-                <BaseButton v-for="button in feature.buttons" v-bind="button" variant="text"/>
-              </BaseButtonGroup>
+              <BaseButtonRepeater v-if="feature.buttons.length" :buttons="feature.buttons" class="mt-8"/>
             </dd>
           </div>
         </dl>

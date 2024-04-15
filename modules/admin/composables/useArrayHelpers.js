@@ -11,7 +11,9 @@ function setValue({object, path, value}) {
 }
 
 function forget({array, index}) {
-  pullAt(array, [index])
+  console.log('array', array)
+  console.log('index', index)
+  pullAt(array, index)
 }
 
 export {

@@ -48,10 +48,6 @@
 </template>
 
 <script setup>
-import { useEditorStore } from '@/modules/admin/store/editorStore'
-import { useFileStore } from '@/modules/admin/store/fileStore'
-import { setValue } from '@/modules/admin/composables/useArrayHelpers'
-
 const emit = defineEmits(['close'])
 const editorStore = useEditorStore()
 const fileStore = useFileStore()

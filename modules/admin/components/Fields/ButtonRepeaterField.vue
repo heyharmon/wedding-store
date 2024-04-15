@@ -1,10 +1,9 @@
 <template>
   <div class="margin-bottom-sm">
     <label v-if="label" class="block text-sm font-medium leading-6 text-gray-900" :for="label">{{ label }}</label>
-
-    <div v-if="store.activeBlock.data[path].length" class="mt-2 overflow-hidden rounded-md border border-gray-300 bg-white">
+    <div v-if="buttons.length" class="mt-2 overflow-hidden rounded-md border border-gray-300 bg-white">
       <ButtonField 
-        v-for="(button, index) in store.activeBlock.data[path]"
+        v-for="(button, index) in buttons"
         :button="button"
         :path="path"
         :index="index"
@@ -31,17 +30,24 @@ import { getValue, setValue } from '@/modules/admin/composables/useArrayHelpers'
 import ButtonField from '@/modules/admin/components/Fields/ButtonField.vue'
 
 const props = defineProps({
-  label: String,
-  path: String
+  label: String, // Label for the field
+  path: String, // Path to buttons array in block data
 })
 
 const store = useEditorStore()
 
+const buttons = getValue({
+  object: store.activeBlock.data,
+  path: props.path
+})
+
 function addNewButton() {
-  setValue({
-    object: store.activeBlock.data,
-    path: props.path,
-    value: [{ label: 'Button label', to: '/' }]
-  })
+  buttons.push({ label: 'Button label', to: '/' })
+
+  // setValue({
+  //   object: store.activeBlock.data,
+  //   path: props.path,
+  //   value: [{ label: 'Button label', to: '/' }]
+  // })
 }
 </script>
