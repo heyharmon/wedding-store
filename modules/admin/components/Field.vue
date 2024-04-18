@@ -17,6 +17,6 @@ const props = defineProps({
 })
 
 let component = computed(() => {
-  return defineAsyncComponent(() => import(`./${props.name}.vue`))
+  return defineAsyncComponent(() => import(`@/modules/admin/components/Fields/${props.name}.vue`))
 })
 </script>

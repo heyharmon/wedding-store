@@ -1,4 +1,6 @@
 import pages from '@/server/pages'
+import get from "lodash/get";
+import set from "lodash/set";
 
 export const useEditorStore = defineStore('editor', {
   state: () => ({
@@ -38,6 +40,40 @@ export const useEditorStore = defineStore('editor', {
       this.blocks = page.blocks
     },
 
+    getValue(path) {
+      console.log('Path: ', path)
+      
+      return get(this.activeBlock.data, path)
+    },
+
+    setValue(path, value) {
+      console.log('Path: ', path)
+      console.log('Value: ', value)
+
+      set(this.activeBlock.data, path, value)
+    },
+
+    pushToArray({path, value}) {
+      console.log('Path: ', path)
+      console.log('Value: ', value)
+
+      let array = this.getValue(path)
+          array.push(value)
+
+      console.log('Array: ', array)
+    },
+
+    removeFromRepeater(path, index) {
+      let repeater = this.getValue(path)
+          repeater.splice(index, 1)
+      // pullAt(repeater, index)
+    },
+
+    // addImage(path, image) {
+    //   this.activeBlock.data[path].push(image)
+    // },
+    
+    // TODO: Move to a UI store
     showDefault() {
       this.activeBlockId = null
 
@@ -49,6 +85,7 @@ export const useEditorStore = defineStore('editor', {
       }
     },
 
+    // TODO: Move to a UI store
     showEditorPanel(blockId) {
       this.activeBlockId = blockId
       
@@ -60,6 +97,7 @@ export const useEditorStore = defineStore('editor', {
       }
     },
 
+    // TODO: Move to a UI store
     showDesignPanel() {
       this.activeBlockId = null
       

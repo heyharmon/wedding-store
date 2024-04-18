@@ -20,10 +20,7 @@
       <ul role="list" class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
         <li v-for="file in fileStore.files" :key="file.id" class="relative">
           <div @click="selectFile(file)" class="group aspect-h-7 aspect-w-10 block w-full max-h-44 overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
-            <img :src="'https://d25r5txdw1c9o7.cloudfront.net/fit-in/350x350/' + file.path" :alt="file.alt" class="pointer-events-none shrink-0 min-w-full min-h-full group-hover:opacity-75" />
-            <button type="button" class="absolute inset-0 focus:outline-none">
-              <span class="sr-only">View details for {{ file.name }}</span>
-            </button>
+            <NuxtImg provider="imagekit" :src="file.path" :alt="file.alt" width="380" height="180" class="pointer-events-none shrink-0 min-w-full min-h-full group-hover:opacity-75"/>
           </div>
           <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">{{ file.name }}</p>
           <p class="pointer-events-none block text-sm font-medium text-gray-500">{{ file.size }}</p>
@@ -50,22 +47,25 @@
 <script setup>
 import { useEditorStore } from '@/modules/admin/store/editorStore'
 import { useFileStore } from '@/modules/admin/store/fileStore'
-import { setValue } from '@/modules/admin/composables/useArrayHelpers'
+import { getValue, setValue, addToArray } from '@/modules/admin/composables/useArrayHelpers'
 
-const emit = defineEmits(['close'])
+const currentTab = ref('files')
 const editorStore = useEditorStore()
 const fileStore = useFileStore()
+const emit = defineEmits(['close'])
 
 await useAsyncData('files', () => fileStore.index())
 
-let currentTab = ref('files')
-
 function selectFile(file) {
-  setValue({
-    object: editorStore.activeBlock.data,
-    path: editorStore.filesModal.targetProp,
-    value: file
-  })
+  editorStore.setValue(
+    editorStore.filesModal.targetProp,
+    file
+  )
+
+  // editorStore.pushToArray({
+  //   path: editorStore.filesModal.targetProp,
+  //   value: {file}
+  // })
 
   editorStore.filesModal.open = false
 }

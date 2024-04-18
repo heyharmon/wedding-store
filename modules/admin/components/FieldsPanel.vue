@@ -46,7 +46,7 @@
 
 <script setup>
 import { useEditorStore } from '../store/editorStore'
-import Field from './Fields/Field.vue'
+import Field from '@/modules/admin/components/Field.vue'
 
 const store = useEditorStore()
 const activeTab = ref('content')

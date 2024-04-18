@@ -55,9 +55,11 @@ export default defineNuxtConfig({
     prefix: 'Headless' // Change the default component prefix
   },
 
-  // image: {
-  //   dir: 'public/images'
-  // },
+  image: {
+    imagekit: {
+      baseURL: 'https://ik.imagekit.io/heyharmon/cms-local'
+    }
+  },
 
   css: [
     '@/styles/client.css',

@@ -5,8 +5,8 @@
       <ButtonField 
         v-for="(button, index) in buttons"
         :button="button"
-        :path="path"
         :index="index"
+        @destroy="destroyButton(index)"
       />
     </div>
 
@@ -26,7 +26,6 @@
 
 <script setup>
 import { useEditorStore } from '@/modules/admin/store/editorStore'
-import { getValue, setValue } from '@/modules/admin/composables/useArrayHelpers'
 import ButtonField from '@/modules/admin/components/Fields/ButtonField.vue'
 
 const props = defineProps({
@@ -35,19 +34,16 @@ const props = defineProps({
 })
 
 const store = useEditorStore()
-
-const buttons = getValue({
-  object: store.activeBlock.data,
-  path: props.path
-})
+const buttons = store.getValue(props.path)
 
 function addNewButton() {
-  buttons.push({ label: 'Button label', to: '/' })
+  buttons.push({ 
+    label: 'Button label', 
+    destination: '/' 
+  })
+}
 
-  // setValue({
-  //   object: store.activeBlock.data,
-  //   path: props.path,
-  //   value: [{ label: 'Button label', to: '/' }]
-  // })
+function destroyButton(index) {
+  buttons.splice(index, 1)
 }
 </script>

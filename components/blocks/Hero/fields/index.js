@@ -7,6 +7,20 @@ const fields = {
   // ],
   content: [
     {
+      label: 'Justify',
+      path: 'content.justify',
+      options: [
+        { value: 'left', label: 'Left' },
+        { value: 'center', label: 'Center' },
+      ],
+      name: 'SelectButtonsField',
+    },
+    {
+      label: 'Background',
+      path: 'wrapper.background.image',
+      name: 'ImageRepeaterField',
+    },
+    {
       label: 'Pretitle',
       path: 'content.pretitle.content',
       name: 'TextField',

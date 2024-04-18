@@ -4,7 +4,7 @@
     <div class="mx-auto max-w-7xl px-8">
 
       <!-- Content container TODO: this should handle the content alignment horizontal and vertical -->
-      <div>
+      <div class="max-w-2xl">
         <!-- Content -->
         <BaseContent v-bind="content" />
       </div>

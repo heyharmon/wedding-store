@@ -17,7 +17,7 @@
 <script setup>
 import { useEditorStore } from '@/modules/admin/store/editorStore'
 import { getValue, setValue } from '@/modules/admin/composables/useArrayHelpers'
-import AppSelectButtons from '@/modules/admin/components/Fields/AppSelectButtons.vue'
+import AppSelectButtons from '@/modules/admin/components/AppSelectButtons.vue'
 
 const props = defineProps({
   label: String,

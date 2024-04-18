@@ -15,7 +15,7 @@
 const props = defineProps({
   element: {
     type: String,
-    default: 'h2' // h1, h2, h3, h4, h5, h6, p, span
+    default: 'h1' // h1, h2, h3, h4, h5, h6, p, span
   },
   content: {
       type: String,
@@ -29,7 +29,7 @@ const props = defineProps({
 const baseClasses = `
   text-gray-900
   font-bold
-  text-balance
+  text-pretty
   tracking-tight
 `
 

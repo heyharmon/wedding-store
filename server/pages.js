@@ -14,18 +14,25 @@ export default [
           wrapper: {
             theme: null,
             padding: {
-              top: '7xl',
-              bottom: '7xl',
+              top: '5xl',
+              bottom: '5xl',
             },
             background: {
               image: {
                 file: {
-                  name: 'The image title',
-                  src: '/images/woman-and-dog.jpg',
+                  id: 19,
+                  name: 'annie-spratt-GbfsuO5fq5E-unsplash',
+                  filename: '3IA7ie8lykSibpztoMXKZhaMyh0cjnv2iLFci0zZ.jpg',
+                  path: 'acme/3IA7ie8lykSibpztoMXKZhaMyh0cjnv2iLFci0zZ.jpg',
+                  url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/3IA7ie8lykSibpztoMXKZhaMyh0cjnv2iLFci0zZ.jpg',
+                  extension: 'jpg',
+                  mime: 'image/jpeg',
                   alt: 'The image alt',
                   description: 'The image description',
                   caption: 'The image caption',
                 },
+                width: 1280,
+                height: 720,
               },
               overlay: true
             }
@@ -39,13 +46,13 @@ export default [
             },
             title: {
               element: 'h1',
-              content: 'Hello world',
-              size: '5xl',
+              content: 'Hi. We\'re Column, a different type of bank.',
+              size: '4xl',
             },
             body: {
               element: 'p',
-              content: 'The subtitle is here. Lorem ipsum dolar sit amit.',
-              size: 'xl',
+              content: 'We enable builders and developers to create incredible financial products and services for their users',
+              size: 'lg',
             },
             buttons: [
               // {
@@ -62,14 +69,19 @@ export default [
             images: [
               {
                 file: {
-                  name: 'The image title',
-                  src: 'https://placehold.co/1280x720/white/grey',
+                  id: 20,
+                  name: 'camylla-battani-6HMdAij5lfs-unsplash',
+                  filename: 'n9Z8JEkCMtUhhy1gMrWtY8qdiXEvTcgPUnQVRsVR.jpg',
+                  path: 'acme/n9Z8JEkCMtUhhy1gMrWtY8qdiXEvTcgPUnQVRsVR.jpg',
+                  url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/n9Z8JEkCMtUhhy1gMrWtY8qdiXEvTcgPUnQVRsVR.jpg',
+                  extension: 'jpg',
+                  mime: 'image/jpeg',
                   alt: 'The image alt',
                   description: 'The image description',
                   caption: 'The image caption',
                 },
-                width: null,
-                height: null,
+                width: 1280,
+                height: 720,
               }
             ]
           },
@@ -88,13 +100,9 @@ export default [
             },
             background: {
               image: {
-                file: {
-                  name: 'The image title',
-                  src: '/images/gradient-purple-pink.jpg',
-                  alt: 'The image alt',
-                  description: 'The image description',
-                  caption: 'The image caption',
-                },
+                file: null,
+                width: 1280,
+                height: 720,
               },
               overlay: false
             }
@@ -127,14 +135,19 @@ export default [
             images: [
               {
                 file: {
-                  name: 'The image title',
-                  src: 'https://placehold.co/600x400/white/grey',
+                  id: 18,
+                  name: 'baptist-standaert-mx0DEnfYxic-unsplash',
+                  filename: 'pP3ic6RPEqcb8Sqxq0ZO8kL3vgkGsNaCRp16oo7W.jpg',
+                  path: 'acme/pP3ic6RPEqcb8Sqxq0ZO8kL3vgkGsNaCRp16oo7W.jpg',
+                  url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/pP3ic6RPEqcb8Sqxq0ZO8kL3vgkGsNaCRp16oo7W.jpg',
+                  extension: 'jpg',
+                  mime: 'image/jpeg',
                   alt: 'The image alt',
                   description: 'The image description',
                   caption: 'The image caption',
                 },
-                width: null,
-                height: null,
+                width: 600,
+                height: 400,
               }
             ]
           },
@@ -153,15 +166,11 @@ export default [
             },
             background: {
               image: {
-                file: {
-                  name: 'The image title',
-                  src: '/images/gradient-purple-pink.jpg',
-                  alt: 'The image alt',
-                  description: 'The image description',
-                  caption: 'The image caption',
-                },
+                file: null,
+                width: 1280,
+                height: 720,
               },
-              overlay: false
+              overlay: true
             }
           },
           content: {
@@ -192,14 +201,17 @@ export default [
             images: [
               {
                 file: {
-                  name: 'The image title',
-                  src: 'https://placehold.co/600x400/white/grey',
+                  id: 17,
+                  name: 'bruno-cervera-ZZqam9DoCoQ-unsplash',
+                  filename: '91mfDTPJXeIRfkWlZt0NS3wKfZ652tfyQiZWEj7K.jpg',
+                  path: 'acme/91mfDTPJXeIRfkWlZt0NS3wKfZ652tfyQiZWEj7K.jpg',
+                  url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/91mfDTPJXeIRfkWlZt0NS3wKfZ652tfyQiZWEj7K.jpg',
+                  extension: 'jpg',
+                  mime: 'image/jpeg',
                   alt: 'The image alt',
-                  description: 'The image description',
-                  caption: 'The image caption',
                 },
-                width: null,
-                height: null,
+                width: 600,
+                height: 400,
               }
             ]
           },
@@ -241,25 +253,37 @@ export default [
             images: [
               {
                 file: {
-                  name: 'The image title',
-                  src: 'https://placehold.co/600x400/white/grey',
+                  id: 16,
+                  name: 'coral-ouellette-lYYDZH9U22I-unsplash',
+                  filename: 'KGwPC3jOvdgPpZg1z9okuc2V8Js9GyIQPknqy8L4.jpg',
+                  path: 'acme/KGwPC3jOvdgPpZg1z9okuc2V8Js9GyIQPknqy8L4.jpg',
+                  url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/KGwPC3jOvdgPpZg1z9okuc2V8Js9GyIQPknqy8L4.jpg',
+                  extension: 'jpg',
+                  mime: 'image/jpeg',
                   alt: 'The image alt',
                   description: 'The image description',
                   caption: 'The image caption',
                 },
-                width: null,
-                height: null,
+                width: 600,
+                height: 400,
               }
             ],
             background: {
               image: {
                 file: {
-                  name: 'The image title',
-                  src: '/images/gradient-purple-pink.jpg',
+                  id: 15,
+                  name: 'helena-lopes-WhBGINtjuwc-unsplash',
+                  filename: '8xZAsVk9PKBhF3TVEK9QblefywbK7JN57M1Vapli.jpg',
+                  path: 'acme/8xZAsVk9PKBhF3TVEK9QblefywbK7JN57M1Vapli.jpg',
+                  url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/8xZAsVk9PKBhF3TVEK9QblefywbK7JN57M1Vapli.jpg',
+                  extension: 'jpg',
+                  mime: 'image/jpeg',
                   alt: 'The image alt',
                   description: 'The image description',
                   caption: 'The image caption',
-                }
+                },
+                width: 1280,
+                height: 720,
               },
               overlay: true
             }
@@ -310,21 +334,21 @@ export default [
                 content: 'Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.',
               },
               buttons: [
-                { label: 'Learn more', destination: '/' },
+                { label: 'Learn more', destination: '/', variant: 'text'},
               ],
-              image: {
-                file: {
-                  id: 1,
-                  name: 'The image title',
-                  src: '/images/icon-camera.svg',
-                  alt: 'The image alt',
-                  description: 'The image description',
-                  caption: 'The image caption',
-                },
-                overlay: false,
-                width: null,
-                height: null,
-              }
+              // image: {
+              //   file: {
+              //     id: 1,
+              //     name: 'The image title',
+              //     src: '/images/icon-camera.svg',
+              //     alt: 'The image alt',
+              //     description: 'The image description',
+              //     caption: 'The image caption',
+              //   },
+              //   overlay: false,
+              //   width: null,
+              //   height: null,
+              // }
             },
             {
               title: {
@@ -337,21 +361,21 @@ export default [
                 content: 'Vero eum voluptatem aliquid nostrum voluptatem. Vitae esse natus. Earum nihil deserunt eos quasi cupiditate. A inventore et molestiae natus.',
               },
               buttons: [
-                { label: 'Learn more', destination: '/' },
+                { label: 'Learn more', destination: '/', variant: 'text'},
               ],
-              image: {
-                file: {
-                  id: 1,
-                  name: 'The image title',
-                  src: '/images/icon-heart.svg',
-                  alt: 'The image alt',
-                  description: 'The image description',
-                  caption: 'The image caption',
-                },
-                overlay: false,
-                width: null,
-                height: null,
-              }
+              // image: {
+              //   file: {
+              //     id: 1,
+              //     name: 'The image title',
+              //     src: '/images/icon-heart.svg',
+              //     alt: 'The image alt',
+              //     description: 'The image description',
+              //     caption: 'The image caption',
+              //   },
+              //   overlay: false,
+              //   width: null,
+              //   height: null,
+              // }
             },
             {
               title: {
@@ -364,21 +388,21 @@ export default [
                 content: 'Et quod quaerat dolorem quaerat architecto aliquam accusantium. Ex adipisci et doloremque autem quia quam. Quis eos molestiae at iure impedit.',
               },
               buttons: [
-                { label: 'Learn more', destination: '/' },
+                { label: 'Learn more', destination: '/', variant: 'text'},
               ],
-              image: {
-                file: {
-                  id: 1,
-                  name: 'The image title',
-                  src: '/images/icon-map.svg',
-                  alt: 'The image alt',
-                  description: 'The image description',
-                  caption: 'The image caption',
-                },
-                overlay: false,
-                width: null,
-                height: null,
-              }
+              // image: {
+              //   file: {
+              //     id: 1,
+              //     name: 'The image title',
+              //     src: '/images/icon-map.svg',
+              //     alt: 'The image alt',
+              //     description: 'The image description',
+              //     caption: 'The image caption',
+              //   },
+              //   overlay: false,
+              //   width: null,
+              //   height: null,
+              // }
             },
           ]
         }
@@ -433,16 +457,19 @@ export default [
                 ],
                 image: {
                   file: {
-                    id: 1,
-                    name: 'The image title',
-                    src: 'https://placehold.co/400x300',
+                    id: 14,
+                    name: 'humphrey-muleba-mmqPwkaTGCs-unsplash',
+                    filename: 'kDRBPSsJBUrDJMapdh0FhTJNB7T88TUssgomXE68.jpg',
+                    path: 'acme/kDRBPSsJBUrDJMapdh0FhTJNB7T88TUssgomXE68.jpg',
+                    url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/kDRBPSsJBUrDJMapdh0FhTJNB7T88TUssgomXE68.jpg',
+                    extension: 'jpg',
+                    mime: 'image/jpeg',
                     alt: 'The image alt',
                     description: 'The image description',
                     caption: 'The image caption',
                   },
-                  overlay: false,
-                  width: null,
-                  height: null,
+                  width: 400,
+                  height: 300,
                 }
               }
             },
@@ -467,16 +494,19 @@ export default [
                 ],
                 image: {
                   file: {
-                    id: 1,
-                    name: 'The image title',
-                    src: 'https://placehold.co/400x300',
+                    id: 13,
+                    name: 'jon-grogan-yfTFo4iaADI-unsplash',
+                    filename: 'kGRz9gB96QT8aGzK2OH5xp3xMyL0Ys5Budk8COQz.jpg',
+                    path: 'acme/kGRz9gB96QT8aGzK2OH5xp3xMyL0Ys5Budk8COQz.jpg',
+                    url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/kGRz9gB96QT8aGzK2OH5xp3xMyL0Ys5Budk8COQz.jpg',
+                    extension: 'jpg',
+                    mime: 'image/jpeg',
                     alt: 'The image alt',
                     description: 'The image description',
                     caption: 'The image caption',
                   },
-                  overlay: false,
-                  width: null,
-                  height: null,
+                  width: 400,
+                  height: 300,
                 }
               }
             },
@@ -501,16 +531,19 @@ export default [
                 ],
                 image: {
                   file: {
-                    id: 1,
-                    name: 'The image title',
-                    src: 'https://placehold.co/400x300',
+                    id: 12,
+                    name: 'nathan-hanna-7hxC83Qcuwo-unsplash',
+                    filename: 'tOlbFKkUonJRthYeMkTyE9rfiemmnSEQ75r1T7sM.jpg',
+                    path: 'acme/tOlbFKkUonJRthYeMkTyE9rfiemmnSEQ75r1T7sM.jpg',
+                    url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/tOlbFKkUonJRthYeMkTyE9rfiemmnSEQ75r1T7sM.jpg',
+                    extension: 'jpg',
+                    mime: 'image/jpeg',
                     alt: 'The image alt',
                     description: 'The image description',
                     caption: 'The image caption',
                   },
-                  overlay: false,
-                  width: null,
-                  height: null,
+                  width: 400,
+                  height: 300,
                 }
               }
             },
@@ -545,16 +578,19 @@ export default [
             },
             image: {
               file: {
-                id: 1,
-                name: 'The image title',
-                src: 'https://placehold.co/100x100',
+                id: 11,
+                name: 'patrick-hendry-nk_uvN_b-w8-unsplash',
+                filename: 'ZaicBTEP9mtHMjpeVPYHYvqTvm8TnZqJ2kL2GqvN.jpg',
+                path: 'acme/ZaicBTEP9mtHMjpeVPYHYvqTvm8TnZqJ2kL2GqvN.jpg',
+                url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/ZaicBTEP9mtHMjpeVPYHYvqTvm8TnZqJ2kL2GqvN.jpg',
+                extension: 'jpg',
+                mime: 'image/jpeg',
                 alt: 'The image alt',
                 description: 'The image description',
                 caption: 'The image caption',
               },
-              overlay: false,
-              width: null,
-              height: null,
+              width: 100,
+              height: 100,
             },
           }
         }
