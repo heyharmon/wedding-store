@@ -9,7 +9,7 @@
         <!-- Content -->
         <BaseContent v-bind="content"/>
         
-        <BaseImage v-if="content.images" v-bind="content.images[0]" class="w-full max-w-none rounded-xl object-cover shadow-xl ring-1 ring-gray-400/10 sm:mx-auto lg:mx-0"/>
+        <BaseImage v-if="content.image" v-bind="content.image" class="w-full max-w-none rounded-xl object-cover shadow-xl ring-1 ring-gray-400/10 sm:mx-auto lg:mx-0"/>
       </div>
     </div>
   </BaseWrapper>

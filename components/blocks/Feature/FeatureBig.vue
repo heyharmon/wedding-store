@@ -10,7 +10,7 @@
         <!-- <div class="lg:pr-8 lg:py-32"> -->
           <BaseContent v-bind="content" />
         <!-- </div> -->
-        <BaseImage v-if="content.images" v-bind="content.images[0]" class="w-full max-w-none rounded-xl object-cover shadow-xl ring-1 ring-gray-400/10 lg:w-[57rem] sm:mx-auto lg:mx-0"/>
+        <BaseImage v-if="content.image" v-bind="content.image" class="w-full max-w-none rounded-xl object-cover shadow-xl ring-1 ring-gray-400/10 lg:w-[57rem] sm:mx-auto lg:mx-0"/>
       </div>
     </div>
   </BaseWrapper>

@@ -6,290 +6,267 @@ export default [
     title: 'Homepage',
     path: '/',
     blocks: [
-      {
-        id: 'slsna4l4',
-        group: 'Hero',
-        name: 'Hero',
-        data: {
-          wrapper: {
-            theme: null,
-            padding: {
-              top: '5xl',
-              bottom: '5xl',
-            },
-            background: {
-              image: {
-                file: {
-                  id: 19,
-                  name: 'annie-spratt-GbfsuO5fq5E-unsplash',
-                  filename: '3IA7ie8lykSibpztoMXKZhaMyh0cjnv2iLFci0zZ.jpg',
-                  path: 'acme/3IA7ie8lykSibpztoMXKZhaMyh0cjnv2iLFci0zZ.jpg',
-                  url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/3IA7ie8lykSibpztoMXKZhaMyh0cjnv2iLFci0zZ.jpg',
-                  extension: 'jpg',
-                  mime: 'image/jpeg',
-                  alt: 'The image alt',
-                  description: 'The image description',
-                  caption: 'The image caption',
-                },
-                width: 1280,
-                height: 720,
-              },
-              overlay: true
-            }
-          },
-          content: {
-            justify: 'left',
-            pretitle: {
-              element: 'p',
-              content: 'This is the pretitle',
-              size: 'base',
-            },
-            title: {
-              element: 'h1',
-              content: 'Hi. We\'re Column, a different type of bank.',
-              size: '4xl',
-            },
-            body: {
-              element: 'p',
-              content: 'We enable builders and developers to create incredible financial products and services for their users',
-              size: 'lg',
-            },
-            buttons: [
-              // {
-              //   label: 'Bold',
-              //   destination: '/',
-              //   variant: 'bold',
-              // },
-              // {
-              //   label: 'Ghost',
-              //   destination: '/',
-              //   variant: 'ghost',
-              // },
-            ],
-            images: [
-              {
-                file: {
-                  id: 20,
-                  name: 'camylla-battani-6HMdAij5lfs-unsplash',
-                  filename: 'n9Z8JEkCMtUhhy1gMrWtY8qdiXEvTcgPUnQVRsVR.jpg',
-                  path: 'acme/n9Z8JEkCMtUhhy1gMrWtY8qdiXEvTcgPUnQVRsVR.jpg',
-                  url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/n9Z8JEkCMtUhhy1gMrWtY8qdiXEvTcgPUnQVRsVR.jpg',
-                  extension: 'jpg',
-                  mime: 'image/jpeg',
-                  alt: 'The image alt',
-                  description: 'The image description',
-                  caption: 'The image caption',
-                },
-                width: 1280,
-                height: 720,
-              }
-            ]
-          },
-        },
-      },
-      {
-        id: 'akl24jl5l',
-        group: 'Feature',
-        name: 'Feature',
-        data: {
-          wrapper: {
-            theme: null,
-            padding: {
-              top: '6xl',
-              bottom: '6xl',
-            },
-            background: {
-              image: {
-                file: null,
-                width: 1280,
-                height: 720,
-              },
-              overlay: false
-            }
-          },
-          content: {
-            pretitle: {
-              element: 'p',
-              content: 'This is the pretitle',
-              size: 'base',
-            },
-            title: {
-              element: 'h2',
-              content: 'The about feature',
-            },
-            body: {
-              content: 'The body content is here. Lorem ipsum dolar sit amit.',
-              size: 'lg',
-            },
-            buttons: [
-              {
-                label: 'Call to action',
-                destination: '/homepage',
-              },
-              {
-                label: 'Learn more',
-                destination: '/page-1',
-                variant: 'ghost',
-              }
-            ],
-            images: [
-              {
-                file: {
-                  id: 18,
-                  name: 'baptist-standaert-mx0DEnfYxic-unsplash',
-                  filename: 'pP3ic6RPEqcb8Sqxq0ZO8kL3vgkGsNaCRp16oo7W.jpg',
-                  path: 'acme/pP3ic6RPEqcb8Sqxq0ZO8kL3vgkGsNaCRp16oo7W.jpg',
-                  url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/pP3ic6RPEqcb8Sqxq0ZO8kL3vgkGsNaCRp16oo7W.jpg',
-                  extension: 'jpg',
-                  mime: 'image/jpeg',
-                  alt: 'The image alt',
-                  description: 'The image description',
-                  caption: 'The image caption',
-                },
-                width: 600,
-                height: 400,
-              }
-            ]
-          },
-        }
-      },
-      {
-        id: 'akl24jl5l',
-        group: 'Feature',
-        name: 'FeatureBig',
-        data: {
-          wrapper: {
-            theme: null,
-            padding: {
-              top: '6xl',
-              bottom: '6xl',
-            },
-            background: {
-              image: {
-                file: null,
-                width: 1280,
-                height: 720,
-              },
-              overlay: true
-            }
-          },
-          content: {
-            pretitle: {
-              element: 'p',
-              content: 'This is the pretitle',
-              size: 'base',
-            },
-            title: {
-              element: 'h2',
-              content: 'The about feature',
-            },
-            body: {
-              content: 'The body content is here. Lorem ipsum dolar sit amit.',
-              size: 'lg',
-            },
-            buttons: [
-              {
-                label: 'Call to action',
-                destination: '/homepage',
-              },
-              {
-                label: 'Learn more',
-                destination: '/page-1',
-                variant: 'ghost',
-              }
-            ],
-            images: [
-              {
-                file: {
-                  id: 17,
-                  name: 'bruno-cervera-ZZqam9DoCoQ-unsplash',
-                  filename: '91mfDTPJXeIRfkWlZt0NS3wKfZ652tfyQiZWEj7K.jpg',
-                  path: 'acme/91mfDTPJXeIRfkWlZt0NS3wKfZ652tfyQiZWEj7K.jpg',
-                  url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/91mfDTPJXeIRfkWlZt0NS3wKfZ652tfyQiZWEj7K.jpg',
-                  extension: 'jpg',
-                  mime: 'image/jpeg',
-                  alt: 'The image alt',
-                },
-                width: 600,
-                height: 400,
-              }
-            ]
-          },
-        }
-      },
-      {
-        id: 'akl24je43',
-        group: 'Feature',
-        name: 'FeatureBoxed',
-        data: {
-          wrapper: {
-            theme: null,
-            padding: {
-              top: '6xl',
-              bottom: '6xl',
-            },
-            background: {
-              image: null,
-              overlay: false
-            }
-          },
-          content: {
-            justify: 'left',
-            pretitle: {
-              element: 'p',
-              content: 'This is the pretitle',
-              size: 'base',
-            },
-            title: {
-              element: 'h2',
-              content: 'Boost your productivity.',
-            },
-            body: {
-              element: 'p',
-              content: 'Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.',
-              size: 'lg',
-            },
-            buttons: [],
-            images: [
-              {
-                file: {
-                  id: 16,
-                  name: 'coral-ouellette-lYYDZH9U22I-unsplash',
-                  filename: 'KGwPC3jOvdgPpZg1z9okuc2V8Js9GyIQPknqy8L4.jpg',
-                  path: 'acme/KGwPC3jOvdgPpZg1z9okuc2V8Js9GyIQPknqy8L4.jpg',
-                  url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/KGwPC3jOvdgPpZg1z9okuc2V8Js9GyIQPknqy8L4.jpg',
-                  extension: 'jpg',
-                  mime: 'image/jpeg',
-                  alt: 'The image alt',
-                  description: 'The image description',
-                  caption: 'The image caption',
-                },
-                width: 600,
-                height: 400,
-              }
-            ],
-            background: {
-              image: {
-                file: {
-                  id: 15,
-                  name: 'helena-lopes-WhBGINtjuwc-unsplash',
-                  filename: '8xZAsVk9PKBhF3TVEK9QblefywbK7JN57M1Vapli.jpg',
-                  path: 'acme/8xZAsVk9PKBhF3TVEK9QblefywbK7JN57M1Vapli.jpg',
-                  url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/8xZAsVk9PKBhF3TVEK9QblefywbK7JN57M1Vapli.jpg',
-                  extension: 'jpg',
-                  mime: 'image/jpeg',
-                  alt: 'The image alt',
-                  description: 'The image description',
-                  caption: 'The image caption',
-                },
-                width: 1280,
-                height: 720,
-              },
-              overlay: true
-            }
-          },
-        }
-      },
+      // {
+      //   id: 'slsna4l4',
+      //   group: 'Hero',
+      //   name: 'Hero',
+      //   data: {
+      //     wrapper: {
+      //       theme: 'theme-2',
+      //       padding: {
+      //         top: '5xl',
+      //         bottom: '5xl',
+      //       },
+      //       background: {
+      //         overlay: false,
+      //         image: null,
+      //       }
+      //     },
+      //     content: {
+      //       alignment: 'left',
+      //       pretitle: {
+      //         element: 'p',
+      //         content: 'This is the pretitle',
+      //         size: 'base',
+      //       },
+      //       title: {
+      //         element: 'h1',
+      //         content: 'Hi. We\'re Cityvet, a different type of vet.',
+      //         size: '4xl',
+      //       },
+      //       body: {
+      //         element: 'p',
+      //         content: 'We enable builders and developers to create incredible financial products and services for their users',
+      //         size: 'lg',
+      //       },
+      //       buttons: [
+      //         {
+      //           label: 'Bold',
+      //           destination: '/',
+      //           variant: 'bold',
+      //         },
+      //         {
+      //           label: 'Ghost',
+      //           destination: '/',
+      //           variant: 'ghost',
+      //         },
+      //       ],
+      //       image: {
+      //         file: {
+      //           id: 20,
+      //           name: 'camylla-battani-6HMdAij5lfs-unsplash',
+      //           filename: 'n9Z8JEkCMtUhhy1gMrWtY8qdiXEvTcgPUnQVRsVR.jpg',
+      //           path: 'acme/n9Z8JEkCMtUhhy1gMrWtY8qdiXEvTcgPUnQVRsVR.jpg',
+      //           url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/n9Z8JEkCMtUhhy1gMrWtY8qdiXEvTcgPUnQVRsVR.jpg',
+      //           extension: 'jpg',
+      //           mime: 'image/jpeg',
+      //           alt: 'The image alt',
+      //           description: 'The image description',
+      //           caption: 'The image caption',
+      //         },
+      //         width: 1280,
+      //         height: 720,
+      //       }
+      //     },
+      //   },
+      // },
+      // {
+      //   id: 'akl24jl5l',
+      //   group: 'Feature',
+      //   name: 'Feature',
+      //   data: {
+      //     wrapper: {
+      //       theme: null,
+      //       padding: {
+      //         top: '6xl',
+      //         bottom: '6xl',
+      //       },
+      //       background: {
+      //         overlay: false,
+      //         image: {
+      //           file: null,
+      //           width: 1280,
+      //           height: 720,
+      //         },
+      //       }
+      //     },
+      //     content: {
+      //       pretitle: {
+      //         element: 'p',
+      //         content: 'This is the pretitle',
+      //         size: 'base',
+      //       },
+      //       title: {
+      //         element: 'h2',
+      //         content: 'The about feature',
+      //       },
+      //       body: {
+      //         content: 'The body content is here. Lorem ipsum dolar sit amit.',
+      //         size: 'lg',
+      //       },
+      //       buttons: [
+      //         {
+      //           label: 'Call to action',
+      //           destination: '/homepage',
+      //         },
+      //         {
+      //           label: 'Learn more',
+      //           destination: '/page-1',
+      //           variant: 'ghost',
+      //         }
+      //       ],
+      //       image: {
+      //         file: {
+      //           id: 18,
+      //           name: 'baptist-standaert-mx0DEnfYxic-unsplash',
+      //           filename: 'pP3ic6RPEqcb8Sqxq0ZO8kL3vgkGsNaCRp16oo7W.jpg',
+      //           path: 'acme/pP3ic6RPEqcb8Sqxq0ZO8kL3vgkGsNaCRp16oo7W.jpg',
+      //           url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/pP3ic6RPEqcb8Sqxq0ZO8kL3vgkGsNaCRp16oo7W.jpg',
+      //           extension: 'jpg',
+      //           mime: 'image/jpeg',
+      //           alt: 'The image alt',
+      //           description: 'The image description',
+      //           caption: 'The image caption',
+      //         },
+      //         width: 600,
+      //         height: 400,
+      //       }
+      //     },
+      //   }
+      // },
+      // {
+      //   id: 'akl24jasd',
+      //   group: 'Feature',
+      //   name: 'FeatureBig',
+      //   data: {
+      //     wrapper: {
+      //       theme: null,
+      //       padding: {
+      //         top: '6xl',
+      //         bottom: '6xl',
+      //       },
+      //       background: {
+      //         overlay: true,
+      //         image: {
+      //           file: null,
+      //           width: 1280,
+      //           height: 720,
+      //         },
+      //       }
+      //     },
+      //     content: {
+      //       pretitle: {
+      //         element: 'p',
+      //         content: 'This is the pretitle',
+      //         size: 'base',
+      //       },
+      //       title: {
+      //         element: 'h2',
+      //         content: 'The about feature',
+      //       },
+      //       body: {
+      //         content: 'The body content is here. Lorem ipsum dolar sit amit.',
+      //         size: 'lg',
+      //       },
+      //       buttons: [
+      //         {
+      //           label: 'Call to action',
+      //           destination: '/homepage',
+      //         },
+      //         {
+      //           label: 'Learn more',
+      //           destination: '/page-1',
+      //           variant: 'ghost',
+      //         }
+      //       ],
+      //       image: {
+      //         file: {
+      //           id: 17,
+      //           name: 'bruno-cervera-ZZqam9DoCoQ-unsplash',
+      //           filename: '91mfDTPJXeIRfkWlZt0NS3wKfZ652tfyQiZWEj7K.jpg',
+      //           path: 'acme/91mfDTPJXeIRfkWlZt0NS3wKfZ652tfyQiZWEj7K.jpg',
+      //           url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/91mfDTPJXeIRfkWlZt0NS3wKfZ652tfyQiZWEj7K.jpg',
+      //           extension: 'jpg',
+      //           mime: 'image/jpeg',
+      //           alt: 'The image alt',
+      //         },
+      //         width: 600,
+      //         height: 400,
+      //       }
+      //     },
+      //   }
+      // },
+      // {
+      //   id: 'akl24je43',
+      //   group: 'Feature',
+      //   name: 'FeatureBoxed',
+      //   data: {
+      //     wrapper: {
+      //       theme: null,
+      //       padding: {
+      //         top: '6xl',
+      //         bottom: '6xl',
+      //       },
+      //       background: {
+      //         overlay: false,
+      //         image: null,
+      //       }
+      //     },
+      //     content: {
+      //       alignment: 'left',
+      //       pretitle: {
+      //         element: 'p',
+      //         content: 'This is the pretitle',
+      //         size: 'base',
+      //       },
+      //       title: {
+      //         element: 'h2',
+      //         content: 'Boost your productivity.',
+      //       },
+      //       body: {
+      //         element: 'p',
+      //         content: 'Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.',
+      //         size: 'lg',
+      //       },
+      //       buttons: [],
+      //       image: {
+      //         file: {
+      //           id: 16,
+      //           name: 'coral-ouellette-lYYDZH9U22I-unsplash',
+      //           filename: 'KGwPC3jOvdgPpZg1z9okuc2V8Js9GyIQPknqy8L4.jpg',
+      //           path: 'acme/KGwPC3jOvdgPpZg1z9okuc2V8Js9GyIQPknqy8L4.jpg',
+      //           url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/KGwPC3jOvdgPpZg1z9okuc2V8Js9GyIQPknqy8L4.jpg',
+      //           extension: 'jpg',
+      //           mime: 'image/jpeg',
+      //           alt: 'The image alt',
+      //           description: 'The image description',
+      //           caption: 'The image caption',
+      //         },
+      //         width: 600,
+      //         height: 400,
+      //       },
+      //       background: {
+      //         overlay: false,
+      //         image: {
+      //           file: {
+      //             id: 15,
+      //             name: 'helena-lopes-WhBGINtjuwc-unsplash',
+      //             filename: '8xZAsVk9PKBhF3TVEK9QblefywbK7JN57M1Vapli.jpg',
+      //             path: 'acme/8xZAsVk9PKBhF3TVEK9QblefywbK7JN57M1Vapli.jpg',
+      //             url: 'https://ik.imagekit.io/heyharmon/cms-local/acme/8xZAsVk9PKBhF3TVEK9QblefywbK7JN57M1Vapli.jpg',
+      //             extension: 'jpg',
+      //             mime: 'image/jpeg',
+      //             alt: 'The image alt',
+      //             description: 'The image description',
+      //             caption: 'The image caption',
+      //           },
+      //           width: 1280,
+      //           height: 720,
+      //         },
+      //       }
+      //     },
+      //   }
+      // },
       {
         id: 'akl24je292',
         group: 'Feature',
@@ -316,8 +293,8 @@ export default [
             },
             buttons: [],
             image: {
-              file: null,
               overlay: false,
+              file: null,
               width: null,
               height: null,
             },
@@ -337,6 +314,7 @@ export default [
                 { label: 'Learn more', destination: '/', variant: 'text'},
               ],
               // image: {
+              //   overlay: false,
               //   file: {
               //     id: 1,
               //     name: 'The image title',
@@ -345,7 +323,6 @@ export default [
               //     description: 'The image description',
               //     caption: 'The image caption',
               //   },
-              //   overlay: false,
               //   width: null,
               //   height: null,
               // }
@@ -364,6 +341,7 @@ export default [
                 { label: 'Learn more', destination: '/', variant: 'text'},
               ],
               // image: {
+              //   overlay: false,
               //   file: {
               //     id: 1,
               //     name: 'The image title',
@@ -372,7 +350,6 @@ export default [
               //     description: 'The image description',
               //     caption: 'The image caption',
               //   },
-              //   overlay: false,
               //   width: null,
               //   height: null,
               // }
@@ -391,6 +368,7 @@ export default [
                 { label: 'Learn more', destination: '/', variant: 'text'},
               ],
               // image: {
+              //   overlay: false,
               //   file: {
               //     id: 1,
               //     name: 'The image title',
@@ -399,7 +377,6 @@ export default [
               //     description: 'The image description',
               //     caption: 'The image caption',
               //   },
-              //   overlay: false,
               //   width: null,
               //   height: null,
               // }
@@ -429,8 +406,8 @@ export default [
             },
             buttons: [],
             image: {
-              file: null,
               overlay: false,
+              file: null,
               width: null,
               height: null,
             },
@@ -562,8 +539,8 @@ export default [
               bottom: '6xl',
             },
             background: {
+              overlay: true,
               image: null,
-              overlay: true
             }
           },
           testimonial: {

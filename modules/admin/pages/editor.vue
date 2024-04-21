@@ -56,7 +56,7 @@
 
     <template v-slot:left>
       <BlocksPanel v-if="editorStore.show.blocksPanel"/>
-      <FieldsPanel v-if="editorStore.activeBlockId"/>
+      <FieldsPanel v-if="editorStore.activeBlockId" :group="editorStore.activeBlock.group"/>
       <!-- <pre>{{ editorStore.activeBlock }}</pre> -->
     </template>
 

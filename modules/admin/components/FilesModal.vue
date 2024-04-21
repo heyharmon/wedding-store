@@ -47,7 +47,6 @@
 <script setup>
 import { useEditorStore } from '@/modules/admin/store/editorStore'
 import { useFileStore } from '@/modules/admin/store/fileStore'
-import { getValue, setValue, addToArray } from '@/modules/admin/composables/useArrayHelpers'
 
 const currentTab = ref('files')
 const editorStore = useEditorStore()
@@ -59,7 +58,7 @@ await useAsyncData('files', () => fileStore.index())
 function selectFile(file) {
   editorStore.setValue(
     editorStore.filesModal.targetProp,
-    file
+    {file}
   )
 
   // editorStore.pushToArray({

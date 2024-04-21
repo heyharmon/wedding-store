@@ -1,7 +1,7 @@
 <template>
     <div 
-        class="flex flex-row"
-        :class="`${justifyContentClasses[justify]} ${alignContainerClasses[align]}`" 
+        class="flex flex-row max-w-2xl"
+        :class="`${alignmentClasses[alignment]}`" 
     >
         <div>
             <BaseText v-bind="pretitle" class="text-primary-600 font-semibold mb-3" />
@@ -14,28 +14,28 @@
 
 <script setup>
 const props = defineProps({
-    justify: {
+    alignment: {
         type: String,
         default: 'left' // Options: left, center
     },
-    align: {
-        type: String,
-        default: 'center' // Options: top, center, bottom
-    },
+    // orientation: {
+    //     type: String,
+    //     default: 'center' // Options: top, center, bottom
+    // },
     pretitle: Object,
     title: Object,
     body: Object,
     buttons: Array,
 })
 
-const justifyContentClasses = {
+const alignmentClasses = {
   left: 'justify-start',
-  center: 'justify-center text-center',
+  center: 'justify-center text-center m-auto',
 }
 
-const alignContainerClasses = {
-  top: 'lg:items-start',
-  center: 'lg:items-center',
-  bottom: 'lg:items-end',
-}
+// const orientationClasses = {
+//   top: 'lg:items-start',
+//   center: 'lg:items-center',
+//   bottom: 'lg:items-end',
+// }
 </script>

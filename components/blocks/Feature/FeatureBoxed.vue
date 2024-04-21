@@ -12,8 +12,8 @@
           <!-- Content -->
           <BaseContent v-bind="content" />
         </div>
-        <div v-if="content.images" class="relative mt-16 h-80 lg:mt-8">
-          <BaseImage v-bind="content.images[0]" class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"/>
+        <div v-if="content.image" class="relative mt-16 h-80 lg:mt-8">
+          <BaseImage v-bind="content.image" class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"/>
         </div>
       </div>
 

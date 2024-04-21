@@ -1,7 +1,7 @@
 import { baseContentFields } from '@/fields/baseContentFields'
 
 const fields = {
-  title: 'Hero editor',
+  title: 'Testimonials block editor',
   ...baseContentFields
 }
 

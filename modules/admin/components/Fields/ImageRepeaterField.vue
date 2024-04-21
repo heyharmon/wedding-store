@@ -2,13 +2,13 @@
   <div class="margin-bottom-sm">
     <label v-if="label" class="block text-sm font-medium leading-6 text-gray-900" :for="label">{{ label }}</label>
     <div v-if="images.length" class="mt-2 overflow-hidden rounded-md border border-gray-300 bg-white">
-      <ImageField
+      <Image
         v-for="(image, index) in images"
         :image="image"
         :index="index"
         :path="path"
         @removeImage="removeImage(index)"
-        @openFilesModal="openFilePicker()"
+        @openFilePicker="openFilePicker()"
       />
     </div>
 
@@ -28,7 +28,7 @@
 
 <script setup>
 import { useEditorStore } from '@/modules/admin/store/editorStore'
-import ImageField from '@/modules/admin/components/Fields/ImageField.vue'
+import Image from '@/modules/admin/components/Fields/Image.vue'
 
 const props = defineProps({
   label: String, // Label for the field
@@ -42,8 +42,8 @@ function removeImage(index) {
   images.splice(index, 1)
 }
 
-// function openFilePicker() {
-//   editorStore.filesModal.open = true 
-//   editorStore.filesModal.targetProp = props.path
-// }
+function openFilePicker() {
+  editorStore.filesModal.open = true 
+  editorStore.filesModal.targetProp = props.path
+}
 </script>

@@ -1,45 +1,66 @@
 <template> 
   <div>
-    <AppSelectButtons
-      :label="label" 
-      v-model="topAndBottomPadding" 
+    <AppSelect
+      :label="label"
+      v-model="topAndBottomPadding"
       :options="[
-        {value: '3xl', label: 'Small'},
-        {value: '6xl', label: 'Default'},
-        {value: '7xl', label: 'Large'},
+        {value: null, label: 'None'},
+        {value: 'sm', label: 'sm'},
+        {value: 'md', label: 'md'},
+        {value: 'lg', label: 'lg'},
+        {value: 'xl', label: 'xl'},
+        {value: '2xl', label: '2xl'},
+        {value: '3xl', label: '3xl'},
+        {value: '4xl', label: '4xl'},
+        {value: '5xl', label: '5xl'},
+        {value: '6xl', label: '6xl'},
+        {value: '7xl', label: '7xl'},
+        {value: '8xl', label: '8xl'},
       ]"
     />
+    <!-- <AppSelectButtons
+      :label="label"
+      v-model="topAndBottomPadding"
+      :options="[
+        {value: null, label: 'None'},
+        {value: 'sm', label: 'sm'},
+        {value: 'md', label: 'md'},
+        {value: 'lg', label: 'lg'},
+        {value: 'xl', label: 'xl'},
+        {value: '2xl', label: '2xl'},
+        {value: '3xl', label: '3xl'},
+        {value: '4xl', label: '4xl'},
+        {value: '5xl', label: '5xl'},
+        {value: '6xl', label: '6xl'},
+        {value: '7xl', label: '7xl'},
+        {value: '8xl', label: '8xl'},
+      ]"
+    /> -->
   </div>
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { useEditorStore } from '@/modules/admin/store/editorStore'
-import AppSelectButtons from '@/modules/admin/components/Fields/AppSelectButtons.vue'
+import AppSelect from '@/modules/admin/components/AppSelect.vue'
+// import AppSelectButtons from '@/modules/admin/components/AppSelectButtons.vue'
 
 const props = defineProps({
   label: String,
   path: String,
 })
 
-const store = useEditorStore()
+const editorStore = useEditorStore()
 
 let topAndBottomPadding = computed({
   get() {
-    return store.activeBlock.data.padding.paddingTop;
+    return editorStore.getValue(props.path + '.top');
   },
   set(value) {
-    store.activeBlock.data.padding.paddingTop = value
-    store.activeBlock.data.padding.paddingBottom = value
+    editorStore.setValue(props.path, {
+      top: value, 
+      bottom: value
+    })
   }
 })
-
-// let topAndBottomPadding = computed({
-//   get() {
-//     return store.activeBlock.data[props.path].paddingTop;
-//   },
-//   set(value) {
-//     store.activeBlock.data[props.path].paddingTop = value
-//     store.activeBlock.data[props.path].paddingBottom = value
-//   }
-// })
 </script>
