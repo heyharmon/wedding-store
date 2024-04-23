@@ -1,5 +1,7 @@
 <template>
   <nav class="w-[22rem] overflow-y-auto rounded-lg border drop-shadow-sm bg-white no-scrollbar ml-4">
+    <!-- <pre>{{ fieldsRef }}</pre> -->
+
     <!-- Panel top -->
     <div class="flex items-center justify-between border-b px-4 py-3">
       <p class="font-medium">{{ fieldsRef.title }}</p>
@@ -32,7 +34,7 @@
 
         <Field 
           v-if="activeTab === 'style'"
-          v-for="(field, index) in fieldsRef.style"
+          v-for="(field, index) in fieldsRef.wrapper"
           :key="index"
           v-bind="field"
         />
