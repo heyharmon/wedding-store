@@ -4,12 +4,12 @@
 
         <div class="mt-8">
             <div class="flex flex-col gap-6">
-                <BaseHeading as="h1">The heading size 1</BaseHeading>
-                <BaseHeading as="h2">The heading size 2</BaseHeading>
-                <BaseHeading as="h3">The heading size 3</BaseHeading>
-                <BaseHeading as="h4">The heading size 4</BaseHeading>
-                <BaseHeading as="h5">The heading size 5</BaseHeading>
-                <BaseHeading as="h6">The heading size 6</BaseHeading>
+                <BaseHeading element="h1" content="The heading size 1"></BaseHeading>
+                <BaseHeading element="h2" content="The heading size 2"></BaseHeading>
+                <BaseHeading element="h3" content="The heading size 3"></BaseHeading>
+                <BaseHeading element="h4" content="The heading size 4"></BaseHeading>
+                <BaseHeading element="h5" content="The heading size 5"></BaseHeading>
+                <BaseHeading element="h6" content="The heading size 6"></BaseHeading>
             </div>
         </div>
     </section>
@@ -58,7 +58,7 @@
         </div>
     </section>
 
-    <section class="mx-auto max-w-7xl px-6 my-10">
+    <!-- <section class="mx-auto max-w-7xl px-6 my-10">
         <p class="text-lg font-semibold text-gray-900 mb-7">Colors</p>
 
         <div class="mt-8">
@@ -171,10 +171,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- THEMES -->
-    <!-- <section class="mx-auto max-w-7xl px-6 my-10">
+    <section class="mx-auto max-w-7xl px-6 my-10">
         <p class="text-lg font-semibold text-gray-900 mb-7">Color themes</p>
 
         <div class="mt-8">
@@ -287,5 +287,5 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 </template>

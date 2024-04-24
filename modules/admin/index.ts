@@ -40,6 +40,13 @@ export default defineNuxtModule({
       //   path: '/:path*',
       //   file: resolve(__dirname, './pages/[path].vue'),
       // })
+
+      pages.push({
+        name: 'styleguide',
+        // path: 'admin/editor/:path*',
+        path: '/admin/styleguide',
+        file: resolve(__dirname, './pages/styleguide.vue'),
+      })
     })
   },
 })
