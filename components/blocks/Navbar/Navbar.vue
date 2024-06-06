@@ -4,8 +4,8 @@
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
         <NuxtLink to="/" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg" alt="" />
+          <span class="sr-only">Crafted</span>
+          <img class="h-8 w-auto" src="/logo.svg" alt="" />
         </NuxtLink>
       </div>
       <div class="hidden lg:flex lg:gap-x-4">
@@ -87,17 +87,19 @@
   </header>
 </template>
 
-<script setup lang="ts">
+<script setup>
+import { ref } from 'vue'
+
 const mobileMenuOpen = ref(false)
 
 const navigation = [
   { 
     name: 'About',
-    to: '/about',
+    to: '/',
   },
   { 
     name: 'Contact',
-    to: '/about/contact',
+    to: '/',
   },
 ]
 </script>

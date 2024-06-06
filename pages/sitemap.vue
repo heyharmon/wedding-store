@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <!-- <section>
     <BaseHeading>Sitemap</BaseHeading>
 
     <BaseText>The page</BaseText>
@@ -8,5 +8,5 @@
       <BaseButton to="/homepage">Homepage</BaseButton>
       <BaseButton to="/page-1">Page 1</BaseButton>
     </BaseButtonRepeater>
-  </section>
+  </section> -->
 </template>
