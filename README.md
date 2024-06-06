@@ -1,20 +1,13 @@
-# Nuxt Base
+# Nuxt eCommerce Storefront
 
-A Nuxt 3 website starter with Tailwind blocks. Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A Nuxt 3 eCommerce store frontend. Connects to Shopify.
 
 ## Setup
 
 Make sure to install the dependencies:
 
 ```bash
-# yarn
-yarn install
-
-# npm
 npm install
-
-# pnpm
-pnpm install
 ```
 
 ## Development Server
