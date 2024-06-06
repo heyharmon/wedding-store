@@ -1,6 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: false },
+  devtools: { 
+    enabled: false 
+  },
+
+  runtimeConfig: {
+    shopifyHost: process.env.NUXT_SHOPIFY_STOREFRONT_HOST,
+    shopifyAccessToken: process.env.NUXT_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+  },
 
   ssr: true, 
 
@@ -17,24 +24,28 @@ export default defineNuxtConfig({
     }],
   ],
 
+  plugins: [
+    '~/plugins/shopify.js',
+  ],
+
   tailwindcss: {
     exposeConfig: true,
     viewer: true,
     // and more...
   },
 
-  apollo: {
-    clients: {
-      default: {
-        httpEndpoint: process.env.SHOPIFY_STOREFRONT_HOST,
-        httpLinkOptions: {
-          headers: {
-            'X-Shopify-Storefront-Access-Token': process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN,
-          }
-        }
-      }
-    },
-  },
+  // apollo: {
+  //   clients: {
+  //     default: {
+  //       httpEndpoint: process.env.SHOPIFY_STOREFRONT_HOST,
+  //       httpLinkOptions: {
+  //         headers: {
+  //           'X-Shopify-Storefront-Access-Token': process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+  //         }
+  //       }
+  //     }
+  //   },
+  // },
 
   components: [
     '~/components/blocks',
