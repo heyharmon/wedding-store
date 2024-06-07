@@ -1,7 +1,6 @@
 <template>
   <CategoriesGrid/>
-  <!-- <ProductsPopular :products="data.products.edges"/> -->
-  <pre>{{ products }}</pre>
+  <ProductsPopular :products="products"/>
 </template>
 
 <script setup>
@@ -13,5 +12,5 @@ import ProductsPopular from '@/components/ProductsPopular.vue'
 // const { data } = await useAsyncQuery(getProductsQuery, query)
 
 const { $shopify } = useNuxtApp()
-const products = await $shopify.product.fetchAll()
+const products = await $shopify.product.fetchAll(9)
 </script>

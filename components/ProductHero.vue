@@ -7,11 +7,11 @@
           <!-- Image selector -->
           <div class="mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none">
             <TabList class="grid grid-cols-4 gap-6">
-              <Tab v-for="(image, index) in product.images.edges" :key="image.src" class="relative flex h-24 cursor-pointer items-center justify-center rounded-md bg-white text-sm font-medium uppercase text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-offset-4" v-slot="{ selected }">
+              <Tab v-for="(image, index) in product.images" :key="image.src" class="relative flex h-24 cursor-pointer items-center justify-center rounded-md bg-white text-sm font-medium uppercase text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-offset-4" v-slot="{ selected }">
                 <span class="sr-only">Product image {{ index + 1 }}</span>
                 <span class="absolute inset-0 overflow-hidden rounded-md">
                   <NuxtImg 
-                    :src="image.node.src" 
+                    :src="image.src" 
                     :alt="product.title + ' thumbnail' + index + 1" 
                     class="h-full w-full object-cover object-center"
                     format="webp"
@@ -23,9 +23,9 @@
           </div>
 
           <TabPanels class="aspect-h-1 aspect-w-1 w-full">
-            <TabPanel v-for="(image, index) in product.images.edges" :key="image.src">
+            <TabPanel v-for="(image, index) in product.images" :key="image.src">
               <NuxtImg 
-                :src="image.node.src" 
+                :src="image.src" 
                 :alt="product.title + ' image' + index + 1" 
                 class="h-full w-full object-cover object-center sm:rounded-lg"
                 format="webp"
@@ -40,7 +40,7 @@
 
           <div class="mt-3">
             <h2 class="sr-only">Product information</h2>
-            <p class="text-3xl tracking-tight text-gray-900">${{ product.priceRange.maxVariantPrice.amount }} / day</p>
+            <p class="text-3xl tracking-tight text-gray-900">${{ product.variants[0].price.amount }} / day</p>
           </div>
 
           <!-- Description -->
@@ -112,5 +112,5 @@ const props = defineProps({
   product: Object,
 })
 
-const selectedColor = ref(mockedProduct.colors[0])
+// const selectedColor = ref(mockedProduct.colors[0])
 </script>

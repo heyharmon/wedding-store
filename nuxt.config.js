@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: true, 
+
   devtools: { 
     enabled: false 
   },
@@ -8,8 +10,6 @@ export default defineNuxtConfig({
     shopifyHost: process.env.NUXT_SHOPIFY_STOREFRONT_HOST,
     shopifyAccessToken: process.env.NUXT_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
   },
-
-  ssr: true, 
 
   modules: [
     'nuxt-icon',
@@ -31,7 +31,6 @@ export default defineNuxtConfig({
   tailwindcss: {
     exposeConfig: true,
     viewer: true,
-    // and more...
   },
 
   // apollo: {

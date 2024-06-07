@@ -14,22 +14,24 @@
       </div>
 
       <div v-if="products" class="mt-10 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8">
-        <NuxtLink v-for="product in products" :key="product.node.id" :to="'/products/' + product.node.handle" class="group text-sm">
+        <NuxtLink v-for="product in products" :key="product.id" :to="'/products/' + product.handle" class="group text-sm">
           <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
             <NuxtImg 
-              v-if="product.node.images.edges[0]" 
-              :src="product.node.images.edges[0].node.src" 
-              :alt="product.node.title + ' featured image'" 
+              v-if="product.images[0]" 
+              :src="product.images[0].src" 
+              :alt="product.title + ' featured image'" 
               class="h-full w-full object-cover object-center"
               format="webp"
             />
           </div>
-          <h3 class="mt-4 font-medium text-gray-900">{{ product.node.title }}</h3>
+          <h3 class="mt-4 font-medium text-gray-900">{{ product.title }}</h3>
           <p class="italic text-gray-500">Available</p>
-          <p class="mt-2 font-medium text-gray-900">${{ product.node.priceRange.maxVariantPrice.amount }} / day</p>
+          <p class="mt-2 font-medium text-gray-900">${{ product.variants[0].price.amount }} / day</p>
         </NuxtLink>
       </div>
     </div>
+    
+    <pre>{{ products }}</pre>
   </div>
 </template>
 
