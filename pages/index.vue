@@ -1,12 +1,18 @@
 <template>
-  <CategoriesGrid/>
+  <!-- <CategoryTabs/> -->
+  <!-- <CategoryThumbnails/> -->
+  <HomeHero/>
+  <CategoryThreeUp/>
   <ProductsPopular :products="products"/>
 </template>
 
 <script setup>
 // import { getProductsQuery } from '@/shopify/getProductsQuery'
-import CategoriesGrid from '@/components/CategoriesGrid.vue'
+import CategoryTabs from '@/components/CategoryTabs.vue'
+import CategoryThumbnails from '@/components/CategoryThumbnails.vue'
+import CategoryThreeUp from '@/components/CategoryThreeUp.vue'
 import ProductsPopular from '@/components/ProductsPopular.vue'
+import HomeHero from '../components/HomeHero.vue';
 
 // const query = { first: 10 }
 // const { data } = await useAsyncQuery(getProductsQuery, query)

@@ -11,8 +11,8 @@
         :required="required"
         :autofocus="autofocus"
         :disabled="disabled"
-        :class="errors ? 'ring-red-300 placeholder:text-red-300 focus:ring-red-500' : 'ring-gray-300 placeholder:text-gray-400 focus:ring-indigo-600'"
-        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset hover:ring-2 hover:ring-indigo-600 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+        :class="errors ? 'ring-red-300 placeholder:text-red-300 focus:ring-red-500' : 'ring-gray-400 placeholder:text-gray-500 focus:ring-indigo-600'"
+        class="block w-full rounded-xl border-0 py-4 px-5 text-gray-900 shadow-sm ring-1 ring-inset hover:ring-2 hover:ring-indigo-600 focus:ring-2 focus:ring-inset sm:text-md sm:leading-6"
       >
     </div>
     

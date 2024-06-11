@@ -1,12 +1,12 @@
 <template>
   <div v-if="product" class="bg-white">
     <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-      <div class="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
+      <div class="lg:grid lg:grid-cols-3 lg:items-start lg:gap-x-8">
         <!-- Image gallery -->
-        <TabGroup as="div" class="flex flex-col-reverse">
+        <TabGroup as="div" class="lg:col-span-2 flex flex-col-reverse">
           <!-- Image selector -->
           <div class="mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none">
-            <TabList class="grid grid-cols-4 gap-6">
+            <TabList class="grid grid-cols-5 gap-6">
               <Tab v-for="(image, index) in product.images" :key="image.src" class="relative flex h-24 cursor-pointer items-center justify-center rounded-md bg-white text-sm font-medium uppercase text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-offset-4" v-slot="{ selected }">
                 <span class="sr-only">Product image {{ index + 1 }}</span>
                 <span class="absolute inset-0 overflow-hidden rounded-md">
@@ -22,6 +22,7 @@
             </TabList>
           </div>
 
+          <!-- Image -->
           <TabPanels class="aspect-h-1 aspect-w-1 w-full">
             <TabPanel v-for="(image, index) in product.images" :key="image.src">
               <NuxtImg 
@@ -36,17 +37,17 @@
 
         <!-- Product info -->
         <div class="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
-          <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{ product.title }}</h1>
+          <h1 class="font-header text-4xl font-bold tracking-tight text-gray-900">{{ product.title }}</h1>
 
           <div class="mt-3">
             <h2 class="sr-only">Product information</h2>
-            <p class="text-3xl tracking-tight text-gray-900">${{ product.variants[0].price.amount }} / day</p>
+            <p class="text-2xl tracking-tight text-gray-900">${{ product.variants[0].price.amount }} / day</p>
           </div>
 
           <!-- Description -->
           <div class="mt-6">
             <h3 class="sr-only">Description</h3>
-            <div class="space-y-6 text-base text-gray-700" v-html="product.description" />
+            <div class="space-y-6 text-sm text-gray-700" v-html="product.description" />
           </div>
 
           <form class="mt-6">
@@ -97,6 +98,7 @@
             </div>
           </section> -->
         </div>
+
       </div>
     </div>
   </div>
