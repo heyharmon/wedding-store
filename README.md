@@ -10,12 +10,20 @@ Make sure to install the dependencies:
 npm install
 ```
 
+## Netlify CLI
+
+To use the Netlify image cdn locally, install the CLI
+
+```bash
+brew install netlify-cli
+```
+
 ## Development Server
 
 Start the development server on `http://localhost:3000`
 
 ```bash
-npm run dev
+netlify dev
 ```
 
 ## Production

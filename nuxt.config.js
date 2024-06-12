@@ -25,7 +25,11 @@ export default defineNuxtConfig({
   },
 
   image: {
-    domains: ['cdn.shopify.com']
+    provider: 'netlify',
+    domains: ['cdn.shopify.com'],
+    netlify: {
+      baseURL: '',
+    },
   },
 
   modules: [
