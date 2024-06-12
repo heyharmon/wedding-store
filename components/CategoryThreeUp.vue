@@ -1,6 +1,6 @@
 <template>
     <div class="bg-white">
-      <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
         <h2 class="sr-only">Categories</h2>
         
         <div class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-6 lg:gap-8">
