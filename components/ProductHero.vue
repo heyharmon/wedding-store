@@ -50,7 +50,7 @@
             <div class="space-y-6 text-sm text-gray-700" v-html="product.description" />
           </div>
 
-          <form class="mt-6">
+          <div class="mt-6">
             <!-- Colors -->
             <!-- <div>
               <h3 class="text-sm font-medium text-gray-600">Color</h3>
@@ -66,14 +66,16 @@
             </div> -->
 
             <div class="mt-10 flex">
-              <button type="submit" class="flex max-w-xs flex-1 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full">Add to bag</button>
+              <button @click="customerStore.addToCart(product.id)" type="button" class="flex max-w-xs flex-1 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full">
+                Add to bag
+              </button>
 
               <button type="button" class="ml-4 flex items-center justify-center rounded-md px-3 py-3 text-gray-400 hover:bg-gray-100 hover:text-gray-500">
                 <HeartIcon class="h-6 w-6 flex-shrink-0" aria-hidden="true" />
                 <span class="sr-only">Add to favorites</span>
               </button>
             </div>
-          </form>
+          </div>
 
           <!-- <section aria-labelledby="details-heading" class="mt-12">
             <h2 id="details-heading" class="sr-only">Additional details</h2>
@@ -106,7 +108,7 @@
   
 <script setup>
 import { ref } from 'vue'
-import { Disclosure, DisclosureButton, DisclosurePanel, RadioGroup, RadioGroupOption, Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue'
+import { provideUseId, Disclosure, DisclosureButton, DisclosurePanel, RadioGroup, RadioGroupOption, Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue'
 import { StarIcon } from '@heroicons/vue/20/solid'
 import { HeartIcon, MinusIcon, PlusIcon } from '@heroicons/vue/24/outline'
 
@@ -114,5 +116,7 @@ const props = defineProps({
   product: Object,
 })
 
+const customerStore = useCustomerStore()
+provideUseId(() => useId())
 // const selectedColor = ref(mockedProduct.colors[0])
 </script>
