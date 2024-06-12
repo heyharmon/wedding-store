@@ -1,7 +1,8 @@
 <template>
     <div class="bg-white">
       <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-
+        <h2 class="sr-only">Categories</h2>
+        
         <div class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-6 lg:gap-8">
           <div class="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2">
             <!-- <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-featured-category.jpg" alt="Two models wearing women's black cotton crewneck tee and off-white cotton crewneck tee." class="object-cover object-center group-hover:opacity-75" /> -->
@@ -20,7 +21,7 @@
                     Arches
                   </NuxtLink>
                 </h3>
-                <p aria-hidden="true" class="mt-1 text-sm font-semibold text-white">Shop now</p>
+                <!-- <p aria-hidden="true" class="mt-1 text-sm font-semibold text-white">Shop now</p> -->
               </div>
             </div>
           </div>
@@ -41,7 +42,7 @@
                     Signage
                   </NuxtLink>
                 </h3>
-                <p aria-hidden="true" class="mt-1 text-sm font-semibold text-white">Shop now</p>
+                <!-- <p aria-hidden="true" class="mt-1 text-sm font-semibold text-white">Shop now</p> -->
               </div>
             </div>
           </div>
@@ -62,7 +63,7 @@
                     Walls
                   </NuxtLink>
                 </h3>
-                <p aria-hidden="true" class="mt-1 text-sm font-semibold text-white">Shop now</p>
+                <!-- <p aria-hidden="true" class="mt-1 text-sm font-semibold text-white">Shop now</p> -->
               </div>
             </div>
           </div>

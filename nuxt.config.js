@@ -1,9 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  // ssr: true, 
+  ssr: true,
 
   devtools: { 
-    enabled: true
+    enabled: true,
+    vscode: {},
   },
 
   runtimeConfig: {
@@ -11,11 +12,32 @@ export default defineNuxtConfig({
     shopifyAccessToken: process.env.NUXT_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
   },
 
+  nitro: {
+    prerender: {
+      // enabled by default with nuxt generate, not required
+      crawlLinks: true,
+      // add any routes to prerender
+      routes: ['/']
+    }
+  },
+
   site: {
     url: 'https://rentcrafted.com',
     name: 'Crafted | Wedding Rentals in Salt Lake City',
-    description: 'Discover better wedding rentals in Salt Lake City using Crafted. We offer wedding arches, signage, walls, chairs, tables, decor, and games to make your special day unforgettable. Our inventory includes elegant and affordable options. Trusted by Utah couples, our dedicated team ensures your wedding is seamless and beautiful. Explore our selection and book today for the perfect Salt Lake City wedding experience.',
+    description: 'Wedding rentals in Salt Lake City trusted by Utah couples. We have wedding arches, signage, walls games and more.',
     defaultLocale: 'en',
+  },
+
+  sitemap: {
+    hostname: 'https://rentcrafted.com',
+  },
+
+  content: {
+    watch: {
+      ws: {
+        hostname: 'localhost'
+      }
+    }
   },
 
   modules: [

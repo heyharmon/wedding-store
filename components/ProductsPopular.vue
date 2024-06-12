@@ -16,7 +16,7 @@
             <NuxtImg 
               v-if="product.images[0]" 
               :src="product.images[0].src" 
-              :alt="product.title + ' featured image'" 
+              :alt="'Featured image of our ' + product.title" 
               class="h-full w-full object-cover object-center"
               format="webp"
             />
