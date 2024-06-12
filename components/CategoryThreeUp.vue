@@ -7,10 +7,12 @@
           <div class="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2">
             <!-- <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-featured-category.jpg" alt="Two models wearing women's black cotton crewneck tee and off-white cotton crewneck tee." class="object-cover object-center group-hover:opacity-75" /> -->
             <NuxtImg 
-              src="/categories/featured-category-arches.png" 
+              src="/categories/featured-category-arches.jpg" 
               alt="Wedding arch rental" 
               class="object-cover object-center group-hover:opacity-75"
-              format="png"
+              format="webp"
+              width="600"
+              height="600"
             />
             <div aria-hidden="true" class="bg-gradient-to-b from-transparent to-black opacity-50" />
             <div class="flex items-end p-6">
@@ -28,10 +30,12 @@
           <div class="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-none sm:relative sm:h-full">
             <!-- <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-category-01.jpg" alt="Wooden shelf with gray and olive drab green baseball caps, next to wooden clothes hanger with sweaters." class="object-cover object-center group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full" /> -->
             <NuxtImg 
-              src="/categories/featured-category-signage.png" 
+              src="/categories/featured-category-signage.jpg" 
               alt="Wedding signage rental" 
               class="object-cover object-center group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full"
-              format="png"
+              format="webp"
+              width="600"
+              height="300"
             />
             <div aria-hidden="true" class="bg-gradient-to-b from-transparent to-black opacity-50 sm:absolute sm:inset-0" />
             <div class="flex items-end p-6 sm:absolute sm:inset-0">
@@ -49,10 +53,12 @@
           <div class="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-none sm:relative sm:h-full">
             <!-- <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-category-02.jpg" alt="Walnut desk organizer set with white modular trays, next to porcelain mug on wooden desk." class="object-cover object-center group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full" /> -->
             <NuxtImg 
-              src="/categories/featured-category-walls.png" 
+              src="/categories/featured-category-walls.jpg" 
               alt="Weddings walls rental" 
               class="object-cover object-center group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full"
-              format="png"
+              format="webp"
+              width="600"
+              height="300"
             />
             <div aria-hidden="true" class="bg-gradient-to-b from-transparent to-black opacity-50 sm:absolute sm:inset-0" />
             <div class="flex items-end p-6 sm:absolute sm:inset-0">

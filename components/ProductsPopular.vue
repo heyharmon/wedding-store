@@ -19,6 +19,8 @@
               :alt="'Featured image of our ' + product.title" 
               class="h-full w-full object-cover object-center"
               format="webp"
+              width="600"
+              height="600"
             />
           </div>
           <h3 class="mt-4 font-medium text-gray-900">{{ product.title }}</h3>
