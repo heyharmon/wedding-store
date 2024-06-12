@@ -29,6 +29,11 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
   },
 
+  robots: {
+    UserAgent: 'SiteAuditBot',
+    Allow: '/',
+  },
+
   sitemap: {
     hostname: 'https://rentcrafted.com',
   },
