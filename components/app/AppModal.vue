@@ -12,15 +12,6 @@
               :class="sizeClasses[size]"
               class="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-xl transition-all sm:w-full"
             >
-              <!-- Modal header -->
-              <div class="flex items-center justify-between border-b px-6 py-3">
-                <p v-if="title" class="text-lg font-medium">{{ title }}</p>
-                <button @click="emit('close')" type="button" class="inline-flex items-center rounded-md border border-gray-300 p-[6px] hover:bg-gray-100 active:translate-y-px">
-                  <Icon name="heroicons:x-mark" class="h-5 w-5 text-gray-400" aria-hidden="true" />
-                </button>
-              </div>
-
-              <!-- Modal body -->
               <slot/>
             </div>
           </div>
@@ -36,7 +27,7 @@ const props = defineProps({
     },
     size: {
       type: String,
-      default: 'xl' // sm, base, lg
+      default: 'sm' // sm, base, lg
     },
 })
 

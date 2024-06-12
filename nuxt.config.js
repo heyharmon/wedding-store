@@ -1,14 +1,50 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: false },
+  ssr: true,
 
-  ssr: true, 
+  devtools: { 
+    enabled: true,
+    vscode: {},
+  },
+
+  runtimeConfig: {
+    shopifyHost: process.env.NUXT_SHOPIFY_STOREFRONT_HOST,
+    shopifyAccessToken: process.env.NUXT_SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+  },
+
+  nitro: {
+    prerender: {
+      // enabled by default with nuxt generate, not required
+      crawlLinks: true,
+      // add any routes to prerender
+      routes: ['/']
+    }
+  },
+
+  site: {
+    url: 'https://rentcrafted.com',
+    name: 'Crafted | Wedding Rentals in Salt Lake City',
+    description: 'Wedding rentals in Salt Lake City trusted by Utah couples. We have wedding arches, signage, walls games and more.',
+    defaultLocale: 'en',
+  },
+
+  sitemap: {
+    hostname: 'https://rentcrafted.com',
+  },
+
+  content: {
+    watch: {
+      ws: {
+        hostname: 'localhost'
+      }
+    }
+  },
 
   modules: [
     'nuxt-icon',
+    '@nuxtjs/seo',
     '@nuxt/image',
     '@vueuse/nuxt',
-    '@nuxtjs/apollo',
     'nuxt-headlessui',
     '@nuxt/image-edge',
     '@nuxtjs/tailwindcss',
@@ -17,24 +53,27 @@ export default defineNuxtConfig({
     }],
   ],
 
+  plugins: [
+    '~/plugins/shopify.js',
+  ],
+
   tailwindcss: {
     exposeConfig: true,
     viewer: true,
-    // and more...
   },
 
-  apollo: {
-    clients: {
-      default: {
-        httpEndpoint: process.env.SHOPIFY_STOREFRONT_HOST,
-        httpLinkOptions: {
-          headers: {
-            'X-Shopify-Storefront-Access-Token': process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN,
-          }
-        }
-      }
-    },
-  },
+  // apollo: {
+  //   clients: {
+  //     default: {
+  //       httpEndpoint: process.env.SHOPIFY_STOREFRONT_HOST,
+  //       httpLinkOptions: {
+  //         headers: {
+  //           'X-Shopify-Storefront-Access-Token': process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+  //         }
+  //       }
+  //     }
+  //   },
+  // },
 
   components: [
     '~/components/blocks',

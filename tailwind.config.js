@@ -2,7 +2,16 @@
 // const forms = require('@tailwindcss/forms')
 
 module.exports = {
+  theme: {
+    fontFamily: {
+      // 'header': ['Cheltenham', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      'header': ['Canela', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      // 'sans': ['"Sharp Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+    }
+  },
+
   content: [
+    "./components/app/AppButton.vue"
     // "./components/**/*.{js,vue,ts}",
     // "./layouts/**/*.vue",
     // "./pages/**/*.vue",
