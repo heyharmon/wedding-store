@@ -1,5 +1,5 @@
 <template>
-    <AppModal @close="emit('close')">
+    <AppModal @close="uiStore.isLoginModalOpen = false" :open="uiStore.isLoginModalOpen">
         <div class="flex items-center justify-between px-5 pt-4 pb-2">
             <AppLogo class="h-6 w-auto"/>
 
@@ -31,5 +31,7 @@
 <script setup>
 import AppModal from '@/components/app/AppModal.vue'
 import AppLogo from '../../app/AppLogo.vue';
-const emit = defineEmits(['close'])
+import { useUiStore } from '@/stores/useUiStore'
+// const emit = defineEmits(['close'])
+const uiStore = useUiStore()
 </script>

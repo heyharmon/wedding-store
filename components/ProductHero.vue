@@ -1,6 +1,6 @@
 <template>
   <div v-if="product" class="bg-white">
-    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+    <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
       <div class="lg:grid lg:grid-cols-3 lg:items-start lg:gap-x-8">
         <!-- Image gallery -->
         <TabGroup as="div" class="lg:col-span-2 flex flex-col-reverse">
@@ -111,6 +111,7 @@ import { ref } from 'vue'
 import { provideUseId, Disclosure, DisclosureButton, DisclosurePanel, RadioGroup, RadioGroupOption, Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue'
 import { StarIcon } from '@heroicons/vue/20/solid'
 import { HeartIcon, MinusIcon, PlusIcon } from '@heroicons/vue/24/outline'
+import { useCustomerStore } from '@/stores/useCustomerStore'
 
 const props = defineProps({
   product: Object,

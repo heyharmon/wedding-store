@@ -1,19 +1,18 @@
 <template>
-<!-- <ProductHero :product="product"/> -->
-<!-- <ProductsSimilar type="Arbors" :products="related"/> -->
- <pre>{{ products }}</pre>
+  <ProductsGrid :title="collection.title" :products="collection.products"/>
+  <!-- <pre>{{ collection }}</pre> -->
 </template>
   
 <script setup>
 import { useRoute } from 'vue-router'
+import ProductsGrid from '@/components/ProductsGrid.vue'
 
 const route = useRoute()
-
 const { $shopify } = useNuxtApp()
+// const collectionStore = useCollectionStore()
+// const products = ref(null)
 
 const collectionId = 'gid://shopify/Collection/302115586214';
-const products = await $shopify.collection.fetchWithProducts(collectionId, {productsFirst: 10}).then((collection) => {
-    console.log(collection);
-    console.log(collection.products);
-});
-  </script>
+// const gid = collectionStore.getCollectionBySlug(route.params.category)
+const collection = await $shopify.collection.fetchWithProducts(collectionId, {productsFirst: 10});
+</script>

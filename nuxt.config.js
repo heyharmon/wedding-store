@@ -53,9 +53,9 @@ export default defineNuxtConfig({
     }
   },
 
-  pinia: {
-    storesDirs: ['./stores/**'],
-  },
+  // pinia: {
+  //   storesDirs: ['./stores/**'],
+  // },
 
   plugins: [
     '~/plugins/shopify.js',
