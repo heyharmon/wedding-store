@@ -29,9 +29,9 @@
 </template>
 
 <script setup>
+import { useUiStore } from '@/stores/useUiStore'
 import AppModal from '@/components/app/AppModal.vue'
 import AppLogo from '../../app/AppLogo.vue';
-import { useUiStore } from '@/stores/useUiStore'
-// const emit = defineEmits(['close'])
+
 const uiStore = useUiStore()
 </script>

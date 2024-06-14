@@ -6,13 +6,13 @@
 <script setup>
 import { useRoute } from 'vue-router'
 import ProductsGrid from '@/components/ProductsGrid.vue'
+import { useCollectionStore } from '@/stores/useCollectionStore'
 
 const route = useRoute()
+const collectionStore = useCollectionStore()
 const { $shopify } = useNuxtApp()
-// const collectionStore = useCollectionStore()
-// const products = ref(null)
 
-const collectionId = 'gid://shopify/Collection/302115586214';
-// const gid = collectionStore.getCollectionBySlug(route.params.category)
-const collection = await $shopify.collection.fetchWithProducts(collectionId, {productsFirst: 10});
+
+const gid = collectionStore.getGidFromSlug(route.params.category)
+const collection = await $shopify.collection.fetchWithProducts(gid, {productsFirst: 10});
 </script>

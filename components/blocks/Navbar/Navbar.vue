@@ -66,14 +66,14 @@
         </div>
 
         <!-- Bottom -->
-        <nav class="hidden lg:flex lg:space-x-4 lg:py-2" aria-label="Global">
+        <nav class="hidden lg:flex lg:space-x-3 lg:py-2" aria-label="Global">
           <NuxtLink 
             v-for="collection in collectionStore.collections" 
             :key="collection.id" 
             :to="`/categories/${collection.slug}`" 
             :aria-current="collection.slug === route.params.category ? 'page' : undefined"
-            :class="[collection.slug === route.params.category ? 'bg-gray-100 text-gray-900' : 'text-gray-900 hover:bg-teal-100 hover:text-gray-900', '']" 
-            class="inline-flex items-center rounded-full px-3 py-2 text-base bg-teal-50 sm:-ml-2"
+            :class="[collection.slug === route.params.category ? 'bg-teal-700 text-white' : 'ring-1 ring-inset ring-gray-200 text-gray-900 hover:bg-teal-50 hover:text-gray-900', '']" 
+            class="inline-flex items-center rounded-full px-3 py-2 text-base sm:-ml-2"
           >
             {{ collection.title }}
           </NuxtLink>
