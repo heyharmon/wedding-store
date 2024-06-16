@@ -74,7 +74,6 @@
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router'
 import Logo from '@/components/Navigation/Logo.vue'
 
 const route = useRoute()

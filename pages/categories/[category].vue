@@ -3,7 +3,6 @@
 </template>
   
 <script setup>
-import { useRoute } from 'vue-router'
 import { useCollectionStore } from '@/stores/useCollectionStore'
 import ProductsGrid from '@/components/ProductsGrid.vue'
 

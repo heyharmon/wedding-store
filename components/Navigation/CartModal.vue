@@ -42,7 +42,7 @@
                                 <div>
                                     <div class="flex justify-between text-base font-medium text-gray-900">
                                     <h3>
-                                        <NuxtLink :to="'/products/' + item.variant.product.handle" target="_blank">{{ item.title }}</NuxtLink>
+                                        <NuxtLink :to="'/products/' + item.variant.product.handle" >{{ item.title }}</NuxtLink>
                                     </h3>
                                     <p class="ml-4">${{ item.variant.price }}</p>
                                     </div>
