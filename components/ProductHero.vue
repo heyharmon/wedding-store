@@ -1,6 +1,6 @@
 <template>
   <div v-if="product" class="bg-white">
-    <pre>{{ customerStore.cart }}</pre>
+    <!-- <pre>{{ customerStore.cart }}</pre> -->
     <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
       <div class="lg:grid lg:grid-cols-3 lg:items-start lg:gap-x-8">
         <!-- Image gallery -->

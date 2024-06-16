@@ -1,4 +1,6 @@
 import { defineStore } from 'pinia'
+import { isProxy, toRaw } from 'vue';
+
 // import { useLocalStorage } from "@vueuse/core"
 import { nanoid } from 'nanoid'
 
@@ -8,8 +10,10 @@ export const useCustomerStore = defineStore('customer', () => {
     // const customer = ref({})
     // const event = ref({})
     const checkoutId = useCookie('checkoutId')
-    const checkout = ref({})
-    const cart = ref({})
+    // const checkout = ref({})
+    const cart = ref({
+        items: []
+    })
 
     // const inCartCount = computed(() => count.value * 2)
     // a computed property that shows the count of a specific product in the cart
@@ -19,14 +23,51 @@ export const useCustomerStore = defineStore('customer', () => {
         }
     })
 
-    // function storeCustomer() {
-    //     this.customer = {
-    //         id: nanoid(),
-    //     }
-    // }
+    const itemFromShopify = ((item) => {
+        return {
+            id: item.id,
+            quantity: item.quantity,
+            title: item.title,
+            variant: {
+                id: item.variant.id,
+                image: {
+                    altText: item.variant.image.altText,
+                    src: item.variant.image.src
+                }
+            }
+        }
+    })
+
+    const itemListFromShopify = ((items) => {
+        return items.map(item => {
+            return itemFromShopify(item)
+        })
+    })
+
+    async function fetchCheckout(checkoutId) {
+        $shopify.checkout.fetch(checkoutId).then((c) => {
+            let fetchedCart = {
+                id: c.id,
+                email: c.email,
+                items: itemListFromShopify(c.lineItems),
+                totalPrice: c.totalPriceV2,
+            }
+
+            cart.value = JSON.parse(JSON.stringify(fetchedCart))
+
+            console.log('fetched checkout: ', c)
+            console.log('cart: ', fetchedCart)
+        })
+    }
+
+    async function createCheckout() {
+        $shopify.checkout.create().then((c) => {
+            checkoutId.value = c.id
+            console.log('new checkout: ', c)
+        })
+    }
 
     function addToCart(productVariantId) {
-        // const { $shopify } = useNuxtApp()
         console.log('checkout id', checkoutId.value)
         console.log('product variant id', productVariantId)
         
@@ -40,41 +81,6 @@ export const useCustomerStore = defineStore('customer', () => {
 
         $shopify.checkout.addLineItems(checkoutId.value, lineItemsToAdd)
         // this.cart.push(productId)
-    }
-
-    async function createCheckout() {
-        // const { $shopify } = useNuxtApp()
-        // let c = await $shopify.checkout.create()
-        // checkoutId.value = c.id
-        // console.log('new checkout', c)
-
-        $shopify.checkout.create().then((c) => {
-            checkoutId.value = c.id
-            console.log('new checkout', c)
-        })
-    }
-
-    async function fetchCheckout(checkoutId) {
-        // const { $shopify } = useNuxtApp()
-        // let c = await $shopify.checkout.fetch(checkoutId)
-        // checkout.value.email = c.email
-        // checkout.value.items = c.lineItems
-        // checkout.value.address = c.shippingAddress
-        // checkout.value.amount = c.totalPrice.amount
-        // console.log('cart', c)
-
-        $shopify.checkout.fetch(checkoutId).then((c) => {
-            cart.value = {
-                id: c.id,
-                email: c.email,
-                lineItems: c.lineItems,
-                note: c.note,
-                shippingAddress: c.shippingAddress,
-                amount: c.totalPrice.amount,
-            }
-
-            console.log('fetched checkout', c)
-        })
     }
 
     onMounted(() => {
@@ -92,7 +98,7 @@ export const useCustomerStore = defineStore('customer', () => {
         // event, 
         
         checkoutId,
-        checkout, 
+        // checkout, 
         cart, 
         inCartCount, 
         // storeCustomer, 
