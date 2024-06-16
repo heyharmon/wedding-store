@@ -1,8 +1,6 @@
 <template>
-    <AppModal @close="uiStore.isLoginModalOpen = false" :open="uiStore.isLoginModalOpen">
+    <AppModal @close="uiStore.isCartModalOpen = false" :open="uiStore.isCartModalOpen">
         <div class="flex items-center justify-between px-5 pt-4 pb-2">
-            <AppLogo class="h-6 w-auto"/>
-
             <button @click="emit('close')" type="button" class="inline-flex items-center rounded-md bg-gray-100 p-1 hover:bg-gray-200 active:translate-y-px">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5 text-gray-700" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -31,7 +29,6 @@
 <script setup>
 import { useUiStore } from '@/stores/useUiStore'
 import AppModal from '@/components/app/AppModal.vue'
-import AppLogo from '../../app/AppLogo.vue';
 
 const uiStore = useUiStore()
 </script>

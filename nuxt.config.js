@@ -57,6 +57,13 @@ export default defineNuxtConfig({
   //   storesDirs: ['./stores/**'],
   // },
 
+  piniaPersistedstate: {
+    cookieOptions: {
+      sameSite: 'strict',
+    },
+    storage: 'localStorage'
+  },
+  
   plugins: [
     '~/plugins/shopify.js',
   ],

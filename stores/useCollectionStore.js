@@ -8,24 +8,9 @@ export const useCollectionStore = defineStore('collections', () => {
             gid: 'gid://shopify/Collection/302115586214'
         },
         {
-            title: 'Signage',
-            slug: 'signage',
-            gid: 'gid://shopify/Collection/302316322982'
-        },
-        {
-            title: 'Walls',
-            slug: 'walls',
+            title: 'Backdrops',
+            slug: 'backdrops',
             gid: 'gid://shopify/Collection/302316781734'
-        },
-        {
-            title: 'Chairs',
-            slug: 'chairs',
-            gid: 'gid://shopify/Collection/302317076646'
-        },
-        {
-            title: 'Tables',
-            slug: 'tables',
-            gid: 'gid://shopify/Collection/302317142182'
         },
         {
             title: 'Decor',
@@ -37,6 +22,21 @@ export const useCollectionStore = defineStore('collections', () => {
             slug: 'games',
             gid: 'gid://shopify/Collection/302317240486'
         },
+        {
+            title: 'Signage',
+            slug: 'signage',
+            gid: 'gid://shopify/Collection/302316322982'
+        },
+        // {
+        //     title: 'Chairs',
+        //     slug: 'chairs',
+        //     gid: 'gid://shopify/Collection/302317076646'
+        // },
+        // {
+        //     title: 'Tables',
+        //     slug: 'tables',
+        //     gid: 'gid://shopify/Collection/302317142182'
+        // },
     ])
 
     function getGidFromSlug(slug) {

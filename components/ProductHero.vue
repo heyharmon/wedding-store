@@ -1,5 +1,6 @@
 <template>
   <div v-if="product" class="bg-white">
+    <pre>{{ customerStore.cart }}</pre>
     <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
       <div class="lg:grid lg:grid-cols-3 lg:items-start lg:gap-x-8">
         <!-- Image gallery -->
@@ -38,16 +39,9 @@
         <!-- Product info -->
         <div class="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
           <h1 class="font-header text-4xl font-bold tracking-tight text-gray-900">{{ product.title }}</h1>
-
           <div class="mt-3">
             <h2 class="sr-only">Product information</h2>
-            <p class="text-2xl tracking-tight text-gray-900">${{ product.variants[0].price.amount }} / day</p>
-          </div>
-
-          <!-- Description -->
-          <div class="mt-6">
-            <h3 class="sr-only">Description</h3>
-            <div class="space-y-6 text-sm text-gray-700" v-html="product.description" />
+            <p class="text-xl text-gray-500">${{ product.variants[0].price.amount }} / day</p>
           </div>
 
           <div class="mt-6">
@@ -65,15 +59,28 @@
               </fieldset>
             </div> -->
 
-            <div class="mt-10 flex">
-              <button @click="customerStore.addToCart(product.id)" type="button" class="flex max-w-xs flex-1 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full">
+            <!-- Description -->
+            <div class="mt-4">
+              <h3 class="sr-only">Description</h3>
+              <div class="space-y-6 text-gray-900" v-html="product.description" />
+            </div>
+
+            <!-- Add to bag -->
+            <div class="mt-6 flex">
+              <button @click="customerStore.addToCart(product.variants[0].id)" type="button" class="flex max-w-xs flex-1 items-center justify-center gap-x-1.5 rounded-md bg-teal-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600">
+                <svg class="h-5 w-5 fill-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M200-80q-33 0-56.5-23.5T120-160v-480q0-33 23.5-56.5T200-720h80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720h80q33 0 56.5 23.5T840-640v480q0 33-23.5 56.5T760-80H200Zm0-80h560v-480H200v480Zm280-240q83 0 141.5-58.5T680-600h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85h-80q0 83 58.5 141.5T480-400ZM360-720h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160v-480 480Z"/></svg>
                 Add to bag
+                <span>({{ customerStore.inCartCount(product.id) }})</span>
               </button>
 
-              <button type="button" class="ml-4 flex items-center justify-center rounded-md px-3 py-3 text-gray-400 hover:bg-gray-100 hover:text-gray-500">
+              <!-- <button @click="customerStore.addToCart(product.id)" type="button" class="flex max-w-xs flex-1 items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 sm:w-full">
+                Add to bag
+              </button> -->
+
+              <!-- <button type="button" class="ml-4 flex items-center justify-center rounded-md px-3 py-3 text-gray-400 hover:bg-gray-100 hover:text-gray-500">
                 <HeartIcon class="h-6 w-6 flex-shrink-0" aria-hidden="true" />
                 <span class="sr-only">Add to favorites</span>
-              </button>
+              </button> -->
             </div>
           </div>
 
@@ -82,7 +89,7 @@
 
             <div class="divide-y divide-gray-200 border-t">
               <Disclosure as="div" v-for="detail in mockedProduct.details" :key="detail.name" v-slot="{ open }">
-                <h3>
+                <h3>axzx 
                   <DisclosureButton class="group relative flex w-full items-center justify-between py-6 text-left">
                     <span :class="[open ? 'text-indigo-600' : 'text-gray-900', 'text-sm font-medium']">{{ detail.name }}</span>
                     <span class="ml-6 flex items-center">
@@ -118,6 +125,6 @@ const props = defineProps({
 })
 
 const customerStore = useCustomerStore()
+
 provideUseId(() => useId())
-// const selectedColor = ref(mockedProduct.colors[0])
 </script>

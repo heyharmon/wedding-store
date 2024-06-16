@@ -1,5 +1,5 @@
 <template>
-  <ProductsGrid :title="collection.title" :products="collection.products"/>
+  <ProductsGrid :title="`Wedding ${collection.title}`" :products="collection.products"/>
   <!-- <pre>{{ collection }}</pre> -->
 </template>
   

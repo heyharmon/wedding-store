@@ -7,7 +7,7 @@
           <div class="relative z-10 flex lg:px-0">
             <!-- Logo -->
             <div class="flex gap-3 items-center">
-              <AppLogo class="h-6 w-auto"/>
+              <Logo class="h-6 w-auto"/>
               <!-- <span class="mt-1 rounded-md bg-gray-50 text-sm text-gray-500 p-1">Salt Lake City</span> -->
               <span class="mt-1 inline-flex items-center gap-x-1.5 rounded-full bg-gray-50 px-1.5 py-0.5 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
                 <svg class="h-1.5 w-1.5 fill-teal-600" viewBox="0 0 6 6" aria-hidden="true">
@@ -35,23 +35,23 @@
           <div class="relative ml-4 flex gap-1 items-center">
 
             <!-- Favorites -->
-            <!-- <a href="#" class="group flex items-center p-2">
+            <!-- <button class="group flex items-center p-2">
               <svg class="h-7 w-7 flex-shrink-0 fill-gray-900 group-hover:fill-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"/></svg>
               <span class="sr-only">View favorites</span>
-            </a> -->
+            </button> -->
 
             <!-- Cart -->
-            <!-- <a v-if="customerStore.customer?.id" href="#" class="group flex items-center p-2"> -->
-            <a href="#" class="group flex items-center p-2">
+            <!-- <button v-if="customerStore.customer?.id" class="group flex items-center p-2"> -->
+            <button @click="uiStore.isCartModalOpen = true" class="group flex items-center p-2">
               <svg class="h-7 w-7 flex-shrink-0 fill-gray-900 group-hover:fill-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M200-80q-33 0-56.5-23.5T120-160v-480q0-33 23.5-56.5T200-720h80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720h80q33 0 56.5 23.5T840-640v480q0 33-23.5 56.5T760-80H200Zm0-80h560v-480H200v480Zm280-240q83 0 141.5-58.5T680-600h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85h-80q0 83 58.5 141.5T480-400ZM360-720h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160v-480 480Z"/></svg>
               <span class="ml-2 text-sm font-medium text-gray-900 group-hover:text-gray-800">{{ customerStore.cart.length }}</span>
               <span class="sr-only"> items in cart, view bag</span>
-            </a>
+            </button>
 
             <!-- Log in or sign up -->
-            <!-- <a @click="uiStore.isLoginModalOpen = true" href="#" class="group flex items-center p-2">
+            <!-- <button @click="uiStore.isLoginModalOpen = true" class="group flex items-center p-2">
               <svg class="h-7 w-7 flex-shrink-0 fill-gray-900 group-hover:fill-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"/></svg>
-            </a> -->
+            </button> -->
 
             <!-- Mobile menu button -->
             <div class="relative z-10 flex items-center mr-1 lg:hidden">
@@ -127,7 +127,8 @@
       </DisclosurePanel>
     </Disclosure>
 
-    <NavbarLogin/>
+    <CartModal/>
+    <LoginModal/>
   </div>
 </template>
 
@@ -138,13 +139,14 @@ import { useCustomerStore } from '@/stores/useCustomerStore.js'
 import { useUiStore } from '@/stores/useUiStore.js'
 import { provideUseId, Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
-import NavbarLogin from '@/components/blocks/Navbar/NavbarLogin.vue';
+import Logo from '@/components/Navigation/Logo.vue'
+import CartModal from '@/components/Navigation/CartModal.vue';
+import LoginModal from '@/components/Navigation/LoginModal.vue';
 
 const route = useRoute()
 const collectionStore = useCollectionStore()
 const customerStore = useCustomerStore()
 const uiStore = useUiStore()
-const isLoginModalOpen = ref(false)
 
 const user = {
   name: 'Tom Cook',
