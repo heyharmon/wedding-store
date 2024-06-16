@@ -1,18 +1,19 @@
 <template>
   <ProductsGrid :title="`Wedding ${collection.title}`" :products="collection.products"/>
-  <!-- <pre>{{ collection }}</pre> -->
 </template>
   
 <script setup>
 import { useRoute } from 'vue-router'
-import ProductsGrid from '@/components/ProductsGrid.vue'
 import { useCollectionStore } from '@/stores/useCollectionStore'
+import ProductsGrid from '@/components/ProductsGrid.vue'
 
 const route = useRoute()
-const collectionStore = useCollectionStore()
 const { $shopify } = useNuxtApp()
+const collectionStore = useCollectionStore()
 
+const collectionId = collectionStore.getGidFromCollectionSlug(route.params.category)
+const collection = await $shopify.collection.fetchWithProducts(collectionId, {productsFirst: 10});
 
-const gid = collectionStore.getGidFromSlug(route.params.category)
-const collection = await $shopify.collection.fetchWithProducts(gid, {productsFirst: 10});
+// console.log('category page collection id: ', collectionId)
+// console.log('category page collection: ', collection)
 </script>

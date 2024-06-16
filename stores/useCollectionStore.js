@@ -39,10 +39,19 @@ export const useCollectionStore = defineStore('collections', () => {
         // },
     ])
 
-    function getGidFromSlug(slug) {
+    function getGidFromCollectionTitle(title) {
+        let collection = collections.value.find(collection => collection.title === title)
+        return collection.gid
+    }
+
+    function getGidFromCollectionSlug(slug) {
         let collection = collections.value.find(collection => collection.slug === slug)
         return collection.gid
     }
   
-    return { collections, getGidFromSlug }
+    return { 
+        collections, 
+        getGidFromCollectionTitle,
+        getGidFromCollectionSlug,
+    }
   })

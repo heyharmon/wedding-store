@@ -1,20 +1,23 @@
 <template>
   <ProductHero :product="product"/>
-  <ProductsSimilar type="Arbors" :products="related"/>
+  <ProductsGrid :title="`Other ${collection.title}`" :products="collection.products"/>
 </template>
 
 <script setup>
 import { useRoute } from 'vue-router'
-// import { getProductQuery } from '@/shopify/getProductQuery'
-// import { getProductsQuery } from '@/shopify/getProductsQuery'
+import { useCollectionStore } from '@/stores/useCollectionStore'
 import ProductHero from '@/components/ProductHero.vue'
-import ProductsSimilar from '@/components/ProductsSimilar.vue'
+import ProductsGrid from '@/components/ProductsGrid.vue'
 
 const route = useRoute()
-// const { data: product } = await useAsyncQuery(getProductQuery, { handle: route.params.slug })
-// const { data: related } = await useAsyncQuery(getProductsQuery, { first: 8, query: `product_type:${product.value.productByHandle.productType}` })
-
 const { $shopify } = useNuxtApp()
+const collectionStore = useCollectionStore()
+
 const product = await $shopify.product.fetchByHandle(route.params.slug)
-const related = await $shopify.product.fetchAll(8)
+const collectionId = collectionStore.getGidFromCollectionTitle(product.productType)
+const collection = await $shopify.collection.fetchWithProducts(collectionId, {productsFirst: 10});
+
+// console.log('product page product: ', product)
+// console.log('product page related collection id: ', collectionId)
+// console.log('product page related collection: ', collection)
 </script>

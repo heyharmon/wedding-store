@@ -8,7 +8,7 @@
           <!-- <h2 class="mx-auto max-w-2xl text-4xl font-header text-gray-900 sm:text-5xl">Better wedding rental</h2> -->
           <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-500">Beautifully crafted wedding rentals</p>
           <!-- <div class="mt-10 flex items-center justify-center gap-x-6">
-            <button type="button" class="inline-flex items-center gap-x-1.5 rounded-md bg-teal-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600">
+            <button type="button" class="inline-flex items-center gap-x-1.5 rounded-md bg-teal-700 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600">
               Get started
               <svg class="h-5 w-5 fill-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M200-80q-33 0-56.5-23.5T120-160v-480q0-33 23.5-56.5T200-720h80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720h80q33 0 56.5 23.5T840-640v480q0 33-23.5 56.5T760-80H200Zm0-80h560v-480H200v480Zm280-240q83 0 141.5-58.5T680-600h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85h-80q0 83 58.5 141.5T480-400ZM360-720h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160v-480 480Z"/></svg>
             </button>

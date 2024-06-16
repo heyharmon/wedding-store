@@ -1,35 +1,22 @@
 import { defineStore } from 'pinia'
-import { isProxy, toRaw } from 'vue';
-
-// import { useLocalStorage } from "@vueuse/core"
-import { nanoid } from 'nanoid'
 
 export const useCustomerStore = defineStore('customer', () => {
     const { $shopify } = useNuxtApp()
-
-    // const customer = ref({})
-    // const event = ref({})
     const checkoutId = useCookie('checkoutId')
-    // const checkout = ref({})
-    const cart = ref({
-        items: []
-    })
-
-    // const inCartCount = computed(() => count.value * 2)
-    // a computed property that shows the count of a specific product in the cart
-    const inCartCount = computed(() => {
-        return (productId) => {
-            return cart.value.items?.filter(id => id === productId).length
-        }
-    })
+    const cart = ref({})
 
     const itemFromShopify = ((item) => {
         return {
-            id: item.id,
+            checkoutLineItemId: item.id,
             quantity: item.quantity,
             title: item.title,
             variant: {
                 id: item.variant.id,
+                price: item.variant.priceV2.amount,
+                product: {
+                    id: item.variant.product.id,
+                    handle: item.variant.product.handle,
+                },
                 image: {
                     altText: item.variant.image.altText,
                     src: item.variant.image.src
@@ -38,70 +25,90 @@ export const useCustomerStore = defineStore('customer', () => {
         }
     })
 
-    const itemListFromShopify = ((items) => {
+    const itemList = ((items) => {
         return items.map(item => {
             return itemFromShopify(item)
         })
     })
 
-    async function fetchCheckout(checkoutId) {
-        $shopify.checkout.fetch(checkoutId).then((c) => {
-            let fetchedCart = {
-                id: c.id,
-                email: c.email,
-                items: itemListFromShopify(c.lineItems),
-                totalPrice: c.totalPriceV2,
-            }
+    const cartFromShopifyCheckout = ((checkout) => {
+        let cart = {
+            email: checkout.email,
+            items: itemList(checkout.lineItems),
+            total: checkout.totalPriceV2.amount,
+            webUrl: checkout.webUrl,
+        }
 
-            cart.value = JSON.parse(JSON.stringify(fetchedCart))
+        return JSON.parse(JSON.stringify(cart))
+    })
 
-            console.log('fetched checkout: ', c)
-            console.log('cart: ', fetchedCart)
+    async function fetchCheckout() {
+        $shopify.checkout.fetch(checkoutId.value).then((checkout) => {
+            cart.value = cartFromShopifyCheckout(checkout)
+
+            console.log('fetched checkout: ', checkout)
+            console.log('cart: ', cart.value)
         })
     }
 
     async function createCheckout() {
-        $shopify.checkout.create().then((c) => {
-            checkoutId.value = c.id
-            console.log('new checkout: ', c)
+        $shopify.checkout.create().then((checkout) => {
+            checkoutId.value = checkout.id
+            console.log('new checkout: ', checkout)
         })
     }
 
     function addToCart(productVariantId) {
         console.log('checkout id', checkoutId.value)
         console.log('product variant id', productVariantId)
-        
-        const lineItemsToAdd = [
-            {
-                variantId: productVariantId,
-                quantity: 1,
-                // customAttributes: [{key: "MyKey", value: "MyValue"}]
-            }
-        ];
 
-        $shopify.checkout.addLineItems(checkoutId.value, lineItemsToAdd)
-        // this.cart.push(productId)
+        $shopify.checkout.addLineItems(checkoutId.value, [{
+            variantId: productVariantId,
+            quantity: 1,
+            // customAttributes: [{key: "MyKey", value: "MyValue"}]
+        }]).then(() => {
+            fetchCheckout()
+        })
     }
+
+    function removeFromCart(checkoutLineItemId) {
+        console.log('checkout id', checkoutId.value)
+        console.log('checkout line item id', checkoutLineItemId)
+
+        $shopify.checkout.removeLineItems(checkoutId.value, [checkoutLineItemId]).then(() => {
+            fetchCheckout()
+        })
+    }
+
+    const inCartCount = computed(() => {
+        return (productId) => {
+            console.log('counting product id: ', productId)
+            return cart.value.items?.filter(item => item.variant.product.id === productId).length
+        }
+    })
+
+    const inCart = computed(() => {
+        return (productId) => {
+            return cart.value.items?.filter(item => item.variant.product.id === productId).length > 0
+        }
+    })
 
     onMounted(() => {
         console.log('checkout id', checkoutId.value)
 
         if (checkoutId.value) {
-            fetchCheckout(checkoutId.value)
+            fetchCheckout()
         } else {
             createCheckout()
         }
     })
   
     return { 
-        // customer, 
-        // event, 
-        
         checkoutId,
-        // checkout, 
         cart, 
+        addToCart,
+        removeFromCart,
         inCartCount, 
-        // storeCustomer, 
-        addToCart 
+        inCart,
     }
 })
