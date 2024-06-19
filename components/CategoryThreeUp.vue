@@ -50,8 +50,8 @@
           </div>
           <div class="group aspect-h-1 aspect-w-2 overflow-hidden rounded-lg sm:aspect-none sm:relative sm:h-full">
             <NuxtImg 
-              src="/categories/featured-category-walls.jpg" 
-              alt="Weddings walls rental" 
+              src="/categories/featured-category-backdrops.jpg" 
+              alt="Weddings backdrop rental" 
               class="object-cover object-center group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full"
               format="webp"
               width="600"
@@ -61,9 +61,9 @@
             <div class="flex items-end p-6 sm:absolute sm:inset-0">
               <div>
                 <h3 class="font-header text-3xl text-white">
-                  <NuxtLink to="/categories/walls">
+                  <NuxtLink to="/categories/backdrops">
                     <span class="absolute inset-0" />
-                    Walls
+                    Backdrops
                   </NuxtLink>
                 </h3>
                 <!-- <p aria-hidden="true" class="mt-1 text-sm font-semibold text-white">Shop now</p> -->

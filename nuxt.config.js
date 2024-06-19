@@ -77,7 +77,7 @@ export default defineNuxtConfig({
     // indexable: false,
     url: 'https://rentcrafted.com',
     name: 'Crafted | Wedding Rentals in Salt Lake City',
-    description: 'Wedding rentals in Salt Lake City trusted by Utah couples. We have wedding arches, signage, walls games and more.',
+    description: 'Wedding rentals in Salt Lake City trusted by Utah couples. We have wedding arches, signage, backdrops, games and more.',
     defaultLocale: 'en',
   },
 
