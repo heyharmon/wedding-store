@@ -13,7 +13,7 @@ const { $shopify } = useNuxtApp()
 const collectionStore = useCollectionStore()
 
 const product = await $shopify.product.fetchByHandle(route.params.slug)
-const collectionId = collectionStore.getGidFromCollectionTitle(product.productType)
+const collectionId = collectionStore.getCollectionGidByTitle(product.productType)
 const collection = await $shopify.collection.fetchWithProducts(collectionId, {productsFirst: 10});
 
 // console.log('product page product: ', product)

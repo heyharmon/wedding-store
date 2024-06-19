@@ -2,8 +2,10 @@ import { defineStore } from 'pinia'
 
 export const useCustomerStore = defineStore('customer', () => {
     const { $shopify } = useNuxtApp()
+
     const checkoutId = useCookie('checkoutId')
     const cart = ref({})
+    const isAddingToCart = ref(false)
 
     const itemFromShopify = ((item) => {
         return {
@@ -35,6 +37,7 @@ export const useCustomerStore = defineStore('customer', () => {
         let cart = {
             email: checkout.email,
             items: itemList(checkout.lineItems),
+            itemsTotal: checkout.lineItemsSubtotalPrice.amount,
             total: checkout.totalPriceV2.amount,
             webUrl: checkout.webUrl,
         }
@@ -62,11 +65,14 @@ export const useCustomerStore = defineStore('customer', () => {
         console.log('checkout id', checkoutId.value)
         console.log('product variant id', productVariantId)
 
+        isAddingToCart.value = true
+
         $shopify.checkout.addLineItems(checkoutId.value, [{
             variantId: productVariantId,
             quantity: 1,
             // customAttributes: [{key: "MyKey", value: "MyValue"}]
         }]).then(() => {
+            isAddingToCart.value = false
             fetchCheckout()
         })
     }
@@ -106,6 +112,7 @@ export const useCustomerStore = defineStore('customer', () => {
     return { 
         checkoutId,
         cart, 
+        isAddingToCart,
         addToCart,
         removeFromCart,
         inCartCount, 

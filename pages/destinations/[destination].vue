@@ -6,7 +6,7 @@
         <!-- <h2 class="mx-auto max-w-2xl text-4xl font-header text-gray-900 sm:text-5xl">A better way to rent for your wedding day</h2> -->
         <h1 class="mx-auto max-w-lg text-4xl font-header text-white sm:text-5xl">
           Wedding rentals near <br>
-          <span class="capitalize">{{ route.params.destination }}</span>, Utah
+          <span class="capitalize">{{ destinationStore.getCityNameBySlug(route.params.destination) }}</span>, Utah
         </h1>
         <!-- <h2 class="mx-auto max-w-2xl text-4xl font-header text-gray-900 sm:text-5xl">Better wedding rental</h2> -->
         <!-- <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-100">Beautifully crafted wedding rentals</p> -->
@@ -20,14 +20,16 @@
     </div>
   </div>
 
-  <ProductsGrid :title="`Popular rentals for ${route.params.destination}`" :products="products"/>
+  <ProductsGrid :title="`Popular rentals for ${destinationStore.getCityNameBySlug(route.params.destination)}`" :products="products"/>
 </template>
   
 <script setup>
+import { useDestinationStore } from '@/stores/useDestinationStore'
 import ProductsGrid from '@/components/ProductsGrid.vue'
 
 const route = useRoute()
 const { $shopify } = useNuxtApp()
+const destinationStore = useDestinationStore()
 
 const products = await $shopify.product.fetchAll(9)
 </script>

@@ -10,7 +10,7 @@ const route = useRoute()
 const { $shopify } = useNuxtApp()
 const collectionStore = useCollectionStore()
 
-const collectionId = collectionStore.getGidFromCollectionSlug(route.params.category)
+const collectionId = collectionStore.getCollectionGidBySlug(route.params.category)
 const collection = await $shopify.collection.fetchWithProducts(collectionId, {productsFirst: 10});
 
 // console.log('category page collection id: ', collectionId)
